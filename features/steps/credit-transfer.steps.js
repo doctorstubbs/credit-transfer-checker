@@ -108,6 +108,18 @@ When('the credit check runs', function () {
   doCheck(this);
 });
 
+When('the student enrolls at McNeese State University', function () {
+  this.student.target.name = 'McNeese State University';
+  this.student.target.isPublic = true;
+  doCheck(this);
+});
+
+When('the credit check runs against a private university such as Loyola University New Orleans', function () {
+  this.student.target.name = 'Loyola University New Orleans';
+  this.student.target.isPublic = false;
+  doCheck(this);
+});
+
 When('the credit check runs against a private university such as Tulane', function () {
   this.student.target.name = 'Tulane University';
   this.student.target.isPublic = false;
