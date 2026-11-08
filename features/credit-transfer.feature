@@ -162,12 +162,12 @@ Feature: Louisiana dual enrollment credit transfer check
     Then the course counts as "MATH 109"
     And the course counts only if the student earns a grade of C or better
 
-  Scenario: A course entered with no grade gets the same match with the condition stated
+  Scenario: A course entered with no grade is assumed to have been passed with a grade of C or better
     Given a student plans to attend "University of Louisiana at Lafayette"
     And the student entered "MATH 130" at "Delgado Community College" with no grade yet
     When the credit check runs
     Then the course counts as "MATH 109"
-    And the course counts only if the student earns a grade of C or better
+    And the course carries no grade condition
 
   Scenario: A course entered with a grade carries no condition
     Given a student plans to attend "University of Louisiana at Lafayette"
