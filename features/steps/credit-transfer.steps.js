@@ -341,3 +341,13 @@ Then('the course counts only if the student earns a grade of C or better', funct
   assert.ok(r.condition && r.condition.includes('C or better'),
     'expected a C-or-better condition, got: ' + r.condition);
 });
+
+Given('the student entered {string} at {string} with no grade yet', function (code, institution) {
+  this.student.sources = [{ institution, degree: null, allGradesCOrBetter: false,
+    courses: [{ code }] }];
+});
+
+Then('the course carries no grade condition', function () {
+  const r = this.report.courseResults[0];
+  assert.strictEqual(r.condition, null);
+});
