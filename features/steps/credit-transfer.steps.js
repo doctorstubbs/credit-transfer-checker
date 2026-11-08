@@ -357,3 +357,9 @@ Then('the course is flagged as not in the course data yet', function () {
   assert.strictEqual(r.dataStatus, 'not-in-data');
   assert.strictEqual(r.shownAs, 'not in the course data yet');
 });
+
+Then('the report does not claim the transfer degree guarantee', function () {
+  assert.strictEqual(this.report.genEdComplete, false);
+  assert.strictEqual(this.report.guaranteePromised, false);
+  assert.strictEqual(this.report.juniorStanding, false);
+});
