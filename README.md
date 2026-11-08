@@ -31,12 +31,8 @@ Louisiana target list (14 public and 8 private universities, two
 scenarios added), then the source college model in Stage 9 (credits
 from several colleges in one check, reported college by college).
 Then the planning mode in Stage 10 (courses checked before they are
-taken, conditions stated plainly), and real course matching in
-Stage 11: the tool looks courses up in the Board of Regents
-articulation matrix itself (266 common courses, 32 colleges, in
-data/courses.json), so nobody has to declare a match. Expected
-today: 21 scenarios, 21 passed
-(run-2026-11-08-real-course-matching.log).
+taken, conditions stated plainly). Expected today: 17 scenarios,
+17 passed (run-2026-11-07-planning-mode.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
