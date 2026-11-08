@@ -220,7 +220,33 @@ any rule (full citations in README.md):
   enrollment and early college students, and anyone moving credits
   between Louisiana colleges."
 
-## Stage 11, Real course matching: the tool finds the match (Sun Nov 8, 2026)
+## Correction (Sun Nov 8, 2026, about 12:20 AM): Stage 11 data withdrawn
+
+Kris's ruling: no AY 2022-2023 information may be used. The matrix
+spreadsheet Stage 11 was built on is the AY 2022-2023 edition, so
+every pairing drawn from it has been pulled out of the tool: the
+engine lookup, the page course picker and coverage line, the
+dataset files, and the four data scenarios are removed, and the
+suite is back to the Stage 10 state (17 scenarios, 17 passed).
+The downloaded matrix files are deleted, not archived. A check for
+a newer posted matrix found none: the Regents' December 2025
+Articulation and Transfer Report says the matrix is being moved to
+a CollegeSource platform, and the last spreadsheet posted on the
+Regents site is the 2022-2023 one. The four data scenarios remain
+the specification for the rebuild, recorded in the Stage 11 entry
+below, which is kept for the record and marked superseded.
+
+Rebuild path (Stage 11b, not started): current sources only. The
+course list, titles, and hours come from the Statewide Common
+Course Catalog AY 2025-26 (current edition, September 2026). The
+college by college equivalents come from the colleges' own current
+catalogs, which print the state common number beside each course
+(example format: [LCCN: CENL 1013]), joined on that number. Every
+pairing in the rebuilt dataset will trace to two current catalogs,
+which makes the dataset verified by construction instead of
+verified after the fact.
+
+## Stage 11, Real course matching: the tool finds the match (Sun Nov 8, 2026) [SUPERSEDED, see Correction above]
 
 - Kris's catch: users cannot know whether a direct match exists;
   that is the problem the tool exists to solve. Data plan written

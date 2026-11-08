@@ -4,6 +4,15 @@ Goal: the tool finds the match itself. The user picks a college, picks
 a course from that college's real list, picks a target college, and
 the tool answers. Nobody is asked a registrar question again.
 
+## Source currency rule (Kris, Nov 8, 2026)
+
+Only current editions may be used. The AY 2022-2023 matrix
+spreadsheet is banned as a source for this project, in whole or in
+part. Equivalents are built from the colleges' current catalogs
+(2025-26), joined on the state common course numbers defined in
+the current Common Course Catalog. See the Correction entry in
+docs/BUILD-LOG.md.
+
 ## The two state sources (both public, both official)
 
 1. Louisiana Statewide Common Course Catalog (Board of Regents,
