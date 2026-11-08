@@ -138,9 +138,30 @@ any rule (full citations in README.md):
   Log: run-2026-11-07-full-louisiana.log. The Pages demo was
   regenerated from the updated page and engine and redeployed.
 
+## Stage 8, Cleanup: broader framing and rights protection (Sat Nov 7, 2026)
+
+- Kris's framing correction: this is not only a dual enrollment tool.
+  The transfer degree guarantee and articulation matrix serve anyone
+  moving credits between Louisiana colleges, community college
+  transfers most of all. Page subtitle and README now read
+  "Louisiana college credit check for families," with dual enrollment
+  named as one audience, not the product definition.
+- Tracking direction confirmed by Kris and held on standby: anonymous
+  usage counts plus optional email capture for the full report
+  (value first, email for extras, never an email wall). Build is a
+  later stage; it needs a form backend because the Pages demo is
+  static.
+- Rights: LICENSE added (all rights reserved, viewing only, no reuse
+  without written permission). Verified Nov 7, 2026: the repo
+  contains no secrets, keys, or credentials of any kind, so there is
+  nothing to purge. Repo stays public as the showcase on Muse's
+  recommendation, with the commercial build (accounts, payments,
+  full articulation data) planned for a private repo at the selling
+  stage. Decision recorded in chat Nov 7, 2026.
+
 ## Next stages (not started)
 
-- Stage 8 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
+- Stage 9 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
