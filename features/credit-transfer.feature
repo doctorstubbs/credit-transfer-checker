@@ -106,3 +106,24 @@ Feature: Louisiana dual enrollment credit transfer check
     When the credit check runs against the University of Louisiana at Lafayette
     Then the report says the general education requirements are met in full
     And the report shows the Baton Rouge Community College course as an elective in that subject at the matching level
+
+  Scenario: A planned course with a direct equivalent counts if the grade is earned
+    Given a student is planning to take ENGL 1010 at a Louisiana community college, and has not taken it yet
+    When the credit check runs against the University of Louisiana at Lafayette
+    Then the report marks the course as planned
+    And the report shows the planned credit as ENGL 101, English Composition
+    And the report says it counts toward the English composition requirement if the student earns a grade of C or better
+
+  Scenario: A planned course that only counts as an elective warns before the money is spent
+    Given a student is planning to take a course that the receiving university offers no direct match for
+    And the receiving university does teach that subject area
+    When the credit check runs
+    Then the report marks the course as planned
+    And the report shows the credit as an elective in that subject at the matching level
+    And the report warns that elective credit does not satisfy a named course requirement
+
+  Scenario: A transfer degree still in progress earns the guarantee only when finished
+    Given a student is working on an Associate of Arts Louisiana Transfer degree and has not finished it yet
+    When the student enrolls at a Louisiana public university
+    Then the report does not say general education is complete yet
+    And the report says the transfer guarantee applies when the degree is finished, if every course is passed with a grade of C or better
