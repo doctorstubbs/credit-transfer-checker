@@ -351,3 +351,9 @@ Then('the course carries no grade condition', function () {
   const r = this.report.courseResults[0];
   assert.strictEqual(r.condition, null);
 });
+
+Then('the course is flagged as not in the course data yet', function () {
+  const r = this.report.courseResults[0];
+  assert.strictEqual(r.dataStatus, 'not-in-data');
+  assert.strictEqual(r.shownAs, 'not in the course data yet');
+});
