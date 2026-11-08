@@ -113,9 +113,34 @@ any rule (full citations in README.md):
   and src/checker.js) so GitHub Pages can serve it as a public demo:
   https://doctorstubbs.github.io/credit-transfer-checker/
 
+## Stage 7, Full Louisiana target list (Sat Nov 7, 2026)
+
+- Kris's correction while viewing the live page: the target list
+  carried only UL Lafayette and Tulane. He directed the full state
+  list so the tool is fully outfitted for Louisiana.
+- Target list now carries all 14 bachelor granting Louisiana public
+  universities (LSU A&M, LSU Alexandria, LSU Shreveport, Grambling,
+  Louisiana Tech, McNeese, Nicholls, Northwestern State, Southeastern,
+  Southern A&M Baton Rouge, Southern at New Orleans, UL Lafayette,
+  UL Monroe, University of New Orleans) grouped under "the state
+  transfer guarantee applies," and 8 private universities (Centenary,
+  Dillard, Franciscan Missionaries of Our Lady, Louisiana Christian,
+  Loyola New Orleans, Tulane, University of Holy Cross, Xavier)
+  grouped under "the state guarantee does not apply." Lists verified
+  against Louisiana system and LAICU sources Nov 7, 2026. Two year
+  colleges (for example LSU Eunice, Southern Shreveport) are sources
+  of dual enrollment credit, not transfer targets, so they are not in
+  the target list; graduate only seminaries are also excluded.
+- Two scenarios added under his direction, extending the existing
+  patterns: the block guarantee at McNeese State (any public, not
+  just one), and the private boundary at Loyola (not just Tulane).
+- Suite now: 12 scenarios, 12 passed; 55 steps, 55 passed.
+  Log: run-2026-11-07-full-louisiana.log. The Pages demo was
+  regenerated from the updated page and engine and redeployed.
+
 ## Next stages (not started)
 
-- Stage 7 (was Stage 6 in the first draft of this log): A simple web page where a family enters courses and a
+- Stage 8 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
