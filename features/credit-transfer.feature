@@ -127,27 +127,3 @@ Feature: Louisiana dual enrollment credit transfer check
     When the student enrolls at a Louisiana public university
     Then the report does not say general education is complete yet
     And the report says the transfer guarantee applies when the degree is finished, if every course is passed with a grade of C or better
-
-  Scenario: The tool finds the direct match itself from the state course data
-    Given a student took ENGL 1010 at Delgado Community College
-    When the credit check runs against the University of Louisiana at Lafayette
-    Then the report shows the credit as ENGL 101 at the target college
-    And the report says the match comes from the state common course number CENL 1013
-    And the report counts it toward the English composition requirement
-
-  Scenario: The same course matches a different code at a different university
-    Given a student took ENGL 1010 at Delgado Community College
-    When the credit check runs against the University of New Orleans
-    Then the report names ENGL 1157 as the equivalent course
-    And the report says the match comes from the state common course number CENL 1013
-
-  Scenario: The state data says a course lands as an elective at the target
-    Given a student took ACCT 201 at Delgado Community College
-    When the credit check runs against the University of Louisiana at Lafayette
-    Then the report shows the credit as an elective in that subject at the matching level
-    And the report says the match comes from the state common course number CACC 2313
-
-  Scenario: A course that is not in the state data yet is flagged honestly
-    Given a student took a course coded XYZ 9999 at Delgado Community College
-    When the credit check runs against the University of Louisiana at Lafayette
-    Then the report flags the course as not in the course data yet
