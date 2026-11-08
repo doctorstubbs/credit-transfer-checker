@@ -349,3 +349,27 @@ the dataset (scripts/build-dataset.py), re-inject the page data
 changes.
 
 ## Stage 12 (next): usage tracking and the email full report offer
+
+## Stage 11c: one path, the grade decides (Nov 8, 2026)
+
+Kris's call: planned and finished courses were always going to
+get the same equivalency answer, so the separate planning path
+was extra work for the user and the tool. Simplified the same
+night:
+
+- The Finished it / Planning to take it picker is gone from every
+  course row. Enter the grade if you know it; leave it blank if
+  you do not.
+- The engine derives status from the grade: a grade on record
+  makes the answer final (including the below C flag on transfer
+  degree courses, which is exactly where a known grade changes
+  the answer); no grade yet attaches the plain condition, "Counts
+  if the student earns a grade of C or better."
+- Two new scenarios pin it: a course entered with no grade gets
+  the same data match with the condition stated (watched failing
+  first, run-2026-11-08-one-path-red.log), and a course entered
+  with a grade carries no condition. The degree in progress
+  verdict is unchanged: a degree still being earned is a real
+  difference, not a display choice.
+- Suite: 24 scenarios, 24 passed; 118 steps, 118 passed
+  (run-2026-11-08-one-path.log).
