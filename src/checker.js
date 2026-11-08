@@ -68,10 +68,36 @@ function courseResult(course, target) {
   return { code: course.code, shownAs: 'unclassified', degreeCredit: null, countsToward: null, warning: null };
 }
 
+function effectiveSources(student) {
+  // One primary source from the top level fields, plus any additional
+  // source colleges the student earned credits at. A transfer check is
+  // always sending colleges (one or more) to one receiving college.
+  const primary = {
+    institution: student.primaryInstitution || null,
+    degree: student.degree || null,
+    allGradesCOrBetter: !!student.allGradesCOrBetter,
+    courses: student.courses || [],
+  };
+  const extras = (student.additionalSources || []).map((src) => ({
+    institution: src.institution || null,
+    degree: src.degree || null,
+    allGradesCOrBetter: !!src.allGradesCOrBetter,
+    courses: src.courses || [],
+  }));
+  if (Array.isArray(student.sources) && student.sources.length) {
+    return student.sources.map((src) => ({
+      institution: src.institution || null,
+      degree: src.degree || null,
+      allGradesCOrBetter: !!src.allGradesCOrBetter,
+      courses: src.courses || [],
+    }));
+  }
+  return [primary, ...extras];
+}
+
 function runCheck(student) {
   const target = student.target || { isPublic: true };
-  const courses = student.courses || [];
-  const isTransferDegree = TRANSFER_DEGREES.includes(student.degree);
+  const sources = effectiveSources(student);
 
   const report = {
     genEdComplete: false,
@@ -101,21 +127,27 @@ function runCheck(student) {
   // Louisiana Transfer Degree (AALT/ASLT) block guarantee at public
   // universities: general education met in full, all 60 hours transfer,
   // junior standing. La. R.S. 17:3163; C or better required per course.
-  if (isTransferDegree && target.isPublic) {
-    report.genEdComplete = true;
-    report.juniorStanding = true;
-    report.hoursTransferred = 60;
-    report.guaranteePromised = true;
+  // The guarantee attaches to the degree granting source college.
+  if (target.isPublic) {
+    for (const src of sources) {
+      if (!TRANSFER_DEGREES.includes(src.degree)) continue;
+      report.genEdComplete = true;
+      report.juniorStanding = true;
+      report.hoursTransferred = 60;
+      report.guaranteePromised = true;
 
-    const belowC = courses.filter(isBelowC);
-    if (student.allGradesCOrBetter && belowC.length === 0) {
-      report.noAdditionalGenEd = true;
-    }
-    if (belowC.length > 0) {
-      // A grade below C puts that course outside the guarantee; the
-      // receiving university decides that course on its own.
-      report.flaggedCoursesOutsideGuarantee = belowC;
-      report.universityDecidesFlaggedCourses = true;
+      const belowC = src.courses.filter(isBelowC);
+      if (src.allGradesCOrBetter && belowC.length === 0) {
+        report.noAdditionalGenEd = true;
+      }
+      if (belowC.length > 0) {
+        // A grade below C puts that course outside the guarantee; the
+        // receiving university decides that course on its own.
+        report.flaggedCoursesOutsideGuarantee.push(
+          ...belowC.map((c) => ({ ...c, sourceInstitution: src.institution }))
+        );
+        report.universityDecidesFlaggedCourses = true;
+      }
     }
   }
 
@@ -132,12 +164,15 @@ function runCheck(student) {
     report.electiveSubstitutedForPrerequisite = false;
   }
 
-  // Course by course outcomes.
-  for (const course of courses) {
-    const result = courseResult(course, target);
-    report.courseResults.push(result);
-    if (result.warning) {
-      report.warnings.push(result.warning);
+  // Course by course outcomes, tagged with the sending college.
+  for (const src of sources) {
+    for (const course of src.courses) {
+      const result = courseResult(course, target);
+      result.sourceInstitution = src.institution;
+      report.courseResults.push(result);
+      if (result.warning) {
+        report.warnings.push(result.warning);
+      }
     }
   }
 
