@@ -373,3 +373,25 @@ night:
   difference, not a display choice.
 - Suite: 24 scenarios, 24 passed; 118 steps, 118 passed
   (run-2026-11-08-one-path.log).
+
+## Stage 11d: the match question comes off the page (Nov 8, 2026)
+
+Kris asked what the match type dropdown was even for, and on the
+answer (it existed only because the tool once had no course data
+and had to ask the user the registrar's question) he directed its
+removal.
+
+- The match dropdown is gone from every course row. The page
+  never asks anyone whether a course matches.
+- Engine: a course with no catalog data behind it and no declared
+  fact now returns the honest not covered result ("not in the
+  course data yet", with the university decides warning) instead
+  of an unclassified blank. Declared facts still work for a
+  counselor who has the receiving college's answer in hand.
+- One legacy rule was caught by the new scenario: the Stage 5
+  hardcoded ENGL 1010 to ENGL 101 rule ignored the sending
+  college entirely. It now fires only when the sender is Delgado
+  or unnamed; a named college outside the data (the scenario uses
+  Baton Rouge Community College) gets the honest answer.
+- Suite: 25 scenarios, 25 passed; 122 steps, 122 passed
+  (run-2026-11-08-no-match-question.log; red run saved alongside).
