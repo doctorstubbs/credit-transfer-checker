@@ -1,112 +1,3 @@
-'use strict';
-
-const { COURSE_DATA } = require('./courses-data');
-
-// Page institution names -> Board of Regents matrix column keys.
-const INST_KEY = {
-  'Bossier Parish Community College': 'BPCC',
-  'Baton Rouge Community College': 'BRCC',
-  'Central Louisiana Technical Community College': 'CLTCC',
-  'Delgado Community College': 'DCC',
-  'Fletcher Technical Community College': 'FTCC',
-  'Louisiana Delta Community College': 'LDCC',
-  'Northshore Technical Community College': 'NTCC',
-  'Northwest Louisiana Technical Community College': 'NLTCC',
-  'Nunez Community College': 'NUNEZ',
-  'River Parishes Community College': 'RPCC',
-  'South Louisiana Community College': 'SLCC',
-  'Sowela Technical Community College': 'SOWELA',
-  'Louisiana State University Eunice': 'LSUE',
-  'Louisiana State University at Eunice': 'LSUE',
-  'Southern University at Shreveport': 'SUSLA',
-  'Grambling State University': 'GSU',
-  'Louisiana State University and A&M College': 'LSU A&M',
-  'Louisiana State University and A&M College (LSU)': 'LSU A&M',
-  'Louisiana State University at Alexandria': 'LSUA',
-  'Louisiana State University Shreveport': 'LSUS',
-  'Louisiana Tech University': 'LA Tech',
-  'McNeese State University': 'McNeese',
-  'Nicholls State University': 'Nicholls',
-  'Northwestern State University of Louisiana': 'NSU',
-  'Southeastern Louisiana University': 'SLU',
-  'Southern University and A&M College': 'SU A&M',
-  'Southern University and A&M College (Baton Rouge)': 'SU A&M',
-  'Southern University at New Orleans': 'SUNO',
-  'University of Louisiana at Lafayette': 'ULL',
-  'University of Louisiana at Monroe': 'ULM',
-  'University of New Orleans': 'UNO',
-  'Franciscan Missionaries of Our Lady University': 'FRAN U',
-  'Louisiana Christian University': 'LA Christian Univers',
-  'Loyola University New Orleans': 'LOYOLA UNIVERSITY',
-  'University of Holy Cross': 'U OF HOLY CROSS',
-};
-
-function normCode(c) {
-  return String(c || '').toUpperCase().replace(/\s+/g, '');
-}
-
-function codeVariants(c) {
-  const n = normCode(c);
-  const out = new Set([n]);
-  const m = n.match(/^([A-Z]+)(\d+)$/);
-  if (m) {
-    out.add(m[1] + m[2] + '0');
-    if (m[2].length > 1 && m[2].endsWith('0')) out.add(m[1] + m[2].slice(0, -1));
-  }
-  return [...out];
-}
-
-function cellCodes(raw) {
-  return String(raw).split(/\s+or\s+|\/|,/).map((x) => x.trim()).filter(Boolean);
-}
-
-function findInData(sourceName, targetName, course) {
-  const sKey = INST_KEY[sourceName];
-  const tKey = INST_KEY[targetName];
-  if (!sKey || !tKey || !course.code) return null;
-  const wanted = codeVariants(course.code);
-  for (const rec of COURSE_DATA.courses) {
-    const cell = rec.equivalents[sKey];
-    if (!cell) continue;
-    const hit = cellCodes(cell).some((c) => wanted.includes(normCode(c)));
-    if (hit) return rec;
-  }
-  return null;
-}
-
-function dataResult(rec, targetName, course) {
-  const tKey = INST_KEY[targetName];
-  const raw = rec.equivalents[tKey];
-  const base = {
-    code: course.code,
-    matchedBy: rec.lccn,
-    dataStatus: 'matched',
-    warning: null,
-    countsToward: rec.lccn === 'CENL 1013' ? 'English composition requirement' : null,
-    degreeCredit: course.hours != null ? course.hours : rec.hours,
-  };
-  if (raw == null || String(raw).trim() === '') {
-    return { ...base, shownAs: 'general elective',
-      warning: 'The state matrix lists no equivalent for this course at the target college, so it lands as a general elective and may not shorten the degree plan.' };
-  }
-  const cell = String(raw).trim();
-  if (/general\s+elective/i.test(cell)) {
-    return { ...base, shownAs: 'general elective',
-      warning: 'The state matrix lists this course as a general elective at the target college, so it may not shorten the degree plan.' };
-  }
-  if (cell.includes('***')) {
-    const subj = cell.replace(/\*/g, '').trim();
-    if (subj) {
-      return { ...base, shownAs: 'subject elective at matching level',
-        warning: 'Elective credit fills elective space; it does not satisfy a named course requirement.' };
-    }
-    return { ...base, shownAs: 'general elective',
-      warning: 'The state matrix lists elective credit only for this course at the target college.' };
-  }
-  const first = cellCodes(cell)[0];
-  return { ...base, shownAs: first.replace(/\s+/g, ' ') };
-}
-
 // Credit transfer rules engine, Louisiana v1.
 // Built to the approved domain model in features/credit-transfer.feature.
 // Every rule below traces to a source listed in README.md.
@@ -139,26 +30,7 @@ function annotatePlanned(result, course) {
   return result;
 }
 
-function courseResultRaw(course, target, sourceInstitution) {
-  // The state course data answers first when the user did not
-  // declare a match themselves: the tool finds the match.
-  if (course.directMatch === undefined && sourceInstitution && target && target.name) {
-    const rec = findInData(sourceInstitution, target.name, course);
-    if (rec) return dataResult(rec, target.name, course);
-    if (INST_KEY[sourceInstitution] && INST_KEY[target.name]) {
-      const r = manualResult(course, target);
-      r.dataStatus = 'not-in-data';
-      r.matchedBy = null;
-      return r;
-    }
-  }
-  const r = manualResult(course, target);
-  r.dataStatus = 'manual';
-  r.matchedBy = null;
-  return r;
-}
-
-function manualResult(course, target) {
+function courseResultRaw(course, target) {
   // Delgado catalog floor: only courses numbered 100 and above count.
   if (typeof course.number === 'number' && course.number < 100) {
     return {
@@ -317,7 +189,7 @@ function runCheck(student) {
   // Course by course outcomes, tagged with the sending college.
   for (const src of sources) {
     for (const course of src.courses) {
-      const result = annotatePlanned(courseResultRaw(course, target, src.institution), course);
+      const result = annotatePlanned(courseResultRaw(course, target), course);
       result.sourceInstitution = src.institution;
       report.courseResults.push(result);
       if (result.warning) {
