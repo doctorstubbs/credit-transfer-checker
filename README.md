@@ -31,8 +31,14 @@ Louisiana target list (14 public and 8 private universities, two
 scenarios added), then the source college model in Stage 9 (credits
 from several colleges in one check, reported college by college).
 Then the planning mode in Stage 10 (courses checked before they are
-taken, conditions stated plainly). Expected today: 17 scenarios,
-17 passed (run-2026-11-07-planning-mode.log).
+taken, conditions stated plainly). Then real course matching in
+Stage 11b, built only from current catalogs after an earlier build
+on an outdated statewide matrix was withdrawn on the owner's
+ruling: Delgado Community College and the University of Louisiana
+at Lafayette (both 2026-2027 catalogs) joined on the Louisiana
+common course numbers in the AY 2025-26 statewide catalog, with
+subject first course picking on the page. Expected today:
+22 scenarios, 22 passed (run-2026-11-08-catalog-data.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
