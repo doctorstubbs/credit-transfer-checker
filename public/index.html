@@ -71,8 +71,6 @@
         <option>Xavier University of Louisiana</option>
       </optgroup>
     </select>
-    <label class="check"><input type="checkbox" id="limited"> The student is applying to a limited access program (for example nursing or engineering)</label>
-    <label class="check"><input type="checkbox" id="prereq"> The target major requires a specific prerequisite course the student never took</label>
   </div>
 
   <button type="button" id="run">Run the credit check</button>
@@ -3078,9 +3076,9 @@ document.getElementById('run').addEventListener('click', async () => {
   const student = {
     sources: sources,
     dualEnrollmentCredits: true,
-    missingMajorPrerequisite: document.getElementById('prereq').checked,
+    missingMajorPrerequisite: false,
     target: target,
-    programType: document.getElementById('limited').checked ? 'limited_access' : 'general'
+    programType: 'general'
   };
 
   const res = await fetch('/api/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(student) });
