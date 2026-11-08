@@ -114,7 +114,12 @@ function courseResultRaw(course, target, sourceInstitution) {
   if (dataResult) return dataResult;
 
   // UL Lafayette direct equivalent example: ENGL 1010 becomes ENGL 101.
-  if (course.code === 'ENGL 1010' && target.name === 'University of Louisiana at Lafayette') {
+  // Legacy rule from before the source college model: it fires only
+  // when the sending college is Delgado or was never named. A named
+  // college outside the course data gets the honest not covered
+  // answer below, not a borrowed match.
+  if (course.code === 'ENGL 1010' && target.name === 'University of Louisiana at Lafayette'
+      && (!sourceInstitution || sourceInstitution === 'Delgado Community College')) {
     return {
       code: course.code,
       shownAs: 'ENGL 101',
@@ -144,6 +149,18 @@ function courseResultRaw(course, target, sourceInstitution) {
       countsToward: 'elective hours',
       warning: 'General elective hours do not shorten the degree plan by themselves.',
     };
+  }
+
+  // No catalog data and no declared fact: the tool says so honestly
+  // instead of asking the user a registrar's question (Kris's call,
+  // Nov 8, 2026: the match dropdown came off the page). A counselor
+  // who has the receiving college's answer in hand can still declare
+  // it through the paths above.
+  if (course.directMatch === undefined && course.subjectOffered === undefined) {
+    return { code: course.code, shownAs: 'not in the course data yet', degreeCredit: 0,
+      countsToward: null,
+      warning: 'This course is not in the course data we have yet, so the tool cannot call it. The university decides it on its own.',
+      dataStatus: 'not-in-data' };
   }
 
   return { code: course.code, shownAs: 'unclassified', degreeCredit: null, countsToward: null, warning: null };
