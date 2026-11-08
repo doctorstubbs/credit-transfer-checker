@@ -80,14 +80,16 @@ function isBelowC(course) {
 }
 
 function annotateCondition(result, course) {
-  // One path for every course (Kris's simplification, Nov 8, 2026):
-  // planned and finished courses get the same equivalency answer.
-  // The only difference a grade makes: with a grade on record the
-  // answer is final, including the below C flag on degree courses;
-  // with no grade yet, the answer carries its condition in plain
-  // words. Status follows the grade, never a separate declaration.
-  result.status = course.grade ? 'completed'
-    : (course.status === 'completed' ? 'completed' : 'planned');
+  // One path for every course (Kris's simplifications, Nov 8, 2026):
+  // planned and finished courses get the same equivalency answer,
+  // and a course entered with no grade is assumed to have been
+  // passed with a grade of C or better, which is what transfer
+  // credit requires in the first place. The page states that
+  // assumption in plain words. A grade on record still rules where
+  // it legally matters: a below C grade inside a transfer degree
+  // is flagged by name (see the degree block above). Only a course
+  // declared planned sight unseen carries the condition line.
+  result.status = course.status === 'planned' ? 'planned' : 'completed';
   result.condition = null;
   if (result.status === 'planned' && result.degreeCredit) {
     // The equivalency answer is firm today; the counting is earned.
