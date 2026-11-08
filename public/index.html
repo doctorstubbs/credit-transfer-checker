@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will This Credit Count? Louisiana Credit Transfer Checker</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #f7f5ef; color: #1c2430; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 4px; }
+  .sub { color: #44506a; margin: 0 0 20px; }
+  .card { background: #fff; border: 1px solid #ddd6c4; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+  label { display: block; font-weight: bold; margin: 12px 0 4px; font-size: 15px; }
+  select, input[type=text] { width: 100%; padding: 9px; font-size: 16px; border: 1px solid #b9b2a0; border-radius: 6px; box-sizing: border-box; }
+  .row { display: grid; grid-template-columns: 1.2fr 0.7fr 1.6fr; gap: 8px; margin-bottom: 8px; }
+  .check { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; font-weight: normal; }
+  .check input { margin-top: 3px; }
+  button { background: #1d3fae; color: #ffd21f; border: 0; border-radius: 8px; padding: 13px 20px; font-size: 17px; font-weight: bold; cursor: pointer; width: 100%; }
+  button.secondary { background: #e9e4d4; color: #1c2430; margin-top: 8px; }
+  .verdict { font-size: 19px; font-weight: bold; margin: 6px 0; }
+  .good { color: #146c2e; } .warn { color: #9a5b00; } .bad { color: #a31621; }
+  ul { margin: 6px 0 6px 18px; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
+  td, th { border-bottom: 1px solid #e3ddcc; padding: 6px 4px; text-align: left; vertical-align: top; }
+  .fine { font-size: 13px; color: #5a6376; }
+  #report { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Will this credit count?</h1>
+  <p class="sub">A Louisiana dual enrollment credit check for families. Built on the Louisiana Transfer Degree guarantee and the Board of Regents articulation rules. Version 1 covers the rules listed at the bottom of this page.</p>
+
+  <div class="card">
+    <label for="degree">Transfer degree completed (if any)</label>
+    <select id="degree">
+      <option value="">No transfer degree, checking individual courses</option>
+      <option value="AALT">Associate of Arts Louisiana Transfer (AALT)</option>
+      <option value="ASLT">Associate of Science Louisiana Transfer (ASLT)</option>
+    </select>
+    <label class="check"><input type="checkbox" id="allC" checked> Every course in the degree was passed with a grade of C or better</label>
+
+    <label for="target">Target college</label>
+    <select id="target">
+      <option value="public">A Louisiana public university</option>
+      <option value="ull">University of Louisiana at Lafayette</option>
+      <option value="tulane">Tulane University (private)</option>
+    </select>
+    <label class="check"><input type="checkbox" id="limited"> The student is applying to a limited access program (for example nursing or engineering)</label>
+    <label class="check"><input type="checkbox" id="prereq"> The target major requires a specific prerequisite course the student never took</label>
+  </div>
+
+  <div class="card">
+    <label>Courses to check</label>
+    <div id="courses"></div>
+    <button type="button" class="secondary" id="addCourse">Add another course</button>
+    <p class="fine">For each course: its code (example ENGL 1010), the grade earned, and what a counselor would find in the articulation matrix: a direct match, no direct match in a subject the college teaches, or a subject the college does not offer.</p>
+  </div>
+
+  <button type="button" id="run">Run the credit check</button>
+
+  <div class="card" id="report">
+    <div id="verdicts"></div>
+    <div id="courseTable"></div>
+    <div id="warnings"></div>
+  </div>
+
+  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+</div>
+
+<script>
+const coursesDiv = document.getElementById('courses');
+
+function courseRow() {
+  const div = document.createElement('div');
+  div.className = 'row';
+  div.innerHTML =
+    '<input type="text" class="c-code" placeholder="ENGL 1010" aria-label="Course code">' +
+    '<select class="c-grade" aria-label="Grade">' +
+      '<option value="">Grade</option><option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>' +
+    '</select>' +
+    '<select class="c-match" aria-label="Match type">' +
+      '<option value="direct">Direct match in the matrix</option>' +
+      '<option value="nodirect">No direct match, subject is taught there</option>' +
+      '<option value="nosubject">Subject not offered there</option>' +
+    '</select>';
+  coursesDiv.appendChild(div);
+}
+courseRow();
+courseRow();
+document.getElementById('addCourse').addEventListener('click', courseRow);
+
+function parseNumber(code) {
+  const m = String(code).match(/(\d+)\s*$/);
+  return m ? parseInt(m[1], 10) : null;
+}
+
+document.getElementById('run').addEventListener('click', async () => {
+  const targetSel = document.getElementById('target').value;
+  const target = targetSel === 'tulane'
+    ? { name: 'Tulane University', isPublic: false, teachesSubject: null }
+    : targetSel === 'ull'
+      ? { name: 'University of Louisiana at Lafayette', isPublic: true, teachesSubject: true }
+      : { name: 'Louisiana public university', isPublic: true, teachesSubject: true };
+
+  const courses = [];
+  document.querySelectorAll('#courses .row').forEach(r => {
+    const code = r.querySelector('.c-code').value.trim();
+    if (!code) return;
+    const grade = r.querySelector('.c-grade').value || null;
+    const match = r.querySelector('.c-match').value;
+    courses.push({
+      code: code.toUpperCase(),
+      grade: grade,
+      number: parseNumber(code),
+      directMatch: match === 'direct' ? true : (match === 'nodirect' ? false : undefined),
+      subjectOffered: match === 'nosubject' ? false : undefined
+    });
+  });
+
+  const degree = document.getElementById('degree').value;
+  const student = {
+    degree: degree === '' ? null : degree,
+    allGradesCOrBetter: document.getElementById('allC').checked,
+    courses: courses,
+    dualEnrollmentCredits: true,
+    missingMajorPrerequisite: document.getElementById('prereq').checked,
+    target: target,
+    programType: document.getElementById('limited').checked ? 'limited_access' : 'general'
+  };
+
+  const res = await fetch('/api/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(student) });
+  const report = await res.json();
+  render(report);
+});
+
+function render(r) {
+  const box = document.getElementById('report');
+  box.style.display = 'block';
+  const v = [];
+  if (r.allCoursesVerifyIndividually) {
+    v.push('<p class="verdict warn">Private university: the Louisiana state guarantee does not apply here.</p>');
+    v.push('<p>Every course must be verified with the university individually. Nothing on this report is promised.</p>');
+  }
+  if (r.genEdComplete) v.push('<p class="verdict good">General education: complete. No additional general education courses required under the transfer guarantee.</p>');
+  if (r.hoursTransferred) v.push('<p class="verdict good">All ' + r.hoursTransferred + ' credit hours transfer, with junior standing.</p>');
+  if (r.flaggedCoursesOutsideGuarantee && r.flaggedCoursesOutsideGuarantee.length) {
+    v.push('<p class="verdict bad">Flagged: ' + r.flaggedCoursesOutsideGuarantee.map(c => c.code === 'UNSPECIFIED' ? 'a course below a C' : c.code).join(', ') + ' falls outside the transfer guarantee. The receiving university decides that course on its own.</p>');
+  }
+  if (r.programAdmissionSeparate) v.push('<p class="verdict warn">Limited access program: admission is a separate decision. The program\'s own admission requirements still have to be met.</p>');
+  if (r.prerequisiteStillRequired) v.push('<p class="verdict warn">A required major prerequisite is still missing. Elective credit does not substitute for it.</p>');
+  document.getElementById('verdicts').innerHTML = v.join('') || '<p class="verdict">Course by course results below.</p>';
+
+  let t = '';
+  if (r.courseResults && r.courseResults.length) {
+    t = '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>' +
+      r.courseResults.map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('') + '</table>';
+  }
+  document.getElementById('courseTable').innerHTML = t;
+
+  document.getElementById('warnings').innerHTML = (r.warnings && r.warnings.length)
+    ? '<p><strong>Warnings</strong></p><ul>' + r.warnings.map(w => '<li>' + w + '</li>').join('') + '</ul>'
+    : '';
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
