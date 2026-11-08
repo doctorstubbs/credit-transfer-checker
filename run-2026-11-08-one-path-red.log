@@ -1,0 +1,20 @@
+
+> credit-transfer-tdd@0.1.0 test
+> cucumber-js
+
+This Node.js version (v24.22.1) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+Failures:
+
+1) Scenario: A course entered with no grade gets the same match with the condition stated # features/credit-transfer.feature:165
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student plans to attend "University of Louisiana at Lafayette" # features/steps/credit-transfer.steps.js:316
+   ✔ And the student entered "MATH 130" at "Delgado Community College" with no grade yet # features/steps/credit-transfer.steps.js:345
+   ✔ When the credit check runs # features/steps/credit-transfer.steps.js:147
+   ✔ Then the course counts as "MATH 109" # features/steps/credit-transfer.steps.js:321
+   ✖ And the course counts only if the student earns a grade of C or better # features/steps/credit-transfer.steps.js:339
+       AssertionError [ERR_ASSERTION]: expected a C-or-better condition, got: null
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:341:10)
+
+24 scenarios (1 failed, 23 passed)
+118 steps (1 failed, 117 passed)
+0m00.148s (executing steps: 0m00.007s)
