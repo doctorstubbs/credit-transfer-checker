@@ -297,3 +297,55 @@ verified after the fact.
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
+
+## Stage 11b: real course matching rebuilt from current catalogs only (Nov 8, 2026)
+
+Kris's direction: the course list must be pickable (subject first,
+then course), and easy to use. Built the same night, current
+sources only, after the Stage 11 withdrawal.
+
+Data, all current editions, all read Nov 8, 2026:
+- Louisiana Statewide Common Course Catalog, AY 2025-26 edition
+  (Board of Regents): 292 common courses and 41 subject families
+  extracted to data/statewide-courses.json.
+- Delgado Community College Catalog, 2026-2027: 131 courses with
+  printed Louisiana common course numbers, harvested from the
+  catalog's own course descriptions (data/harvests/).
+- University of Louisiana at Lafayette Catalog, 2026-2027: 96
+  courses with printed numbers, harvested the same way.
+- data/courses.json joins them on the common number: 72 of the
+  131 Delgado courses have a UL Lafayette partner today.
+- Why current matters, proven in the harvest: UL Lafayette's
+  ENGL 101 is now titled Introduction to Academic Writing, its
+  MATH 103 no longer exists (college algebra is MATH 105,
+  CMAT 1203), and Delgado's MATH 128 and UL Lafayette's MATH 105
+  share CMAT 1203 while sharing no local number at all.
+
+Scenarios first: five new scenarios written from what the current
+catalogs actually say (the tool finds the Delgado English match
+itself; different numbers at both colleges match on the state
+number; a state number the university does not carry becomes a
+level elective in a subject it teaches, Delgado FREN 101 against
+UL Lafayette's CFRN 1014 French; a subject outside the harvested
+data, accounting at UL Lafayette, gets an honest not covered flag
+instead of an invented answer; a planned course matched from the
+data carries its C or better condition). Watched failing
+(run-2026-11-08-catalog-data-red.log), then the engine lookup was
+built on the dataset: 22 scenarios, 22 passed; 109 steps, 109
+passed (run-2026-11-08-catalog-data.log).
+
+Page: subject first course picking per Kris's choice. For a
+college in the data, each course row offers a subject dropdown,
+then a course dropdown for that subject at that college (code and
+title). Picking a course fills the code and the state number and
+removes the match question. Colleges outside the data keep the
+type-the-code path. The page states its coverage plainly: which
+catalogs, which editions, how many courses.
+
+Growth path unchanged and now proven: run the same harvest on
+the next college's current catalog, add its harvest file, rebuild
+the dataset (scripts/build-dataset.py), re-inject the page data
+(scripts/inject-data.py). Nothing about the page or engine
+changes.
+
+## Stage 12 (next): usage tracking and the email full report offer

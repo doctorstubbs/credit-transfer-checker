@@ -90,6 +90,28 @@ the same file.
 5. Verify three pairings against the colleges' own catalogs before
    publishing, and say in the build log which ones were checked.
 
+## Course picking: subject first (Kris's choice, Nov 8, 2026)
+
+When the dataset lands (Stage 11b), nobody types a course code
+from memory and nobody faces one giant course dropdown. The flow
+is subject first:
+
+1. A short subject dropdown (English, Mathematics, Biology,
+   History, Psychology, and the other families in the data; the
+   families come straight from the state rubric groups, named in
+   plain words).
+2. A course dropdown listing only that college's courses in the
+   chosen subject, each line showing the local code and the title
+   ("ENGL 1010, English Composition I").
+3. Picking a course carries its state common number with it, so
+   the match question never appears for a listed course.
+
+A plain dropdown of every course at a college was rejected on
+purpose: at a thousand plus courses it is unusable on a phone.
+Subject first keeps every list short at any dataset size, which
+is what lets the data grow to the full catalog without the page
+changing.
+
 ## Keeping it true
 
 - The catalog is reissued yearly (September) and the matrix is
