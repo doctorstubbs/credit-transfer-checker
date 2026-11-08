@@ -20,7 +20,17 @@ function isBelowC(course) {
   return course.grade && BELOW_C_GRADES.includes(course.grade.toUpperCase());
 }
 
-function courseResult(course, target) {
+function annotatePlanned(result, course) {
+  result.status = course.status === 'planned' ? 'planned' : 'completed';
+  result.condition = null;
+  if (result.status === 'planned' && result.degreeCredit) {
+    // The equivalency answer is firm today; the counting is earned.
+    result.condition = 'Counts if the student earns a grade of C or better';
+  }
+  return result;
+}
+
+function courseResultRaw(course, target) {
   // Delgado catalog floor: only courses numbered 100 and above count.
   if (typeof course.number === 'number' && course.number < 100) {
     return {
@@ -75,12 +85,14 @@ function effectiveSources(student) {
   const primary = {
     institution: student.primaryInstitution || null,
     degree: student.degree || null,
+    degreeStatus: student.degreeStatus || 'completed',
     allGradesCOrBetter: !!student.allGradesCOrBetter,
     courses: student.courses || [],
   };
   const extras = (student.additionalSources || []).map((src) => ({
     institution: src.institution || null,
     degree: src.degree || null,
+    degreeStatus: src.degreeStatus || 'completed',
     allGradesCOrBetter: !!src.allGradesCOrBetter,
     courses: src.courses || [],
   }));
@@ -88,6 +100,7 @@ function effectiveSources(student) {
     return student.sources.map((src) => ({
       institution: src.institution || null,
       degree: src.degree || null,
+      degreeStatus: src.degreeStatus || 'completed',
       allGradesCOrBetter: !!src.allGradesCOrBetter,
       courses: src.courses || [],
     }));
@@ -114,6 +127,8 @@ function runCheck(student) {
     warnings: [],
     guaranteePromised: false,
     allCoursesVerifyIndividually: false,
+    degreeGuaranteeOnCompletion: false,
+    degreeGuaranteeCondition: null,
   };
 
   // The state guarantee binds Louisiana public institutions only.
@@ -131,6 +146,13 @@ function runCheck(student) {
   if (target.isPublic) {
     for (const src of sources) {
       if (!TRANSFER_DEGREES.includes(src.degree)) continue;
+      if (src.degreeStatus === 'in_progress') {
+        // Not a verdict yet: the guarantee is earned at completion.
+        report.degreeGuaranteeOnCompletion = true;
+        report.degreeGuaranteeCondition =
+          'Applies when the degree is finished, if every course is passed with a grade of C or better';
+        continue;
+      }
       report.genEdComplete = true;
       report.juniorStanding = true;
       report.hoursTransferred = 60;
@@ -167,7 +189,7 @@ function runCheck(student) {
   // Course by course outcomes, tagged with the sending college.
   for (const src of sources) {
     for (const course of src.courses) {
-      const result = courseResult(course, target);
+      const result = annotatePlanned(courseResultRaw(course, target), course);
       result.sourceInstitution = src.institution;
       report.courseResults.push(result);
       if (result.warning) {
