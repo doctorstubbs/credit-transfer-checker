@@ -189,12 +189,42 @@ any rule (full citations in README.md):
   guarantee while a BRCC course in the same check is evaluated on
   its own and tagged to BRCC.
 
+## Stage 10, Planning mode: check before you enroll (Sat Nov 7, 2026)
+
+- Kris's addition: students also need to plan courses they have not
+  taken yet, not only verify finished ones. Explained and agreed in
+  plain terms: the match answer is firm before enrollment; the grade
+  based answers become conditions.
+- Scenarios first, watched failing (14 passed, 3 failed): a planned
+  course with a direct equivalent (marked planned, counts toward the
+  requirement if a C or better is earned); a planned course that
+  only counts as an elective (the warning lands before the money is
+  spent); a transfer degree still in progress (no completion verdict
+  yet; the guarantee applies at completion if every course finishes
+  at C or better).
+- Engine: courses carry a status (completed or planned); planned
+  results keep firm equivalency answers and gain a condition line.
+  Sources carry a degree status (completed or in progress); an in
+  progress degree yields a guarantee on completion answer instead of
+  a block verdict. Suite: 17 scenarios, 17 passed, 85 steps.
+  Log: run-2026-11-07-planning-mode.log.
+- Page: every course row now starts with Finished it or Planning to
+  take it (planned rows ignore the grade box), each college block
+  offers the transfer degree as completed or still working on it,
+  and results label planned courses with their condition in plain
+  words. Verified end to end locally with an in progress AALT and a
+  planned ENGL 1010.
+- Note: the audience subtitle reached its final wording in this
+  stretch (largest population first, no "families"): "A Louisiana
+  college credit check: for community college transfers, dual
+  enrollment and early college students, and anyone moving credits
+  between Louisiana colleges."
+
 ## Next stages (not started)
 
-- Stage 10: anonymous usage counts plus email capture for the full
-  report (direction confirmed by Kris Nov 7, 2026, held on standby
-  until the data model was right; it now is).
-- Stage 11 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
+- Stage 11: anonymous usage counts plus email capture for the full
+  report (direction confirmed by Kris Nov 7, 2026).
+- Stage 12 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
