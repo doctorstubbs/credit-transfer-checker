@@ -85,7 +85,7 @@
     <div id="warnings"></div>
   </div>
 
-  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. Every course gets the same match answer either way: enter the grade if you know it and the answer is final; leave the grade blank and the answer carries its condition in plain words (the match is firm today; the counting is earned with a grade of C or better). This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. Every course gets the same match answer either way: enter the grade if you know it and the answer is final; leave the grade blank and the answer carries its condition in plain words (the match is firm today; the counting is earned with a grade of C or better). Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
 </div>
 
 <script>/*DATA-START*/
@@ -2964,11 +2964,7 @@ function courseRowHTML() {
     '<select class="c-grade" aria-label="Grade">' +
       '<option value="">Grade</option><option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>' +
     '</select>' +
-    '<select class="c-match" aria-label="Match type">' +
-      '<option value="direct">Direct match in the matrix</option>' +
-      '<option value="nodirect">No direct match, subject is taught there</option>' +
-      '<option value="nosubject">Subject not offered there</option>' +
-    '</select></div>';
+    '</div>';
 }
 
 function addSourceBlock() {
@@ -3041,10 +3037,8 @@ sourcesDiv.addEventListener('change', (e) => {
     if (opt && opt.value) {
       row.querySelector('.c-code').value = opt.value;
       row.dataset.lccn = opt.getAttribute('data-lccn') || '';
-      row.querySelector('.c-match').disabled = true;
     } else {
       row.dataset.lccn = '';
-      row.querySelector('.c-match').disabled = false;
     }
   }
 });
@@ -3071,16 +3065,13 @@ document.getElementById('run').addEventListener('click', async () => {
     block.querySelectorAll('.s-courses .row').forEach(r => {
       const code = r.querySelector('.c-code').value.trim();
       if (!code) return;
-      const match = r.querySelector('.c-match').value;
       const grade = r.querySelector('.c-grade').value || null;
       courses.push({
         code: code.toUpperCase(),
         lccn: r.dataset.lccn || undefined,
         status: grade ? 'completed' : 'planned',
         grade: grade,
-        number: parseNumber(code),
-        directMatch: match === 'direct' ? true : (match === 'nodirect' ? false : undefined),
-        subjectOffered: match === 'nosubject' ? false : undefined
+        number: parseNumber(code)
       });
     });
     const degreeRaw = block.querySelector('.s-degree').value;
