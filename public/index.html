@@ -85,7 +85,7 @@
     <div id="warnings"></div>
   </div>
 
-  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. Courses can be checked two ways: finished courses are judged on the grade earned, and planned courses are answered with the condition stated plainly (the match is firm today; the counting is earned with a grade of C or better). This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. Every course gets the same match answer either way: enter the grade if you know it and the answer is final; leave the grade blank and the answer carries its condition in plain words (the match is firm today; the counting is earned with a grade of C or better). This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
 </div>
 
 <script>/*DATA-START*/
@@ -2958,10 +2958,6 @@ let sourceCount = 0;
 
 function courseRowHTML() {
   return '<div class="row">' +
-    '<select class="c-status" aria-label="Course status">' +
-      '<option value="completed">Finished it</option>' +
-      '<option value="planned">Planning to take it</option>' +
-    '</select>' +
     '<select class="c-subject" aria-label="Subject"><option value="">Pick a subject</option></select>' +
     '<select class="c-course" aria-label="Course" disabled><option value="">Pick the course</option></select>' +
     '<input type="text" class="c-code" placeholder="or type the code: ENGL 1010" aria-label="Course code">' +
@@ -3076,12 +3072,12 @@ document.getElementById('run').addEventListener('click', async () => {
       const code = r.querySelector('.c-code').value.trim();
       if (!code) return;
       const match = r.querySelector('.c-match').value;
-      const status = r.querySelector('.c-status').value;
+      const grade = r.querySelector('.c-grade').value || null;
       courses.push({
         code: code.toUpperCase(),
         lccn: r.dataset.lccn || undefined,
-        status: status,
-        grade: status === 'planned' ? null : (r.querySelector('.c-grade').value || null),
+        status: grade ? 'completed' : 'planned',
+        grade: grade,
         number: parseNumber(code),
         directMatch: match === 'direct' ? true : (match === 'nodirect' ? false : undefined),
         subjectOffered: match === 'nosubject' ? false : undefined
@@ -3138,7 +3134,7 @@ function render(r) {
     t = '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>';
     Object.keys(groups).forEach(college => {
       t += '<tr class="srchead"><td colspan="4">Credits from ' + college + '</td></tr>';
-      t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">Planned. ' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
+      t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">No grade entered yet. ' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
     });
     t += '</table>';
   }
