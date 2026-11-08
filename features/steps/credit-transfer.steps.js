@@ -292,3 +292,52 @@ Then('the report says the transfer guarantee applies when the degree is finished
   assert.strictEqual(this.report.degreeGuaranteeOnCompletion, true);
   assert.ok(this.report.degreeGuaranteeCondition && this.report.degreeGuaranteeCondition.includes('C or better'));
 });
+
+Given('the student completed {string} at {string} with a grade of {string}', function (code, institution, grade) {
+  this.student.sources = [{ institution, degree: null, allGradesCOrBetter: false,
+    courses: [{ code, grade, status: 'completed' }] }];
+});
+
+Given('the student plans to take {string} at {string}', function (code, institution) {
+  this.student.sources = [{ institution, degree: null, allGradesCOrBetter: false,
+    courses: [{ code, status: 'planned' }] }];
+});
+
+Then('the match comes from the current catalog data', function () {
+  const r = this.report.courseResults[0];
+  assert.strictEqual(r.matchedBy, 'catalog-data');
+});
+
+Then('the course is flagged as not covered by the current course data yet', function () {
+  const r = this.report.courseResults[0];
+  assert.strictEqual(r.dataStatus, 'no-match-in-data');
+});
+
+Given('a student plans to attend {string}', function (institution) {
+  this.student.targetInstitution = institution;
+  this.student.target = { name: institution, isPublic: true };
+});
+
+Then('the course counts as {string}', function (expected) {
+  const r = this.report.courseResults[0];
+  assert.strictEqual(r.shownAs, expected);
+});
+
+Then('the course counts as a level elective at the {int} level', function (level) {
+  const r = this.report.courseResults[0];
+  assert.ok(/^[A-Z]+ \dXX$/.test(r.shownAs || ''),
+    'shownAs should be a level elective code, got: ' + r.shownAs);
+  assert.strictEqual(r.shownAs.split(' ')[1][0], String(level)[0]);
+});
+
+Then('the student is warned the credit fills no named course requirement', function () {
+  const r = this.report.courseResults[0];
+  assert.ok(r.warning && r.warning.includes('named course requirement'),
+    'expected a named-requirement warning, got: ' + r.warning);
+});
+
+Then('the course counts only if the student earns a grade of C or better', function () {
+  const r = this.report.courseResults[0];
+  assert.ok(r.condition && r.condition.includes('C or better'),
+    'expected a C-or-better condition, got: ' + r.condition);
+});
