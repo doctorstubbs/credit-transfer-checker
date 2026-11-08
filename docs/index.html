@@ -35,14 +35,14 @@
   <h1>Will this credit count?</h1>
 
   <div class="card">
-    <h2 style="margin-top:0;font-size:20px;">Where your credits come from</h2>
-    <p class="fine" style="margin-top:0;">Add every college you earned credits at.</p>
+    <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
+    <p class="fine" style="margin-top:0;">Add every college you took courses at, or plan to.</p>
     <div id="sources"></div>
     <button type="button" class="secondary" id="addSource">Add another college</button>
   </div>
 
   <div class="card">
-    <label for="target" style="margin-top:0;">Target college (where the credits are going)</label>
+    <label for="target" style="margin-top:0;">Target college (where you want the courses to count)</label>
     <select id="target">
       <optgroup label="Louisiana public universities: the state transfer guarantee applies">
         <option>Grambling State University</option>
@@ -87,7 +87,7 @@
   </div>
   <details class="disclosure"><summary>Where this data comes from, and what this check assumes</summary>
     <p class="fine" id="coverage"></p>
-  <p class="fine">Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course was passed with a grade of C or better, which is what transfer credit requires in the first place. If a course came in below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  <p class="fine">Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course is passed with a grade of C or better, which is what transfer credit requires in the first place. If a course ends below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
   </details>
 </div>
 
@@ -2975,7 +2975,7 @@ function addSourceBlock() {
   div.innerHTML =
     '<h3>College ' + sourceCount + '</h3>' +
     '<label>College name</label><select class="s-name">' + options + '</select>' +
-    '<label>Courses taken at this college</label>' +
+    '<label>Courses taken or planned at this college</label>' +
     '<div class="s-courses">' + courseRowHTML() + courseRowHTML() + '</div>' +
     '<button type="button" class="secondary small s-addcourse">Add a course at this college</button>';
   div.querySelector('.s-addcourse').addEventListener('click', () => {
@@ -3112,8 +3112,8 @@ function render(r) {
     });
     t = '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>';
     Object.keys(groups).forEach(college => {
-      t += '<tr class="srchead"><td colspan="4">Credits from ' + college + '</td></tr>';
-      t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">No grade entered yet. ' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
+      t += '<tr class="srchead"><td colspan="4">Courses from ' + college + '</td></tr>';
+      t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
     });
     t += '</table>';
   }
