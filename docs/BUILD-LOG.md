@@ -395,3 +395,28 @@ removal.
   Baton Rouge Community College) gets the honest answer.
 - Suite: 25 scenarios, 25 passed; 122 steps, 122 passed
   (run-2026-11-08-no-match-question.log; red run saved alongside).
+
+## Stage 11e: assume C or better (Nov 8, 2026)
+
+Kris's call: particular courses are being assessed one by one,
+not only inside transfer degrees, so the tool should simply
+assume a grade of C or better instead of asking. He is right
+that the rules never read the letter itself.
+
+- The grade dropdown is gone from every course row. A course row
+  is now: subject, course, code. Nothing else.
+- The engine assumes a course entered with no grade was passed
+  with a C or better, and says so: the rules text on the page
+  states the assumption plainly, with the honest edge (a course
+  below a C is decided by the receiving university on its own).
+- What grades still do where they legally matter: the transfer
+  degree block keeps its C or better attestation, and when a
+  real grade is supplied (a transcript, an audit) a below C
+  course inside a degree is still flagged by name, pinned by the
+  original degree scenarios. A course declared planned sight
+  unseen still carries its condition line.
+- The Stage 11c no grade scenario was rewritten to the new rule
+  (assumed C or better, final answer, no condition) and watched
+  failing before the engine change.
+- Suite: 25 scenarios, 25 passed; 122 steps, 122 passed
+  (run-2026-11-08-assume-c.log; red run saved alongside).
