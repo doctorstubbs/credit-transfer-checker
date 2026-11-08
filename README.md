@@ -28,8 +28,10 @@ npm test
 History: the recorded red state (10 failing, red-run-2026-11-07.log)
 was built to green in Stage 5, then extended in Stage 7 to the full
 Louisiana target list (14 public and 8 private universities, two
-scenarios added). Expected today: 12 scenarios, 12 passed
-(run-2026-11-07-full-louisiana.log).
+scenarios added), then the source college model in Stage 9 (credits
+from several colleges in one check, reported college by college).
+Expected today: 14 scenarios, 14 passed
+(run-2026-11-07-source-colleges.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
