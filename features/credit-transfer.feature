@@ -174,3 +174,9 @@ Feature: Louisiana dual enrollment credit transfer check
     And the student completed "ENGL 1010" at "Delgado Community College" with a grade of "B"
     When the credit check runs
     Then the course carries no grade condition
+
+  Scenario: A typed course from a college outside the course data gets an honest not covered answer
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "ENGL 1010" at "Baton Rouge Community College" with a grade of "B"
+    When the credit check runs
+    Then the course is flagged as not in the course data yet
