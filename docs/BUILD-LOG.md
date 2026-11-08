@@ -159,9 +159,42 @@ any rule (full citations in README.md):
   full articulation data) planned for a private repo at the selling
   stage. Decision recorded in chat Nov 7, 2026.
 
+## Stage 9, Source colleges: many senders, one receiver (Sat Nov 7, 2026)
+
+- Kris's catch while using the live page: it asked for a target
+  college and courses, but never asked where the courses were taken,
+  and real students hold credits from several colleges at once.
+  Research confirms the field's model: transfer is always a sending
+  college and a receiving college, articulation agreements are
+  between two specific colleges, and registrars evaluate transcript
+  by transcript.
+- Method followed: scenarios first. Two scenarios were written and
+  watched failing (12 passed, 2 failed): credits from Delgado and
+  Baton Rouge Community College evaluated in one check and grouped
+  by college in the report; a transfer degree from Delgado plus
+  loose courses from BRCC, where the block verdict and the course
+  by course verdict coexist.
+- Engine: the input model is now sources (each with its institution,
+  its own transfer degree if any, and its courses) to one target.
+  The block guarantee attaches to the degree granting college.
+  Course results carry their source college. All 12 earlier
+  scenarios still pass unchanged; suite is 14 scenarios, 14 passed,
+  70 steps. Log: run-2026-11-07-source-colleges.log.
+- Page: a "Where your credits come from" section of repeatable
+  college blocks (full Louisiana source list, community colleges
+  included, plus out of state and not listed options), each with
+  its own degree selector and course rows, and an "Add another
+  college" button. Results render grouped under each college's name.
+- Verified end to end locally: AALT at Delgado fires the block
+  guarantee while a BRCC course in the same check is evaluated on
+  its own and tagged to BRCC.
+
 ## Next stages (not started)
 
-- Stage 9 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
+- Stage 10: anonymous usage counts plus email capture for the full
+  report (direction confirmed by Kris Nov 7, 2026, held on standby
+  until the data model was right; it now is).
+- Stage 11 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
