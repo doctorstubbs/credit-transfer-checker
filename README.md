@@ -24,8 +24,10 @@ npm test
 ```
 
 History: the recorded red state (10 failing, red-run-2026-11-07.log)
-was built to green in Stage 5. Expected today: 10 scenarios,
-10 passed (green-run-2026-11-07.log).
+was built to green in Stage 5, then extended in Stage 7 to the full
+Louisiana target list (14 public and 8 private universities, two
+scenarios added). Expected today: 12 scenarios, 12 passed
+(run-2026-11-07-full-louisiana.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
@@ -45,6 +47,7 @@ will this credit count, and what will it count as, at the target college?
 - DOMAIN OWNER APPROVED: Kris reviewed all 10 scenarios on Nov 7, 2026 and approved them as written ("These all look good to me"). The three soft spots in the checklist below stand as the approved wording.
 - RED RUN RECORDED Nov 7, 2026: 10 scenarios, 10 failed, 0 undefined, every failure the intentional 'Not implemented' stub. Log: red-run-2026-11-07.log.
 - GREEN RUN RECORDED Nov 7, 2026: rules engine built in src/checker.js; 10 scenarios, 10 passed, 46 steps, 46 passed on the first full implementation run. Log: green-run-2026-11-07.log. Stage 5 in docs/BUILD-LOG.md.
+- FULL LOUISIANA LIST Nov 7, 2026: target list carries all 14 public and 8 private Louisiana universities; suite extended to 12 scenarios, 12 passed. Stage 7 in docs/BUILD-LOG.md.
 
 ## Sources each scenario stands on (verified Nov 7, 2026)
 
