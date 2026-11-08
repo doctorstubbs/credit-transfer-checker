@@ -463,3 +463,26 @@ to the bottom. The subtitle's stale "Version 1" tail was
 rewritten to point at the disclosure.
 
 Suite unchanged and green: 26 scenarios, 126 steps.
+
+## Stage 11h: strip the page to the work (Nov 8, 2026)
+
+Kris, looking at the live page on his phone: still way too much
+text. Directives applied:
+
+- The transfer degree sentence inside every college block is
+  removed entirely. The transfer degree piece can be added back
+  later, with the transcript audit it belongs to.
+- The long subtitle leaves the top of the page. The top is now
+  the title and the form, nothing between.
+- The C or better assumption line leaves the top too; the
+  assumption already lives in the rules text inside the bottom
+  disclosure.
+- The sources card intro is trimmed to one line. A stale
+  sentence telling users to declare a transfer degree on the
+  block (a control removed in Stage 11f) is gone.
+- The subtitle text returns at the bottom as an "About this
+  check" section, placed directly above the "Where this data
+  comes from" disclosure, so all explanation sits together at
+  the foot of the page where Kris wanted it.
+
+Suite unchanged and green: 26 scenarios, 126 steps.
