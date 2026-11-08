@@ -127,3 +127,37 @@ Feature: Louisiana dual enrollment credit transfer check
     When the student enrolls at a Louisiana public university
     Then the report does not say general education is complete yet
     And the report says the transfer guarantee applies when the degree is finished, if every course is passed with a grade of C or better
+
+  Scenario: The tool finds the Delgado English match at UL Lafayette by itself
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "ENGL 1010" at "Delgado Community College" with a grade of "B"
+    When the credit check runs
+    Then the course counts as "ENGL 101"
+    And the match comes from the current catalog data
+
+  Scenario: Different course numbers at both colleges still match on the state number
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "MATH 128" at "Delgado Community College" with a grade of "A"
+    When the credit check runs
+    Then the course counts as "MATH 105"
+    And the match comes from the current catalog data
+
+  Scenario: A state number the university does not carry becomes a level elective in a subject it teaches
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "FREN 101" at "Delgado Community College" with a grade of "B"
+    When the credit check runs
+    Then the course counts as a level elective at the 100 level
+    And the student is warned the credit fills no named course requirement
+
+  Scenario: A subject outside the course data gets an honest not covered answer
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "ACCT 201" at "Delgado Community College" with a grade of "B"
+    When the credit check runs
+    Then the course is flagged as not covered by the current course data yet
+
+  Scenario: A planned course matched from the data carries its grade condition
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student plans to take "MATH 130" at "Delgado Community College"
+    When the credit check runs
+    Then the course counts as "MATH 109"
+    And the course counts only if the student earns a grade of C or better
