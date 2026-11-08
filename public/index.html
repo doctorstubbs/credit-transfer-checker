@@ -42,9 +42,32 @@
 
     <label for="target">Target college</label>
     <select id="target">
-      <option value="public">A Louisiana public university</option>
-      <option value="ull">University of Louisiana at Lafayette</option>
-      <option value="tulane">Tulane University (private)</option>
+      <optgroup label="Louisiana public universities: the state transfer guarantee applies">
+        <option value="Grambling State University" data-kind="public">Grambling State University</option>
+        <option value="Louisiana State University and A&M College (LSU)" data-kind="public">Louisiana State University and A&M College (LSU)</option>
+        <option value="Louisiana State University at Alexandria" data-kind="public">Louisiana State University at Alexandria</option>
+        <option value="Louisiana State University Shreveport" data-kind="public">Louisiana State University Shreveport</option>
+        <option value="Louisiana Tech University" data-kind="public">Louisiana Tech University</option>
+        <option value="McNeese State University" data-kind="public">McNeese State University</option>
+        <option value="Nicholls State University" data-kind="public">Nicholls State University</option>
+        <option value="Northwestern State University of Louisiana" data-kind="public">Northwestern State University of Louisiana</option>
+        <option value="Southeastern Louisiana University" data-kind="public">Southeastern Louisiana University</option>
+        <option value="Southern University and A&M College (Baton Rouge)" data-kind="public">Southern University and A&M College (Baton Rouge)</option>
+        <option value="Southern University at New Orleans" data-kind="public">Southern University at New Orleans</option>
+        <option value="University of Louisiana at Lafayette" data-kind="public">University of Louisiana at Lafayette</option>
+        <option value="University of Louisiana at Monroe" data-kind="public">University of Louisiana at Monroe</option>
+        <option value="University of New Orleans" data-kind="public">University of New Orleans</option>
+      </optgroup>
+      <optgroup label="Louisiana private universities: the state guarantee does not apply">
+        <option value="Centenary College of Louisiana" data-kind="private">Centenary College of Louisiana</option>
+        <option value="Dillard University" data-kind="private">Dillard University</option>
+        <option value="Franciscan Missionaries of Our Lady University" data-kind="private">Franciscan Missionaries of Our Lady University</option>
+        <option value="Louisiana Christian University" data-kind="private">Louisiana Christian University</option>
+        <option value="Loyola University New Orleans" data-kind="private">Loyola University New Orleans</option>
+        <option value="Tulane University" data-kind="private">Tulane University</option>
+        <option value="University of Holy Cross" data-kind="private">University of Holy Cross</option>
+        <option value="Xavier University of Louisiana" data-kind="private">Xavier University of Louisiana</option>
+      </optgroup>
     </select>
     <label class="check"><input type="checkbox" id="limited"> The student is applying to a limited access program (for example nursing or engineering)</label>
     <label class="check"><input type="checkbox" id="prereq"> The target major requires a specific prerequisite course the student never took</label>
@@ -96,12 +119,9 @@ function parseNumber(code) {
 }
 
 document.getElementById('run').addEventListener('click', async () => {
-  const targetSel = document.getElementById('target').value;
-  const target = targetSel === 'tulane'
-    ? { name: 'Tulane University', isPublic: false, teachesSubject: null }
-    : targetSel === 'ull'
-      ? { name: 'University of Louisiana at Lafayette', isPublic: true, teachesSubject: true }
-      : { name: 'Louisiana public university', isPublic: true, teachesSubject: true };
+  const targetEl = document.getElementById('target');
+  const isPublic = targetEl.options[targetEl.selectedIndex].dataset.kind === 'public';
+  const target = { name: targetEl.value, isPublic: isPublic, teachesSubject: isPublic ? true : null };
 
   const courses = [];
   document.querySelectorAll('#courses .row').forEach(r => {
