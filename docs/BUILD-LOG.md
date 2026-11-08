@@ -220,11 +220,54 @@ any rule (full citations in README.md):
   enrollment and early college students, and anyone moving credits
   between Louisiana colleges."
 
+## Stage 11, Real course matching: the tool finds the match (Sun Nov 8, 2026)
+
+- Kris's catch: users cannot know whether a direct match exists;
+  that is the problem the tool exists to solve. Data plan written
+  first (docs/DATA-PLAN.md), including his growth condition: the
+  design must scale to the majority, ideally all, courses offered.
+- Data acquired from the source: the Board of Regents Master
+  Course Articulation Matrix AY 2022-2023 Excel (the newest posted
+  on laregents.edu) and the Statewide Common Course Catalog AY
+  2025-26 PDF, both saved under data/sources/. The matrix is one
+  row per common course and one column per college, exactly the
+  shape the plan called for.
+- Extraction script (scripts/build-dataset.py, repeatable) produced
+  data/courses.json and src/courses-data.js: 266 common courses
+  across 32 institutions, raw matrix cells preserved.
+- Scenarios first, watched failing (17 passed, 4 failed): the tool
+  finds Delgado ENGL 1010 as ENGL 101 at UL Lafayette by common
+  number CENL 1013 on its own; the same course is ENGL 1157 at the
+  University of New Orleans; a matrix elective cell (ACCT ***) lands
+  as a level elective; a course absent from the data is flagged
+  not-in-data instead of guessed.
+- Engine: a data lookup runs before the manual rules whenever the
+  user did not declare a match. Code matching tolerates college
+  renumbering (ENGL 101 vs ENGL 1010). Results carry matchedBy (the
+  common course number) and dataStatus (matched, not-in-data,
+  manual). Suite: 21 scenarios, 21 passed, 101 steps. Log:
+  run-2026-11-08-real-course-matching.log.
+- Verification pass (the human checkpoint layer): CENL 1013 and
+  CENL 1023 rows are stamped verified in the dataset with notes:
+  Delgado's catalog and placement pages tag ENGL 101/110 as
+  [LCCN: CENL 1013] and ENGL 102 as [LCCN: CENL 1023]; UL
+  Lafayette's transfer FAQs use this exact pairing as their worked
+  example; Louisiana DOE Fast Forward pathways list Delgado
+  English Composition I as ENGL 1010 under CENL 1013. All other
+  rows remain labeled matrix-listed until verified.
+- Page: picking a source college fills a course picker from the
+  data; choosing a listed course disables the match question (the
+  data answers it), results show "Matched by the state course
+  data" with the common number, and not-in-data lines are labeled
+  estimates. The match options were also renamed into plain words
+  after Kris flagged the registrar language. The subtitle now
+  states the coverage count in public: 266 courses, 32 colleges.
+
 ## Next stages (not started)
 
-- Stage 11: anonymous usage counts plus email capture for the full
+- Stage 12: anonymous usage counts plus email capture for the full
   report (direction confirmed by Kris Nov 7, 2026).
-- Stage 12 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
+- Stage 13 (the paid family audit, was Stage 7 in the first draft): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
