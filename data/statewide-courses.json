@@ -1,0 +1,1799 @@
+{
+ "subjects": {
+  "CACC": "Accounting",
+  "CATR": "Anthropology",
+  "CAST": "Astronomy",
+  "CARB": "Arabic",
+  "CART": "Art",
+  "CBIO": "Biological Sciences",
+  "CBUS": "Business",
+  "CCEM": "Chemistry",
+  "CCOM": "Communication",
+  "CCSC": "Computer Science",
+  "CCRJ": "Criminal Justice",
+  "CDNC": "Dance",
+  "CECE": "Early Childhood Education",
+  "CECO": "Ecology",
+  "CECN": "Economics",
+  "CEDU": "Education",
+  "CENG": "Engineering",
+  "CENL": "English",
+  "CEVS": "Environmental Sciences",
+  "CFIN": "Finance",
+  "CFRN": "French",
+  "CGRG": "Geography",
+  "CGRM": "German",
+  "CHLT": "Health Science",
+  "CHIS": "History",
+  "CHTM": "Hospitality And Tourism",
+  "CHUM": "Humanities",
+  "CKIN": "Kinesiology",
+  "CLTN": "Latin",
+  "CMGM": "Management",
+  "CMKT": "Marketing",
+  "CMAT": "Mathematics",
+  "CMUS": "Music",
+  "CPHL": "Philosophy",
+  "CPHY": "Physics",
+  "CPOL": "Political Science",
+  "CPSY": "Psychology",
+  "CSOC": "Sociology",
+  "CSWK": "Social Work",
+  "CSPN": "Spanish",
+  "CTHE": "Theatre"
+ },
+ "courses": [
+  {
+   "lccn": "CACC 2113",
+   "title": "Introduction to Financial Accounting",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2213",
+   "title": "Introduction to Managerial Accounting",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2313",
+   "title": "Principles of Accounting I",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2323",
+   "title": "Principles of Accounting II",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2413",
+   "title": "Computerized Accounting",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2513",
+   "title": "Payroll",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2613",
+   "title": "Tax Accounting/Individual",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 2713",
+   "title": "Intermediate Accounting I (Lower Level)",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 3113",
+   "title": "Cost Accounting (Upper Level)",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 3213",
+   "title": "Tax I (Upper Level)",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 3223",
+   "title": "Tax II (Upper Level)",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CACC 3313",
+   "title": "Auditing (Upper Level)",
+   "hours": 3,
+   "rubric": "CACC"
+  },
+  {
+   "lccn": "CATR 1013",
+   "title": "Introduction to Anthropology",
+   "hours": 3,
+   "rubric": "CATR"
+  },
+  {
+   "lccn": "CATR 2013",
+   "title": "Cultural Anthropology",
+   "hours": 3,
+   "rubric": "CATR"
+  },
+  {
+   "lccn": "CATR 2023",
+   "title": "Biological Anthropology",
+   "hours": 3,
+   "rubric": "CATR"
+  },
+  {
+   "lccn": "CAST 1103",
+   "title": "Astronomy/The Solar System",
+   "hours": 3,
+   "rubric": "CAST"
+  },
+  {
+   "lccn": "CAST 1113",
+   "title": "Astronomy/Stars & Galaxies",
+   "hours": 3,
+   "rubric": "CAST"
+  },
+  {
+   "lccn": "CARB 2013",
+   "title": "Intermediate Arabic I",
+   "hours": 3,
+   "rubric": "CARB"
+  },
+  {
+   "lccn": "CARB 2023",
+   "title": "Intermediate Arabic II",
+   "hours": 3,
+   "rubric": "CARB"
+  },
+  {
+   "lccn": "CART 1013",
+   "title": "Exploring the Arts",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 1023",
+   "title": "Introduction to Visual Arts",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 1113",
+   "title": "Art Structure/ 2-D Design",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 2103",
+   "title": "Art History I",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 2113",
+   "title": "Art History \u2013 II",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 2203",
+   "title": "Beginning Drawing",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 2213",
+   "title": "Figure Drawing",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CART 2303",
+   "title": "Color Theory",
+   "hours": 3,
+   "rubric": "CART"
+  },
+  {
+   "lccn": "CBIO 1011",
+   "title": "General Biology I Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1013",
+   "title": "General Biology I",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1021",
+   "title": "General Biology II Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1022",
+   "title": "General Biology Lab I+II",
+   "hours": 2,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1023",
+   "title": "General Biology II",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1031",
+   "title": "General Biology I Lab (Science Majors)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1033",
+   "title": "General Biology I (Science Majors)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1034",
+   "title": "General Biology I (Science Majors) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1041",
+   "title": "General Biology II Lab (Science Majors)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1043",
+   "title": "General Biology II (Science Majors)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 1044",
+   "title": "General Biology II (Science Majors) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2101",
+   "title": "General Microbiology Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2103",
+   "title": "General Microbiology",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2104",
+   "title": "General Microbiology Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2111",
+   "title": "Microbiology Lab for Nursing/Allied Health",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2113",
+   "title": "Microbiology for Nursing & Allied Health",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2114",
+   "title": "Microbiology Lab for Nursing/Allied Health Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2121",
+   "title": "General Microbiology Lab (Science Majors)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2123",
+   "title": "General Microbiology (Science Majors)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2124",
+   "title": "General Microbiology (Science Majors) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2131",
+   "title": "Cell Biology Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2133",
+   "title": "Cell Biology",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2134",
+   "title": "Cell Biology Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2211",
+   "title": "Human Anatomy and Physiology I Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2213",
+   "title": "Human Anatomy and Physiology I",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2214",
+   "title": "Human Anatomy and Physiology I Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2221",
+   "title": "Human Anatomy and Physiology II Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2223",
+   "title": "Human Anatomy and Physiology II",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2224",
+   "title": "Human Anatomy and Physiology II Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2311",
+   "title": "Botany I Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2313",
+   "title": "Botany I",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2314",
+   "title": "Botany I Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2231",
+   "title": "Comparative Anatomy Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2233",
+   "title": "Comparative Anatomy",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2234",
+   "title": "Comparative Anatomy Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2511",
+   "title": "Introduction to Genetics Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2513",
+   "title": "Introduction to Genetics",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2514",
+   "title": "Introduction to Genetics Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2601",
+   "title": "Introduction to Zoology Lab",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2603",
+   "title": "Introduction to Zoology",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2703",
+   "title": "Nutrition",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 2713",
+   "title": "Pathophysiology",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3231",
+   "title": "Comparative Anatomy Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3233",
+   "title": "Comparative Anatomy (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3234",
+   "title": "Comparative Anatomy Lecture + Lab (UPPER LEVEL)",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3401",
+   "title": "Biochemistry I Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3403",
+   "title": "Biochemistry I (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3521",
+   "title": "Genetics Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3523",
+   "title": "Genetics (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3524",
+   "title": "Genetics (UPPER LEVEL) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3603",
+   "title": "Entomology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3613",
+   "title": "Histology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3623",
+   "title": "Parasitology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3633",
+   "title": "Animal Physiology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 3643",
+   "title": "Evolutionary Biology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4141",
+   "title": "Cell Biology Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4143",
+   "title": "Cell Biology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4144",
+   "title": "Cell Biology (UPPER LEVEL) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4411",
+   "title": "Biochemistry II Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4413",
+   "title": "Biochemistry II (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4412",
+   "title": "Biochemistry I+II Lab (UPPER LEVEL)",
+   "hours": 2,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4503",
+   "title": "Developmental Biology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4513",
+   "title": "Endocrinology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4523",
+   "title": "Immunology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4533",
+   "title": "Molecular Biology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4543",
+   "title": "Pathogenic Microbiology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4553",
+   "title": "Virology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBIO 4561",
+   "title": "Biology Seminar (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CBIO"
+  },
+  {
+   "lccn": "CBUS 1003",
+   "title": "General/Introduction to Business Administration",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 1103",
+   "title": "Business Math (Lower Level)",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2003",
+   "title": "Legal Environment",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2103",
+   "title": "Business Law",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2203",
+   "title": "Computer Applications",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2213",
+   "title": "Introduction to Programming",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2303",
+   "title": "Business Statistical Methods I",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CBUS 2313",
+   "title": "Business Statistical Methods II",
+   "hours": 3,
+   "rubric": "CBUS"
+  },
+  {
+   "lccn": "CCEM 1003",
+   "title": "General, Organic & Biochemistry",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1013",
+   "title": "General Chemistry Survey",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1101",
+   "title": "Chemistry I Lab (Non-Science Majors)",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1103",
+   "title": "Chemistry I (Non-Science Majors)",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1111",
+   "title": "Chemistry II Lab (Non-Science Majors)",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1113",
+   "title": "Chemistry II (Non-Science Majors)",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1121",
+   "title": "Chemistry I Lab (Science Majors)",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1123",
+   "title": "Chemistry I (Science Majors)",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1131",
+   "title": "Chemistry II Lab (Science Majors)",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1132",
+   "title": "Chemistry I+II Lab (Science Majors)",
+   "hours": 2,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 1133",
+   "title": "Chemistry II (Science Majors)",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2203",
+   "title": "Organic Chemistry, Survey",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2211",
+   "title": "Organic Chemistry I Lab",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2213",
+   "title": "Organic Chemistry I",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2221",
+   "title": "Organic Chemistry II Lab",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2223",
+   "title": "Organic Chemistry II",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2222",
+   "title": "Organic Chemistry I+II",
+   "hours": 2,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2301",
+   "title": "Analytical Chemistry Lab",
+   "hours": 1,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCEM 2303",
+   "title": "Analytical Chemistry (Quantitative Analysis)",
+   "hours": 3,
+   "rubric": "CCEM"
+  },
+  {
+   "lccn": "CCOM 1013",
+   "title": "Fundamentals of Communication",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCOM 1113",
+   "title": "Introduction to Mass Media",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCOM 2013",
+   "title": "Public Speaking",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCOM 2113",
+   "title": "Argumentation and Debate",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCOM 2213",
+   "title": "Interpersonal Communication",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCOM 2313",
+   "title": "Business & Professional Communication",
+   "hours": 3,
+   "rubric": "CCOM"
+  },
+  {
+   "lccn": "CCSC 1103",
+   "title": "Computer Science I",
+   "hours": 3,
+   "rubric": "CCSC"
+  },
+  {
+   "lccn": "CCSC 1203",
+   "title": "Computer Science II",
+   "hours": 3,
+   "rubric": "CCSC"
+  },
+  {
+   "lccn": "CCSC 1303",
+   "title": "Foundation of Cyber Security",
+   "hours": 3,
+   "rubric": "CCSC"
+  },
+  {
+   "lccn": "CCSC 2113",
+   "title": "Information Assurance & Security",
+   "hours": 3,
+   "rubric": "CCSC"
+  },
+  {
+   "lccn": "CCRJ 1013",
+   "title": "Introduction to Criminal Justice",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 1103",
+   "title": "Courts",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2013",
+   "title": "Introduction to Corrections",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2113",
+   "title": "Criminology [Lower Level]",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2213",
+   "title": "Criminal Law",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2313",
+   "title": "Introduction to Policing",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2413",
+   "title": "Juvenile Justice",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2513",
+   "title": "Deviance",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CCRJ 2613",
+   "title": "Judicial Process",
+   "hours": 3,
+   "rubric": "CCRJ"
+  },
+  {
+   "lccn": "CDNC 1013",
+   "title": "Dance Appreciation",
+   "hours": 3,
+   "rubric": "CDNC"
+  },
+  {
+   "lccn": "CECO 4121",
+   "title": "Principles of Ecology Lab (UPPER LEVEL)",
+   "hours": 1,
+   "rubric": "CECO"
+  },
+  {
+   "lccn": "CECO 4123",
+   "title": "Principles of Ecology (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CECO"
+  },
+  {
+   "lccn": "CECO 4124",
+   "title": "Principles of Ecology Lecture + Lab (UPPER LEVEL)",
+   "hours": 4,
+   "rubric": "CECO"
+  },
+  {
+   "lccn": "CECN 2113",
+   "title": "Economic Principles",
+   "hours": 3,
+   "rubric": "CECN"
+  },
+  {
+   "lccn": "CECN 2213",
+   "title": "Macroeconomics",
+   "hours": 3,
+   "rubric": "CECN"
+  },
+  {
+   "lccn": "CECN 2223",
+   "title": "Microeconomics",
+   "hours": 3,
+   "rubric": "CECN"
+  },
+  {
+   "lccn": "CECN 2313",
+   "title": "Money, Banking & the Economy (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CECN"
+  },
+  {
+   "lccn": "CECN 3113",
+   "title": "Money, Banking & the Economy (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CECN"
+  },
+  {
+   "lccn": "CEDU 1013",
+   "title": "Foundations in Multicultural Education",
+   "hours": 3,
+   "rubric": "CEDU"
+  },
+  {
+   "lccn": "CENG 1013",
+   "title": "IT Programming",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2113",
+   "title": "Physics I for Engineering & Science",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2123",
+   "title": "Physics II for Engineering & Science",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2263",
+   "title": "Circuits II",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2013",
+   "title": "Statics",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2023",
+   "title": "Dynamics",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENG 2033",
+   "title": "Material Science",
+   "hours": 3,
+   "rubric": "CENG"
+  },
+  {
+   "lccn": "CENL 1013",
+   "title": "English Composition I",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 1023",
+   "title": "English Composition II",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2103",
+   "title": "British Literature I",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2113",
+   "title": "British Literature II",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2123",
+   "title": "Major British Writers",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2153",
+   "title": "American Literature I",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2163",
+   "title": "American Literature II",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2173",
+   "title": "Major American Writers",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2203",
+   "title": "World Literature I",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2213",
+   "title": "World Literature II",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2223",
+   "title": "Major World Writers",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2303",
+   "title": "Introduction to Fiction",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2313",
+   "title": "Introduction to Poetry and/or Drama",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2323",
+   "title": "Introduction to Literature",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2403",
+   "title": "Introduction to African American Literature",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2413",
+   "title": "Introduction to Women\u2019s Literature",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2503",
+   "title": "Mythology or Folklore",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2513",
+   "title": "Foundations of Professional Writing (Lower Level)",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CENL 2523",
+   "title": "Creative Writing (Various Genres)",
+   "hours": 3,
+   "rubric": "CENL"
+  },
+  {
+   "lccn": "CEVS 1103",
+   "title": "Environmental Science",
+   "hours": 3,
+   "rubric": "CEVS"
+  },
+  {
+   "lccn": "CEVS 1113",
+   "title": "Environmental and Anthropogenic Impacts of Microbes",
+   "hours": 3,
+   "rubric": "CEVS"
+  },
+  {
+   "lccn": "CFIN 2113",
+   "title": "Personal Finance",
+   "hours": 3,
+   "rubric": "CFIN"
+  },
+  {
+   "lccn": "CFIN 3113",
+   "title": "Principles of Business Finance",
+   "hours": 3,
+   "rubric": "CFIN"
+  },
+  {
+   "lccn": "CFRN 2023",
+   "title": "Intermediate French II",
+   "hours": 3,
+   "rubric": "CFRN"
+  },
+  {
+   "lccn": "CFRN 2026",
+   "title": "Intermediate French I + II (6 Cr Hrs)",
+   "hours": 6,
+   "rubric": "CFRN"
+  },
+  {
+   "lccn": "CGRG 2013",
+   "title": "Human Geography",
+   "hours": 3,
+   "rubric": "CGRG"
+  },
+  {
+   "lccn": "CGRG 2113",
+   "title": "World Regional Geography",
+   "hours": 3,
+   "rubric": "CGRG"
+  },
+  {
+   "lccn": "CGRG 2213",
+   "title": "Physical Geography",
+   "hours": 3,
+   "rubric": "CGRG"
+  },
+  {
+   "lccn": "CGRG 2313",
+   "title": "Introduction to Geographic Information Systems (GIS)",
+   "hours": 3,
+   "rubric": "CGRG"
+  },
+  {
+   "lccn": "CGEO 1101",
+   "title": "Physical Geology Lab",
+   "hours": 1,
+   "rubric": "CGEO"
+  },
+  {
+   "lccn": "CGEO 1103",
+   "title": "Physical Geology",
+   "hours": 3,
+   "rubric": "CGEO"
+  },
+  {
+   "lccn": "CGEO 1111",
+   "title": "Historical Geology Lab",
+   "hours": 1,
+   "rubric": "CGEO"
+  },
+  {
+   "lccn": "CGEO 1113",
+   "title": "Historical Geology",
+   "hours": 3,
+   "rubric": "CGEO"
+  },
+  {
+   "lccn": "CGRM 2013",
+   "title": "Intermediate German I",
+   "hours": 3,
+   "rubric": "CGRM"
+  },
+  {
+   "lccn": "CGRM 2023",
+   "title": "Intermediate German II",
+   "hours": 3,
+   "rubric": "CGRM"
+  },
+  {
+   "lccn": "CHLT 1103",
+   "title": "Medical Terminology",
+   "hours": 3,
+   "rubric": "CHLT"
+  },
+  {
+   "lccn": "CHLT 2103",
+   "title": "Introduction to Pharmacology",
+   "hours": 3,
+   "rubric": "CHLT"
+  },
+  {
+   "lccn": "CHIS 1013",
+   "title": "Western Civilization I",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 1023",
+   "title": "Western Civilization II",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 1113",
+   "title": "World Civilization I",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 1123",
+   "title": "World Civilization II",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 2013",
+   "title": "American History I",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 2023",
+   "title": "American History II",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 2033",
+   "title": "Louisiana History",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHIS 2103",
+   "title": "African American History",
+   "hours": 3,
+   "rubric": "CHIS"
+  },
+  {
+   "lccn": "CHTM 1003",
+   "title": "Survey of Hospitality and Tourism",
+   "hours": 3,
+   "rubric": "CHTM"
+  },
+  {
+   "lccn": "CHTM 1053",
+   "title": "Introduction to Professionalism",
+   "hours": 3,
+   "rubric": "CHTM"
+  },
+  {
+   "lccn": "CHTM 2053",
+   "title": "Food Safety and Sanitation",
+   "hours": 3,
+   "rubric": "CHTM"
+  },
+  {
+   "lccn": "CHUM 2013",
+   "title": "Africa and the Middle East",
+   "hours": 3,
+   "rubric": "CHUM"
+  },
+  {
+   "lccn": "CHUM 2213",
+   "title": "Humanities I",
+   "hours": 3,
+   "rubric": "CHUM"
+  },
+  {
+   "lccn": "CHUM 2223",
+   "title": "Humanities II",
+   "hours": 3,
+   "rubric": "CHUM"
+  },
+  {
+   "lccn": "CKIN 1013",
+   "title": "Intro to Kinesiology",
+   "hours": 3,
+   "rubric": "CKIN"
+  },
+  {
+   "lccn": "CKIN 1113",
+   "title": "Personal and Community Health",
+   "hours": 3,
+   "rubric": "CKIN"
+  },
+  {
+   "lccn": "CKIN 1213",
+   "title": "First Aid",
+   "hours": 3,
+   "rubric": "CKIN"
+  },
+  {
+   "lccn": "CLTN 1026",
+   "title": "Elementary Latin I + II (6 Cr Hrs)",
+   "hours": 6,
+   "rubric": "CLTN"
+  },
+  {
+   "lccn": "CLTN 2013",
+   "title": "Intermediate Latin I",
+   "hours": 3,
+   "rubric": "CLTN"
+  },
+  {
+   "lccn": "CLTN 2023",
+   "title": "Intermediate Latin II",
+   "hours": 3,
+   "rubric": "CLTN"
+  },
+  {
+   "lccn": "CMGM 3013",
+   "title": "Management Information Systems",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 2103",
+   "title": "Principles of Management (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 3103",
+   "title": "Principles of Management (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 3213",
+   "title": "Production & Operations (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 2213",
+   "title": "Human Resource Management (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 3313",
+   "title": "Human Resource Management (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 2313",
+   "title": "Small Business Management (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 3413",
+   "title": "Small Business Management (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 2413",
+   "title": "Introduction to Entrepreneurship (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 3513",
+   "title": "Introduction to Entrepreneurship (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 4103",
+   "title": "Organizational Behavior (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMGM 4213",
+   "title": "Management in a Global Context (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMGM"
+  },
+  {
+   "lccn": "CMKT 2003",
+   "title": "Foundations of Marketing (LOWER LEVEL)",
+   "hours": 3,
+   "rubric": "CMKT"
+  },
+  {
+   "lccn": "CMKT 3003",
+   "title": "Principles of Marketing (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMKT"
+  },
+  {
+   "lccn": "CMKT 3103",
+   "title": "Retail Management",
+   "hours": 3,
+   "rubric": "CMKT"
+  },
+  {
+   "lccn": "CMKT 3203",
+   "title": "Personal/Professional Selling (UPPER LEVEL)",
+   "hours": 3,
+   "rubric": "CMKT"
+  },
+  {
+   "lccn": "CMAT 1103",
+   "title": "Contemporary Mathematics",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1203",
+   "title": "Applied Algebra",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1204",
+   "title": "The Nature of Mathematics",
+   "hours": 4,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1213",
+   "title": "College Algebra",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1223",
+   "title": "Trigonometry",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1303",
+   "title": "Introductory Statistics",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1304",
+   "title": "A Second Course in Introductory Statistics",
+   "hours": 4,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1313",
+   "title": "Finite Mathematics",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1403",
+   "title": "Introduction to Data Science",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1413",
+   "title": "Math for Elementary Teachers",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 1423",
+   "title": "Geometry for Elementary Teachers",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 2103",
+   "title": "Applied Calculus",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMAT 2133",
+   "title": "Calculus III",
+   "hours": 3,
+   "rubric": "CMAT"
+  },
+  {
+   "lccn": "CMUS 1013",
+   "title": "Music Appreciation",
+   "hours": 3,
+   "rubric": "CMUS"
+  },
+  {
+   "lccn": "CMUS 1023",
+   "title": "Jazz Appreciation",
+   "hours": 3,
+   "rubric": "CMUS"
+  },
+  {
+   "lccn": "CPHL 1013",
+   "title": "Introduction to Philosophy",
+   "hours": 3,
+   "rubric": "CPHL"
+  },
+  {
+   "lccn": "CPHL 2013",
+   "title": "Introduction to Ethics",
+   "hours": 3,
+   "rubric": "CPHL"
+  },
+  {
+   "lccn": "CPHL 2113",
+   "title": "Introduction to Logic",
+   "hours": 3,
+   "rubric": "CPHL"
+  },
+  {
+   "lccn": "CPHL 2213",
+   "title": "World Religions",
+   "hours": 3,
+   "rubric": "CPHL"
+  },
+  {
+   "lccn": "CPHY 1013",
+   "title": "Introduction to Concepts in Physics",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 1023",
+   "title": "Physical Science I",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 1033",
+   "title": "Physical Science II",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2111",
+   "title": "Physics I Lab (Algebra/Trigonometry Based)",
+   "hours": 1,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2113",
+   "title": "Physics I (Algebra/Trigonometry Based)",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2114",
+   "title": "Physics I (Algebra/Trigonometry Based) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2121",
+   "title": "Physics II Lab (Algebra/Trigonometry Based)",
+   "hours": 1,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2123",
+   "title": "Physics II (Algebra/Trigonometry Based)",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2124",
+   "title": "Physics II (Algebra/Trigonometry Based) Lecture + Lab",
+   "hours": 4,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2131",
+   "title": "Physics I Lab (Calculus Based)",
+   "hours": 1,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2133",
+   "title": "Physics I (Calculus Based)",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2141",
+   "title": "Physics II Lab (Calculus Based)",
+   "hours": 1,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2143",
+   "title": "Physics II (Calculus Based)",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPHY 2153",
+   "title": "Physics III (Calculus Based)",
+   "hours": 3,
+   "rubric": "CPHY"
+  },
+  {
+   "lccn": "CPOL 2013",
+   "title": "Introduction to American Government",
+   "hours": 3,
+   "rubric": "CPOL"
+  },
+  {
+   "lccn": "CPOL 2113",
+   "title": "Introduction to State & Local Government",
+   "hours": 3,
+   "rubric": "CPOL"
+  },
+  {
+   "lccn": "CPOL 2213",
+   "title": "Introduction to Comparative Government",
+   "hours": 3,
+   "rubric": "CPOL"
+  },
+  {
+   "lccn": "CPSY 2013",
+   "title": "Introduction to Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CPSY 2113",
+   "title": "Developmental Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CPSY 2213",
+   "title": "Adolescent Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CPSY 2313",
+   "title": "Child Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CPSY 2413",
+   "title": "Social Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CPSY 2613",
+   "title": "Educational Psychology",
+   "hours": 3,
+   "rubric": "CPSY"
+  },
+  {
+   "lccn": "CSOC 2013",
+   "title": "Introduction to Sociology",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 2113",
+   "title": "Social Problems",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 2213",
+   "title": "Marriage and Family",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 2313",
+   "title": "Sociology of Deviance",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 2413",
+   "title": "Race, Class & Ethnicity",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 3013",
+   "title": "Sociological Theory",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSOC 3113",
+   "title": "Introduction to Statistical Analysis",
+   "hours": 3,
+   "rubric": "CSOC"
+  },
+  {
+   "lccn": "CSWK 1101",
+   "title": "Social Work as a Profession",
+   "hours": 1,
+   "rubric": "CSWK"
+  },
+  {
+   "lccn": "CSPN 1026",
+   "title": "Elementary Spanish I + II (6 Cr Hrs)",
+   "hours": 6,
+   "rubric": "CSPN"
+  },
+  {
+   "lccn": "CSPN 2023",
+   "title": "Intermediate Spanish II",
+   "hours": 3,
+   "rubric": "CSPN"
+  },
+  {
+   "lccn": "CSPN 2026",
+   "title": "Intermediate Spanish I + II (6 Cr Hrs)",
+   "hours": 6,
+   "rubric": "CSPN"
+  },
+  {
+   "lccn": "CTHE 1013",
+   "title": "Introduction to Theatre",
+   "hours": 3,
+   "rubric": "CTHE"
+  },
+  {
+   "lccn": "CTHE 2103",
+   "title": "Acting I",
+   "hours": 3,
+   "rubric": "CTHE"
+  },
+  {
+   "lccn": "CTHE 2113",
+   "title": "Acting II",
+   "hours": 3,
+   "rubric": "CTHE"
+  },
+  {
+   "lccn": "CTHE 2203",
+   "title": "Voice for the Stage",
+   "hours": 3,
+   "rubric": "CTHE"
+  },
+  {
+   "lccn": "CTHE 2303",
+   "title": "Stagecraft",
+   "hours": 3,
+   "rubric": "CTHE"
+  },
+  {
+   "lccn": "CULA 1013",
+   "title": "Introduction to Culinary Arts",
+   "hours": 3,
+   "rubric": "CULA"
+  },
+  {
+   "lccn": "CULA 2053",
+   "title": "Food Service Layout, Equipment, Safety and Sanitation",
+   "hours": 3,
+   "rubric": "CULA"
+  },
+  {
+   "lccn": "CULA 3013",
+   "title": "Advanced Professional Culinary Preparation and Presentation",
+   "hours": 3,
+   "rubric": "CULA"
+  }
+ ]
+}
