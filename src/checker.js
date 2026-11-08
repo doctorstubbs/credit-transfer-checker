@@ -14,6 +14,65 @@
 // }
 
 const TRANSFER_DEGREES = ['AALT', 'ASLT', 'LT'];
+
+// Current catalog data (Stage 11b): pairings joined on the Louisiana
+// common course number each college prints in its OWN current catalog.
+// Sources: data/courses.json, built from the AY 2025-26 statewide
+// common course catalog and the colleges' 2026-2027 catalogs.
+// No AY 2022-2023 matrix data is used anywhere in this file.
+function loadData() {
+  try { return require('../data/courses.json'); } catch (e) {
+    try { return COURSES_DATA; } catch (e2) { return null; }
+  }
+}
+const CATALOG_DATA = loadData();
+
+function resolveInCollege(college, code) {
+  const norm = String(code || '').toUpperCase().replace(/\s+/g, ' ').trim();
+  let hit = college.courses.find((c) => c.code === norm);
+  if (!hit) {
+    const m = norm.match(/^([A-Z]+) (\d{4})$/);
+    if (m && m[2].endsWith('0')) {
+      hit = college.courses.find((c) => c.code === m[1] + ' ' + m[2].slice(0, 3));
+    }
+  }
+  return hit || null;
+}
+
+function lccnHours(lccn) {
+  const sw = CATALOG_DATA.statewide && CATALOG_DATA.statewide[lccn];
+  return (sw && sw.hours) || parseInt(lccn.slice(-1), 10);
+}
+
+function dataCourseResult(course, target, sourceInstitution) {
+  if (!CATALOG_DATA || !sourceInstitution || !target.name) return null;
+  const srcCol = CATALOG_DATA.colleges[sourceInstitution];
+  const tgtCol = CATALOG_DATA.colleges[target.name];
+  if (!srcCol || !tgtCol) return null;
+  const srcCourse = resolveInCollege(srcCol, course.code);
+  if (!srcCourse) return null;
+  for (const l of srcCourse.lccns) {
+    const partner = tgtCol.courses.find((c) => c.lccns.includes(l));
+    if (partner) {
+      return { code: course.code, shownAs: partner.code, degreeCredit: lccnHours(l),
+        countsToward: null, warning: null,
+        matchedBy: 'catalog-data', dataStatus: 'matched', lccn: l };
+    }
+  }
+  const rubric = srcCourse.lccns[0].split(' ')[0];
+  const fam = tgtCol.courses.find((c) => c.lccns.some((x) => x.split(' ')[0] === rubric));
+  if (fam) {
+    const lvl = srcCourse.lccns[0].match(/(\d)/)[1];
+    return { code: course.code, shownAs: fam.code.split(' ')[0] + ' ' + lvl + 'XX',
+      degreeCredit: lccnHours(srcCourse.lccns[0]), countsToward: 'elective hours',
+      warning: 'Elective credit does not satisfy a named course requirement.',
+      matchedBy: 'catalog-data', dataStatus: 'subject-elective', lccn: srcCourse.lccns[0] };
+  }
+  return { code: course.code, shownAs: 'not in the course data yet', degreeCredit: 0,
+    countsToward: null,
+    warning: 'This course is not in the course data we have for that university yet, so the tool cannot call it. The university decides it on its own.',
+    matchedBy: 'catalog-data', dataStatus: 'no-match-in-data', lccn: srcCourse.lccns[0] };
+}
 const BELOW_C_GRADES = ['D', 'F'];
 
 function isBelowC(course) {
@@ -30,7 +89,7 @@ function annotatePlanned(result, course) {
   return result;
 }
 
-function courseResultRaw(course, target) {
+function courseResultRaw(course, target, sourceInstitution) {
   // Delgado catalog floor: only courses numbered 100 and above count.
   if (typeof course.number === 'number' && course.number < 100) {
     return {
@@ -41,6 +100,11 @@ function courseResultRaw(course, target) {
       warning: 'Only courses numbered 100 and above fulfill degree requirements.',
     };
   }
+
+  // Current catalog data first: when both colleges are in the data,
+  // the state common number decides, not a guess typed by the user.
+  const dataResult = dataCourseResult(course, target, sourceInstitution);
+  if (dataResult) return dataResult;
 
   // UL Lafayette direct equivalent example: ENGL 1010 becomes ENGL 101.
   if (course.code === 'ENGL 1010' && target.name === 'University of Louisiana at Lafayette') {
@@ -189,7 +253,7 @@ function runCheck(student) {
   // Course by course outcomes, tagged with the sending college.
   for (const src of sources) {
     for (const course of src.courses) {
-      const result = annotatePlanned(courseResultRaw(course, target), course);
+      const result = annotatePlanned(courseResultRaw(course, target, src.institution), course);
       result.sourceInstitution = src.institution;
       report.courseResults.push(result);
       if (result.warning) {
