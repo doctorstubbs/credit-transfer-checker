@@ -89,9 +89,33 @@ any rule (full citations in README.md):
   credit, and grade point requirements are later stages, added the
   same way: scenarios first, domain owner approval, then code.
 
+## Stage 6, First version a family can touch (Sat Nov 7, 2026)
+
+- Added a zero dependency web layer: src/server.js (Node http server)
+  serves public/index.html and a POST /api/check endpoint backed by
+  the same src/checker.js the Cucumber scenarios test. No second copy
+  of the rules exists in the web layer.
+- The page asks for the transfer degree (if any), the C or better
+  confirmation, the target college (Louisiana public, UL Lafayette,
+  or Tulane as the private example), limited access and missing
+  prerequisite flags, and course rows (code, grade, and the matrix
+  match type a counselor would look up).
+- Verified locally before commit: the page serves (HTTP 200), the
+  endpoint answers the degree case (gen ed complete, 60 hours,
+  junior standing), the UL Lafayette ENGL 1010 case (counts as
+  ENGL 101 toward English composition), and the private university
+  case (no guarantee, verify individually). The Cucumber suite still
+  passes 10 of 10 after the web layer was added.
+- Run it with: npm start, then open http://localhost:3000
+- The canonical version runs on the small Node server. A preview
+  copy also lives at docs/index.html (the same page with the same
+  checker code inlined, generated mechanically from public/index.html
+  and src/checker.js) so GitHub Pages can serve it as a public demo:
+  https://doctorstubbs.github.io/credit-transfer-checker/
+
 ## Next stages (not started)
 
-- Stage 6: A simple web page where a family enters courses and a
+- Stage 7 (was Stage 6 in the first draft of this log): A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
   take the first paid orders.
