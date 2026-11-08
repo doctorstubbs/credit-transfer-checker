@@ -420,3 +420,46 @@ that the rules never read the letter itself.
   failing before the engine change.
 - Suite: 25 scenarios, 25 passed; 122 steps, 122 passed
   (run-2026-11-08-assume-c.log; red run saved alongside).
+
+## Stage 11f: courses only on the page (Nov 8, 2026)
+
+Kris's call, and the reasoning is his: people who finished a
+degree will have a transcript, and degree assessment belongs to
+the transcript audit down the road, not to a self declared
+dropdown most users cannot answer correctly anyway (plenty hold
+an associate degree without knowing whether it is the transfer
+degree, and applied associate degrees carry no guarantee).
+
+- The transfer degree dropdown and its C or better checkbox are
+  removed from every source block. In their place, one plain
+  sentence: a finished Louisiana Transfer Degree carries a state
+  guarantee this quick check does not apply, and that guarantee
+  is read from the transcript in the full audit.
+- The rules text and subtitle were corrected to match: the page
+  no longer claims to apply the block guarantee.
+- The engine is untouched. The degree machinery stays, proven by
+  the original scenarios, ready for the transcript audit product.
+  A new scenario pins the page's contract at the engine level: a
+  courses only check never claims the transfer degree guarantee.
+  (This scenario pins existing behavior rather than driving new
+  behavior; the change was page scope, recorded honestly.)
+- Suite: 26 scenarios, 26 passed; 126 steps, 126 passed
+  (run-2026-11-08-courses-only.log).
+
+## Stage 11g: clear the top of the page (Nov 8, 2026)
+
+Kris's call: the top of the page carried a wall of explanation
+nobody reads, including the full data provenance paragraph. All
+of it moved into a disclosure at the bottom of the page ("Where
+this data comes from, and what this check assumes"), one tap to
+open, closed by default. The coverage paragraph and the full
+rules text now live there.
+
+Kept up top, deliberately, as a single line: the assumption that
+every course was passed with a grade of C or better. That one
+changes how a reader should take the answers, so it stays where
+eyes land; everything that merely describes the machinery went
+to the bottom. The subtitle's stale "Version 1" tail was
+rewritten to point at the disclosure.
+
+Suite unchanged and green: 26 scenarios, 126 steps.
