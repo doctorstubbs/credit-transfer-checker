@@ -13,7 +13,8 @@ tests pass.
 - Full stage by stage record: docs/BUILD-LOG.md
 - The rules: features/credit-transfer.feature
 - The test harness: features/steps/credit-transfer.steps.js
-- The checker contract: src/checker.js
+- The checker contract and engine: src/checker.js
+- The family facing page: public/index.html, served by src/server.js (npm start, then http://localhost:3000)
 
 Run the tests yourself (Node.js 24):
 
