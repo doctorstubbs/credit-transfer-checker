@@ -33,7 +33,7 @@
 <body>
 <div class="wrap">
   <h1>Will this credit count?</h1>
-  <p class="sub">A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Louisiana Transfer Degree guarantee and the Board of Regents articulation rules. Version 1 covers the rules listed at the bottom of this page.</p>
+  <p class="sub">A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. Version 1 covers the rules listed at the bottom of this page.</p>
 
   <div class="card">
     <h2 style="margin-top:0;font-size:20px;">Where your credits come from</h2>
@@ -85,7 +85,7 @@
     <div id="warnings"></div>
   </div>
 
-  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. This check assumes every course was passed with a grade of C or better, which is what transfer credit requires in the first place. If a course came in below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  <p class="fine">Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course was passed with a grade of C or better, which is what transfer credit requires in the first place. If a course came in below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
 </div>
 
 <script>/*DATA-START*/
@@ -2972,13 +2972,7 @@ function addSourceBlock() {
   div.innerHTML =
     '<h3>College ' + sourceCount + '</h3>' +
     '<label>College name</label><select class="s-name">' + options + '</select>' +
-    '<label>Transfer degree completed at this college (if any)</label>' +
-    '<select class="s-degree"><option value="">No transfer degree from this college</option>' +
-    '<option value="AALT">Associate of Arts Louisiana Transfer (AALT), completed</option>' +
-    '<option value="ASLT">Associate of Science Louisiana Transfer (ASLT), completed</option>' +
-    '<option value="AALT-IP">AALT, still working on it</option>' +
-    '<option value="ASLT-IP">ASLT, still working on it</option></select>' +
-    '<label class="check"><input type="checkbox" class="s-allc" checked> Every course in the degree was passed with a grade of C or better</label>' +
+    '<p class="fine">Finished a Louisiana Transfer Degree at this college? It carries a state guarantee this quick check does not apply. That guarantee is read from your transcript in the full audit, not picked from a list here.</p>' +
     '<label>Courses taken at this college</label>' +
     '<div class="s-courses">' + courseRowHTML() + courseRowHTML() + '</div>' +
     '<button type="button" class="secondary small s-addcourse">Add a course at this college</button>';
@@ -3068,12 +3062,11 @@ document.getElementById('run').addEventListener('click', async () => {
         number: parseNumber(code)
       });
     });
-    const degreeRaw = block.querySelector('.s-degree').value;
     sources.push({
       institution: block.querySelector('.s-name').value,
-      degree: degreeRaw === '' ? null : degreeRaw.replace('-IP', ''),
-      degreeStatus: degreeRaw.endsWith('-IP') ? 'in_progress' : 'completed',
-      allGradesCOrBetter: block.querySelector('.s-allc').checked,
+      degree: null,
+      degreeStatus: 'completed',
+      allGradesCOrBetter: false,
       courses: courses
     });
   });
