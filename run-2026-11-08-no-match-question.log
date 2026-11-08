@@ -1,0 +1,8 @@
+
+> credit-transfer-tdd@0.1.0 test
+> cucumber-js
+
+This Node.js version (v24.22.1) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+25 scenarios (25 passed)
+122 steps (122 passed)
+0m00.110s (executing steps: 0m00.010s)

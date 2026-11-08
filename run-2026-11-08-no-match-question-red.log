@@ -1,0 +1,24 @@
+
+> credit-transfer-tdd@0.1.0 test
+> cucumber-js
+
+This Node.js version (v24.22.1) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+Failures:
+
+1) Scenario: A typed course from a college outside the course data gets an honest not covered answer # features/credit-transfer.feature:178
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student plans to attend "University of Louisiana at Lafayette" # features/steps/credit-transfer.steps.js:316
+   ✔ And the student completed "ENGL 1010" at "Baton Rouge Community College" with a grade of "B" # features/steps/credit-transfer.steps.js:296
+   ✔ When the credit check runs # features/steps/credit-transfer.steps.js:147
+   ✖ Then the course is flagged as not in the course data yet # features/steps/credit-transfer.steps.js:355
+       AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+       + actual - expected
+
+       + undefined
+       - 'not-in-data'
+
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:357:10)
+
+25 scenarios (1 failed, 24 passed)
+122 steps (1 failed, 121 passed)
+0m00.133s (executing steps: 0m00.010s)
