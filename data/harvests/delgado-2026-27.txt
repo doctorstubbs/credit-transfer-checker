@@ -1,0 +1,134 @@
+Delgado Community College, 2026-2027 Catalog (catalog.dcc.edu, current as of July 2026)
+Harvested Nov 8, 2026 from the catalog's own course descriptions. 131 tagged courses.
+
+ENGL 101 | English Composition I | CENL 1013
+ENGL 102 | English Composition II | CENL 1023
+ENGL 110 | Intro to the Study of Language | CENL 1013
+ENGL 112 | Intro to Literature | CENL 2513
+ENGL 207 | Introduction to Short Fiction | CENL 2323
+ENGL 211 | Introduction to Poetry and Drama | CENL 2153
+ENGL 212 | Introduction to American Literature | CENL 2163
+ENGL 221 | Survey of British Literature I | CENL 2103
+ENGL 222 | Survey of British Literature II | CENL 2113
+ENGL 235 | Introduction to World Literature I | CENL 2223
+ENGL 244 | African-American Literature | CENL 2403
+ENGL 245 | Introduction to World Literature II | CENL 2413
+ENGL 251 | Intro to Technology and Literature | CENL 2523
+MATH 120 | Contemporary Math | CMAT 1103
+MATH 123 | Math for Elementary Teachers | CMAT 1413
+MATH 124 | Geometry for Elementary Teachers | CMAT-1423
+MATH 128 | Applied Algebra | CMAT 1203
+MATH 130 | College Algebra | CMAT 1213
+MATH 131 | Trigonometry | CMAT 1223
+MATH 133 | Intensive College Algebra | CMAT 1213
+MATH 140 | Precalculus | CMAT 1235
+MATH 151 | Finite Math | CMAT 1313
+MATH 203 | Statistics I | CMAT 1303
+MATH 220 | Applied Calculus | CMAT 2103
+MATH 221 | Calculus I | CMAT 2115
+MATH 222 | Calculus II | CMAT 2125
+MATH 223 | Calculus III | CMAT 2133
+BIOL 101 | General Biology I (non-science majors) | CBIO 1013
+BIOL 102 | General Biology II (non-science majors) | CBIO 1023
+BIOL 107 | General Biology I Lab (non-science majors) | CBIO 1011
+BIOL 108 | General Biology II Lab (non-science majors) | CBIO 1021
+BIOL 141 | General Biology I (Science Majors) | CBIO 1033
+BIOL 142 | General Biology II (Science Majors) | CBIO 1043
+BIOL 143 | General Biology I Lab (Science Majors) | CBIO 1031
+BIOL 144 | General Biology II Lab (Science Majors) | CBIO 1041
+BIOL 201 | Botany I | CBIO 2313
+BIOL 203 | Botany I Laboratory | CBIO 2311
+BIOL 207 | Comparative Anatomy | CBIO 2233
+BIOL 209 | Comparative Anatomy Lab | CBIO 2231
+BIOL 210 | General Microbiology (Science Majors) | CBIO 2123
+BIOL 211 | Microbiology of Human Pathogens | CBIO 2103
+BIOL 212 | General Microbiology Lab (Science Majors) | CBIO 2121
+BIOL 245 | Genetics | GBIO 2513
+BIOL 246 | Genetics Laboratory | BIO 2511
+BIOL 251 | Human Anatomy and Physiology I | CBIO 2213
+BIOL 252 | Human Anatomy and Physiology II | CBIO 2223
+BIOL 253 | Human Anatomy and Physiology I Laboratory | CBIO 2211
+BIOL 254 | Human Anatomy and Physiology II Laboratory | CBIO 2221
+BIOL 265 | Cell Biology | CBIO 2133
+BIOL 266 | Cell Biology Lab | CBIO 2131
+CHEM 100 | Chemistry in Society | CCEM 1013
+CHEM 101 | Chemistry I (non-science majors) | CCEM 1103
+CHEM 102 | Chemistry II (non-science majors) | CCEM 1113
+CHEM 107 | Chemistry I Lab (non-science majors) | CCEM 1101
+CHEM 108 | Chemistry II Lab (non-science majors) | CCEM 1111
+CHEM 141 | Chemistry I (Science Majors) | CCEM 1123
+CHEM 142 | Chemistry II (Science Majors) | CCEM 1133
+CHEM 143 | Chemistry I Lab (Science Majors) | CCEM1121
+CHEM 144 | Chemistry II Lab (Science Majors) | CCEM 1131
+CHEM 221 | Organic Chemistry I | CCEM 2213
+CHEM 222 | Organic Chemistry II | CCEM 2223
+CHEM 223 | Organic Chemistry I Lab | CCEM 2211
+CHEM 224 | Organic Chemistry II Lab | CCEM 2221
+CHEM 241 | Quantitative Chemical Analysis | CCEM 2303
+CHEM 243 | Quantitative Chemical Analysis Lab | CCEM 2301
+HIST 101 | Western Civilization I | CHIS 1013
+HIST 102 | Western Civilization II | CHIS 1023
+HIST 103 | World Civilization I | CHIS 1113
+HIST 105 | World Civilization II | CHIS 1123
+HIST 141 | African-American History | CHIS 2103
+HIST 205 | American History I | CHIS 2013
+HIST 206 | American History II | CHIS 2023
+HIST 260 | Louisiana History | CHIS 2033
+PSYC 127 | Introduction to Psychology | CPSY 2013
+PSYC 225 | Child Psychology | CPSY 2313
+PSYC 226 | Developmental Psychology | CPSY 2113
+PSYC 235 | Educational Psychology | CPSY 2613
+PSYC 245 | Social Psychology | CPSY 2413
+SOCI 151 | Introduction to Sociology | CSOC 2013
+SOCI 155 | Social Problems | CSOC 2113
+SOCI 250 | Studies in Cultural Diversity | CSOC 2413
+SOCI 255 | Marriage and the Family | CSOC 2213
+CMST 130 | Fundamentals of Communication | CCOM 1013
+CMST 132 | Business and Professional Communication | CCOM 2313
+CMST 230 | Public Speaking | CCOM 2013
+CMST 231 | Interpersonal Communication | CCOM 2213
+CMST 240 | Argumentation and Debate | CCOM 2113
+ECON 201 | Macroeconomics | CECN 2213
+ECON 202 | Microeconomics | CECN 2223
+ECON 272 | Money, Banking, and the Economy | CECN 2313
+PHIL 101 | Introduction to Philosophy | CPHL 1013
+PHIL 112 | Introduction to Logic | CPHL 2113
+PHIL 175 | Introduction to Ethics | CPHL 2013
+FNAR 103 | Beginning Drawing | CART 2203
+FNAR 121 | Intro to Visual Arts | CART 1023
+FNAR 125 | Art History I | CART 2103
+FNAR 126 | Art History II | CART 2113
+FNAR 158 | Three-Dimensional Design | CART 1123
+FNAR 212 | Figure Drawing | CART 2213
+MUSC 105 | Music Appreciation | CMUS 1013
+MUSC 137 | Jazz Appreciation | CMUS 1023
+GEOL 101 | Physical Geology | CGEO 1103
+GEOL 102 | Historical Geology | CGEO 1113
+GEOL 103 | Physical Geology Lab | CGEO 1101
+GEOL 104 | Historical Geology Lab | CGEO 1111
+PHYS 101 | Introduction to Concepts in Physics | CPHY 1013
+PHYS 141 | Physics I (Algebra/Trigonometry Based) | CPHY 2113
+PHYS 142 | Physics II (Algebra/Trigonometry Based) | CPHY 2123
+PHYS 143 | Physics I Lab (Algebra/Trigonometry Based) | CPHY 2111
+PHYS 144 | Physics II Lab (Algebra/Trigonometry Based) | CPHY 2121
+PHYS 221 | Physics I (Calculus Based) | CPHY 2133
+PHYS 223 | Physics I Lab (Calculus Based) | CPHY 2131
+PHYS 224 | Physics II Lab (Calculus Based) | CPHY 2141
+PHYS 228 | Physics II (Calculus Based) | CPHY 2143
+PHYS 229 | Physics III (Calculus Based) | CENG 2123 OR CPHY 2153
+FREN 101 | Elementary French I | CFRN 1013
+FREN 102 | Elementary French II | CFRN 1023
+FREN 201 | Intermediate French I | CFRN 2013
+FREN 202 | Intermediate French II | CFRN 2023
+SPAN 101 | Elementary Spanish I | CSPN 1013
+SPAN 102 | Elementary Spanish II | CSPN 1023
+SPAN 201 | Intermediate Spanish I | CSPN 2013
+SPAN 202 | Intermediate Spanish II | CSPN 2023
+ACCT 201 | Principles of Accounting I | CACC 2313
+ACCT 202 | Principles of Accounting II | CACC 2323
+ACCT 205 | Intro to Financial Accounting | CACC 2113
+ACCT 211 | Managerial Accounting | CACC 2213
+ACCT 214 | Tax Accounting - Individuals | CACC 2613
+ACCT 218 | Payroll | CACC 2513
+ACCT 222 | Computerized Accounting Using QuickBooks | CACC 2413
+POLI 180 | Introduction to American Government | CPOL 2013

@@ -1,0 +1,99 @@
+University of Louisiana at Lafayette, 2026-2027 Undergraduate and Graduate Catalog (catalog.louisiana.edu)
+Harvested Nov 8, 2026 from the catalog's own course descriptions. 96 tagged courses.
+
+ENGL 101 | Introduction to Academic Writing | CENL 1013
+ENGL 102 | Writing and Research About Culture | CENL 1023
+ENGL 103 | Foundations of Academic Writing | CENL 1013
+ENGL 201 | British Literature from the Medieval Period to 1800 | CENL 2103
+ENGL 202 | British Literature from 1800 to the Present | CENL 2113
+ENGL 205 | American Literature to 1865 | CENL 2153
+ENGL 206 | American Literature since 1865 | CENL 2163
+ENGL 210 | Literary Genres | CENL 2303 / CENL 2313
+ENGL 211 | Thematic Approaches to Literature | CENL 2203 / CENL 2213 / CENL 2403 / CENL 2413
+MATH 105 | Applied College Algebra | CMAT 1203
+MATH 109 | Pre-calculus Algebra | CMAT 1213
+MATH 110 | Pre-calculus Trigonometry | CMAT 1223
+MATH 143 | Business Calculus | CMAT 1233
+MATH 250 | Survey of Calculus | CMAT 2103
+MATH 270 | Calculus I | CMAT 2114
+MATH 301 | Calculus II | CMAT 2124
+BIOL 110 | Fundamentals of Biology I | CBIO 1033
+BIOL 111 | Fundamentals of Biology II | CBIO 1043
+BIOL 112 | Fundamentals of Biology I Lab | CBIO 1031
+BIOL 113 | Fundamentals of Biology II Lab | CBIO 1041
+BIOL 121 | Biological Principles and Issues I | CBIO 1013
+BIOL 122 | Biological Principles and Issues II | CBIO 1023
+BIOL 123 | Biological Principles and Issues I Laboratory | CBIO 1011
+BIOL 230 | Fundamentals of Cell and Molecular Biology | CBIO 2133 / CBIO 2134
+BIOL 231 | Fundamentals of Cell and Molecular Biology Laboratory | CBIO 2131 / CBIO 2134
+BIOL 261 | General Microbiology | CBIO 2103 / CBIO 2113 / CBIO 2123
+BIOL 263 | General Microbiology Laboratory | CBIO 2121
+BIOL 264 | Microbiology Laboratory | CBIO 2101 / CBIO 2104 / CBIO 2111 / CBIO 2114
+BIOL 310 | Vertebrate Endocrinology | CBIO 4513
+BIOL 321 | Entomology | CBIO 3603
+BIOL 351 | Parasitology | CBIO 3623
+BIOL 354 | Pathogenic Microbiology | CBIO 4543
+BIOL 360 | Principles of Ecology | CECO 4124
+BIOL 361 | Anatomy and Physiology I | CBIO 3523
+BIOL 362 | Anatomy and Physiology I Laboratory | CBIO 3521
+BIOL 442G | Immunobiology | CBIO 4523
+BIOL 457G | Advanced Cell Biology | CBIO 4143 / CBIO 4144
+BIOL 458G | Advanced Cell Biology Laboratory | CBIO 4141 / CBIO 4144
+CHEM 101 | Survey of Chemistry I | CCEM 1013
+CHEM 102 | Survey of Chemistry II | CCEM 1103
+CHEM 107 | General Chemistry I | CCEM 1123
+CHEM 108 | General Chemistry II | CCEM 1133
+CHEM 112 | Introductory Chemistry Laboratory | CCEM 1111
+CHEM 115 | General Chemistry Laboratory | CCEM 1132
+CHEM 123 | Survey of General, Organic and Biological Chemistry | CCEM 1003
+CHEM 221 | Analytical Chemistry | CCEM 2303
+CHEM 222 | Analytical Chemistry Laboratory | CCEM 2301
+CHEM 231 | Organic Chemistry I | CCEM 2213
+CHEM 232 | Organic Chemistry II | CCEM 2223
+CHEM 233 | Organic Chemistry Laboratory I | CCEM 2211
+CHEM 234 | Organic Chemistry Laboratory II | CCEM 2221
+CHEM 240 | Introductory Organic Chemistry | CCEM 2203
+CHEM 317 | Biochemistry I | CBIO 3403
+CHEM 319 | Biochemistry Laboratory | CBIO 3401
+CHEM 417G | Biochemistry II | CBIO 4413
+HIST 101 | World History to 1500 | CHIS 1113
+HIST 102 | World History since 1500 | CHIS 1123
+HIST 221 | U.S. History from the Civil War to 1900 | CHIS 2013
+HIST 222 | U.S. History from 1900 | CHIS 2023
+HIST 307 | Louisiana History | CHIS 2033
+PSYC 110 | Introduction to Psychology | CPSY 2013
+PSYC 220 | Educational Psychology | CPSY 2613
+SOCI 100 | General Sociology | CSOC 2013
+SOCI 241 | Contemporary Social Problems | CSOC 2113
+SOCI 411G | Sociological Theory | CSOC 3013
+CMCN 100 | Fundamentals of Public Speaking | CCOM 2113
+CMCN 210 | Introduction to Communication | CCOM 2213
+POLS 110 | U.S. Government | CPOL 2013
+POLS 220 | World Politics | CPOL 2213
+ECON 201 | Principles of Microeconomics | CECN 2213
+ECON 202 | Principles of Macroeconomics | CECN 2223
+ECON 320 | Intermediate Macroeconomics | CECN 3113
+PHIL 101 | Introduction to Philosophy | CPHL 1013
+PHIL 111 | Introduction to Ethics | CPHL 2013
+PHIL 202 | History of Western Philosophy | CPHL 2113
+GEOL 107 | Physical Geology Laboratory | CGEO 1101
+GEOL 108 | Historical Geology Laboratory | CGEO 1111
+GEOL 111 | Physical Geology | CGEO 1103
+GEOL 112 | Historical Geology | CGEO 1113
+GEOL 355 | Environmental Geology | CEVS 1103
+PHYS 160 | Astronomy I | CAST 1103
+PHYS 170 | Astronomy II | CAST 1113
+PHYS 201 | Calculus-Based University Physics I | CPHY 2133
+PHYS 202 | Calculus-Based University Physics II | CPHY 2143
+PHYS 207 | General Physics I | CPHY 2113
+PHYS 208 | General Physics II | CPHY 2123
+PHYS 213 | Principles of Physics | CPHY 1013
+PHYS 215 | Principles of Physics Lab I | CPHY 2111 / CPHY 2131
+PHYS 216 | Principles of Physics Lab II | CPHY 2121 / CPHY 2141
+FREN 101 | Elementary French I | CFRN 1014
+FREN 102 | Elementary French II | CFRN 1023
+FREN 201 | Intermediate French I | CFRN 2013
+FREN 202 | Intermediate French II | CFRN 2023
+SPAN 101 | Elementary Spanish I | CSPN 1014
+SPAN 102 | Elementary Spanish II | CSPN 1023
+SPAN 201 | Intermediate Spanish I | CSPN 2013
