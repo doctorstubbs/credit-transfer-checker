@@ -486,3 +486,24 @@ text. Directives applied:
   the foot of the page where Kris wanted it.
 
 Suite unchanged and green: 26 scenarios, 126 steps.
+
+## Stage 11i: the last two checkboxes come off (Nov 8, 2026)
+
+Kris, on the limited access and missing prerequisite checkboxes:
+"What does this have to do with anything." He is right about the
+page. Both boxes were self declared hypotheticals; neither
+changed a course outcome, each only added a caution note, and
+the facts they carried are already stated in the bottom
+disclosure. Same weakness as the degree dropdown: the tool
+cannot know a student's major or its requirement list.
+
+- Both checkboxes are removed from the target card, which now
+  holds only the college picker and the Run button.
+- The engine is untouched, as with the degree machinery in Stage
+  11f: the limited access and prerequisite verdicts stay proven
+  by their scenarios and available to the audit, where a real
+  major and program are known from documents, not guessed.
+- The page now asks exactly three things: where the credits
+  came from, which courses, and where they are headed.
+
+Suite unchanged and green: 26 scenarios, 126 steps.
