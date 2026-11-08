@@ -74,3 +74,16 @@ Feature: Louisiana dual enrollment credit transfer check
     When the credit check runs
     Then the report shows zero degree credit for that course
     And the report explains that only courses numbered 100 and above fulfill degree requirements
+
+  Scenario: The block guarantee holds at any Louisiana public university, not just one
+    Given a student completes an Associate of Arts Louisiana Transfer degree
+    And every course in the degree was passed with a grade of C or better
+    When the student enrolls at McNeese State University
+    Then the report says the general education requirements are met in full
+    And the report shows the student entering with junior standing
+
+  Scenario: The state guarantee does not bind other private universities either
+    Given a student completed dual enrollment credits in Louisiana
+    When the credit check runs against a private university such as Loyola University New Orleans
+    Then the report does not promise transfer under the Louisiana public guarantee
+    And the report marks every course as verify with the university individually
