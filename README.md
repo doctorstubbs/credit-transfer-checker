@@ -30,8 +30,9 @@ was built to green in Stage 5, then extended in Stage 7 to the full
 Louisiana target list (14 public and 8 private universities, two
 scenarios added), then the source college model in Stage 9 (credits
 from several colleges in one check, reported college by college).
-Expected today: 14 scenarios, 14 passed
-(run-2026-11-07-source-colleges.log).
+Then the planning mode in Stage 10 (courses checked before they are
+taken, conditions stated plainly). Expected today: 17 scenarios,
+17 passed (run-2026-11-07-planning-mode.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
