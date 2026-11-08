@@ -180,3 +180,9 @@ Feature: Louisiana dual enrollment credit transfer check
     And the student completed "ENGL 1010" at "Baton Rouge Community College" with a grade of "B"
     When the credit check runs
     Then the course is flagged as not in the course data yet
+
+  Scenario: A courses only check never claims the transfer degree guarantee
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "ENGL 1010" at "Delgado Community College" with a grade of "B"
+    When the credit check runs
+    Then the report does not claim the transfer degree guarantee
