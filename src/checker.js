@@ -79,8 +79,15 @@ function isBelowC(course) {
   return course.grade && BELOW_C_GRADES.includes(course.grade.toUpperCase());
 }
 
-function annotatePlanned(result, course) {
-  result.status = course.status === 'planned' ? 'planned' : 'completed';
+function annotateCondition(result, course) {
+  // One path for every course (Kris's simplification, Nov 8, 2026):
+  // planned and finished courses get the same equivalency answer.
+  // The only difference a grade makes: with a grade on record the
+  // answer is final, including the below C flag on degree courses;
+  // with no grade yet, the answer carries its condition in plain
+  // words. Status follows the grade, never a separate declaration.
+  result.status = course.grade ? 'completed'
+    : (course.status === 'completed' ? 'completed' : 'planned');
   result.condition = null;
   if (result.status === 'planned' && result.degreeCredit) {
     // The equivalency answer is firm today; the counting is earned.
@@ -253,7 +260,7 @@ function runCheck(student) {
   // Course by course outcomes, tagged with the sending college.
   for (const src of sources) {
     for (const course of src.courses) {
-      const result = annotatePlanned(courseResultRaw(course, target, src.institution), course);
+      const result = annotateCondition(courseResultRaw(course, target, src.institution), course);
       result.sourceInstitution = src.institution;
       report.courseResults.push(result);
       if (result.warning) {
