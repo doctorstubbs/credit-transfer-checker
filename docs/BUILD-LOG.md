@@ -507,3 +507,25 @@ cannot know a student's major or its requirement list.
   came from, which courses, and where they are headed.
 
 Suite unchanged and green: 26 scenarios, 126 steps.
+
+## Stage 11j: words for both audiences (Nov 8, 2026)
+
+Kris's language rule for the page: nothing may assume the
+courses are already taken. The tool serves people checking
+credits they have AND people planning courses they have not
+taken yet, and the wording has to read true for both.
+
+- "Where your credits come from" is now "Where your courses
+  come from"; the intro reads "Add every college you took
+  courses at, or plan to."
+- "Courses taken at this college" is now "Courses taken or
+  planned at this college."
+- The target picker reads "Target college (where you want the
+  courses to count)."
+- Results group under "Courses from (college)", not "Credits
+  from", and the leftover "No grade entered yet" tag on planned
+  course notes is removed; the condition line stands alone.
+- Disclosure text made tense neutral to match ("ends below a
+  C", "is passed with a grade of C or better").
+
+Suite unchanged and green: 26 scenarios, 126 steps.
