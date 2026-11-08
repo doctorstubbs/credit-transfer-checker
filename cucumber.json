@@ -1,0 +1,1 @@
+{"default":{"format":["progress","summary"],"paths":["features"],"require":["features/steps/*.js"]}}

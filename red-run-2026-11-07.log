@@ -1,0 +1,126 @@
+
+> credit-transfer-tdd@0.1.0 test
+> cucumber-js
+
+This Node.js version (v24.22.1) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+Failures:
+
+1) Scenario: Transfer degree completes the general education block at a public university # features/credit-transfer.feature:12
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completes an Associate of Arts Louisiana Transfer degree at Delgado Community College # features/steps/credit-transfer.steps.js:24
+   ✔ And every course in the degree was passed with a grade of C or better # features/steps/credit-transfer.steps.js:44
+   ✖ When the student enrolls at a Louisiana public university # features/steps/credit-transfer.steps.js:82
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:84:3)
+   - Then the report says the general education requirements are met in full # features/steps/credit-transfer.steps.js:119
+   - And the report says no additional general education courses are required # features/steps/credit-transfer.steps.js:123
+
+2) Scenario: Transfer degree grants junior standing and transfers all 60 hours # features/credit-transfer.feature:19
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completes an Associate of Science Louisiana Transfer degree # features/steps/credit-transfer.steps.js:32
+   ✔ And every course in the degree was passed with a grade of C or better # features/steps/credit-transfer.steps.js:44
+   ✖ When the student enrolls at a Louisiana public university # features/steps/credit-transfer.steps.js:82
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:84:3)
+   - Then the report shows all 60 credit hours transferring # features/steps/credit-transfer.steps.js:127
+   - And the report shows the student entering with junior standing # features/steps/credit-transfer.steps.js:131
+
+3) Scenario: A grade below C breaks the transfer degree guarantee for that course # features/credit-transfer.feature:26
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completes a Louisiana Transfer degree # features/steps/credit-transfer.steps.js:36
+   ✔ But one course in the degree was passed with a grade of D # features/steps/credit-transfer.steps.js:48
+   ✖ When the credit check runs against a Louisiana public university # features/steps/credit-transfer.steps.js:87
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:89:3)
+   - Then the report flags that course as outside the transfer guarantee # features/steps/credit-transfer.steps.js:135
+   - And the report tells the family the receiving university decides that course on its own # features/steps/credit-transfer.steps.js:139
+
+4) Scenario: The transfer degree does not guarantee a seat in a limited access program # features/credit-transfer.feature:33
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completes a Louisiana Transfer degree with junior standing # features/steps/credit-transfer.steps.js:40
+   ✖ When the student applies to a limited access program at a public university # features/steps/credit-transfer.steps.js:92
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:95:3)
+   - Then the report says general education is complete # features/steps/credit-transfer.steps.js:143
+   - But the report warns that admission to that program is a separate decision # features/steps/credit-transfer.steps.js:147
+   - And the report lists the program's own admission requirements as still to be met # features/steps/credit-transfer.steps.js:151
+
+5) Scenario: A major prerequisite is not satisfied just because the transfer degree is complete # features/credit-transfer.feature:40
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completes an Associate of Arts Louisiana Transfer degree # features/steps/credit-transfer.steps.js:28
+   ✔ And the student's target major requires a specific prerequisite course the student never took # features/steps/credit-transfer.steps.js:52
+   ✖ When the credit check runs for that major # features/steps/credit-transfer.steps.js:98
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:99:3)
+   - Then the report marks that prerequisite as still required # features/steps/credit-transfer.steps.js:155
+   - And the report does not count any elective credit as a substitute for it # features/steps/credit-transfer.steps.js:159
+
+6) Scenario: A course with a direct equivalent counts as that exact course # features/credit-transfer.feature:47
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student passed ENGL 1010 at a Louisiana community college # features/steps/credit-transfer.steps.js:56
+   ✖ When the credit check runs against the University of Louisiana at Lafayette # features/steps/credit-transfer.steps.js:102
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:104:3)
+   - Then the report shows the credit as ENGL 101, English Composition # features/steps/credit-transfer.steps.js:163
+   - And the report counts it toward the English composition requirement # features/steps/credit-transfer.steps.js:167
+
+7) Scenario: A course with no direct equivalent becomes a level elective in the same subject # features/credit-transfer.feature:53
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student passed a course that the receiving university offers no direct match for # features/steps/credit-transfer.steps.js:60
+   ✔ And the receiving university does teach that subject area # features/steps/credit-transfer.steps.js:64
+   ✖ When the credit check runs # features/steps/credit-transfer.steps.js:107
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:108:3)
+   - Then the report shows the credit as an elective in that subject at the matching level # features/steps/credit-transfer.steps.js:171
+   - And the report warns that elective credit does not satisfy a named course requirement # features/steps/credit-transfer.steps.js:175
+
+8) Scenario: A course with no matching subject becomes a general elective # features/credit-transfer.feature:60
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student passed a course in a subject the receiving university does not offer # features/steps/credit-transfer.steps.js:68
+   ✖ When the credit check runs # features/steps/credit-transfer.steps.js:107
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:108:3)
+   - Then the report shows the credit as a general elective # features/steps/credit-transfer.steps.js:179
+   - And the report warns that general elective hours do not shorten the degree plan by themselves # features/steps/credit-transfer.steps.js:183
+
+9) Scenario: The state guarantee does not bind a private university # features/credit-transfer.feature:66
+   ✔ Before # features/steps/credit-transfer.steps.js:5
+   ✔ Given a student completed dual enrollment credits in Louisiana # features/steps/credit-transfer.steps.js:72
+   ✖ When the credit check runs against a private university such as Tulane # features/steps/credit-transfer.steps.js:111
+       Error: Not implemented: credit transfer rules engine
+           at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+           at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+           at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:114:3)
+   - Then the report does not promise transfer under the Louisiana public guarantee # features/steps/credit-transfer.steps.js:187
+   - And the report marks every course as verify with the university individually # features/steps/credit-transfer.steps.js:191
+
+10) Scenario: A below college level course earns no degree credit # features/credit-transfer.feature:72
+    ✔ Before # features/steps/credit-transfer.steps.js:5
+    ✔ Given a student passed a course numbered below 100 at Delgado Community College # features/steps/credit-transfer.steps.js:76
+    ✖ When the credit check runs # features/steps/credit-transfer.steps.js:107
+        Error: Not implemented: credit transfer rules engine
+            at runCheck (/home/hatch/workspace/credit-transfer-tdd/src/checker.js:29:9)
+            at doCheck (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:19:18)
+            at World.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/credit-transfer.steps.js:108:3)
+    - Then the report shows zero degree credit for that course # features/steps/credit-transfer.steps.js:195
+    - And the report explains that only courses numbered 100 and above fulfill degree requirements # features/steps/credit-transfer.steps.js:199
+
+10 scenarios (10 failed)
+46 steps (10 failed, 21 skipped, 15 passed)
+0m00.051s (executing steps: 0m00.002s)
