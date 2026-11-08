@@ -1,1 +1,13 @@
-{"description":"Louisiana dual enrollment credit transfer checker, built test first in the Beyond Vibe Coding method.","devDependencies":{"@cucumber/cucumber":"^11.0.0"},"name":"credit-transfer-tdd","private":true,"scripts":{"test":"cucumber-js"},"version":"0.1.0"}
+{
+  "description": "Louisiana dual enrollment credit transfer checker, built test first in the Beyond Vibe Coding method.",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.0"
+  },
+  "name": "credit-transfer-tdd",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js",
+    "start": "node src/server.js"
+  },
+  "version": "0.1.0"
+}
