@@ -85,7 +85,7 @@
     <div id="warnings"></div>
   </div>
 
-  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. Every course gets the same match answer either way: enter the grade if you know it and the answer is final; leave the grade blank and the answer carries its condition in plain words (the match is firm today; the counting is earned with a grade of C or better). Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  <p class="fine">Rules in this version: the Louisiana Transfer Degree block guarantee at public universities (general education complete, 60 hours, junior standing) with a grade of C or better in every course, attached to the college that granted the degree; a grade below C is flagged for the receiving university to decide; limited access program admission is separate; electives never replace a missing major prerequisite; course outcomes are direct equivalent, level elective, or general elective; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit. Credits from several colleges are evaluated together and reported college by college. This check assumes every course was passed with a grade of C or better, which is what transfer credit requires in the first place. If a course came in below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
 </div>
 
 <script>/*DATA-START*/
@@ -2961,9 +2961,6 @@ function courseRowHTML() {
     '<select class="c-subject" aria-label="Subject"><option value="">Pick a subject</option></select>' +
     '<select class="c-course" aria-label="Course" disabled><option value="">Pick the course</option></select>' +
     '<input type="text" class="c-code" placeholder="or type the code: ENGL 1010" aria-label="Course code">' +
-    '<select class="c-grade" aria-label="Grade">' +
-      '<option value="">Grade</option><option>A</option><option>B</option><option>C</option><option>D</option><option>F</option>' +
-    '</select>' +
     '</div>';
 }
 
@@ -3065,12 +3062,9 @@ document.getElementById('run').addEventListener('click', async () => {
     block.querySelectorAll('.s-courses .row').forEach(r => {
       const code = r.querySelector('.c-code').value.trim();
       if (!code) return;
-      const grade = r.querySelector('.c-grade').value || null;
       courses.push({
         code: code.toUpperCase(),
         lccn: r.dataset.lccn || undefined,
-        status: grade ? 'completed' : 'planned',
-        grade: grade,
         number: parseNumber(code)
       });
     });
@@ -3219,14 +3213,16 @@ function isBelowC(course) {
 }
 
 function annotateCondition(result, course) {
-  // One path for every course (Kris's simplification, Nov 8, 2026):
-  // planned and finished courses get the same equivalency answer.
-  // The only difference a grade makes: with a grade on record the
-  // answer is final, including the below C flag on degree courses;
-  // with no grade yet, the answer carries its condition in plain
-  // words. Status follows the grade, never a separate declaration.
-  result.status = course.grade ? 'completed'
-    : (course.status === 'completed' ? 'completed' : 'planned');
+  // One path for every course (Kris's simplifications, Nov 8, 2026):
+  // planned and finished courses get the same equivalency answer,
+  // and a course entered with no grade is assumed to have been
+  // passed with a grade of C or better, which is what transfer
+  // credit requires in the first place. The page states that
+  // assumption in plain words. A grade on record still rules where
+  // it legally matters: a below C grade inside a transfer degree
+  // is flagged by name (see the degree block above). Only a course
+  // declared planned sight unseen carries the condition line.
+  result.status = course.status === 'planned' ? 'planned' : 'completed';
   result.condition = null;
   if (result.status === 'planned' && result.degreeCredit) {
     // The equivalency answer is firm today; the counting is earned.
