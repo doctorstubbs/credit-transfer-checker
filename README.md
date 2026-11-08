@@ -1,6 +1,6 @@
 # Credit Transfer Checker, Test First
 
-**The question this product answers for a dual enrollment family:**
+**The question this product answers for any Louisiana student or family moving credits between colleges, dual enrollment included:**
 will this credit count, and what will it count as, at the college my
 teen actually plans to attend, answered before the money is spent.
 
@@ -10,6 +10,8 @@ the business rules are written first as plain English scenarios, the
 domain owner approves them, and software is built only to make the
 tests pass.
 
+- License: all rights reserved, see LICENSE. This repo is a public
+  showcase of the build, not an open source release.
 - Full stage by stage record: docs/BUILD-LOG.md
 - The rules: features/credit-transfer.feature
 - The test harness: features/steps/credit-transfer.steps.js
