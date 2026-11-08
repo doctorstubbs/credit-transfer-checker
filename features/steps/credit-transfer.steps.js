@@ -56,6 +56,19 @@ Given('a student completes an Associate of Arts Louisiana Transfer degree', func
   this.student.degree = 'AALT';
 });
 
+Given('a student is planning to take ENGL 1010 at a Louisiana community college, and has not taken it yet', function () {
+  this.student.courses.push({ code: 'ENGL 1010', status: 'planned', grade: null });
+});
+
+Given('a student is planning to take a course that the receiving university offers no direct match for', function () {
+  this.student.courses.push({ code: 'UNSPECIFIED', status: 'planned', directMatch: false });
+});
+
+Given('a student is working on an Associate of Arts Louisiana Transfer degree and has not finished it yet', function () {
+  this.student.degree = 'AALT';
+  this.student.degreeStatus = 'in_progress';
+});
+
 Given('a student completes an Associate of Science Louisiana Transfer degree', function () {
   this.student.degree = 'ASLT';
 });
@@ -256,4 +269,26 @@ Then('the report shows the Baton Rouge Community College course as an elective i
   const r = this.report.courseResults.find((c) => c.sourceInstitution === 'Baton Rouge Community College');
   assert.ok(r, 'Baton Rouge Community College result missing');
   assert.strictEqual(r.shownAs, 'subject elective at matching level');
+});
+
+Then('the report marks the course as planned', function () {
+  assert.strictEqual(this.report.courseResults[0].status, 'planned');
+});
+
+Then('the report shows the planned credit as ENGL 101, English Composition', function () {
+  assert.strictEqual(this.report.courseResults[0].shownAs, 'ENGL 101');
+});
+
+Then('the report says it counts toward the English composition requirement if the student earns a grade of C or better', function () {
+  assert.strictEqual(this.report.courseResults[0].countsToward, 'English composition requirement');
+  assert.ok(this.report.courseResults[0].condition && this.report.courseResults[0].condition.includes('C or better'));
+});
+
+Then('the report does not say general education is complete yet', function () {
+  assert.strictEqual(this.report.genEdComplete, false);
+});
+
+Then('the report says the transfer guarantee applies when the degree is finished, if every course is passed with a grade of C or better', function () {
+  assert.strictEqual(this.report.degreeGuaranteeOnCompletion, true);
+  assert.ok(this.report.degreeGuaranteeCondition && this.report.degreeGuaranteeCondition.includes('C or better'));
 });
