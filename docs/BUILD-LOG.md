@@ -67,11 +67,30 @@ any rule (full citations in README.md):
   Log saved at red-run-2026-11-07.log.
 - Meaning: the tests bite, and they fail only because the behavior
   does not exist yet. That is the correct starting line.
+- Published the same night to GitHub (Kris's direction: everything
+  documented and showcase ready): https://github.com/doctorstubbs/credit-transfer-checker
+  All files verified live, feature file shows exactly 10 scenarios.
+
+## Stage 5, Build to green (Sat Nov 7, 2026)
+
+- Implemented the rules engine in src/checker.js against the approved
+  scenarios: transfer degree block guarantee (gen ed complete, 60
+  hours, junior standing), the C or better condition with flagged
+  courses decided by the receiving university, limited access programs
+  as a separate admission decision, prerequisites never satisfied by
+  electives, the three course level outcomes (direct equivalent,
+  level elective, general elective), the private university boundary,
+  and the below 100 level floor.
+- Result on the first full implementation run: 10 scenarios,
+  10 passed; 46 steps, 46 passed. Log: green-run-2026-11-07.log.
+- Honest scope note: v1 covers the ten approved Louisiana rules with
+  the course data the scenarios name. Real articulation data (the
+  full Board of Regents matrix), more receiving universities, AP
+  credit, and grade point requirements are later stages, added the
+  same way: scenarios first, domain owner approval, then code.
 
 ## Next stages (not started)
 
-- Stage 5: Build the rules engine to green, one scenario group at a
-  time (transfer degree block first, then course level outcomes).
 - Stage 6: A simple web page where a family enters courses and a
   target college and receives the report. First browser visible stage.
 - Stage 7: Package the audit as a fixed price report for families and
