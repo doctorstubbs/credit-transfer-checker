@@ -13,6 +13,9 @@ Before(function () {
     programType: 'general',
   };
   this.report = null;
+  this.student.primaryInstitution = null;
+  this.student.additionalSources = [];
+  this.currentSource = null;
 });
 
 function doCheck(world) {
@@ -23,6 +26,30 @@ function doCheck(world) {
 
 Given('a student completes an Associate of Arts Louisiana Transfer degree at Delgado Community College', function () {
   this.student.degree = 'AALT';
+  this.student.primaryInstitution = 'Delgado Community College';
+});
+
+Given('a student earned dual enrollment credits at Delgado Community College', function () {
+  this.student.dualEnrollmentCredits = true;
+  this.student.primaryInstitution = 'Delgado Community College';
+});
+
+Given('at Delgado Community College, the student passed ENGL 1010', function () {
+  this.student.courses.push({ code: 'ENGL 1010', grade: 'C or better' });
+});
+
+Given('the student also earned credits at Baton Rouge Community College', function () {
+  const src = { institution: 'Baton Rouge Community College', degree: null, allGradesCOrBetter: false, courses: [] };
+  this.student.additionalSources.push(src);
+  this.currentSource = src;
+});
+
+Given('at Baton Rouge Community College, the student passed a course in a subject the receiving university does not offer', function () {
+  this.currentSource.courses.push({ code: 'UNSPECIFIED', subjectOffered: false });
+});
+
+Given('at Baton Rouge Community College, the student passed a course that the receiving university offers no direct match for', function () {
+  this.currentSource.courses.push({ code: 'UNSPECIFIED', directMatch: false });
 });
 
 Given('a student completes an Associate of Arts Louisiana Transfer degree', function () {
@@ -210,4 +237,23 @@ Then('the report shows zero degree credit for that course', function () {
 
 Then('the report explains that only courses numbered 100 and above fulfill degree requirements', function () {
   assert.ok(this.report.warnings.some((w) => w.includes('100 and above')));
+});
+
+Then('the report lists the ENGL 1010 result under Delgado Community College', function () {
+  const r = this.report.courseResults.find((c) => c.code === 'ENGL 1010');
+  assert.ok(r, 'ENGL 1010 result missing');
+  assert.strictEqual(r.sourceInstitution, 'Delgado Community College');
+  assert.strictEqual(r.shownAs, 'ENGL 101');
+});
+
+Then('the report lists the general elective result under Baton Rouge Community College', function () {
+  const r = this.report.courseResults.find((c) => c.sourceInstitution === 'Baton Rouge Community College');
+  assert.ok(r, 'Baton Rouge Community College result missing');
+  assert.strictEqual(r.shownAs, 'general elective');
+});
+
+Then('the report shows the Baton Rouge Community College course as an elective in that subject at the matching level', function () {
+  const r = this.report.courseResults.find((c) => c.sourceInstitution === 'Baton Rouge Community College');
+  assert.ok(r, 'Baton Rouge Community College result missing');
+  assert.strictEqual(r.shownAs, 'subject elective at matching level');
 });
