@@ -1,0 +1,76 @@
+# Credit Transfer Rules, Louisiana
+# Draft v1, Nov 7, 2026. Written test first, in the Beyond Vibe Coding method:
+# these scenarios are the domain model. No software gets built until the
+# domain owner (Kris) approves each rule. Every scenario is grounded in a
+# published source listed in README.md, or it does not ship.
+#
+# The checker answers one family question for a dual enrollment student:
+# "Will this credit count, and what will it count as, at my target college?"
+
+Feature: Louisiana dual enrollment credit transfer check
+
+  Scenario: Transfer degree completes the general education block at a public university
+    Given a student completes an Associate of Arts Louisiana Transfer degree at Delgado Community College
+    And every course in the degree was passed with a grade of C or better
+    When the student enrolls at a Louisiana public university
+    Then the report says the general education requirements are met in full
+    And the report says no additional general education courses are required
+
+  Scenario: Transfer degree grants junior standing and transfers all 60 hours
+    Given a student completes an Associate of Science Louisiana Transfer degree
+    And every course in the degree was passed with a grade of C or better
+    When the student enrolls at a Louisiana public university
+    Then the report shows all 60 credit hours transferring
+    And the report shows the student entering with junior standing
+
+  Scenario: A grade below C breaks the transfer degree guarantee for that course
+    Given a student completes a Louisiana Transfer degree
+    But one course in the degree was passed with a grade of D
+    When the credit check runs against a Louisiana public university
+    Then the report flags that course as outside the transfer guarantee
+    And the report tells the family the receiving university decides that course on its own
+
+  Scenario: The transfer degree does not guarantee a seat in a limited access program
+    Given a student completes a Louisiana Transfer degree with junior standing
+    When the student applies to a limited access program at a public university
+    Then the report says general education is complete
+    But the report warns that admission to that program is a separate decision
+    And the report lists the program's own admission requirements as still to be met
+
+  Scenario: A major prerequisite is not satisfied just because the transfer degree is complete
+    Given a student completes an Associate of Arts Louisiana Transfer degree
+    And the student's target major requires a specific prerequisite course the student never took
+    When the credit check runs for that major
+    Then the report marks that prerequisite as still required
+    And the report does not count any elective credit as a substitute for it
+
+  Scenario: A course with a direct equivalent counts as that exact course
+    Given a student passed ENGL 1010 at a Louisiana community college
+    When the credit check runs against the University of Louisiana at Lafayette
+    Then the report shows the credit as ENGL 101, English Composition
+    And the report counts it toward the English composition requirement
+
+  Scenario: A course with no direct equivalent becomes a level elective in the same subject
+    Given a student passed a course that the receiving university offers no direct match for
+    And the receiving university does teach that subject area
+    When the credit check runs
+    Then the report shows the credit as an elective in that subject at the matching level
+    And the report warns that elective credit does not satisfy a named course requirement
+
+  Scenario: A course with no matching subject becomes a general elective
+    Given a student passed a course in a subject the receiving university does not offer
+    When the credit check runs
+    Then the report shows the credit as a general elective
+    And the report warns that general elective hours do not shorten the degree plan by themselves
+
+  Scenario: The state guarantee does not bind a private university
+    Given a student completed dual enrollment credits in Louisiana
+    When the credit check runs against a private university such as Tulane
+    Then the report does not promise transfer under the Louisiana public guarantee
+    And the report marks every course as verify with the university individually
+
+  Scenario: A below college level course earns no degree credit
+    Given a student passed a course numbered below 100 at Delgado Community College
+    When the credit check runs
+    Then the report shows zero degree credit for that course
+    And the report explains that only courses numbered 100 and above fulfill degree requirements
