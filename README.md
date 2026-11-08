@@ -22,9 +22,9 @@ npm install
 npm test
 ```
 
-Expected today: 10 scenarios, 10 failing with "Not implemented,"
-which is the recorded red state (see red-run-2026-11-07.log). The
-build to green is Stage 5 in the build log.
+History: the recorded red state (10 failing, red-run-2026-11-07.log)
+was built to green in Stage 5. Expected today: 10 scenarios,
+10 passed (green-run-2026-11-07.log).
 
 Started Nov 7, 2026, the night of Black Tech NOLA, using the method from
 D. Gaspard's "Beyond Vibe Coding" workshop: write the business rules as
@@ -42,7 +42,8 @@ will this credit count, and what will it count as, at the target college?
 
 - v1 scenarios: 10 rules in features/credit-transfer.feature
 - DOMAIN OWNER APPROVED: Kris reviewed all 10 scenarios on Nov 7, 2026 and approved them as written ("These all look good to me"). The three soft spots in the checklist below stand as the approved wording.
-- RED RUN RECORDED Nov 7, 2026: harness stood up (Cucumber, Node 24). First run caught one undefined step (scenario 5 degree phrasing), fixed, rerun: 10 scenarios, 10 failed, 0 undefined, every failure is the intentional 'Not implemented: credit transfer rules engine' in src/checker.js. Log: red-run-2026-11-07.log. The tests are proven to bite. Next: build the rules engine to green, one scenario group at a time.
+- RED RUN RECORDED Nov 7, 2026: 10 scenarios, 10 failed, 0 undefined, every failure the intentional 'Not implemented' stub. Log: red-run-2026-11-07.log.
+- GREEN RUN RECORDED Nov 7, 2026: rules engine built in src/checker.js; 10 scenarios, 10 passed, 46 steps, 46 passed on the first full implementation run. Log: green-run-2026-11-07.log. Stage 5 in docs/BUILD-LOG.md.
 
 ## Sources each scenario stands on (verified Nov 7, 2026)
 
