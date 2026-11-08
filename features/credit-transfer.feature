@@ -87,3 +87,22 @@ Feature: Louisiana dual enrollment credit transfer check
     When the credit check runs against a private university such as Loyola University New Orleans
     Then the report does not promise transfer under the Louisiana public guarantee
     And the report marks every course as verify with the university individually
+
+  Scenario: Credits from two colleges are evaluated in one check, grouped by college
+    Given a student earned dual enrollment credits at Delgado Community College
+    And at Delgado Community College, the student passed ENGL 1010
+    And the student also earned credits at Baton Rouge Community College
+    And at Baton Rouge Community College, the student passed a course in a subject the receiving university does not offer
+    When the credit check runs against the University of Louisiana at Lafayette
+    Then the report lists the ENGL 1010 result under Delgado Community College
+    And the report lists the general elective result under Baton Rouge Community College
+
+  Scenario: A transfer degree from one college plus loose courses from another
+    Given a student completes an Associate of Arts Louisiana Transfer degree at Delgado Community College
+    And every course in the degree was passed with a grade of C or better
+    And the student also earned credits at Baton Rouge Community College
+    And at Baton Rouge Community College, the student passed a course that the receiving university offers no direct match for
+    And the receiving university does teach that subject area
+    When the credit check runs against the University of Louisiana at Lafayette
+    Then the report says the general education requirements are met in full
+    And the report shows the Baton Rouge Community College course as an elective in that subject at the matching level
