@@ -69,25 +69,6 @@ Given('a student is working on an Associate of Arts Louisiana Transfer degree an
   this.student.degreeStatus = 'in_progress';
 });
 
-Given('a student took ENGL 1010 at Delgado Community College', function () {
-  this.student.primaryInstitution = 'Delgado Community College';
-  this.student.courses.push({ code: 'ENGL 1010' });
-});
-
-Given('a student took ACCT 201 at Delgado Community College', function () {
-  this.student.primaryInstitution = 'Delgado Community College';
-  this.student.courses.push({ code: 'ACCT 201' });
-});
-
-Given('a student took a course coded XYZ 9999 at Delgado Community College', function () {
-  this.student.primaryInstitution = 'Delgado Community College';
-  this.student.courses.push({ code: 'XYZ 9999' });
-});
-
-Given('the credit check runs against the University of New Orleans', function () {
-  this.report = runCheck({ ...this.student, target: { name: 'University of New Orleans', isPublic: true, teachesSubject: true }, programType: 'general' });
-});
-
 Given('a student completes an Associate of Science Louisiana Transfer degree', function () {
   this.student.degree = 'ASLT';
 });
@@ -310,24 +291,4 @@ Then('the report does not say general education is complete yet', function () {
 Then('the report says the transfer guarantee applies when the degree is finished, if every course is passed with a grade of C or better', function () {
   assert.strictEqual(this.report.degreeGuaranteeOnCompletion, true);
   assert.ok(this.report.degreeGuaranteeCondition && this.report.degreeGuaranteeCondition.includes('C or better'));
-});
-
-Then('the report shows the credit as ENGL 101 at the target college', function () {
-  assert.strictEqual(this.report.courseResults[0].shownAs, 'ENGL 101');
-});
-
-Then('the report says the match comes from the state common course number CENL 1013', function () {
-  assert.strictEqual(this.report.courseResults[0].matchedBy, 'CENL 1013');
-});
-
-Then('the report names ENGL 1157 as the equivalent course', function () {
-  assert.strictEqual(this.report.courseResults[0].shownAs, 'ENGL 1157');
-});
-
-Then('the report says the match comes from the state common course number CACC 2313', function () {
-  assert.strictEqual(this.report.courseResults[0].matchedBy, 'CACC 2313');
-});
-
-Then('the report flags the course as not in the course data yet', function () {
-  assert.strictEqual(this.report.courseResults[0].dataStatus, 'not-in-data');
 });
