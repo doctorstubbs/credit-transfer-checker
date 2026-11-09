@@ -3353,5 +3353,245 @@
     }
    ]
   }
+ },
+ "apTables": {
+  "University of Louisiana at Lafayette": {
+   "AP Art History": [
+    {
+     "minScore": 3,
+     "courses": "VIAR 121",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "VIAR 121, VIAR 122",
+     "hours": 6
+    }
+   ],
+   "AP Biology": [
+    {
+     "minScore": 3,
+     "courses": "BIOL 110, BIOL 111, BIOL 112, BIOL 113",
+     "hours": 8
+    }
+   ],
+   "AP Chemistry": [
+    {
+     "minScore": 3,
+     "courses": "CHEM 107, CHEM 108",
+     "hours": 6
+    }
+   ],
+   "AP Computer Science A": [
+    {
+     "minScore": 3,
+     "courses": "",
+     "hours": 3
+    }
+   ],
+   "AP English Language and Composition": [
+    {
+     "minScore": 3,
+     "courses": "ENGL 101",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "ENGL 101, ENGL 102",
+     "hours": 6
+    },
+    {
+     "minScore": 5,
+     "courses": "ENGL 101, ENGL 102, ENGL 352",
+     "hours": 9
+    }
+   ],
+   "AP English Literature and Composition": [
+    {
+     "minScore": 3,
+     "courses": "ENGL 101",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "ENGL 101, ENGL 102",
+     "hours": 6
+    },
+    {
+     "minScore": 5,
+     "courses": "ENGL 101, ENGL 102, ENGL 210",
+     "hours": 9
+    }
+   ],
+   "AP Economics": [
+    {
+     "minScore": 3,
+     "courses": "ECON 201, ECON 202",
+     "hours": 6
+    }
+   ],
+   "AP French Language and Culture": [
+    {
+     "minScore": 3,
+     "courses": "FREN 101, FREN 102, FREN 201",
+     "hours": 9
+    },
+    {
+     "minScore": 4,
+     "courses": "FREN 101, FREN 102, FREN 201, FREN 202",
+     "hours": 12
+    },
+    {
+     "minScore": 5,
+     "courses": "FREN 101, FREN 102, FREN 201, FREN 202, FREN 361",
+     "hours": 15
+    }
+   ],
+   "AP German Language": [
+    {
+     "minScore": 3,
+     "courses": "GERM 101, GERM 102, GERM 201",
+     "hours": 9
+    }
+   ],
+   "AP United States Government and Politics": [
+    {
+     "minScore": 3,
+     "courses": "POLS 110",
+     "hours": 3
+    }
+   ],
+   "AP United States History": [
+    {
+     "minScore": 3,
+     "courses": "HIST 221 or HIST 222",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "HIST 221, HIST 222",
+     "hours": 6
+    }
+   ],
+   "AP European History": [
+    {
+     "minScore": 3,
+     "courses": "HIST 101 or HIST 102",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "HIST 101, HIST 102",
+     "hours": 6
+    }
+   ],
+   "AP Human Geography": [
+    {
+     "minScore": 3,
+     "courses": "GEOG 201",
+     "hours": 3
+    }
+   ],
+   "AP Latin": [
+    {
+     "minScore": 3,
+     "courses": "LATN 101, LATN 102, LATN 201",
+     "hours": 9
+    }
+   ],
+   "AP Calculus AB": [
+    {
+     "minScore": 3,
+     "courses": "MATH 143, MATH 250",
+     "hours": 6
+    },
+    {
+     "minScore": 4,
+     "courses": "MATH 143, MATH 270",
+     "hours": 7
+    }
+   ],
+   "AP Calculus BC": [
+    {
+     "minScore": 3,
+     "courses": "MATH 143, MATH 270",
+     "hours": 7
+    },
+    {
+     "minScore": 4,
+     "courses": "MATH 143, MATH 270, MATH 301",
+     "hours": 11
+    }
+   ],
+   "AP Statistics": [
+    {
+     "minScore": 3,
+     "courses": "STAT 214",
+     "hours": 3
+    }
+   ],
+   "AP Music Theory": [
+    {
+     "minScore": 3,
+     "courses": "MUS 130",
+     "hours": 3
+    },
+    {
+     "minScore": 4,
+     "courses": "MUS 120, MUS 130",
+     "hours": 9
+    },
+    {
+     "minScore": 5,
+     "courses": "MUS 120, MUS 130",
+     "hours": 12
+    }
+   ],
+   "AP Physics B": [
+    {
+     "minScore": 3,
+     "courses": "PHYS 207, PHYS 208",
+     "hours": 6
+    }
+   ],
+   "AP Physics C: Mechanics": [
+    {
+     "minScore": 3,
+     "courses": "PHYS 201",
+     "hours": 4
+    }
+   ],
+   "AP Physics C: Electricity and Magnetism": [
+    {
+     "minScore": 3,
+     "courses": "PHYS 202",
+     "hours": 4
+    }
+   ],
+   "AP Psychology": [
+    {
+     "minScore": 3,
+     "courses": "PSYC 110",
+     "hours": 3
+    }
+   ],
+   "AP Spanish Language and Culture": [
+    {
+     "minScore": 3,
+     "courses": "SPAN 101, SPAN 102, SPAN 201",
+     "hours": 9
+    },
+    {
+     "minScore": 4,
+     "courses": "SPAN 101, SPAN 102, SPAN 201, SPAN 202",
+     "hours": 12
+    },
+    {
+     "minScore": 5,
+     "courses": "SPAN 101, SPAN 102, SPAN 201, SPAN 202, SPAN 310",
+     "hours": 15
+    }
+   ]
+  }
  }
 }
