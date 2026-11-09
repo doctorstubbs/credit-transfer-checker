@@ -610,3 +610,88 @@ MATH 128 still counts as MATH 105 at UL Lafayette; an AP 4
 with the report sent returns credit awarded; an AP 2 returns
 no credit; a Tulane target returns verify individually).
 Log: run-2026-11-08-ap-page-green.log.
+
+## Stage 11m: University of New Orleans joins the dataset (Nov 8, 2026)
+
+Third college in the data, first one added since the Stage 11b
+method settled. Source: UNO's own 2026-2027 University Catalog
+(catalog.uno.edu, served from catalog.lsuneworleans.edu,
+Acalog catoid 13). Current edition only; no AY 2022-2023 data.
+
+The wrinkle: this edition does not print the Louisiana common
+course number beside its courses, the way Delgado's and UL
+Lafayette's catalogs do. The numbers live in the catalog's own
+search index instead. The harvest recovered them through the
+catalog's Advanced Search, and because part of the first pass
+rested on pattern inference (bucket searches plus the rule
+that the number's last digit equals the course's credit
+hours), a dedicated verification pass then exact-verified
+every pairing one by one: all 73 confirmed, 0 wrong,
+0 unresolved. Nothing inferred reached the dataset unverified.
+
+Verified quirk, recorded as printed: PHYS 1001 and PHYS 1002
+both carry CPHY 1013 in this catalog, and no CPHY 1023 exists.
+Course titles are the catalog's search listing titles; a few
+are abbreviated there (for example "Found'n of Developmental
+Psyc"), a cosmetic limit of the source, noted rather than
+rewritten.
+
+Dataset now: Delgado 131, UL Lafayette 96, UNO 73. A student
+can pick courses at any of the three and check them against
+any of the three. Smoke checks on the live page copy: Delgado
+ENGL 101 counts as ENGL 1157 at UNO; UNO ENGL 1157 counts as
+ENGL 101 at UL Lafayette; Delgado MATH 128 counts as MATH
+1115 at UNO (the state number matches where the local numbers
+do not, the same pattern as Stage 11b).
+
+Suite unchanged and green: 31 scenarios, 154 steps.
+Log: run-2026-11-08-uno-green.log.
+
+## Stage 11n: UL Lafayette's AP table wired in (Nov 8, 2026)
+
+The AP harvest from Stage 11k's follow-up turned out to hold a
+finding: UL Lafayette's table (2026-2027 catalog, Credit for
+Prior Learning, Advanced Placement Program) has NO elective
+tier. Every exam starts at 3, and higher scores earn more
+courses and more hours. Kris approved a new scenario written
+from the real table, watched it fail (run-2026-11-08-ap-table
+-red.log), and the wiring below made it pass:
+
+- The dataset now carries apTables, built from the harvested
+  table: 23 exams, each a list of score bands (minimum score,
+  courses awarded, hours). When the target university has a
+  table on record and the exam is in it, the table decides the
+  AP result: exact courses, exact hours, and a note naming
+  what the next score band would have earned. When no table
+  is on record, or the exam is not in it, the statewide
+  policy default from Stage 11k still applies.
+- Exam names: the catalog prints its own style ("History,
+  American", "Mathematics: Calculus AB"). An alias map in the
+  dataset builder ties each printed name to the College Board
+  name the page lists. Two deliberate non-aliases, recorded so
+  nobody has to re-derive them: the catalog's single
+  "Economics" line is NOT split between AP Macroeconomics and
+  AP Microeconomics by guesswork, and the retired "Physics B"
+  is NOT treated as AP Physics 1. "Computer Science" (the
+  catalog names no course for it, hours only) is aliased to AP
+  Computer Science A, and the engine says plainly that the
+  table awards the hours without naming a course.
+- One scenario correction driven by the data, flagged to Kris:
+  the Stage 11k scenario "A score of 3 earns an elective where
+  the exact course requires a 4" named UL Lafayette as its
+  example. UL Lafayette's real table contradicts that premise
+  (a 3 there earns ENGL 101 outright), so the scenario's
+  example university is now McNeese State University, a public
+  university with no AP table on record, where the declared
+  requirement path the scenario pins is the one that governs.
+  The rule itself is unchanged.
+- The catalog marks its AP section "under review, changes
+  forthcoming"; the harvest is dated Nov 8, 2026 and the table
+  joins the re-check list with the catalogs.
+
+Page effect: for a UL Lafayette target, 14 of the 20 listed AP
+exams now return the university's real courses and hours
+instead of the generic statewide answer.
+
+Suite: 32 scenarios, 160 steps, all passing.
+Log: run-2026-11-08-ap-table-green.log.
