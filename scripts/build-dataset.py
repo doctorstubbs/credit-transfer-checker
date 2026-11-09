@@ -29,13 +29,15 @@ state = json.load(open('data/statewide-courses.json'))
 dataset = {
  'meta': {'builtFrom': ['Louisiana Statewide Common Course Catalog, AY 2025-26 edition (Board of Regents)',
    'Delgado Community College Catalog, 2026-2027 (catalog.dcc.edu)',
-   'University of Louisiana at Lafayette Undergraduate and Graduate Catalog, 2026-2027 (catalog.louisiana.edu)'],
-   'note': 'Every pairing traces to two current catalogs joined on the Louisiana common course number each college prints beside its own course. No AY 2022-2023 matrix data is used.'},
+   'University of Louisiana at Lafayette Undergraduate and Graduate Catalog, 2026-2027 (catalog.louisiana.edu)',
+   'University of New Orleans University Catalog, 2026-2027 (catalog.uno.edu; LCCN tags carried in the catalog search index, each pairing exact-verified Nov 8, 2026)'],
+   'note': 'Every pairing traces to two current catalogs joined on the Louisiana common course number from each college\'s own current catalog. No AY 2022-2023 matrix data is used.'},
  'subjects': state['subjects'],
  'statewide': {c['lccn']: {'title': c['title'], 'hours': c['hours']} for c in state['courses']},
  'colleges': {
    'Delgado Community College': {'catalog': '2026-2027 catalog', 'courses': parse('data/harvests/delgado-2026-27.txt')},
    'University of Louisiana at Lafayette': {'catalog': '2026-2027 catalog', 'courses': parse('data/harvests/ul-lafayette-2026-27.txt')},
+   'University of New Orleans': {'catalog': '2026-2027 catalog', 'courses': parse('data/harvests/uno-2026-27.txt')},
  }
 }
 json.dump(dataset, open('data/courses.json', 'w'), indent=1)
