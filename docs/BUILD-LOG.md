@@ -529,3 +529,50 @@ taken yet, and the wording has to read true for both.
   C", "is passed with a grade of C or better").
 
 Suite unchanged and green: 26 scenarios, 126 steps.
+
+## Stage 11k: AP credit scenarios go green in the engine (Nov 8, 2026)
+
+Kris picked AP credit as the first expansion set and approved
+five scenarios as domain owner before anything was built:
+
+1. A score of 3 or higher earns credit at a public university.
+2. A score below 3 earns no credit.
+3. AP credit is never automatic: no official score report sent,
+   no credit, and the report says why.
+4. Where a college's AP table requires a 4 for the exact course
+   match, a 3 earns a subject elective instead, and the report
+   shows what the higher score would have earned.
+5. The state AP rule does not bind a private university; AP
+   credit there is flagged verify individually.
+
+Grounding: Louisiana's statewide AP policy requires public
+institutions to award credit for scores of 3 or higher, aligned
+to campus course equivalents (College Board state policy
+summary; Board of Regents AA 2.22 FAQ: credit is awarded only
+if the student scores 3 or higher and submits the score report
+when enrolling).
+
+Method, same as always: the scenarios went into the feature
+file first and were watched in their red state (26 passed, 5
+undefined; run-2026-11-08-ap-scenarios-red.log). The engine
+then grew an apExams input and an apResults section:
+
+- Private targets are now also recognized by name against the
+  Stage 7 private list, so a named private university gets the
+  verify individually flag for AP just as it does for transfer.
+- Each AP exam returns one outcome: exact-equivalent,
+  subject-elective (with a note naming what the higher score
+  would have earned), none (below the line, or the score report
+  was never sent, each with its reason in plain words), or
+  verify-individually at a private university.
+
+The page does not collect AP exams yet, by design: the courses
+only page stays as Kris simplified it in Stages 11c to 11j.
+The AP verdicts live in the engine for the family audit, where
+a real student's scores are read from documents. Wiring AP
+into the public page is a separate stage if Kris calls for it.
+
+Suite: 31 scenarios, 154 steps, all passing.
+Log: run-2026-11-08-ap-green.log. The standalone Pages copy
+was regenerated so it carries the same engine, and its AP
+path was exercised directly as a smoke check.
