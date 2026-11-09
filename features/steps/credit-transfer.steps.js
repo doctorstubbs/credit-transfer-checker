@@ -16,6 +16,8 @@ Before(function () {
   this.student.primaryInstitution = null;
   this.student.additionalSources = [];
   this.currentSource = null;
+  this.student.apExams = [];
+  this.student.apExactMatchRequirements = {};
 });
 
 function doCheck(world) {
@@ -362,4 +364,69 @@ Then('the report does not claim the transfer degree guarantee', function () {
   assert.strictEqual(this.report.genEdComplete, false);
   assert.strictEqual(this.report.guaranteePromised, false);
   assert.strictEqual(this.report.juniorStanding, false);
+});
+
+// ---------- AP credit (scenarios approved Nov 8, 2026) ----------
+
+Given('the student scored {int} on the AP English Language and Composition exam', function (score) {
+  const exam = { exam: 'AP English Language and Composition', score, scoreReportSent: false };
+  const required = this.student.apExactMatchRequirements[exam.exam];
+  if (required) exam.exactMatchMinScore = required;
+  this.student.apExams.push(exam);
+});
+
+Given('the student sent the official AP score report to the university', function () {
+  this.student.apExams[this.student.apExams.length - 1].scoreReportSent = true;
+});
+
+Given('the student never sent the official AP score report to the university', function () {
+  this.student.apExams[this.student.apExams.length - 1].scoreReportSent = false;
+});
+
+Given('the university requires a score of {int} for the exact course match for AP English Language and Composition', function (minScore) {
+  this.student.apExactMatchRequirements['AP English Language and Composition'] = minScore;
+  const exam = this.student.apExams.find((e) => e.exam === 'AP English Language and Composition');
+  if (exam) exam.exactMatchMinScore = minScore;
+});
+
+Then("the report awards AP credit for the university's English composition equivalent", function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.strictEqual(r.outcome, 'exact-equivalent');
+  assert.strictEqual(r.creditAwarded, true);
+});
+
+Then('the report awards no credit for that AP exam', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.strictEqual(r.outcome, 'none');
+  assert.strictEqual(r.creditAwarded, false);
+  assert.strictEqual(r.degreeCredit, 0);
+});
+
+Then('the report says AP credit requires the official score report to be sent', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.ok(r.note && r.note.includes('score report'),
+    'expected a score report note, got: ' + r.note);
+});
+
+Then('the report awards AP credit as an elective in that subject', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.strictEqual(r.outcome, 'subject-elective');
+  assert.strictEqual(r.creditAwarded, true);
+});
+
+Then('the report shows what the higher score would have earned', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.ok(r.higherScoreNote && r.higherScoreNote.includes('exact course match'),
+    'expected a higher score note, got: ' + r.higherScoreNote);
+});
+
+Then('the report flags AP credit at a private university as verify individually', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.strictEqual(r.outcome, 'verify-individually');
 });
