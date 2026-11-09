@@ -45,3 +45,21 @@ Feature: The full audit report
     And the audit is rendered for printing
     Then the printed document names University of Louisiana at Lafayette and the total of 6
     And the printed document contains no form elements
+
+  Scenario: The printed audit names the target college on every course group
+    Given a check of Delgado ENGL 101 and UNO BIOS 1083 toward UL Lafayette
+    When the audit is built from that check
+    And the audit is rendered for printing
+    Then every course group heading in the printed document names University of Louisiana at Lafayette as where the courses count
+
+  Scenario: The printed audit opens by naming where courses come from and where they count
+    Given a check of Delgado ENGL 101 and UNO BIOS 1083 toward UL Lafayette
+    When the audit is built from that check
+    And the audit is rendered for printing
+    Then the printed document summary names Delgado Community College and University of New Orleans as where the courses come from
+    And the printed document summary names University of Louisiana at Lafayette as where they count
+
+  Scenario: A check built the way the page builds it still names the target in the audit
+    Given a page style check of Delgado ENGL 101 toward UL Lafayette
+    When the audit is built from that check
+    Then the audit target is University of Louisiana at Lafayette
