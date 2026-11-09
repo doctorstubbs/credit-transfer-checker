@@ -695,3 +695,39 @@ instead of the generic statewide answer.
 
 Suite: 32 scenarios, 160 steps, all passing.
 Log: run-2026-11-08-ap-table-green.log.
+
+## Stage 11o: BRCC checked, no publishable data (Nov 8, 2026)
+
+Baton Rouge Community College was the last college on Kris's
+list. It was checked the same way as the others and the
+result is a documented zero, recorded here so nobody has to
+re-run it to learn why BRCC is not in the dataset.
+
+BRCC's current catalog is the 2026-2027 Academic Catalog on
+the same Acalog / Modern Campus system as the other colleges
+(catalog.mybrcc.edu, catoid=4). All 72 prefixes across all 7
+course description pages were expanded and searched: the
+Louisiana common course number appears only in the catalog's
+introductory paragraph explaining the system, and in no
+course entry. Rubric searches across the whole catalog
+returned no matches in Courses. Because UNO's numbers had
+hidden in its catalog's search index, the same probe was run
+here (quoted exact-phrase searches for seven certain tags,
+CENL 1013 first): all seven returned no matches. The hidden
+route is closed at BRCC too.
+
+The single tag visible anywhere in the catalog, CMAT 1213 in
+an explanatory figure, belongs to a course with no listing
+in this edition. It was not counted, and it was not moved
+onto the living course of a similar name, which prints no
+tag of its own.
+
+Conclusion: BRCC does not publish its common course numbers
+with its courses, so it cannot join the dataset from public
+sources. A BRCC course in the checker keeps the honest not
+covered answer. If a future BRCC edition publishes the
+numbers, the harvest reruns exactly as the others did.
+Harvest record: data/harvests/brcc-2026-27.txt.
+
+No dataset, page, or engine change. Suite unchanged and
+green: 32 scenarios, 160 steps.
