@@ -767,3 +767,40 @@ run-2026-11-08-audit-red.log. Green log:
 run-2026-11-08-audit-green.log. The standalone page copy was
 exercised directly: a Delgado ENGL 101 plus MATH 128 check
 toward UL Lafayette produces an audit totaling 6 credits.
+
+## Stage 14: Kris's clarity pass (Nov 8, 2026)
+
+Five fixes from Kris's own read of the audit and the page:
+
+1. The audit never named the target on the live site. He was
+   right, and it was a real bug: the page sends the target as
+   an object, the audit read a field the page never sets, so
+   the printed audit's target came out blank. The audit now
+   reads the target the way the page sends it, a scenario
+   pins the page-shaped check, and the document itself now
+   opens with a blue band naming where the courses come from
+   and the one college they count at, in gold. Every course
+   group heading repeats it: "Courses from X, counting at Y."
+   The on-screen results table says the same.
+2. The two choices that matter are now visibly the key
+   choices: the "Where your courses come from" card and the
+   target college card carry a blue border and tint.
+3. The AP exams card no longer reads as required: its
+   heading says "AP exams (optional)" and the card is dashed
+   and muted against the two highlighted cards.
+4. A blue Louisiana, wearing a graduation cap, now sits
+   beside the page title.
+5. Kris's dropdown rule: a college with no verified course
+   data is not listed at all. Both dropdowns (where courses
+   come from, and the target) now list only the colleges in
+   the dataset: Delgado Community College, University of
+   Louisiana at Lafayette, and University of New Orleans.
+   The other colleges come back to the lists only when their
+   catalogs are harvested and verified, the same way these
+   three were. The engine keeps its wider rules for the
+   audit and counselor work; the page simply stops offering
+   what it cannot back with data.
+
+Suite: 42 scenarios, 201 steps, all passing. Red log:
+run-2026-11-08-clarity-red.log. Green log:
+run-2026-11-08-clarity-green.log.
