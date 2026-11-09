@@ -1,0 +1,4 @@
+This Node.js version (v24.22.1) has not been tested with this version of Cucumber; it should work normally, but please raise an issue if you see anything unexpected.
+39 scenarios (39 passed)
+189 steps (189 passed)
+0m00.177s (executing steps: 0m00.013s)
