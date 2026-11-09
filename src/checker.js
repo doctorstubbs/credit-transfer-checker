@@ -15,6 +15,61 @@
 
 const TRANSFER_DEGREES = ['AALT', 'ASLT', 'LT'];
 
+// Louisiana private universities: the state guarantee and the state
+// AP rule bind public institutions only. Names match the target list
+// the page offers (Stage 7).
+const PRIVATE_UNIVERSITIES = [
+  'Centenary College of Louisiana',
+  'Dillard University',
+  'Franciscan Missionaries of Our Lady University',
+  'Louisiana Christian University',
+  'Loyola University New Orleans',
+  'Tulane University',
+  'University of Holy Cross',
+  'Xavier University of Louisiana',
+];
+
+function isPrivateTarget(target) {
+  if (!target) return false;
+  if (target.isPublic === false) return true;
+  return !!target.name && PRIVATE_UNIVERSITIES.includes(target.name);
+}
+
+// AP credit (scenarios approved by Kris, Nov 8, 2026). Louisiana's
+// statewide AP policy: public institutions award credit for a score
+// of 3 or higher, aligned to the college's own course equivalents
+// (College Board state policy summary; Board of Regents dual
+// enrollment FAQ, AA 2.22). Credit is awarded only when the student
+// sends the official score report at enrollment. Where a college's
+// own AP table requires a higher score for the exact course match, a
+// qualifying lower score earns credit as an elective in that subject
+// instead, and the report shows what the higher score would have
+// earned. Private universities set their own AP policy.
+function apExamResult(exam, target) {
+  const base = { exam: exam.exam, score: exam.score, degreeCredit: 0, creditAwarded: false };
+  if (isPrivateTarget(target)) {
+    return { ...base, outcome: 'verify-individually',
+      note: 'Private universities set their own AP credit policy. Verify this score with the university individually.' };
+  }
+  if (!exam.scoreReportSent) {
+    return { ...base, outcome: 'none', reason: 'score-report-not-sent',
+      note: 'AP credit requires the official score report to be sent to the university. A score the university never received earns no credit.' };
+  }
+  if (typeof exam.score !== 'number' || exam.score < 3) {
+    return { ...base, outcome: 'none', reason: 'below-minimum-score',
+      note: 'Louisiana public colleges award AP credit for a score of 3 or higher. This score is below that line.' };
+  }
+  if (exam.exactMatchMinScore && exam.score < exam.exactMatchMinScore) {
+    return { ...base, outcome: 'subject-elective', creditAwarded: true, degreeCredit: 3,
+      countsToward: 'elective hours',
+      higherScoreNote: 'A score of ' + exam.exactMatchMinScore + ' or higher would have earned the exact course match at this university.',
+      note: 'This score earns credit as an elective in the subject. The exact course match at this university requires a score of ' + exam.exactMatchMinScore + '.' };
+  }
+  return { ...base, outcome: 'exact-equivalent', creditAwarded: true, degreeCredit: 3,
+    countsToward: "the university's equivalent course for this exam",
+    note: 'Awarded under the Louisiana statewide AP policy for a score of 3 or higher.' };
+}
+
 // Current catalog data (Stage 11b): pairings joined on the Louisiana
 // common course number each college prints in its OWN current catalog.
 // Sources: data/courses.json, built from the AY 2025-26 statewide
@@ -219,11 +274,16 @@ function runCheck(student) {
     allCoursesVerifyIndividually: false,
     degreeGuaranteeOnCompletion: false,
     degreeGuaranteeCondition: null,
+    apResults: [],
   };
+
+  // AP exams are evaluated for every target; at a private university
+  // each one is flagged verify individually instead of decided.
+  report.apResults = (student.apExams || []).map((exam) => apExamResult(exam, target));
 
   // The state guarantee binds Louisiana public institutions only.
   // Private universities (for example Tulane) decide course by course.
-  if (target.isPublic === false) {
+  if (isPrivateTarget(target)) {
     report.guaranteePromised = false;
     report.allCoursesVerifyIndividually = true;
     return report;
