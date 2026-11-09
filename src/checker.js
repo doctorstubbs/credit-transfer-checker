@@ -59,6 +59,33 @@ function apExamResult(exam, target) {
     return { ...base, outcome: 'none', reason: 'below-minimum-score',
       note: 'Louisiana public colleges award AP credit for a score of 3 or higher. This score is below that line.' };
   }
+  // The university's own AP table, when it is on record, decides the
+  // exact courses and hours. UL Lafayette's 2026-2027 table has no
+  // elective tier: higher scores earn more courses, and the report
+  // shows what the next score band would have earned.
+  const table = CATALOG_DATA && CATALOG_DATA.apTables && target.name
+    ? CATALOG_DATA.apTables[target.name] : null;
+  const bands = table && table[exam.exam];
+  if (bands && bands.length) {
+    const earned = [...bands].reverse().find((b) => exam.score >= b.minScore);
+    if (!earned) {
+      return { ...base, outcome: 'none', reason: 'below-table-minimum', matchedBy: 'ap-table',
+        note: 'This university\'s AP table starts at a score of ' + bands[0].minScore + ' for this exam. This score is below that line.' };
+    }
+    const next = bands.find((b) => b.minScore > exam.score);
+    const result = { ...base, outcome: 'exact-equivalent', creditAwarded: true,
+      degreeCredit: earned.hours, matchedBy: 'ap-table',
+      shownAs: earned.courses || null,
+      countsToward: earned.courses ? null : "the university's equivalent course for this exam",
+      note: earned.courses
+        ? 'Awarded from this university\'s own AP table in its current catalog.'
+        : 'This university\'s AP table awards the hours for this exam but does not name a course for it.' };
+    if (next) {
+      result.higherScoreNote = 'A score of ' + next.minScore + ' would have earned ' +
+        (next.courses || 'more credit') + ' for ' + next.hours + ' hours.';
+    }
+    return result;
+  }
   if (exam.exactMatchMinScore && exam.score < exam.exactMatchMinScore) {
     return { ...base, outcome: 'subject-elective', creditAwarded: true, degreeCredit: 3,
       countsToward: 'elective hours',
