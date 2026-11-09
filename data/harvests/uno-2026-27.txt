@@ -1,0 +1,77 @@
+University of New Orleans, 2026-2027 University Catalog (catalog.uno.edu, served from catalog.lsuneworleans.edu, Acalog catoid 13). Harvested Nov 8, 2026.
+Method: LCCN tags are NOT printed in UNO course descriptions in this edition. Tags were recovered through the catalog Advanced Search, which indexes the LCCN as a hidden field. Every one of the 73 pairings below was individually EXACT-VERIFIED: an exact-phrase search for that LCCN returned that course (43 in the harvest pass, the remaining 30 in a dedicated verification pass on Nov 8, 2026; 30 of 30 confirmed, 0 wrong, 0 unresolved).
+Verified catalog quirk: PHYS 1001 and PHYS 1002 both carry CPHY 1013 in this catalog's index, and no CPHY 1023 tag exists. Recorded as printed, not corrected.
+Titles below are the catalog search listing titles; some are abbreviated as printed there. PSYC 5100 and SOC 5104 are graduate cross-lists returned by the catalog's own LCCN search.
+ENGL 1157 | English Composition 1 | CENL 1013
+ENGL 1158 | English Composition 2 | CENL 1023
+ENGL 1159 | English Composition 2 - Honors | CENL 1023
+ENGL 2341 | Survey British Literature I | CENL 2103
+ENGL 2342 | Survey British Literature II | CENL 2113
+ENGL 2031 | Surv Am Lit before Civil War | CENL 2153
+ENGL 2032 | Surv Am Lit after Civil War | CENL 2163
+ENGL 2041 | Major American Writers | CENL 2173
+ENGL 2238 | Reading Fiction | CENL 2303
+ENGL 2208 | Reading Drama | CENL 2313
+ENGL 2228 | Reading Poetry | CENL 2313
+ENGL 2071 | Afro-American Lit I | CENL 2403
+ENGL 2072 | Afro-American Lit II | CENL 2403
+ENGL 2378 | Intro to Women's Literature | CENL 2413
+ENGL 2152 | Technical Writing | CENL 2513
+ENGL 2155 | Intro to Professional Writing | CENL 2513
+MATH 1021 | Prob Solv/Number Rel Elem Tchr | CMAT 1413
+MATH 1023 | Prob Solv Geometry Elem Tchrs | CMAT 1423
+MATH 1031 | Survey Mathematical Thought I | CMAT 1103
+MATH 1115 | Applied Algebra | CMAT 1203
+MATH 1125 | Precalculus Algebra | CMAT 1213
+MATH 1126 | Precalculus Trigonometry | CMAT 1223
+MATH 2314 | Elementary Statistical Methods | CMAT 1303
+MATH 2785 | Elementary Statistics for Business and Economics | CMAT 1303
+MATH 2114 | Calculus I | CMAT 2114
+MATH 2124 | Calculus II | CMAT 2124
+BIOS 1053 | Human Biol Non-Sci | CBIO 1013
+BIOS 1063 | Biodiversity Non-Sci | CBIO 1023
+BIOS 1083 | Biology I | CBIO 1033
+BIOS 1081 | Biology I Laboratory | CBIO 1031
+BIOS 1073 | Biology II | CBIO 1043
+BIOS 1071 | Biology II Laboratory | CBIO 1041
+BIOS 2743 | Micro Human Disease Lec | CBIO 2103
+BIOS 2741 | Micro & Human Dis Lab | CBIO 2101
+BIOS 2114 | Cell & Molecular Biology | CBIO 2134
+BIOS 1303 | Human Anatomy & Phys | CBIO 2213
+BIOS 1301 | Human Anatomy & Phys Lab | CBIO 2211
+BIOS 1313 | Human Anatomy & Phys II | CBIO 2223
+BIOS 1311 | Human Anatomy & Phys Lab | CBIO 2221
+PHYS 1001 | Introduction to Physics I | CPHY 1013
+PHYS 1002 | Introduction to Physics II | CPHY 1013
+PHYS 1031 | General Physics I | CPHY 2113
+PHYS 1033 | General Physics Laboratory | CPHY 2111
+PHYS 1032 | General Physics II | CPHY 2123
+PHYS 1034 | General Physics Laboratory | CPHY 2121
+PHYS 1061 | Physics Sci Engr I | CPHY 2133
+PHYS 1063 | Physics Lab for Science & Engr | CPHY 2131
+PHYS 1062 | Physics Sci Engr II | CPHY 2143
+PHYS 1065 | Physics Lab for Science & Engr | CPHY 2141
+HIST 2501 | US History I | CHIS 2013
+HIST 2502 | US History II | CHIS 2023
+HIST 2601 | History of Louisiana | CHIS 2033
+HIST 1010 | Intro African-American History | CHIS 2103
+POLI 2151 | US Govt & Politics | CPOL 2013
+POLI 2157 | Public Policy | CPOL 2213
+POLI 2600 | Intro Comparative Government | CPOL 2213
+PSYC 1000 | General Psychology | CPSY 2013
+PSYC 1009 | General Psychology Honors | CPSY 2013
+PSYC 2100 | Found'n of Developmental Psyc | CPSY 2113
+PSYC 5100 | Found'n of Developmental Psyc | CPSY 2113
+PSYC 2120 | Adolescent Psychology | CPSY 2213
+PSYC 2110 | Child Psychology | CPSY 2313
+PSYC 2400 | Found'n of Social Psychology | CPSY 2413
+SOC 1051 | Introductory Sociology | CSOC 2013
+SOC 2962 | Current Social Problems | CSOC 2113
+SOC 4104 | The Family | CSOC 2213
+SOC 5104 | The Family | CSOC 2213
+ACCT 2100 | Principles of Accounting | CACC 2113
+ACCT 2130 | Management Accounting | CACC 2213
+MUS 1000 | Music Appreciation | CMUS 1013
+FTA 1000 | Theatre Appreciation | CTHE 1013
+FTA 2650 | Oral Communications | CCOM 2013
+ARTS 1000 | Intro to the Arts | CART 1013
