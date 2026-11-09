@@ -430,3 +430,18 @@ Then('the report flags AP credit at a private university as verify individually'
   assert.ok(r, 'AP result missing');
   assert.strictEqual(r.outcome, 'verify-individually');
 });
+
+Then('the report awards ENGL 101 for 3 hours from the AP table', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.strictEqual(r.matchedBy, 'ap-table');
+  assert.strictEqual(r.shownAs, 'ENGL 101');
+  assert.strictEqual(r.degreeCredit, 3);
+});
+
+Then('the report shows a score of 4 would have earned ENGL 101 and ENGL 102 for 6 hours', function () {
+  const r = this.report.apResults[0];
+  assert.ok(r, 'AP result missing');
+  assert.ok(r.higherScoreNote && r.higherScoreNote.includes('ENGL 102') && r.higherScoreNote.includes('6 hours'),
+    'expected a higher score note naming ENGL 102 and 6 hours, got: ' + r.higherScoreNote);
+});
