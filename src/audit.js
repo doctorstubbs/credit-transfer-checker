@@ -48,7 +48,7 @@ function buildAudit(student, report) {
   });
 
   return {
-    target: report.targetCollege || student.targetCollege,
+    target: report.targetCollege || (student.target && student.target.name) || student.targetCollege,
     groups: [...groupsByInstitution.values()],
     ap,
     notCovered,
@@ -69,14 +69,15 @@ function renderAuditHtml(audit) {
   parts.push('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">');
   parts.push('<title>Credit Transfer Audit</title>');
   parts.push('<style>body{font-family:Georgia,serif;max-width:760px;margin:40px auto;padding:0 20px;color:#111}');
-  parts.push('h1{font-size:26px;margin-bottom:4px}h2{font-size:19px;margin-top:28px}');
+  parts.push('h1{font-size:26px;margin:0 0 4px}.band{background:#1d3fae;color:#fff;padding:18px 20px;border-radius:8px}.band .fromto{font-size:16px;margin:0}.band .tgt{color:#ffd21f}h2{font-size:19px;margin-top:28px}h2 .tgt{color:#1d3fae}');
   parts.push('table{border-collapse:collapse;width:100%;margin-top:8px}th,td{border:1px solid #999;padding:6px 8px;text-align:left;font-size:15px}');
   parts.push('.total{font-size:18px;font-weight:bold;margin-top:24px}.limits{margin-top:32px;font-size:14px;color:#333}</style></head><body>');
-  parts.push('<h1>Credit Transfer Audit</h1>');
-  parts.push('<p>Target college: <strong>' + esc(audit.target) + '</strong></p>');
+  const fromList = audit.groups.map((g) => g.institution).join(' and ');
+  parts.push('<div class="band"><h1>Credit Transfer Audit</h1>');
+  parts.push('<p class="fromto">Courses from <strong>' + esc(fromList) + '</strong> counting at <strong class="tgt">' + esc(audit.target) + '</strong></p></div>');
 
   for (const g of audit.groups) {
-    parts.push('<h2>Courses from ' + esc(g.institution) + '</h2>');
+    parts.push('<h2>Courses from ' + esc(g.institution) + ', counting at <span class="tgt">' + esc(audit.target) + '</span></h2>');
     parts.push('<table><tr><th>Course</th><th>Counts as</th><th>Degree credit</th></tr>');
     for (const c of g.courses) {
       let countsAs = esc(c.countsAs);
