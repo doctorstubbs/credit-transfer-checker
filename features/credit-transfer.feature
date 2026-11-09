@@ -210,7 +210,7 @@ Feature: Louisiana dual enrollment credit transfer check
     And the report says AP credit requires the official score report to be sent
 
   Scenario: A score of 3 earns an elective where the exact course requires a 4
-    Given a student plans to attend "University of Louisiana at Lafayette"
+    Given a student plans to attend "McNeese State University"
     And the university requires a score of 4 for the exact course match for AP English Language and Composition
     And the student scored 3 on the AP English Language and Composition exam
     And the student sent the official AP score report to the university
@@ -224,3 +224,11 @@ Feature: Louisiana dual enrollment credit transfer check
     And the student sent the official AP score report to the university
     When the credit check runs
     Then the report flags AP credit at a private university as verify individually
+
+  Scenario: A higher AP score earns more courses at UL Lafayette
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student scored 3 on the AP English Language and Composition exam
+    And the student sent the official AP score report to the university
+    When the credit check runs
+    Then the report awards ENGL 101 for 3 hours from the AP table
+    And the report shows a score of 4 would have earned ENGL 101 and ENGL 102 for 6 hours
