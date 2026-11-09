@@ -28,54 +28,43 @@
   tr.srchead td { background: #eef0fa; font-weight: bold; border-bottom: 1px solid #c6cdea; }
   .fine { font-size: 13px; color: #5a6376; }
   #report { display: none; }
+  .brandrow { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  .brandrow h1 { margin: 0; }
+  .keycard { border: 2px solid #1d3fae; background: #f2f4fd; }
+  .keycard h2, .keycard label { color: #16307a; }
+  .optional-card { border: 1px dashed #b9b2a0; background: #fbf9f3; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Will this credit count?</h1>
+  <div class="brandrow">
+    <svg width="86" height="92" viewBox="0 0 120 124" role="img" aria-label="Louisiana, in blue, with a graduation cap">
+      <polygon points="58,4 90,13 58,22 28,13" fill="#14213d"/>
+      <path d="M45,17 L45,25 Q58,31 71,25 L71,17 Q58,22 45,17 Z" fill="#14213d"/>
+      <line x1="90" y1="13" x2="90" y2="25" stroke="#d4a017" stroke-width="3"/>
+      <circle cx="90" cy="28" r="3" fill="#d4a017"/>
+      <path d="M20,26 L86,26 L94,34 L90,50 L97,64 L89,76 L100,90 L107,104 L95,110 L77,105 L52,104 L36,102 L29,88 L21,79 L25,63 L17,49 L23,35 Z" fill="#1d3fae"/>
+    </svg>
+    <h1>Will this credit count?</h1>
+  </div>
 
-  <div class="card">
+  <div class="card keycard">
     <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
     <p class="fine" style="margin-top:0;">Add every college you took courses at, or plan to.</p>
     <div id="sources"></div>
     <button type="button" class="secondary" id="addSource">Add another college</button>
   </div>
 
-  <div class="card">
-    <h2 style="margin-top:0;font-size:20px;">AP exams</h2>
+  <div class="card optional-card">
+    <h2 style="margin-top:0;font-size:20px;">AP exams (optional)</h2>
     <div id="apExams"></div>
     <button type="button" class="secondary" id="addAp">Add an AP exam</button>
   </div>
 
-  <div class="card">
+  <div class="card keycard">
     <label for="target" style="margin-top:0;">Target college (where you want the courses to count)</label>
     <select id="target">
-      <optgroup label="Louisiana public universities: the state transfer guarantee applies">
-        <option>Grambling State University</option>
-        <option>Louisiana State University and A&M College (LSU)</option>
-        <option>Louisiana State University at Alexandria</option>
-        <option>Louisiana State University Shreveport</option>
-        <option>Louisiana Tech University</option>
-        <option>McNeese State University</option>
-        <option>Nicholls State University</option>
-        <option>Northwestern State University of Louisiana</option>
-        <option>Southeastern Louisiana University</option>
-        <option>Southern University and A&M College (Baton Rouge)</option>
-        <option>Southern University at New Orleans</option>
-        <option>University of Louisiana at Lafayette</option>
-        <option>University of Louisiana at Monroe</option>
-        <option>University of New Orleans</option>
-      </optgroup>
-      <optgroup label="Louisiana private universities: the state guarantee does not apply">
-        <option>Centenary College of Louisiana</option>
-        <option>Dillard University</option>
-        <option>Franciscan Missionaries of Our Lady University</option>
-        <option>Louisiana Christian University</option>
-        <option>Loyola University New Orleans</option>
-        <option>Tulane University</option>
-        <option>University of Holy Cross</option>
-        <option>Xavier University of Louisiana</option>
-      </optgroup>
+      <option value="">Pick the target college</option>
     </select>
   </div>
 
@@ -3699,27 +3688,17 @@ var COURSES_DATA = {
 };
 /*DATA-END*/</script>
 <script>
-const PUBLIC_UNIVERSITIES = [
-  'Grambling State University','Louisiana State University and A&M College (LSU)',
-  'Louisiana State University at Alexandria','Louisiana State University Shreveport',
-  'Louisiana Tech University','McNeese State University','Nicholls State University',
-  'Northwestern State University of Louisiana','Southeastern Louisiana University',
-  'Southern University and A&M College (Baton Rouge)','Southern University at New Orleans',
-  'University of Louisiana at Lafayette','University of Louisiana at Monroe','University of New Orleans'
-];
-const SOURCE_COLLEGES = [
-  'Delgado Community College','Baton Rouge Community College','Bossier Parish Community College',
-  'Central Louisiana Technical Community College','Fletcher Technical Community College',
-  'Louisiana Delta Community College','Northshore Technical Community College',
-  'Northwest Louisiana Technical Community College','Nunez Community College',
-  'River Parishes Community College','South Louisiana Community College','Sowela Technical Community College',
-  'Louisiana State University at Eunice','Southern University at Shreveport'
-].concat(PUBLIC_UNIVERSITIES, [
-  'Centenary College of Louisiana','Dillard University','Franciscan Missionaries of Our Lady University',
-  'Louisiana Christian University','Loyola University New Orleans','Tulane University',
-  'University of Holy Cross','Xavier University of Louisiana',
-  'A college outside Louisiana','Another college not listed here'
-]);
+// Kris's rule (Nov 8, 2026): the dropdowns list only colleges with
+// verified course data in the dataset. A college with no data is not
+// listed at all, rather than listed and answered with a guess. Every
+// college in the dataset today is a Louisiana public institution.
+const DATA_COLLEGES = (typeof COURSES_DATA !== 'undefined' && COURSES_DATA && COURSES_DATA.colleges)
+  ? Object.keys(COURSES_DATA.colleges) : [];
+(function fillTargets() {
+  const sel = document.getElementById('target');
+  if (!sel) return;
+  sel.innerHTML = DATA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+})();
 
 const sourcesDiv = document.getElementById('sources');
 let sourceCount = 0;
@@ -3736,7 +3715,7 @@ function addSourceBlock() {
   sourceCount += 1;
   const div = document.createElement('div');
   div.className = 'source';
-  const options = SOURCE_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+  const options = DATA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
   div.innerHTML =
     '<h3>College ' + sourceCount + '</h3>' +
     '<label>College name</label><select class="s-name">' + options + '</select>' +
@@ -3858,7 +3837,7 @@ sourcesDiv.addEventListener('change', (e) => {
 
 document.getElementById('run').addEventListener('click', async () => {
   const targetEl = document.getElementById('target');
-  const isPublic = PUBLIC_UNIVERSITIES.includes(targetEl.value);
+  const isPublic = DATA_COLLEGES.includes(targetEl.value);
   const target = { name: targetEl.value, isPublic: isPublic, teachesSubject: isPublic ? true : null };
 
   const sources = [];
@@ -3935,7 +3914,7 @@ function render(r) {
     });
     t = '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>';
     Object.keys(groups).forEach(college => {
-      t += '<tr class="srchead"><td colspan="4">Courses from ' + college + '</td></tr>';
+      t += '<tr class="srchead"><td colspan="4">Courses from ' + college + ', counting at ' + ((window._lastStudent && window._lastStudent.target && window._lastStudent.target.name) || '') + '</td></tr>';
       t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
     });
     t += '</table>';
@@ -4410,7 +4389,7 @@ function buildAudit(student, report) {
   });
 
   return {
-    target: report.targetCollege || student.targetCollege,
+    target: report.targetCollege || (student.target && student.target.name) || student.targetCollege,
     groups: [...groupsByInstitution.values()],
     ap,
     notCovered,
@@ -4431,14 +4410,15 @@ function renderAuditHtml(audit) {
   parts.push('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">');
   parts.push('<title>Credit Transfer Audit</title>');
   parts.push('<style>body{font-family:Georgia,serif;max-width:760px;margin:40px auto;padding:0 20px;color:#111}');
-  parts.push('h1{font-size:26px;margin-bottom:4px}h2{font-size:19px;margin-top:28px}');
+  parts.push('h1{font-size:26px;margin:0 0 4px}.band{background:#1d3fae;color:#fff;padding:18px 20px;border-radius:8px}.band .fromto{font-size:16px;margin:0}.band .tgt{color:#ffd21f}h2{font-size:19px;margin-top:28px}h2 .tgt{color:#1d3fae}');
   parts.push('table{border-collapse:collapse;width:100%;margin-top:8px}th,td{border:1px solid #999;padding:6px 8px;text-align:left;font-size:15px}');
   parts.push('.total{font-size:18px;font-weight:bold;margin-top:24px}.limits{margin-top:32px;font-size:14px;color:#333}</style></head><body>');
-  parts.push('<h1>Credit Transfer Audit</h1>');
-  parts.push('<p>Target college: <strong>' + esc(audit.target) + '</strong></p>');
+  const fromList = audit.groups.map((g) => g.institution).join(' and ');
+  parts.push('<div class="band"><h1>Credit Transfer Audit</h1>');
+  parts.push('<p class="fromto">Courses from <strong>' + esc(fromList) + '</strong> counting at <strong class="tgt">' + esc(audit.target) + '</strong></p></div>');
 
   for (const g of audit.groups) {
-    parts.push('<h2>Courses from ' + esc(g.institution) + '</h2>');
+    parts.push('<h2>Courses from ' + esc(g.institution) + ', counting at <span class="tgt">' + esc(audit.target) + '</span></h2>');
     parts.push('<table><tr><th>Course</th><th>Counts as</th><th>Degree credit</th></tr>');
     for (const c of g.courses) {
       let countsAs = esc(c.countsAs);
