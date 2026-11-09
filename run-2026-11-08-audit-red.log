@@ -1,0 +1,20 @@
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at Module._load (node:internal/modules/cjs/loader:1341:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.require (node:internal/modules/cjs/loader:1674:12)
+    at require (node:internal/modules/helpers:157:16)
+    at Object.<anonymous> (/home/hatch/workspace/credit-transfer-tdd/features/steps/audit.steps.js:4:41)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/hatch/workspace/credit-transfer-tdd/features/steps/audit.steps.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/try_require.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/api/support.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/api/load_support.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/api/index.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/cli/index.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/lib/cli/run.js',
+    '/home/hatch/workspace/credit-transfer-tdd/node_modules/@cucumber/cucumber/bin/cucumber.js'
+  ]
+}
