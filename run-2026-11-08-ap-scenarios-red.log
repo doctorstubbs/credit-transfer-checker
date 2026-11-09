@@ -1,0 +1,8 @@
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+31 scenarios (5 undefined, 26 passed)
+154 steps (18 undefined, 5 skipped, 131 passed)
+0m00.102s (executing steps: 0m00.007s)
