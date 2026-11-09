@@ -186,3 +186,41 @@ Feature: Louisiana dual enrollment credit transfer check
     And the student completed "ENGL 1010" at "Delgado Community College" with a grade of "B"
     When the credit check runs
     Then the report does not claim the transfer degree guarantee
+
+  Scenario: An AP score of 3 or higher earns credit at a public university
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student scored 3 on the AP English Language and Composition exam
+    And the student sent the official AP score report to the university
+    When the credit check runs
+    Then the report awards AP credit for the university's English composition equivalent
+
+  Scenario: An AP score below 3 earns no credit
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student scored 2 on the AP English Language and Composition exam
+    And the student sent the official AP score report to the university
+    When the credit check runs
+    Then the report awards no credit for that AP exam
+
+  Scenario: AP credit is never automatic without the score report
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student scored 4 on the AP English Language and Composition exam
+    And the student never sent the official AP score report to the university
+    When the credit check runs
+    Then the report awards no credit for that AP exam
+    And the report says AP credit requires the official score report to be sent
+
+  Scenario: A score of 3 earns an elective where the exact course requires a 4
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the university requires a score of 4 for the exact course match for AP English Language and Composition
+    And the student scored 3 on the AP English Language and Composition exam
+    And the student sent the official AP score report to the university
+    When the credit check runs
+    Then the report awards AP credit as an elective in that subject
+    And the report shows what the higher score would have earned
+
+  Scenario: The state AP rule does not bind a private university
+    Given a student plans to attend "Tulane University"
+    And the student scored 4 on the AP English Language and Composition exam
+    And the student sent the official AP score report to the university
+    When the credit check runs
+    Then the report flags AP credit at a private university as verify individually
