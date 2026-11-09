@@ -149,3 +149,39 @@ Then('the printed document names University of Louisiana at Lafayette and the to
 Then('the printed document contains no form elements', function () {
   assert.ok(!/<(form|input|select|textarea|button)[\s>]/i.test(printedHtml), 'form element found in the printed document');
 });
+
+Given('a page style check of Delgado ENGL 101 toward UL Lafayette', function () {
+  student = {
+    target: { name: 'University of Louisiana at Lafayette', isPublic: true, teachesSubject: true },
+    sources: [
+      { institution: 'Delgado Community College', courses: [course('ENGL 101')] }
+    ],
+    programType: 'general'
+  };
+  report = runCheck(student);
+});
+
+Then('every course group heading in the printed document names University of Louisiana at Lafayette as where the courses count', function () {
+  const headings = printedHtml.match(/<h2>[\s\S]*?<\/h2>/g) || [];
+  const groupHeadings = headings.filter((h) => h.includes('Courses from'));
+  assert.ok(groupHeadings.length >= 2, 'expected at least 2 course groups, got: ' + headings.join(' | '));
+  for (const h of groupHeadings) {
+    const text = h.replace(/<[^>]*>/g, '');
+    assert.ok(text.includes('counting at University of Louisiana at Lafayette'), 'group heading missing target: ' + h);
+  }
+});
+
+Then('the printed document summary names Delgado Community College and University of New Orleans as where the courses come from', function () {
+  const head = printedHtml.slice(0, printedHtml.indexOf('<h2>'));
+  assert.ok(head.includes('Delgado Community College'), 'summary missing Delgado');
+  assert.ok(head.includes('University of New Orleans'), 'summary missing UNO');
+});
+
+Then('the printed document summary names University of Louisiana at Lafayette as where they count', function () {
+  const head = printedHtml.slice(0, printedHtml.indexOf('<h2>'));
+  assert.ok(head.includes('counting at') && head.includes('University of Louisiana at Lafayette'), 'summary missing target');
+});
+
+Then('the audit target is University of Louisiana at Lafayette', function () {
+  assert.strictEqual(audit.target, 'University of Louisiana at Lafayette');
+});
