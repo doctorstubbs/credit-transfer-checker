@@ -1,0 +1,44 @@
+University of Louisiana at Lafayette AP credit table
+Source: 2026-2027 Undergraduate and Graduate Catalog (catalog.louisiana.edu, catoid=26), "Credit for Prior Learning", subsection C, Advanced Placement Program. Harvested Nov 8, 2026 via live browser and re-verified on reload.
+Catalog warning on the section: "This section of the catalog is currently under review by the University. Changes are forthcoming and will be date stamped. The information below remains in effect until updates are made."
+Policy points: grade of S awarded; credits count as hours earned and may satisfy degree requirements; students arrange to have scores sent to the Director of Admissions. No universal minimum stated in words; the lowest score listed in the table is 3 for every exam. No exam has an elective-only line.
+Format: EXAM | MIN SCORE | COURSES AWARDED | HOURS (exactly as printed; exam names carry no AP prefix in the table)
+Art History | 3 | VIAR 121 | 3
+Art History | 4 | VIAR 121, VIAR 122 | 6
+Biology | 3 | BIOL 110, BIOL 111, BIOL 112, BIOL 113 | 8
+Chemistry | 3 | CHEM 107, CHEM 108 | 6
+Computer Science | 3 | (no course printed) | 3
+English Language and Composition | 3 | ENGL 101 | 3
+English Language and Composition | 4 | ENGL 101, ENGL 102 | 6
+English Language and Composition | 5 | ENGL 101, ENGL 102, ENGL 352 | 9
+English Literature and Composition | 3 | ENGL 101 | 3
+English Literature and Composition | 4 | ENGL 101, ENGL 102 | 6
+English Literature and Composition | 5 | ENGL 101, ENGL 102, ENGL 210 | 9
+Economics | 3 | ECON 201, ECON 202 | 6
+French Language | 3 | FREN 101, FREN 102, FREN 201 | 9
+French Language | 4 | FREN 101, FREN 102, FREN 201, FREN 202 | 12
+French Language | 5 | FREN 101, FREN 102, FREN 201, FREN 202, FREN 361 | 15
+German Language | 3 | GERM 101, GERM 102, GERM 201 | 9
+Government-Politics | 3 | POLS 110 | 3
+History, American | 3 | HIST 221 or HIST 222 | 3
+History, American | 4 | HIST 221, HIST 222 | 6
+History, European | 3 | HIST 101 or HIST 102 | 3
+History, European | 4 | HIST 101, HIST 102 | 6
+Human Geography | 3 | GEOG 201 | 3
+Latin | 3 | LATN 101, LATN 102, LATN 201 | 9
+Mathematics: Calculus AB | 3 | MATH 143, MATH 250 | 6
+Mathematics: Calculus AB | 4 | MATH 143, MATH 270 | 7
+Mathematics: Calculus BC | 3 | MATH 143, MATH 270 | 7
+Mathematics: Calculus BC | 4 | MATH 143, MATH 270, MATH 301 | 11
+Mathematics: Statistics | 3 | STAT 214 | 3
+Music | 3 | MUS 130 | 3
+Music | 4 | MUS 120, MUS 130 | 9
+Music | 5 | MUS 120, MUS 130 | 12
+Physics B | 3 | PHYS 207, PHYS 208 | 6
+Physics C Mechanics | 3 | PHYS 201 | 4
+Physics C Elect-Mag | 3 | PHYS 202 | 4
+Psychology | 3 | PSYC 110 | 3
+Spanish Language | 3 | SPAN 101, SPAN 102, SPAN 201 | 9
+Spanish Language | 4 | SPAN 101, SPAN 102, SPAN 201, SPAN 202 | 12
+Spanish Language | 5 | SPAN 101, SPAN 102, SPAN 201, SPAN 202, SPAN 310 | 15
+Anomalies preserved as printed: Computer Science lists hours but no course; Economics lists only score 3; Music scores 4 and 5 list the same courses with different hours (9 vs 12).
