@@ -731,3 +731,39 @@ Harvest record: data/harvests/brcc-2026-27.txt.
 
 No dataset, page, or engine change. Suite unchanged and
 green: 32 scenarios, 160 steps.
+
+## Stage 13: the full audit report (Nov 8, 2026)
+
+Kris approved seven audit scenarios, and the Gemini
+recalibration of the commercial plan agreed with the order
+already set here: the paid audit is the first product, the
+free checker is the hook, and the payment gate waits on
+Stripe (still not connected; a connection session is parked
+mid challenge). So this stage builds the report itself. The
+gate is a later, separate step that changes nothing about
+the report.
+
+What the audit is: a printable document built from one check
+by a new module, src/audit.js. It groups every course by the
+college the courses come from, shows what each counts as and
+how many degree credits it earns, totals the degree credits
+that count at the target, gives AP exams their own section,
+carries a planned course's C or better condition into the
+document, and lists any course outside the data as not
+covered rather than dropping it. It closes with its limits
+in plain words: a planning check from current catalogs, not
+an official evaluation, and the receiving university makes
+the final call on every credit.
+
+The printed document is generated HTML of its own (title,
+target, tables, total, limits) and a scenario pins that it
+contains no form elements at all: no form, input, select,
+textarea, or button. On the page, a "Full audit report"
+button appears after a check runs and opens that document
+in a new tab, ready to print or save as a PDF.
+
+Suite: 39 scenarios, 189 steps, all passing. Red log:
+run-2026-11-08-audit-red.log. Green log:
+run-2026-11-08-audit-green.log. The standalone page copy was
+exercised directly: a Delgado ENGL 101 plus MATH 128 check
+toward UL Lafayette produces an audit totaling 6 credits.
