@@ -576,3 +576,37 @@ Suite: 31 scenarios, 154 steps, all passing.
 Log: run-2026-11-08-ap-green.log. The standalone Pages copy
 was regenerated so it carries the same engine, and its AP
 path was exercised directly as a smoke check.
+
+## Stage 11l: AP exams on the main page (Nov 8, 2026)
+
+Kris's call: AP belongs on the main page, not only in the
+engine. Built the same evening, on top of Stage 11k:
+
+- A new AP exams card sits between the courses card and the
+  target card. Each row is three picks: the exam (20 common AP
+  exams listed), the score (1 to 5), and whether the official
+  score report was sent. An "Add an AP exam" button adds rows.
+  No new explanatory text at the top; the AP rule lives in the
+  bottom disclosure, where the other rules live, in one added
+  sentence stating the statewide policy exactly as the check
+  applies it.
+- Results render as their own table under the course results:
+  exam, score, the outcome in plain words, and degree credit.
+- One engine fix rode along: the exact equivalent outcome no
+  longer names the English composition equivalent for every
+  exam; it now reads "the university's equivalent course for
+  this exam", which is true for Biology as much as English.
+- Honest limit, same as the audit note in 11k: the page does
+  not yet carry any college's own AP table, so the page never
+  shows the subject elective outcome from scenario 4. That
+  outcome fires when a college's exact match requirement is on
+  record, which today is the audit path. Harvesting college AP
+  tables is a data stage of its own if Kris calls for it.
+
+Verification: suite still 31 scenarios, 154 steps, all
+passing; both page scripts pass a syntax check; the standalone
+Pages copy was regenerated and exercised directly (Delgado
+MATH 128 still counts as MATH 105 at UL Lafayette; an AP 4
+with the report sent returns credit awarded; an AP 2 returns
+no credit; a Tulane target returns verify individually).
+Log: run-2026-11-08-ap-page-green.log.
