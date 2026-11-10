@@ -804,3 +804,20 @@ Five fixes from Kris's own read of the audit and the page:
 Suite: 42 scenarios, 201 steps, all passing. Red log:
 run-2026-11-08-clarity-red.log. Green log:
 run-2026-11-08-clarity-green.log.
+
+## Stage 15: Hero header, logo removed (Kris, Nov 10, 2026)
+
+Kris directed: remove the Louisiana silhouette logo added in
+Stage 14, and build the top of the page like a homepage with a
+hero header that just says Louisiana in text instead of showing
+the logo.
+
+Built: the inline SVG state-and-cap logo and its brandrow are
+gone from both page copies (public/index.html and docs/index.html).
+In their place, a full-width hero band in the site's deep royal
+blue (#1d3fae) sits above the content column: a gold, letterspaced
+"LOUISIANA" line over the existing H1 "Will this credit count?" in
+white. No new copy was added anywhere; the About text and the
+disclosure below are unchanged, word for word.
+
+Suite: 42 scenarios, 201 steps, all passing (no engine change).
