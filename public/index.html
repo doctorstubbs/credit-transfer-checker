@@ -28,25 +28,23 @@
   tr.srchead td { background: #eef0fa; font-weight: bold; border-bottom: 1px solid #c6cdea; }
   .fine { font-size: 13px; color: #5a6376; }
   #report { display: none; }
-  .brandrow { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
-  .brandrow h1 { margin: 0; }
+  .hero { background: #1d3fae; color: #fff; margin: 0 0 22px; }
+  .hero-inner { max-width: 760px; margin: 0 auto; padding: 34px 16px 30px; }
+  .hero-state { color: #ffd21f; font-weight: bold; letter-spacing: 3px; font-size: 15px; margin: 0 0 8px; }
+  .hero h1 { color: #fff; margin: 0; font-size: 34px; }
   .keycard { border: 2px solid #1d3fae; background: #f2f4fd; }
   .keycard h2, .keycard label { color: #16307a; }
   .optional-card { border: 1px dashed #b9b2a0; background: #fbf9f3; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="brandrow">
-    <svg width="86" height="92" viewBox="0 0 120 124" role="img" aria-label="Louisiana, in blue, with a graduation cap">
-      <polygon points="58,4 90,13 58,22 28,13" fill="#14213d"/>
-      <path d="M45,17 L45,25 Q58,31 71,25 L71,17 Q58,22 45,17 Z" fill="#14213d"/>
-      <line x1="90" y1="13" x2="90" y2="25" stroke="#d4a017" stroke-width="3"/>
-      <circle cx="90" cy="28" r="3" fill="#d4a017"/>
-      <path d="M20,26 L86,26 L94,34 L90,50 L97,64 L89,76 L100,90 L107,104 L95,110 L77,105 L52,104 L36,102 L29,88 L21,79 L25,63 L17,49 L23,35 Z" fill="#1d3fae"/>
-    </svg>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-state">LOUISIANA</p>
     <h1>Will this credit count?</h1>
   </div>
+</header>
+<div class="wrap">
 
   <div class="card keycard">
     <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
