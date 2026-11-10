@@ -1,6 +1,6 @@
 const { Given, Then } = require('@cucumber/cucumber');
 const assert = require('node:assert');
-const { buildGuidance } = require('../../src/guidance');
+const { buildGuidance, uncoveredColleges } = require('../../src/guidance');
 
 function emptyReport() {
   return { courseResults: [], apResults: [], prerequisiteStillRequired: false };
@@ -60,6 +60,28 @@ Given('a check for target {string} with an AP exact-equivalent result', function
   this.report.apResults.push({ exam: 'AP Biology', score: 4, outcome: 'exact-equivalent', creditAwarded: true, degreeCredit: 4 });
   this.student = studentFor(target);
   this.guidance = buildGuidance(this.student, this.report);
+});
+
+Given('the covered colleges are {string} and {string}', function (a, b) {
+  this.coveredColleges = [a, b];
+});
+
+Given('a check from {string} to {string}', function (source, target) {
+  this.student = {
+    target: { name: target, isPublic: true, teachesSubject: true },
+    sources: [{ institution: source, courses: [] }],
+  };
+  this.uncovered = uncoveredColleges(this.student, this.coveredColleges);
+});
+
+Then('the uncovered colleges are {string}', function (name) {
+  assert.deepStrictEqual(this.uncovered, [name],
+    'expected uncovered [' + name + '], got ' + JSON.stringify(this.uncovered));
+});
+
+Then('there are no uncovered colleges', function () {
+  assert.deepStrictEqual(this.uncovered, [],
+    'expected no uncovered colleges, got ' + JSON.stringify(this.uncovered));
 });
 
 function codesIn(list) {
