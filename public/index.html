@@ -40,6 +40,7 @@
   .hero-state { color: #ffd21f; font-weight: bold; letter-spacing: 3px; font-size: 15px; margin: 0 0 8px; }
   .hero h1 { color: #fff; margin: 0; font-size: 34px; }
   .hero-tag { color: #ffd21f; font-size: 19px; font-style: italic; margin: 8px 0 0; }
+  .tagline-foot { text-align: center; color: #1d3fae; font-weight: bold; font-size: 18px; letter-spacing: 1px; margin: 24px 0 0; }
   .keycard { border: 2px solid #1d3fae; background: #f2f4fd; }
   .keycard h2, .keycard label { color: #16307a; }
   .optional-card { border: 1px dashed #b9b2a0; background: #fbf9f3; }
@@ -84,6 +85,7 @@
     <div id="warnings"></div>
     <div id="nextSteps"></div>
     <div id="advisorBox"></div>
+    <div id="coverageRequest"></div>
     <p><button type="button" id="auditBtn" style="display:none">Full audit report</button></p>
   </div>
 
@@ -95,6 +97,7 @@
     <p class="fine" id="coverage"></p>
   <p class="fine">Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course is passed with a grade of C or better, which is what transfer credit requires in the first place. If a course ends below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. AP exams are checked under the Louisiana statewide AP policy: a public college awards credit for a score of 3 or higher once the official score report is sent; a score below 3, or a score report never sent, earns no credit; private universities set their own AP policy. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
   </details>
+  <p class="tagline-foot">Know before you go.</p>
 </div>
 
 <script>/*DATA-START*/
@@ -3697,16 +3700,69 @@ var COURSES_DATA = {
 };
 /*DATA-END*/</script>
 <script>
-// Kris's rule (Nov 8, 2026): the dropdowns list only colleges with
-// verified course data in the dataset. A college with no data is not
-// listed at all, rather than listed and answered with a guess. Every
-// college in the dataset today is a Louisiana public institution.
+// Coverage design (Kris, Nov 10, 2026, superseding the Nov 8, 2026
+// dropdown rule for this build): the dropdowns list EVERY Louisiana
+// college, covered or not. Covered colleges (DATA_COLLEGES) check
+// instantly from verified course data. An uncovered college is not
+// a dead end: its courses come back as not covered, and the result
+// offers the email request that queues the college for harvesting,
+// which is how the verified dataset grows. The first three entries
+// are the covered colleges today.
 const DATA_COLLEGES = (typeof COURSES_DATA !== 'undefined' && COURSES_DATA && COURSES_DATA.colleges)
   ? Object.keys(COURSES_DATA.colleges) : [];
+const LA_COLLEGES = [
+  'Delgado Community College',
+  'University of Louisiana at Lafayette',
+  'University of New Orleans',
+  'Baton Rouge Community College',
+  'Bossier Parish Community College',
+  'Centenary College of Louisiana',
+  'Central Louisiana Technical Community College',
+  'Dillard University',
+  'Fletcher Technical Community College',
+  'Franciscan Missionaries of Our Lady University',
+  'Grambling State University',
+  'Louisiana Christian University',
+  'Louisiana Delta Community College',
+  'Louisiana State University and A&M College',
+  'Louisiana State University at Alexandria',
+  'Louisiana State University Eunice',
+  'Louisiana State University Shreveport',
+  'Louisiana Tech University',
+  'Loyola University New Orleans',
+  'McNeese State University',
+  'Nicholls State University',
+  'Northshore Technical Community College',
+  'Northwest Louisiana Technical Community College',
+  'Northwestern State University of Louisiana',
+  'Nunez Community College',
+  'River Parishes Community College',
+  'South Louisiana Community College',
+  'SOWELA Technical Community College',
+  'Southeastern Louisiana University',
+  'Southern University and A&M College',
+  'Southern University at New Orleans',
+  'Southern University Shreveport',
+  'Tulane University',
+  'University of Holy Cross',
+  'University of Louisiana at Monroe',
+  'Xavier University of Louisiana'
+];
+const LA_PRIVATE = [
+  'Centenary College of Louisiana',
+  'Dillard University',
+  'Franciscan Missionaries of Our Lady University',
+  'Louisiana Christian University',
+  'Loyola University New Orleans',
+  'Tulane University',
+  'University of Holy Cross',
+  'Xavier University of Louisiana'
+];
+const LA_PUBLIC = LA_COLLEGES.filter(c => !LA_PRIVATE.includes(c));
 (function fillTargets() {
   const sel = document.getElementById('target');
   if (!sel) return;
-  sel.innerHTML = DATA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+  sel.innerHTML = LA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
 })();
 
 const sourcesDiv = document.getElementById('sources');
@@ -3724,7 +3780,7 @@ function addSourceBlock() {
   sourceCount += 1;
   const div = document.createElement('div');
   div.className = 'source';
-  const options = DATA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+  const options = LA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
   div.innerHTML =
     '<h3>College ' + sourceCount + '</h3>' +
     '<label>College name</label><select class="s-name">' + options + '</select>' +
@@ -3846,7 +3902,7 @@ sourcesDiv.addEventListener('change', (e) => {
 
 document.getElementById('run').addEventListener('click', async () => {
   const targetEl = document.getElementById('target');
-  const isPublic = DATA_COLLEGES.includes(targetEl.value);
+  const isPublic = LA_PUBLIC.includes(targetEl.value);
   const target = { name: targetEl.value, isPublic: isPublic, teachesSubject: isPublic ? true : null };
 
   const sources = [];
@@ -3945,6 +4001,17 @@ function buildGuidance(student, report) {
   if (report && report.prerequisiteStillRequired) advisorQuestions.push('A required major prerequisite is still missing. Which course fills it, and where can it be taken so the credit transfers?');
   return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions };
 }
+function uncoveredColleges(student, coveredNames) {
+  const covered = new Set(coveredNames || []);
+  const out = [];
+  const add = (name) => { if (name && !covered.has(name) && !out.includes(name)) out.push(name); };
+  if (student) {
+    (student.sources || []).forEach(s => add(s.institution));
+    const t = guidanceTargetName(student);
+    add(t === 'the target college' ? null : t);
+  }
+  return out;
+}
 
 function render(r) {
   window._lastReport = r;
@@ -4013,6 +4080,25 @@ function render(r) {
   document.getElementById('advisorBox').innerHTML = g.advisorQuestions.length
     ? '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;"><p style="margin-top:0;"><strong>Questions to ask your advisor</strong></p><ul>' + g.advisorQuestions.map(q => '<li>' + q + '</li>').join('') + '</ul></div>'
     : '';
+  const uncovered = uncoveredColleges(window._lastStudent, DATA_COLLEGES);
+  const cr = document.getElementById('coverageRequest');
+  if (uncovered.length) {
+    cr.innerHTML = '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;">' +
+      '<p style="margin-top:0;"><strong>Not covered yet: ' + uncovered.join(', ') + '</strong></p>' +
+      '<p>These colleges are being built. Enter your email and your full report will be sent to you when their course data is verified. Every request moves a college up the list.</p>' +
+      '<label for="crEmail">Email for your report</label>' +
+      '<input type="text" id="crEmail" placeholder="you@example.com">' +
+      '<p><button type="button" id="crBtn">Request the report</button></p></div>';
+    document.getElementById('crBtn').addEventListener('click', () => {
+      const email = (document.getElementById('crEmail').value || '').trim();
+      const s = window._lastStudent || {};
+      const lines = ['Coverage request from the credit checker', '', 'Send the report to: ' + email, 'Colleges to build: ' + uncovered.join(', '), 'Target college: ' + ((s.target && s.target.name) || '')];
+      (s.sources || []).forEach(src => { lines.push('Courses from ' + src.institution + ': ' + (src.courses || []).map(c => c.code).join(', ')); });
+      window.location.href = 'mailto:stubbsmediaco@gmail.com?subject=' + encodeURIComponent('Credit Crosswalk coverage request: ' + uncovered.join(', ')) + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+  } else {
+    cr.innerHTML = '';
+  }
   const ab = document.getElementById('auditBtn');
   if (ab) ab.style.display = '';
   box.scrollIntoView({ behavior: 'smooth' });
