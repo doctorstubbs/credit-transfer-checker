@@ -821,3 +821,43 @@ white. No new copy was added anywhere; the About text and the
 disclosure below are unchanged, word for word.
 
 Suite: 42 scenarios, 201 steps, all passing (no engine change).
+
+## Stage 16: Actionable results, saved entries, link preview (Kris, Nov 10, 2026)
+
+From Kris's six-item list (items 2 and 4):
+
+1. Results are now grouped under three headings: "Counts
+   toward your degree", "Counts as credit only", and "Not
+   counted in this check". AP results group the same way by
+   outcome. The split is the direct-equivalent vs elective
+   distinction, computed by a new guidance layer
+   (src/guidance.js) pinned by 9 new scenarios in
+   features/guidance.feature.
+2. Every result ends with Next steps: send the official
+   transcript to the target college (named), send the AP score
+   report when AP credit was awarded, and for each elective
+   course, ask the registrar about that course by code, since
+   it counts as an elective there, not a direct match.
+3. A "Questions to ask your advisor" box appears when courses
+   were flagged, built only from those courses: electives ask
+   whether they count toward the degree plan or only as
+   elective hours; uncovered courses ask what they count as;
+   a missing prerequisite asks which course fills it. A clean
+   all-direct check shows no box.
+4. Entries persist in the browser (localStorage): colleges,
+   courses, AP exams, and the target survive a page reload.
+   Nothing leaves the device.
+5. Link preview: Open Graph and Twitter card tags added, with
+   a generated 1200x630 share image (docs/share-image.png) in
+   the hero style: royal blue, gold LOUISIANA, the title in
+   white serif.
+
+Not in this stage: the Download/Email report button row (the
+printable full audit already exists behind its button; the
+email form is Stage 12), the About rewrite and Built-by line
+(items 3 and 5, awaiting Kris's copy approval), and coverage
+widening (item 1, awaiting the Regents matrix data).
+
+Suite: 51 scenarios, 221 steps, all passing. The guidance
+module was also copied into the private production repo, whose
+suite is green at the same 51/221.
