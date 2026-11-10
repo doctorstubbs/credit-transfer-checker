@@ -87,8 +87,24 @@ function buildGuidance(student, report) {
   return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions };
 }
 
+// Coverage requests (Kris, Nov 10, 2026): the production design
+// lists every college up front. A college with no verified data
+// is not a dead end; it is named here so the page can offer the
+// email request that queues it for harvesting. Covered colleges
+// are the ones with verified course data.
+function uncoveredColleges(student, coveredNames) {
+  const covered = new Set(coveredNames || []);
+  const out = [];
+  const add = (name) => { if (name && !covered.has(name) && !out.includes(name)) out.push(name); };
+  if (student) {
+    (student.sources || []).forEach((s) => add(s.institution));
+    add(targetNameOf(student) === 'the target college' ? null : targetNameOf(student));
+  }
+  return out;
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { buildGuidance, classifyCourse, classifyAp, targetNameOf };
+  module.exports = { buildGuidance, classifyCourse, classifyAp, targetNameOf, uncoveredColleges };
 }
 if (typeof window !== 'undefined') {
   window.buildGuidance = buildGuidance;
