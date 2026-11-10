@@ -43,3 +43,18 @@ Feature: Actionable results: what counts where, next steps, advisor questions
   Scenario: An AP credit produces a score report next step naming the target
     Given a check for target "University of Louisiana at Lafayette" with an AP exact-equivalent result
     Then the next steps include having the official AP score report sent to "University of Louisiana at Lafayette"
+
+  Scenario: An uncovered source college is named for the coverage request
+    Given the covered colleges are "Delgado Community College" and "University of Louisiana at Lafayette"
+    And a check from "Baton Rouge Community College" to "University of Louisiana at Lafayette"
+    Then the uncovered colleges are "Baton Rouge Community College"
+
+  Scenario: An uncovered target college is named for the coverage request
+    Given the covered colleges are "Delgado Community College" and "University of Louisiana at Lafayette"
+    And a check from "Delgado Community College" to "Louisiana State University and A&M College"
+    Then the uncovered colleges are "Louisiana State University and A&M College"
+
+  Scenario: A fully covered check names no uncovered colleges
+    Given the covered colleges are "Delgado Community College" and "University of Louisiana at Lafayette"
+    And a check from "Delgado Community College" to "University of Louisiana at Lafayette"
+    Then there are no uncovered colleges
