@@ -861,3 +861,19 @@ widening (item 1, awaiting the Regents matrix data).
 Suite: 51 scenarios, 221 steps, all passing. The guidance
 module was also copied into the private production repo, whose
 suite is green at the same 51/221.
+
+## Stage 17: Tagline and button in Kris's words (Nov 10, 2026)
+
+Kris's tagline for the site: "Match your credits. Know what
+transfers." It now sits in the hero under the title, in gold
+italic. The check button, which said "Run the credit check",
+now says "Match your credits".
+
+Brand note: Kris is considering "Credit Crosswalk" as the
+production product's brand and domain. Registry checks on
+Nov 10, 2026 found no registration record for
+creditcrosswalk.com, .org, .app, or .co (a registrar checkout
+is the only final confirmation). Recorded as a candidate, not
+a decision; nothing purchased.
+
+Addendum (Stage 17): Kris added a second tagline, "Know before you go.", placed as the closing line at the bottom of the page.
