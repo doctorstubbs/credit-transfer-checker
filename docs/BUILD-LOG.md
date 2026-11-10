@@ -886,7 +886,7 @@ ones (this supersedes the Nov 8, 2026 dropdown rule for this
 build; the rule's history is kept in the page comment).
 
 Built:
-1. Both dropdowns (source colleges and target) now list all 37
+1. Both dropdowns (source colleges and target) now list all 36
    Louisiana colleges: the 3 covered colleges first (Delgado,
    UL Lafayette, UNO), then the rest: LSU system schools,
    Southern campuses, UL Monroe, Louisiana Tech, McNeese,
@@ -917,3 +917,27 @@ Built:
 
 Suite: 54 scenarios, 230 steps, all passing, in both this repo
 and the private production repo.
+
+## Stage 19: Request box moved up, audit button removed (Kris, Nov 10, 2026)
+
+Kris's layout call: the request box is the point of the results,
+so it goes first and everything else is fine print below it.
+
+1. The "Full audit report" button is removed from the page
+   (the audit document itself still exists in the production
+   API for the paid product; it is simply no longer a button
+   here).
+2. The request box now sits directly under the results,
+   above Next steps and Questions to ask your advisor.
+3. The box now shows on every check, in two forms: when a
+   college is not covered yet, it is the coverage request
+   (heading names the colleges, report sent when their data is
+   verified); when everything is covered, it reads "Get the
+   full report" and offers the full report for the check by
+   email. Both use the button label "Request the full report".
+   The request email now also carries the per-course results.
+4. A second "Request the full report" button sits at the very
+   bottom of the results, under the advisor questions; it
+   scrolls back to the box and focuses the email field.
+
+Also corrected above: Stage 18's college count is 36, not 37.
