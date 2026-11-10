@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Will This Credit Count? Louisiana Credit Transfer Checker</title>
+<meta name="description" content="A Louisiana college credit check for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Will This Credit Count? Louisiana Credit Transfer Checker">
+<meta property="og:description" content="A Louisiana college credit check for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges.">
+<meta property="og:url" content="https://doctorstubbs.github.io/credit-transfer-checker/">
+<meta property="og:image" content="https://doctorstubbs.github.io/credit-transfer-checker/share-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #f7f5ef; color: #1c2430; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
@@ -73,6 +80,8 @@
     <div id="courseTable"></div>
     <div id="apResults"></div>
     <div id="warnings"></div>
+    <div id="nextSteps"></div>
+    <div id="advisorBox"></div>
     <p><button type="button" id="auditBtn" style="display:none">Full audit report</button></p>
   </div>
 
@@ -3885,6 +3894,56 @@ document.getElementById('run').addEventListener('click', async () => {
   render(report);
 });
 
+// Guidance layer (Stage 16): the same code as src/guidance.js.
+// Groups the results into counts toward the degree, counts as
+// credit only, and not counted; builds the next steps and the
+// advisor questions from the flagged courses.
+function guidanceTargetName(student) {
+  if (!student) return 'the target college';
+  if (student.target && student.target.name) return student.target.name;
+  if (student.targetCollege) return student.targetCollege;
+  return 'the target college';
+}
+function classifyCourse(c) {
+  if (!c) return 'not-counted';
+  if (c.dataStatus === 'subject-elective') return 'credit-only';
+  if (c.dataStatus === 'no-match-in-data' || c.dataStatus === 'not-in-data') return 'not-counted';
+  if (c.degreeCredit && c.countsToward === 'elective hours') return 'credit-only';
+  if (c.degreeCredit && c.degreeCredit > 0) return 'degree';
+  return 'not-counted';
+}
+function classifyAp(a) {
+  if (!a) return 'not-counted';
+  if (a.outcome === 'exact-equivalent') return 'degree';
+  if (a.outcome === 'subject-elective') return 'credit-only';
+  return 'not-counted';
+}
+function buildGuidance(student, report) {
+  const target = guidanceTargetName(student);
+  const courses = (report && report.courseResults) || [];
+  const aps = (report && report.apResults) || [];
+  const degree = [], creditOnly = [], notCounted = [];
+  courses.forEach(c => {
+    const kind = classifyCourse(c);
+    if (kind === 'degree') degree.push(c);
+    else if (kind === 'credit-only') creditOnly.push(c);
+    else notCounted.push(c);
+  });
+  const apDegree = aps.filter(a => classifyAp(a) === 'degree');
+  const apCreditOnly = aps.filter(a => classifyAp(a) === 'credit-only');
+  const apNotCounted = aps.filter(a => classifyAp(a) === 'not-counted');
+  const nextSteps = [];
+  if (courses.length) nextSteps.push('Send your official transcript to ' + target + ' so the credits that count can be posted to your record there.');
+  if (apDegree.length || apCreditOnly.length) nextSteps.push('Have your official AP score report sent to ' + target + '; AP credit is only awarded once the university receives it.');
+  creditOnly.forEach(c => nextSteps.push('Ask the registrar at ' + target + ' about ' + c.code + ', since it counts as an elective there, not a direct match, and confirm it fits your degree plan before you count on it.'));
+  const advisorQuestions = [];
+  creditOnly.forEach(c => advisorQuestions.push('Will ' + c.code + ' count toward my degree plan at ' + target + ', or only as elective hours?'));
+  notCounted.forEach(c => advisorQuestions.push('What will ' + c.code + ' count as at ' + target + '? It was not in the course data this check is built on.'));
+  apNotCounted.forEach(a => { if (a.outcome === 'verify-individually') advisorQuestions.push('What credit does ' + target + ' award for ' + a.exam + '?'); });
+  if (report && report.prerequisiteStillRequired) advisorQuestions.push('A required major prerequisite is still missing. Which course fills it, and where can it be taken so the credit transfers?');
+  return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions };
+}
+
 function render(r) {
   window._lastReport = r;
   const box = document.getElementById('report');
@@ -3904,26 +3963,23 @@ function render(r) {
   if (r.degreeGuaranteeOnCompletion) v.push('<p class="verdict warn">Transfer degree still in progress: the guarantee is not in hand yet. ' + r.degreeGuaranteeCondition + '.</p>');
   document.getElementById('verdicts').innerHTML = v.join('') || '<p class="verdict">Course by course results below.</p>';
 
-  let t = '';
-  if (r.courseResults && r.courseResults.length) {
+  const g = buildGuidance(window._lastStudent, r);
+  const targetLabel = (window._lastStudent && window._lastStudent.target && window._lastStudent.target.name) || '';
+  function courseRows(list) {
     const groups = {};
-    r.courseResults.forEach(c => {
+    list.forEach(c => {
       const key = c.sourceInstitution || 'College not specified';
       (groups[key] = groups[key] || []).push(c);
     });
-    t = '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>';
+    let h = '';
     Object.keys(groups).forEach(college => {
-      t += '<tr class="srchead"><td colspan="4">Courses from ' + college + ', counting at ' + ((window._lastStudent && window._lastStudent.target && window._lastStudent.target.name) || '') + '</td></tr>';
-      t += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
+      h += '<tr class="srchead"><td colspan="4">Courses from ' + college + ', counting at ' + targetLabel + '</td></tr>';
+      h += groups[college].map(c => '<tr><td>' + c.code + '</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td>' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
     });
-    t += '</table>';
+    return h;
   }
-  document.getElementById('courseTable').innerHTML = t;
-
-  let ap = '';
-  if (r.apResults && r.apResults.length) {
-    ap = '<table><tr><th>AP exam</th><th>Score</th><th>Result</th><th>Degree credit</th></tr>';
-    ap += r.apResults.map(a => {
+  function apRows(list) {
+    return list.map(a => {
       let result;
       if (a.outcome === 'exact-equivalent') result = (a.shownAs ? 'Credit awarded: ' + a.shownAs + '.' : 'Credit awarded: counts toward ' + a.countsToward + '.') + (a.higherScoreNote ? ' ' + a.higherScoreNote : '');
       else if (a.outcome === 'subject-elective') result = 'Credit awarded as an elective in the subject. ' + (a.higherScoreNote || '');
@@ -3931,12 +3987,29 @@ function render(r) {
       else result = 'No credit. ' + a.note;
       return '<tr><td>' + a.exam + '</td><td>' + a.score + '</td><td>' + result + '</td><td>' + (a.degreeCredit || 0) + '</td></tr>';
     }).join('');
-    ap += '</table>';
   }
-  document.getElementById('apResults').innerHTML = ap;
+  let t = '';
+  [
+    ['Counts toward your degree', g.degree, g.apDegree],
+    ['Counts as credit only', g.creditOnly, g.apCreditOnly],
+    ['Not counted in this check', g.notCounted, g.apNotCounted]
+  ].forEach(([label, cs, aps]) => {
+    if (!cs.length && !aps.length) return;
+    t += '<h3>' + label + '</h3>';
+    if (cs.length) t += '<table><tr><th>Course</th><th>Counts as</th><th>Counts toward</th><th>Degree credit</th></tr>' + courseRows(cs) + '</table>';
+    if (aps.length) t += '<table><tr><th>AP exam</th><th>Score</th><th>Result</th><th>Degree credit</th></tr>' + apRows(aps) + '</table>';
+  });
+  document.getElementById('courseTable').innerHTML = t;
+  document.getElementById('apResults').innerHTML = '';
 
   document.getElementById('warnings').innerHTML = (r.warnings && r.warnings.length)
     ? '<p><strong>Warnings</strong></p><ul>' + r.warnings.map(w => '<li>' + w + '</li>').join('') + '</ul>'
+    : '';
+  document.getElementById('nextSteps').innerHTML = g.nextSteps.length
+    ? '<p><strong>Next steps</strong></p><ul>' + g.nextSteps.map(s => '<li>' + s + '</li>').join('') + '</ul>'
+    : '';
+  document.getElementById('advisorBox').innerHTML = g.advisorQuestions.length
+    ? '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;"><p style="margin-top:0;"><strong>Questions to ask your advisor</strong></p><ul>' + g.advisorQuestions.map(q => '<li>' + q + '</li>').join('') + '</ul></div>'
     : '';
   const ab = document.getElementById('auditBtn');
   if (ab) ab.style.display = '';
@@ -3952,6 +4025,81 @@ document.getElementById('auditBtn').addEventListener('click', () => {
   w.document.close();
   w.focus();
 });
+
+// Saved entries (Stage 16): what the student typed stays in this
+// browser when the page reloads, so nobody has to retype ten
+// courses. Nothing leaves the device.
+(function () {
+  const KEY = 'ctc-entries-v1';
+  function snapshot() {
+    const sources = [];
+    document.querySelectorAll('#sources .source').forEach(block => {
+      const rows = [];
+      block.querySelectorAll('.s-courses .row').forEach(r => {
+        rows.push({
+          subject: r.querySelector('.c-subject').value || '',
+          course: r.querySelector('.c-course').value || '',
+          code: r.querySelector('.c-code').value || '',
+          lccn: r.dataset.lccn || ''
+        });
+      });
+      sources.push({ institution: block.querySelector('.s-name').value || '', rows });
+    });
+    const ap = [];
+    document.querySelectorAll('#apExams .ap-row').forEach(r => {
+      ap.push({
+        exam: r.querySelector('.a-exam').value || '',
+        score: r.querySelector('.a-score').value || '',
+        sent: r.querySelector('.a-sent').value || ''
+      });
+    });
+    const targetEl = document.getElementById('target');
+    return { sources, ap, target: targetEl ? targetEl.value || '' : '' };
+  }
+  let timer = null;
+  function save() {
+    clearTimeout(timer);
+    timer = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify(snapshot())); } catch (e) {} }, 250);
+  }
+  document.addEventListener('change', save);
+  document.addEventListener('input', save);
+  function fireChange(el) { el.dispatchEvent(new Event('change', { bubbles: true })); }
+  function restore() {
+    let data = null;
+    try { data = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!data) return;
+    const targetEl = document.getElementById('target');
+    if (data.target && targetEl) targetEl.value = data.target;
+    (data.sources || []).forEach((s, i) => {
+      if (i > 0) addSourceBlock();
+      const block = document.querySelectorAll('#sources .source')[i];
+      if (!block) return;
+      const nameSel = block.querySelector('.s-name');
+      if (s.institution && [...nameSel.options].some(o => o.value === s.institution || o.text === s.institution)) { nameSel.value = s.institution; fireChange(nameSel); }
+      const rows = s.rows || [];
+      for (let j = 2; j < rows.length; j++) block.querySelector('.s-addcourse').click();
+      rows.forEach((row, j) => {
+        const r = block.querySelectorAll('.s-courses .row')[j];
+        if (!r) return;
+        const subj = r.querySelector('.c-subject');
+        if (row.subject && [...subj.options].some(o => o.value === row.subject)) { subj.value = row.subject; fireChange(subj); }
+        const courseSel = r.querySelector('.c-course');
+        if (row.course && [...courseSel.options].some(o => o.value === row.course)) { courseSel.value = row.course; fireChange(courseSel); }
+        if (row.code) r.querySelector('.c-code').value = row.code;
+        if (row.lccn) r.dataset.lccn = row.lccn;
+      });
+    });
+    (data.ap || []).forEach((a, i) => {
+      if (i > 0) addApRow();
+      const r = document.querySelectorAll('#apExams .ap-row')[i];
+      if (!r) return;
+      if (a.exam) r.querySelector('.a-exam').value = a.exam;
+      if (a.score) r.querySelector('.a-score').value = a.score;
+      if (a.sent) r.querySelector('.a-sent').value = a.sent;
+    });
+  }
+  restore();
+})();
 </script>
 <script>
 // The full audit: the printable document built from one check.
