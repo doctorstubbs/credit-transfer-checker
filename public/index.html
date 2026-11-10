@@ -83,10 +83,10 @@
     <div id="courseTable"></div>
     <div id="apResults"></div>
     <div id="warnings"></div>
+    <div id="coverageRequest"></div>
     <div id="nextSteps"></div>
     <div id="advisorBox"></div>
-    <div id="coverageRequest"></div>
-    <p><button type="button" id="auditBtn" style="display:none">Full audit report</button></p>
+    <div id="reportCta"></div>
   </div>
 
   <div class="card">
@@ -4082,37 +4082,44 @@ function render(r) {
     : '';
   const uncovered = uncoveredColleges(window._lastStudent, DATA_COLLEGES);
   const cr = document.getElementById('coverageRequest');
+  const stu = window._lastStudent || {};
+  const rep = window._lastReport || {};
+  const targetName = (stu.target && stu.target.name) || 'the target college';
+  let heading, blurb, subject;
   if (uncovered.length) {
-    cr.innerHTML = '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;">' +
-      '<p style="margin-top:0;"><strong>Not covered yet: ' + uncovered.join(', ') + '</strong></p>' +
-      '<p>These colleges are being built. Enter your email and your full report will be sent to you when their course data is verified. Every request moves a college up the list.</p>' +
-      '<label for="crEmail">Email for your report</label>' +
-      '<input type="text" id="crEmail" placeholder="you@example.com">' +
-      '<p><button type="button" id="crBtn">Request the report</button></p></div>';
-    document.getElementById('crBtn').addEventListener('click', () => {
-      const email = (document.getElementById('crEmail').value || '').trim();
-      const s = window._lastStudent || {};
-      const lines = ['Coverage request from the credit checker', '', 'Send the report to: ' + email, 'Colleges to build: ' + uncovered.join(', '), 'Target college: ' + ((s.target && s.target.name) || '')];
-      (s.sources || []).forEach(src => { lines.push('Courses from ' + src.institution + ': ' + (src.courses || []).map(c => c.code).join(', ')); });
-      window.location.href = 'mailto:stubbsmediaco@gmail.com?subject=' + encodeURIComponent('Credit Crosswalk coverage request: ' + uncovered.join(', ')) + '&body=' + encodeURIComponent(lines.join('\n'));
-    });
+    heading = 'Not covered yet: ' + uncovered.join(', ');
+    blurb = 'These colleges are being built. Enter your email and your full report will be sent to you when their course data is verified. Every request moves a college up the list.';
+    subject = 'Credit Crosswalk coverage request: ' + uncovered.join(', ');
   } else {
-    cr.innerHTML = '';
+    heading = 'Get the full report';
+    blurb = 'The full report for this check lists every course, what it counts as at ' + targetName + ', and the conditions on it. Enter your email and it will be sent to you.';
+    subject = 'Credit Crosswalk full report request: ' + targetName;
   }
-  const ab = document.getElementById('auditBtn');
-  if (ab) ab.style.display = '';
+  cr.innerHTML = '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;">' +
+    '<p style="margin-top:0;"><strong>' + heading + '</strong></p>' +
+    '<p>' + blurb + '</p>' +
+    '<label for="crEmail">Email for your report</label>' +
+    '<input type="text" id="crEmail" placeholder="you@example.com">' +
+    '<p><button type="button" id="crBtn">Request the full report</button></p></div>';
+  document.getElementById('crBtn').addEventListener('click', () => {
+    const email = (document.getElementById('crEmail').value || '').trim();
+    const lines = ['Report request from the credit checker', '', 'Send the report to: ' + email, 'Target college: ' + targetName];
+    if (uncovered.length) lines.push('Colleges to build: ' + uncovered.join(', '));
+    (stu.sources || []).forEach(src => { lines.push('Courses from ' + src.institution + ': ' + (src.courses || []).map(c => c.code).join(', ')); });
+    (rep.courseResults || []).forEach(c => { lines.push(c.code + ': ' + c.shownAs); });
+    (rep.apResults || []).forEach(a => { lines.push('AP ' + a.exam + ': ' + a.shownAs); });
+    window.location.href = 'mailto:stubbsmediaco@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+  });
+  document.getElementById('reportCta').innerHTML = '<p style="margin-top:14px;"><button type="button" id="ctaBtn">Request the full report</button></p>';
+  document.getElementById('ctaBtn').addEventListener('click', () => {
+    cr.scrollIntoView({ behavior: 'smooth' });
+    const em = document.getElementById('crEmail');
+    if (em) em.focus({ preventScroll: true });
+  });
   box.scrollIntoView({ behavior: 'smooth' });
 }
 
-document.getElementById('auditBtn').addEventListener('click', () => {
-  if (!window._lastStudent || !window._lastReport) return;
-  const audit = window.buildAudit(window._lastStudent, window._lastReport);
-  const w = window.open('', '_blank');
-  if (!w) return;
-  w.document.write(window.renderAuditHtml(audit));
-  w.document.close();
-  w.focus();
-});
+
 
 // Saved entries (Stage 16): what the student typed stays in this
 // browser when the page reloads, so nobody has to retype ten
