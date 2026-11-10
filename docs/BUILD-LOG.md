@@ -877,3 +877,43 @@ is the only final confirmation). Recorded as a candidate, not
 a decision; nothing purchased.
 
 Addendum (Stage 17): Kris added a second tagline, "Know before you go.", placed as the closing line at the bottom of the page.
+
+## Stage 18: Every Louisiana college listed, coverage requests (Kris, Nov 10, 2026)
+
+Kris directed the production coverage design be prototyped on
+the Louisiana checker: list every college, not only the covered
+ones (this supersedes the Nov 8, 2026 dropdown rule for this
+build; the rule's history is kept in the page comment).
+
+Built:
+1. Both dropdowns (source colleges and target) now list all 37
+   Louisiana colleges: the 3 covered colleges first (Delgado,
+   UL Lafayette, UNO), then the rest: LSU system schools,
+   Southern campuses, UL Monroe, Louisiana Tech, McNeese,
+   Nicholls, Northwestern State, Southeastern, Grambling, the
+   LCTCS community and technical colleges (BRCC, BPCC, CLTCC,
+   Fletcher, Louisiana Delta, Northshore, NLTCC, Nunez, River
+   Parishes, SLCC, SOWELA), and the private universities
+   (Tulane, Loyola, Xavier, Dillard, Centenary, Louisiana
+   Christian, Holy Cross, Franciscan). Public/private is set
+   correctly per college, so a private target still gets the
+   verify-individually treatment.
+2. Uncovered source colleges keep the manual course code entry
+   (the subject/course pickers hide, the code box stays). The
+   engine already answered those honestly: not in the course
+   data yet, zero degree credit, grouped under "Not counted in
+   this check". No engine change was needed.
+3. When a check involves an uncovered college (source or
+   target), the result now ends with a coverage request panel
+   naming the uncovered colleges: enter an email, and the full
+   report will be sent when that college's course data is
+   verified; every request moves the college up the list. For
+   this prototype the button opens a prefilled email to
+   stubbsmediaco@gmail.com carrying the colleges, the target,
+   the courses entered, and the requester's address; the real
+   form arrives with Stage 12 (Tally). The naming logic
+   (uncoveredColleges in src/guidance.js) is pinned by 3 new
+   scenarios.
+
+Suite: 54 scenarios, 230 steps, all passing, in both this repo
+and the private production repo.
