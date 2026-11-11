@@ -941,3 +941,28 @@ so it goes first and everything else is fine print below it.
    scrolls back to the box and focuses the email field.
 
 Also corrected above: Stage 18's college count is 36, not 37.
+
+## Stage 20: Course options appear while typing (Kris, Nov 10, 2026)
+
+Kris: the course pickers vanishing for uncovered colleges reads
+like a breakage, and typing a code blind is a poor experience.
+His direction: dropdown options for the courses, at least when
+someone types something, the course options appear.
+
+Built: every course code box now has a suggestion dropdown
+that opens while typing (2+ characters), matched by code or
+by title words, capped at 8.
+- Covered college: the pool is that college's own verified
+  courses (code, title, state number).
+- Uncovered college: the pool is the statewide common course
+  catalog already in the dataset (292 courses keyed by LCCN),
+  shown by state number and title. Picking one fills the box
+  with the state number and stores it on the row, which is
+  exactly the identifier the articulation matrix is keyed on,
+  so a coverage request carries the right course identity.
+- Picking a suggestion never changes a verdict: the engine
+  still only calls courses from verified data (tested: a
+  statewide pick at BRCC still returns not in the course data
+  yet). The logic is src/suggest.js, pinned by 5 scenarios.
+
+Suite: 59 scenarios, 250 steps, all passing, in both repos.
