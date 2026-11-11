@@ -44,6 +44,11 @@
   .keycard { border: 2px solid #1d3fae; background: #f2f4fd; }
   .keycard h2, .keycard label { color: #16307a; }
   .optional-card { border: 1px dashed #b9b2a0; background: #fbf9f3; }
+
+  .row { position: relative; }
+  .suggest { position: absolute; top: calc(100% + 2px); left: 0; right: 0; background: #fff; border: 1.5px solid #1d3fae; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.15); z-index: 40; overflow: hidden; }
+  .suggest div { padding: 8px 10px; cursor: pointer; font-size: .95rem; }
+  .suggest div:hover { background: #eef1fd; }
 </style>
 </head>
 <body>
@@ -4012,6 +4017,75 @@ function uncoveredColleges(student, coveredNames) {
   }
   return out;
 }
+
+
+function suggestionPool(data, collegeName) {
+  if (!data) return [];
+  const colleges = data.colleges || {};
+  const college = colleges[collegeName];
+  if (college && Array.isArray(college.courses)) {
+    return college.courses.map(c => ({ code: c.code, title: c.title || '', lccn: (c.lccns && c.lccns[0]) || null, statewide: false }));
+  }
+  const statewide = data.statewide || {};
+  return Object.keys(statewide).map(lccn => ({ code: lccn, title: (statewide[lccn] && statewide[lccn].title) || '', lccn, statewide: true }));
+}
+function suggestNorm(text) { return String(text || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+function matchSuggestions(pool, typed, limit) {
+  const q = suggestNorm(typed);
+  if (q.length < 2) return [];
+  const cap = limit || 8;
+  const titleQuery = String(typed || '').trim().toLowerCase();
+  const codeMatches = [];
+  const titleMatches = [];
+  (pool || []).forEach(entry => {
+    const codeN = suggestNorm(entry.code);
+    const lccnN = suggestNorm(entry.lccn || '');
+    if (codeN.includes(q) || (lccnN && lccnN.includes(q))) codeMatches.push(entry);
+    else if (titleQuery.length >= 2 && entry.title.toLowerCase().includes(titleQuery)) titleMatches.push(entry);
+  });
+  codeMatches.sort((a, b) => suggestNorm(a.code).indexOf(q) - suggestNorm(b.code).indexOf(q));
+  return codeMatches.concat(titleMatches).slice(0, cap);
+}
+// Suggestions appear while typing in a course code box (Stage 20).
+(function wireSuggestions() {
+  const sources = document.getElementById('sources');
+  if (!sources) return;
+  function closeSuggest(row) { const d = row.querySelector('.suggest'); if (d) d.remove(); }
+  sources.addEventListener('input', (e) => {
+    const input = e.target.closest ? e.target.closest('.c-code') : null;
+    if (!input) return;
+    const row = input.closest('.row');
+    const block = input.closest('.source');
+    if (!row || !block) return;
+    const college = block.querySelector('.s-name').value;
+    const matches = matchSuggestions(suggestionPool(COURSES_DATA, college), input.value);
+    closeSuggest(row);
+    if (!matches.length) return;
+    const d = document.createElement('div');
+    d.className = 'suggest';
+    matches.forEach(m => {
+      const item = document.createElement('div');
+      const b = document.createElement('strong');
+      b.textContent = m.code;
+      item.appendChild(b);
+      item.appendChild(document.createTextNode(' · ' + m.title));
+      item.addEventListener('mousedown', (ev) => {
+        ev.preventDefault();
+        input.value = m.code;
+        row.dataset.lccn = m.lccn || '';
+        closeSuggest(row);
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      d.appendChild(item);
+    });
+    row.appendChild(d);
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest || (!e.target.closest('.suggest') && !e.target.closest('.c-code'))) {
+      document.querySelectorAll('.suggest').forEach(x => x.remove());
+    }
+  });
+})();
 
 function render(r) {
   window._lastReport = r;
