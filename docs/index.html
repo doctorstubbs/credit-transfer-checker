@@ -57,6 +57,14 @@
   .suggest div { padding: 8px 10px; cursor: pointer; font-size: .95rem; }
   .suggest div:hover { background: #eef1fd; }
 </style>
+<style>
+/*CTC-STYLE-START*/
+.secgroup { border: 3px solid #1d3fae; border-radius: 12px; background: #e8ecfd; padding: 16px 16px 4px; margin-bottom: 16px; }
+.secgroup > .secband { background: #1d3fae; color: #fff; font-size: 22px; font-weight: bold; margin: -16px -16px 14px; padding: 12px 16px; border-radius: 9px 9px 0 0; }
+.toolcard { border: 2px solid #1d3fae; }
+.toolcard > h2:first-child { background: #1d3fae; color: #fff; margin: -18px -18px 14px; padding: 10px 18px; border-radius: 8px 8px 0 0; }
+/*CTC-STYLE-END*/
+</style>
 </head>
 <body>
 <header class="hero">
@@ -74,7 +82,10 @@
     <p style="margin:8px 0 0;"><button type="button" class="secondary" id="spanishToggle">Ver en español</button></p>
   </div>
 
-<!--CTC-STRIP-END-->
+<!--CTC-STRIP-END--><!--CTC-GROUP-OPEN-->
+  <div class="secgroup">
+    <div class="secband">Match your credits</div>
+<!--/CTC-GROUP-OPEN-->
   <div class="card keycard">
     <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
     <p class="fine" style="margin-top:0;">Add every college you took courses at, or plan to.</p>
@@ -108,8 +119,11 @@
     <div id="reportCta"></div>
   </div>
 
+<!--CTC-GROUP-CLOSE-->
+  </div>
+<!--/CTC-GROUP-CLOSE-->
 <!--CTC-SECTIONS-START-->
-  <div class="card">
+  <div class="card toolcard">
     <h2 style="margin-top:0;font-size:20px;">Can you take dual enrollment yet?</h2>
     <p class="fine" style="margin-top:0;">Checked against the published dual enrollment minimums. Meeting them is not a promise of a seat in a course; the college and your school make the final call.</p>
     <label for="eligCollege">College</label>
@@ -143,7 +157,7 @@
     <div id="eligResult"></div>
   </div>
 
-  <div class="card">
+  <div class="card toolcard">
     <h2 style="margin-top:0;font-size:20px;">Know what to take next semester</h2>
     <p class="fine" style="margin-top:0;">Built from the Louisiana Universal Transfer Pathways: 60 credit hours that transfer and count toward the degree at any Louisiana public university that offers it. Pick a career goal and see the exact courses at your college, starting with next semester. Thirteen pathways are verified in full today; the rest are being verified before they are listed. A gap is named, never filled with a guess.</p>
     <label for="pwPathway">Career goal</label>
@@ -156,7 +170,7 @@
     <div id="pwResult"></div>
   </div>
 
-  <div class="card">
+  <div class="card toolcard">
     <h2 style="margin-top:0;font-size:20px;">No pathway for your goal? Build the general transfer plan</h2>
     <p class="fine" style="margin-top:0;">The Louisiana Transfer Degree plan: 60 hours (39 of general education plus 21 more) that transfer as a block to any Louisiana public university, with general education met in full and junior standing, when every course is passed with a C or better. Built only from courses verified at both colleges.</p>
     <label for="planSource">Your college</label>
@@ -168,7 +182,7 @@
     <div id="packetResult"></div>
   </div>
 
-  <div class="card">
+  <div class="card toolcard">
     <h2 style="margin-top:0;font-size:20px;">Will you be admitted?</h2>
     <p class="fine" style="margin-top:0;">Checked against the Louisiana Board of Regents minimum admission standards for transfer students. Meeting the state minimum is not a promise of admission; the university makes the final call.</p>
     <label for="admTarget">University</label>
@@ -194,8 +208,7 @@
     <p class="fine" style="color:#dbe2ff;">Tell us the college your student attends now and the university they want to finish at, and we will reply with what it takes to get theirs.</p>
   </div>
 
-<!--CTC-SECTIONS-END-->
-  <div class="card">
+<!--CTC-SECTIONS-END-->  <div class="card">
     <h2 style="margin-top:0;font-size:20px;">About this check</h2>
     <p>A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. What this check assumes, and where its data comes from, is linked at the bottom of this page.</p>
   </div>
@@ -219,7 +232,8 @@ var COURSES_DATA = {
    "Louisiana State University and A&M College: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
    "Northwestern State University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
    "Northwestern State University of Louisiana: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
-   "Louisiana Tech University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)"
+   "Louisiana Tech University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "University of Louisiana at Lafayette: 2026-2027 catalog harvest supplemented Nov 12, 2026 with the Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, filter UL LAFAYETTE; 201 rows merged by home course code, LCCNs unioned) to close the fine arts gap in transfer degree plans"
   ],
   "note": "Every pairing traces to two current catalogs joined on the Louisiana common course number from each college's own current catalog. No AY 2022-2023 matrix data is used."
  },
@@ -2361,122 +2375,90 @@ var COURSES_DATA = {
    ]
   },
   "University of Louisiana at Lafayette": {
-   "catalog": "2026-2027 catalog",
+   "catalog": "2026-2027 catalog and Board of Regents Articulation Matrix, 2025-26",
    "courses": [
     {
-     "code": "ENGL 101",
-     "title": "Introduction to Academic Writing",
+     "code": "ACCT 201",
+     "title": "Intro to Financial Accounting",
      "lccns": [
-      "CENL 1013"
+      "CACC 2113"
      ]
     },
     {
-     "code": "ENGL 102",
-     "title": "Writing and Research About Culture",
+     "code": "ACCT 202",
+     "title": "Intro to Managerial Accounting",
      "lccns": [
-      "CENL 1023"
+      "CACC 2213"
      ]
     },
     {
-     "code": "ENGL 103",
-     "title": "Foundations of Academic Writing",
+     "code": "ACCT 305",
+     "title": "Cost Accounting (Upper Level)",
      "lccns": [
-      "CENL 1013"
+      "CACC 3113"
      ]
     },
     {
-     "code": "ENGL 201",
-     "title": "British Literature from the Medieval Period to 1800",
+     "code": "ACCT 409",
+     "title": "Auditing (Upper Level)",
      "lccns": [
-      "CENL 2103"
+      "CACC 3313"
      ]
     },
     {
-     "code": "ENGL 202",
-     "title": "British Literature from 1800 to the Present",
+     "code": "ACCT 420",
+     "title": "Tax I (Upper Level)",
      "lccns": [
-      "CENL 2113"
+      "CACC 3213"
      ]
     },
     {
-     "code": "ENGL 205",
-     "title": "American Literature to 1865",
+     "code": "ACCT 421",
+     "title": "Tax II (Upper Level)",
      "lccns": [
-      "CENL 2153"
+      "CACC 3223"
      ]
     },
     {
-     "code": "ENGL 206",
-     "title": "American Literature since 1865",
+     "code": "ANTH 100",
+     "title": "Intro to Anthropology",
      "lccns": [
-      "CENL 2163"
+      "CATR 1013"
      ]
     },
     {
-     "code": "ENGL 210",
-     "title": "Literary Genres",
+     "code": "ANTH 201",
+     "title": "Cultural Anthroplogy",
      "lccns": [
-      "CENL 2303",
-      "CENL 2313"
+      "CATR 2013"
      ]
     },
     {
-     "code": "ENGL 211",
-     "title": "Thematic Approaches to Literature",
+     "code": "ANTH 202",
+     "title": "Biological Anthropology",
      "lccns": [
-      "CENL 2203",
-      "CENL 2213",
-      "CENL 2403",
-      "CENL 2413"
+      "CATR 2023"
      ]
     },
     {
-     "code": "MATH 105",
-     "title": "Applied College Algebra",
+     "code": "ARAB 101",
+     "title": "Elementary Arabic I: 3 credit hours",
      "lccns": [
-      "CMAT 1203"
+      "CARB 1013"
      ]
     },
     {
-     "code": "MATH 109",
-     "title": "Pre-calculus Algebra",
+     "code": "ARAB 102",
+     "title": "Elementary Arabic II: 3 credit hours",
      "lccns": [
-      "CMAT 1213"
+      "CARB 1023"
      ]
     },
     {
-     "code": "MATH 110",
-     "title": "Pre-calculus Trigonometry",
+     "code": "BADM 101",
+     "title": "General/Intro to Business",
      "lccns": [
-      "CMAT 1223"
-     ]
-    },
-    {
-     "code": "MATH 143",
-     "title": "Business Calculus",
-     "lccns": [
-      "CMAT 1233"
-     ]
-    },
-    {
-     "code": "MATH 250",
-     "title": "Survey of Calculus",
-     "lccns": [
-      "CMAT 2103"
-     ]
-    },
-    {
-     "code": "MATH 270",
-     "title": "Calculus I",
-     "lccns": [
-      "CMAT 2114"
-     ]
-    },
-    {
-     "code": "MATH 301",
-     "title": "Calculus II",
-     "lccns": [
-      "CMAT 2124"
+      "CBUS 1003"
      ]
     },
     {
@@ -2545,6 +2527,20 @@ var COURSES_DATA = {
      ]
     },
     {
+     "code": "BIOL 233",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513"
+     ]
+    },
+    {
+     "code": "BIOL 234",
+     "title": "Intro to Genetics Lab",
+     "lccns": [
+      "CBIO 2511"
+     ]
+    },
+    {
      "code": "BIOL 261",
      "title": "General Microbiology",
      "lccns": [
@@ -2567,7 +2563,8 @@ var COURSES_DATA = {
       "CBIO 2101",
       "CBIO 2104",
       "CBIO 2111",
-      "CBIO 2114"
+      "CBIO 2114",
+      "CBIO 2121"
      ]
     },
     {
@@ -2620,10 +2617,59 @@ var COURSES_DATA = {
      ]
     },
     {
+     "code": "BIOL 403G",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BIOL 425",
+     "title": "Dev Bio",
+     "lccns": [
+      "CBIO 4503"
+     ]
+    },
+    {
+     "code": "BIOL 434G",
+     "title": "Histology",
+     "lccns": [
+      "CBIO 3613"
+     ]
+    },
+    {
+     "code": "BIOL 436G",
+     "title": "Comparative Anatomy Lec + Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3234"
+     ]
+    },
+    {
+     "code": "BIOL 442",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
      "code": "BIOL 442G",
      "title": "Immunobiology",
      "lccns": [
       "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BIOL 452",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BIOL 457",
+     "title": "Cell Bio",
+     "lccns": [
+      "CBIO 4143"
      ]
     },
     {
@@ -2632,6 +2678,13 @@ var COURSES_DATA = {
      "lccns": [
       "CBIO 4143",
       "CBIO 4144"
+     ]
+    },
+    {
+     "code": "BIOL 458",
+     "title": "Cell Bio Lab",
+     "lccns": [
+      "CBIO 4141"
      ]
     },
     {
@@ -2646,14 +2699,16 @@ var COURSES_DATA = {
      "code": "CHEM 101",
      "title": "Survey of Chemistry I",
      "lccns": [
-      "CCEM 1013"
+      "CCEM 1013",
+      "CCEM 1103"
      ]
     },
     {
      "code": "CHEM 102",
      "title": "Survey of Chemistry II",
      "lccns": [
-      "CCEM 1103"
+      "CCEM 1103",
+      "CCEM 1113"
      ]
     },
     {
@@ -2755,10 +2810,347 @@ var COURSES_DATA = {
      ]
     },
     {
+     "code": "CHEM 417",
+     "title": "Biochemistry II",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
      "code": "CHEM 417G",
      "title": "Biochemistry II",
      "lccns": [
       "CBIO 4413"
+     ]
+    },
+    {
+     "code": "CJUS 101",
+     "title": "Introduction to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "CJUS 203",
+     "title": "Introduction to Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "code": "CJUS 204",
+     "title": "Judicial Process",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "code": "CJUS 205",
+     "title": "Introduction to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "CMCN 100",
+     "title": "Fundamentals of Public Speaking",
+     "lccns": [
+      "CCOM 2113",
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "CMCN 170",
+     "title": "Intro to Mass Media",
+     "lccns": [
+      "CCOM 1113"
+     ]
+    },
+    {
+     "code": "CMCN 202",
+     "title": "Argumentation",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "CMCN 210",
+     "title": "Introduction to Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "CMCN 310",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "ECON 201",
+     "title": "Principles of Microeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 202",
+     "title": "Principles of Macroeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 320",
+     "title": "Intermediate Macroeconomics",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "ENGL 101",
+     "title": "Introduction to Academic Writing",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 102",
+     "title": "Writing and Research About Culture",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 103",
+     "title": "Foundations of Academic Writing",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 201",
+     "title": "British Literature from the Medieval Period to 1800",
+     "lccns": [
+      "CENL 2103"
+     ]
+    },
+    {
+     "code": "ENGL 202",
+     "title": "British Literature from 1800 to the Present",
+     "lccns": [
+      "CENL 2113"
+     ]
+    },
+    {
+     "code": "ENGL 203",
+     "title": "World Literature I",
+     "lccns": [
+      "CENL 2203"
+     ]
+    },
+    {
+     "code": "ENGL 204",
+     "title": "World Literature II",
+     "lccns": [
+      "CENL 2213"
+     ]
+    },
+    {
+     "code": "ENGL 205",
+     "title": "American Literature to 1865",
+     "lccns": [
+      "CENL 2153"
+     ]
+    },
+    {
+     "code": "ENGL 206",
+     "title": "American Literature since 1865",
+     "lccns": [
+      "CENL 2163"
+     ]
+    },
+    {
+     "code": "ENGL 210",
+     "title": "Literary Genres",
+     "lccns": [
+      "CENL 2303",
+      "CENL 2313"
+     ]
+    },
+    {
+     "code": "ENGL 211",
+     "title": "Thematic Approaches to Literature",
+     "lccns": [
+      "CENL 2203",
+      "CENL 2213",
+      "CENL 2403",
+      "CENL 2413",
+      "CENL 2123",
+      "CENL 2173",
+      "CENL 2223",
+      "CENL 2323",
+      "CENL 2503"
+     ]
+    },
+    {
+     "code": "ENGL 223",
+     "title": "Creative Writing",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENVS 100",
+     "title": "Introduction to Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "FNAN 230",
+     "title": "Intro to Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "FNAN 300",
+     "title": "Advanced Topics in Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FNAN 320",
+     "title": "Money and Banking (Upper Level)",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "FREN 101",
+     "title": "Elementary French I",
+     "lccns": [
+      "CFRN 1014",
+      "CFRN 1013"
+     ]
+    },
+    {
+     "code": "FREN 102",
+     "title": "Elementary French II",
+     "lccns": [
+      "CFRN 1023"
+     ]
+    },
+    {
+     "code": "FREN 201",
+     "title": "Intermediate French I",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 202",
+     "title": "Intermediate French II",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 103",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOG 104",
+     "title": "Physical Geography",
+     "lccns": [
+      "CGRG 2213"
+     ]
+    },
+    {
+     "code": "GEOG 201",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GEOG 380",
+     "title": "Intro to GIS",
+     "lccns": [
+      "CGRG 2313"
+     ]
+    },
+    {
+     "code": "GEOL 107",
+     "title": "Physical Geology Laboratory",
+     "lccns": [
+      "CGEO 1101"
+     ]
+    },
+    {
+     "code": "GEOL 108",
+     "title": "Historical Geology Laboratory",
+     "lccns": [
+      "CGEO 1111"
+     ]
+    },
+    {
+     "code": "GEOL 111",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103",
+      "CGES 1101",
+      "CGES 1103"
+     ]
+    },
+    {
+     "code": "GEOL 112",
+     "title": "Historical Geology",
+     "lccns": [
+      "CGEO 1113",
+      "CGES 1111",
+      "CGES 1113"
+     ]
+    },
+    {
+     "code": "GEOL 355",
+     "title": "Environmental Geology",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "GERM 101",
+     "title": "Elementary German I: 3 credit hours",
+     "lccns": [
+      "CGRM 1013"
+     ]
+    },
+    {
+     "code": "GERM 102",
+     "title": "Elementary German II: 3 credit hours",
+     "lccns": [
+      "CGRM 1023"
+     ]
+    },
+    {
+     "code": "GERM 201",
+     "title": "Intermediate German I: 3 credit hours",
+     "lccns": [
+      "CGRM 2013"
+     ]
+    },
+    {
+     "code": "GERM 202",
+     "title": "Intermediate German II: 3 credit hours",
+     "lccns": [
+      "CGRM 2023"
      ]
     },
     {
@@ -2797,87 +3189,269 @@ var COURSES_DATA = {
      ]
     },
     {
-     "code": "PSYC 110",
-     "title": "Introduction to Psychology",
+     "code": "HIST 355",
+     "title": "African-American History",
      "lccns": [
-      "CPSY 2013"
+      "CHIS 2103"
      ]
     },
     {
-     "code": "PSYC 220",
-     "title": "Educational Psychology",
+     "code": "HUMA 101",
+     "title": "Intro to Humanities I",
      "lccns": [
-      "CPSY 2613"
+      "CHUM 2113"
      ]
     },
     {
-     "code": "SOCI 100",
-     "title": "General Sociology",
+     "code": "HUMA 102",
+     "title": "Introduction to Humanities",
      "lccns": [
-      "CSOC 2013"
+      "CHUM 2013"
      ]
     },
     {
-     "code": "SOCI 241",
-     "title": "Contemporary Social Problems",
+     "code": "HUMA 103",
+     "title": "Intro to Humanities II",
      "lccns": [
-      "CSOC 2113"
+      "CHUM 2123"
      ]
     },
     {
-     "code": "SOCI 411G",
-     "title": "Sociological Theory",
+     "code": "INFX 205",
+     "title": "Computer Applications (Business)",
      "lccns": [
-      "CSOC 3013"
+      "CBUS 2203"
      ]
     },
     {
-     "code": "CMCN 100",
-     "title": "Fundamentals of Public Speaking",
+     "code": "IPHE 200",
+     "title": "Nutrition",
      "lccns": [
-      "CCOM 2113"
+      "CBIO 2703"
      ]
     },
     {
-     "code": "CMCN 210",
-     "title": "Introduction to Communication",
+     "code": "LATN 101",
+     "title": "Elementary Latin I: 3 credit hours",
      "lccns": [
-      "CCOM 2213"
+      "CLAN 1013"
      ]
     },
     {
-     "code": "POLS 110",
-     "title": "U.S. Government",
+     "code": "LATN 102",
+     "title": "Elementary Latin II: 3 credit hours",
      "lccns": [
-      "CPOL 2013"
+      "CLAN 1023"
      ]
     },
     {
-     "code": "POLS 220",
-     "title": "World Politics",
+     "code": "LATN 201",
+     "title": "Intermediate Latin I: 3 credit hours",
      "lccns": [
-      "CPOL 2213"
+      "CLAN 2013"
      ]
     },
     {
-     "code": "ECON 201",
-     "title": "Principles of Microeconomics",
+     "code": "LATN 202",
+     "title": "Intermediate Latin II: 3 credit hours",
      "lccns": [
-      "CECN 2213"
+      "CLAN 2023"
      ]
     },
     {
-     "code": "ECON 202",
-     "title": "Principles of Macroeconomics",
+     "code": "MATH 102",
+     "title": "Contemporary Math",
      "lccns": [
-      "CECN 2223"
+      "CMAT 1103"
      ]
     },
     {
-     "code": "ECON 320",
-     "title": "Intermediate Macroeconomics",
+     "code": "MATH 103",
+     "title": "Applied Mathematics",
      "lccns": [
-      "CECN 3113"
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 105",
+     "title": "Applied College Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 109",
+     "title": "Pre-calculus Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 110",
+     "title": "Pre-calculus Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 117",
+     "title": "Math for Elementary Teachers I",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 143",
+     "title": "Business Calculus",
+     "lccns": [
+      "CMAT 1233"
+     ]
+    },
+    {
+     "code": "MATH 217",
+     "title": "Geometry for Elementary Teachers",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MATH 250",
+     "title": "Survey of Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 270",
+     "title": "Calculus I",
+     "lccns": [
+      "CMAT 2114"
+     ]
+    },
+    {
+     "code": "MATH 301",
+     "title": "Calculus II",
+     "lccns": [
+      "CMAT 2124"
+     ]
+    },
+    {
+     "code": "MATH 302",
+     "title": "Calculus III",
+     "lccns": [
+      "CMAT 2133"
+     ]
+    },
+    {
+     "code": "MGMT 201",
+     "title": "Intro to Management",
+     "lccns": [
+      "CMGM 1003"
+     ]
+    },
+    {
+     "code": "MGMT 300",
+     "title": "Principles of Management",
+     "lccns": [
+      "CMGM 2103"
+     ]
+    },
+    {
+     "code": "MGMT 310",
+     "title": "Management Information Systems",
+     "lccns": [
+      "CMGM 2303"
+     ]
+    },
+    {
+     "code": "MGMT 320",
+     "title": "Human Behavior in Organizations",
+     "lccns": [
+      "CMGM 2013"
+     ]
+    },
+    {
+     "code": "MGMT 335",
+     "title": "Human Resources Management",
+     "lccns": [
+      "CMGM 3013"
+     ]
+    },
+    {
+     "code": "MGMT 345",
+     "title": "International Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103"
+     ]
+    },
+    {
+     "code": "MGMT 410",
+     "title": "Production/Operations Management (Upper Level)",
+     "lccns": [
+      "CMGM 3003"
+     ]
+    },
+    {
+     "code": "MGMT 412",
+     "title": "Business Law/Environmental Analysis (Upper Level)",
+     "lccns": [
+      "CMGM 3203"
+     ]
+    },
+    {
+     "code": "MKTG 300",
+     "title": "Principles of Marketing",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MKTG 350",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "MKTG 357",
+     "title": "Personal Selling",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MTHS 102",
+     "title": "Contemporary Math",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MTHS 105",
+     "title": "Applied Mathematics",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MTHS 109",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MUS 105",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "MUS 108",
+     "title": "Music Theory I",
+     "lccns": [
+      "CMUS 1023"
      ]
     },
     {
@@ -2895,6 +3469,13 @@ var COURSES_DATA = {
      ]
     },
     {
+     "code": "PHIL 130",
+     "title": "Introduction to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
      "code": "PHIL 202",
      "title": "History of Western Philosophy",
      "lccns": [
@@ -2902,38 +3483,31 @@ var COURSES_DATA = {
      ]
     },
     {
-     "code": "GEOL 107",
-     "title": "Physical Geology Laboratory",
+     "code": "PHIL 230",
+     "title": "Ethics",
      "lccns": [
-      "CGEO 1101"
+      "CPHL 2013"
      ]
     },
     {
-     "code": "GEOL 108",
-     "title": "Historical Geology Laboratory",
+     "code": "PHIL 345",
+     "title": "Logic",
      "lccns": [
-      "CGEO 1111"
+      "CPHL 2113"
      ]
     },
     {
-     "code": "GEOL 111",
-     "title": "Physical Geology",
+     "code": "PHYS 101",
+     "title": "Intro to Physics",
      "lccns": [
-      "CGEO 1103"
+      "CPHY 1013"
      ]
     },
     {
-     "code": "GEOL 112",
-     "title": "Historical Geology",
+     "code": "PHYS 103",
+     "title": "General Physics Survey",
      "lccns": [
-      "CGEO 1113"
-     ]
-    },
-    {
-     "code": "GEOL 355",
-     "title": "Environmental Geology",
-     "lccns": [
-      "CEVS 1103"
+      "CPHY 1023"
      ]
     },
     {
@@ -2954,28 +3528,32 @@ var COURSES_DATA = {
      "code": "PHYS 201",
      "title": "Calculus-Based University Physics I",
      "lccns": [
-      "CPHY 2133"
+      "CPHY 2133",
+      "CPHY 2113"
      ]
     },
     {
      "code": "PHYS 202",
      "title": "Calculus-Based University Physics II",
      "lccns": [
-      "CPHY 2143"
+      "CPHY 2143",
+      "CPHY 2123"
      ]
     },
     {
      "code": "PHYS 207",
      "title": "General Physics I",
      "lccns": [
-      "CPHY 2113"
+      "CPHY 2113",
+      "CPHY 2111"
      ]
     },
     {
      "code": "PHYS 208",
      "title": "General Physics II",
      "lccns": [
-      "CPHY 2123"
+      "CPHY 2123",
+      "CPHY 2121"
      ]
     },
     {
@@ -3002,52 +3580,260 @@ var COURSES_DATA = {
      ]
     },
     {
-     "code": "FREN 101",
-     "title": "Elementary French I",
+     "code": "POLS 110",
+     "title": "U.S. Government",
      "lccns": [
-      "CFRN 1014"
+      "CPOL 2013"
      ]
     },
     {
-     "code": "FREN 102",
-     "title": "Elementary French II",
+     "code": "POLS 220",
+     "title": "World Politics",
      "lccns": [
-      "CFRN 1023"
+      "CPOL 2213",
+      "CPOL 2113"
      ]
     },
     {
-     "code": "FREN 201",
-     "title": "Intermediate French I",
+     "code": "POLS 300",
+     "title": "American Politics",
      "lccns": [
-      "CFRN 2013"
+      "CPOL 2213"
      ]
     },
     {
-     "code": "FREN 202",
-     "title": "Intermediate French II",
+     "code": "PSYC 110",
+     "title": "Introduction to Psychology",
      "lccns": [
-      "CFRN 2023"
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 210",
+     "title": "Introduction to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 220",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "PSYC 250",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213"
+     ]
+    },
+    {
+     "code": "PSYC 310",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 311",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "PSYC 330",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "QMET 251",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "SOCI 100",
+     "title": "General Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOCI 241",
+     "title": "Contemporary Social Problems",
+     "lccns": [
+      "CSOC 2113",
+      "CSOC 2213"
+     ]
+    },
+    {
+     "code": "SOCI 260",
+     "title": "Contemporary Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOCI 310",
+     "title": "Social Statistics",
+     "lccns": [
+      "CSOC 2313"
+     ]
+    },
+    {
+     "code": "SOCI 320",
+     "title": "Social Psychology",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SOCI 335",
+     "title": "Race & Ethnic Relations (Upper Level)",
+     "lccns": [
+      "CSOC 3013"
+     ]
+    },
+    {
+     "code": "SOCI 410",
+     "title": "Sociology of Deviance (Upper Level)",
+     "lccns": [
+      "CSOC 3113"
+     ]
+    },
+    {
+     "code": "SOCI 411G",
+     "title": "Sociological Theory",
+     "lccns": [
+      "CSOC 3013"
      ]
     },
     {
      "code": "SPAN 101",
      "title": "Elementary Spanish I",
      "lccns": [
-      "CSPN 1014"
+      "CSPN 1014",
+      "CSPA 1013"
      ]
     },
     {
      "code": "SPAN 102",
      "title": "Elementary Spanish II",
      "lccns": [
-      "CSPN 1023"
+      "CSPN 1023",
+      "CSPA 1023"
      ]
     },
     {
      "code": "SPAN 201",
      "title": "Intermediate Spanish I",
      "lccns": [
-      "CSPN 2013"
+      "CSPN 2013",
+      "CSPA 2013"
+     ]
+    },
+    {
+     "code": "SPAN 202",
+     "title": "Intermediate Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPA 2023"
+     ]
+    },
+    {
+     "code": "STAT 214",
+     "title": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "THEA 161",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THEA 251",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THEA 260",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    },
+    {
+     "code": "THEA 261",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THEA 262",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    },
+    {
+     "code": "VIAR 101",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "VIAR 102",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "VIAR 111",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "VIAR 120",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "VIAR 121",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "VIAR 122",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "VIAR 211",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
      ]
     }
    ]
@@ -15110,6 +15896,21 @@ function render(r) {
         if (row.course && [...courseSel.options].some(o => o.value === row.course)) { courseSel.value = row.course; fireChange(courseSel); }
         if (row.code) r.querySelector('.c-code').value = row.code;
         if (row.lccn) r.dataset.lccn = row.lccn;
+        // Align the dropdowns with the code box when the snapshot
+        // holds a typed code but no dropdown picks (restore fix,
+        // Nov 12, 2026): find the course in the college's data by
+        // code, set the subject from its state number, then set
+        // the course dropdown to the same code, so what the
+        // visitor sees is what the check will read.
+        if (row.code && (!row.subject || !row.course)) {
+          const collegeData = (typeof COURSES_DATA !== 'undefined' && COURSES_DATA && COURSES_DATA.colleges) ? COURSES_DATA.colleges[s.institution] : null;
+          const rec = collegeData ? (collegeData.courses || []).find(c => c.code === row.code.toUpperCase()) : null;
+          const lccn = (rec && rec.lccns && rec.lccns[0]) || row.lccn || '';
+          const rubric = lccn ? lccn.split(' ')[0] : '';
+          if (rec && rubric && [...subj.options].some(o => o.value === rubric)) { subj.value = rubric; fireChange(subj); }
+          if (rec && [...courseSel.options].some(o => o.value === rec.code)) { courseSel.value = rec.code; }
+          if (rec && lccn) r.dataset.lccn = lccn;
+        }
       });
     });
     (data.ap || []).forEach((a, i) => {
@@ -16120,10 +16921,42 @@ function buildPlan(input, data) {
 
     const picks = [];
     let areaHours = 0;
-    for (const candidate of pool) {
-      if (areaHours >= area.minHours) break;
-      picks.push(candidate);
-      areaHours += candidate.hours;
+    if (area.branches) {
+      // Branch-aware fill (Nov 12, 2026): the old in-order fill
+      // filled the whole area minimum from the first branch, then
+      // the repair pass added the second branch on top, padding
+      // natural sciences to 14 hours (two full biology sequences)
+      // once UL Lafayette's matrix supplement widened the matched
+      // pool. Fill the first branch to its same-science sequence
+      // minimum, then the other branch only until the area minimum
+      // is met, then anything left. The repair pass still runs.
+      const firstBranch = pool.length ? pool[0].branch : null;
+      const sameMin = area.sameScienceMinHours || 0;
+      const pickedHours = () => picks.reduce((s, p) => s + p.hours, 0);
+      const branchHours = (b) => picks
+        .filter((p) => p.branch === b).reduce((s, p) => s + p.hours, 0);
+      for (const candidate of pool) {
+        if (branchHours(firstBranch) >= sameMin) break;
+        if (candidate.branch !== firstBranch) continue;
+        picks.push(candidate);
+      }
+      for (const candidate of pool) {
+        if (pickedHours() >= area.minHours) break;
+        if (candidate.branch === firstBranch || picks.includes(candidate)) continue;
+        picks.push(candidate);
+      }
+      for (const candidate of pool) {
+        if (pickedHours() >= area.minHours) break;
+        if (picks.includes(candidate)) continue;
+        picks.push(candidate);
+      }
+      areaHours = pickedHours();
+    } else {
+      for (const candidate of pool) {
+        if (areaHours >= area.minHours) break;
+        picks.push(candidate);
+        areaHours += candidate.hours;
+      }
     }
     if (area.branches) repairNaturalSciences(area, picks, pool);
 
@@ -16638,11 +17471,380 @@ if (typeof window !== 'undefined') {
 </script>
 <script>
 /*CTC-WIRING-START*/
-// Credit Crosswalk page wiring: coverage strip, results additions
-// (savings line, source line, Spanish), eligibility check, career
-// pathways, transfer degree planner with apply ready packet, and
-// the admission check. All verdicts come from the tested engines
-// inlined on this page; nothing here invents an outcome.
+var CTC_ES_DICT = {
+ "2026-2027 catalog": "catálogo 2026-2027",
+ "2026-2027 catalog and Board of Regents Articulation Matrix, 2025-26": "catálogo 2026-2027 y la Matriz de Articulación del Board of Regents, 2025-26",
+ "A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. What this check assumes, and where its data comes from, is linked at the bottom of this page.": "Una verificación de créditos universitarios de Luisiana: para transferencias desde colegios comunitarios, estudiantes de inscripción dual y de universidad temprana, y cualquiera que mueva créditos entre universidades de Luisiana. Se basa en las reglas de articulación del Board of Regents y en los catálogos actuales de cada universidad. Lo que esta verificación supone, y de dónde vienen sus datos, está enlazado al final de esta página.",
+ "A required major prerequisite is still missing. Elective credit does not substitute for it.": "Aún falta un prerrequisito obligatorio de la especialidad. El crédito electivo no lo sustituye.",
+ "ACT Composite (if you have one)": "ACT compuesto (si tiene uno)",
+ "ACT English (if you have one)": "ACT de inglés (si tiene uno)",
+ "ACT Math (if you have one)": "ACT de matemáticas (si tiene uno)",
+ "AP exam": "Examen AP",
+ "AP exams (optional)": "Exámenes AP (opcional)",
+ "About this check": "Acerca de esta verificación",
+ "Academic courses": "Cursos académicos",
+ "Add a course at this college": "Agregar un curso en esta universidad",
+ "Add an AP exam": "Agregar un examen AP",
+ "Add another college": "Agregar otra universidad",
+ "Add every college you took courses at, or plan to.": "Agregue cada universidad donde tomó cursos, o donde planea tomarlos.",
+ "Board of Regents Articulation Matrix, 2025-26": "Matriz de Articulación del Board of Regents, 2025-26",
+ "Build my plan": "Construir mi plan",
+ "Built from the Louisiana Universal Transfer Pathways: 60 credit hours that transfer and count toward the degree at any Louisiana public university that offers it. Pick a career goal and see the exact courses at your college, starting with next semester. Thirteen pathways are verified in full today; the rest are being verified before they are listed. A gap is named, never filled with a guess.": "Basado en las Rutas Universales de Transferencia de Luisiana: 60 horas de crédito que se transfieren y cuentan para el título en cualquier universidad pública de Luisiana que lo ofrezca. Elija una meta profesional y vea los cursos exactos en su universidad, empezando por el próximo semestre. Trece rutas están verificadas por completo hoy; el resto se está verificando antes de publicarse. Un vacío se nombra, nunca se rellena con una suposición.",
+ "Can you take dual enrollment yet?": "¿Ya puede tomar inscripción dual?",
+ "Career goal": "Meta profesional",
+ "Check admission standing": "Verificar mi situación de admisión",
+ "Check eligibility": "Verificar elegibilidad",
+ "Checked against the Louisiana Board of Regents minimum admission standards for transfer students. Meeting the state minimum is not a promise of admission; the university makes the final call.": "Verificado contra los estándares mínimos de admisión del Board of Regents de Luisiana para estudiantes de transferencia. Cumplir el mínimo estatal no es una promesa de admisión; la universidad toma la decisión final.",
+ "Checked against the published dual enrollment minimums. Meeting them is not a promise of a seat in a course; the college and your school make the final call.": "Verificado contra los mínimos publicados de inscripción dual. Cumplirlos no es una promesa de un cupo en un curso; la universidad y su escuela toman la decisión final.",
+ "College": "Universidad",
+ "College GPA": "GPA universitario",
+ "College credit hours earned": "Horas de crédito universitarias obtenidas",
+ "College level English completed with a C or better": "Inglés de nivel universitario completado con C o mejor",
+ "College level math completed with a C or better": "Matemáticas de nivel universitario completadas con C o mejor",
+ "Counts as": "Cuenta como",
+ "Counts as credit only": "Cuenta solo como crédito",
+ "Counts toward": "Cuenta para",
+ "Counts toward your degree": "Cuenta para su título",
+ "Course": "Curso",
+ "Course by course results below.": "Resultados curso por curso a continuación.",
+ "Degree credit": "Crédito para el título",
+ "Elective": "Electiva",
+ "Email for your report": "Correo electrónico para su informe",
+ "English Composition": "Composición en inglés",
+ "English, humanities, or social sciences": "Inglés, humanidades o ciencias sociales",
+ "Every course must be verified with the university individually. Nothing on this report is promised.": "Cada curso debe verificarse con la universidad de forma individual. Nada en este informe está prometido.",
+ "Everything on this page, finished for one student: a semester by semester map built only from verified courses, admission standing, the apply ready packet with published deadlines, the savings total at published tuition, and a signed audit reviewed by Dr. Kristofer Stubbs, a working transcript evaluator.": "Todo lo de esta página, terminado para un estudiante: un mapa semestre por semestre construido solo con cursos verificados, la situación de admisión, el paquete listo para solicitar con las fechas límite publicadas, el total de ahorro según la matrícula publicada y una auditoría firmada y revisada por el Dr. Kristofer Stubbs, un evaluador de expedientes en activo.",
+ "Fine Arts": "Bellas artes",
+ "General education": "Educación general",
+ "General education: complete. No additional general education courses required under the transfer guarantee.": "Educación general: completa. No se requieren cursos adicionales de educación general bajo la garantía de transferencia.",
+ "Get the full plan": "Obtenga el plan completo",
+ "Get the full report": "Obtenga el informe completo",
+ "Grade level": "Nivel de grado",
+ "High school GPA (cumulative, unweighted)": "GPA de la escuela secundaria (acumulado, sin ponderar)",
+ "Humanities": "Humanidades",
+ "I am 25 or older": "Tengo 25 años o más",
+ "I am in a partnership bridge program with this university": "Estoy en un programa puente en alianza con esta universidad",
+ "I hold an associate degree (AA, AS, AAS, AALT, or ASLT)": "Tengo un título asociado (AA, AS, AAS, AALT o ASLT)",
+ "I place into standalone college math or English": "Mi nivel corresponde a matemáticas o inglés universitarios independientes",
+ "Junior (11th grade)": "Junior (11.º grado)",
+ "Know before you go.": "Infórmese antes de ir.",
+ "Know what to take next semester": "Sepa qué tomar el próximo semestre",
+ "Limited access program: admission is a separate decision. The program's own admission requirements still have to be met.": "Programa de acceso limitado: la admisión es una decisión separada. Aún deben cumplirse los requisitos de admisión propios del programa.",
+ "Match your credits": "Verifique sus créditos",
+ "Match your credits. Know what transfers.": "Verifique sus créditos. Sepa qué se transfiere.",
+ "Math or science": "Matemáticas o ciencias",
+ "Mathematics/Analytical Reasoning": "Matemáticas/Razonamiento analítico",
+ "My school counselor will recommend me": "Mi consejero escolar me recomendará",
+ "Natural Sciences": "Ciencias naturales",
+ "Next steps": "Próximos pasos",
+ "No pathway for your goal? Build the general transfer plan": "¿No hay una ruta para su meta? Construya el plan general de transferencia",
+ "Not counted in this check": "No contado en esta verificación",
+ "Not sure yet": "Aún no lo sé",
+ "Now checking the Louisiana colleges with verified course data.": "Ahora verificamos las universidades de Luisiana con datos de cursos verificados.",
+ "Pick a career goal": "Elija una meta profesional",
+ "Pick the college": "Elija la universidad",
+ "Pick the target college": "Elija la universidad de destino",
+ "Pick the university": "Elija la universidad",
+ "Pick your college": "Elija su universidad",
+ "Private university: the Louisiana state guarantee does not apply here.": "Universidad privada: la garantía estatal de Luisiana no aplica aquí.",
+ "Questions to ask your advisor": "Preguntas para su asesor",
+ "Request the full plan": "Solicitar el plan completo",
+ "Request the full report": "Solicitar el informe completo",
+ "Result": "Resultado",
+ "Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course is passed with a grade of C or better, which is what transfer credit requires in the first place. If a course ends below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. AP exams are checked under the Louisiana statewide AP policy: a public college awards credit for a score of 3 or higher once the official score report is sent; a score below 3, or a score report never sent, earns no credit; private universities set their own AP policy. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.": "Reglas de esta versión: los resultados de los cursos son equivalente directo, electiva por nivel o electiva general, según los catálogos actuales y las reglas de articulación de Luisiana; las universidades privadas no están sujetas a la garantía estatal; los cursos con número menor de 100 no otorgan crédito para el título; la admisión a programas de acceso limitado siempre es una decisión separada; las electivas nunca reemplazan un prerrequisito faltante de la especialidad. La garantía en bloque del Título de Transferencia de Luisiana (educación general completa, las 60 horas y nivel junior) no se aplica en esta verificación rápida: un título se lee de un expediente académico, no de un menú, y eso es lo que hace la auditoría completa. Los créditos de varias universidades se evalúan juntos y se informan universidad por universidad. Esta verificación supone que cada curso se aprueba con una calificación de C o mejor, que es lo que la transferencia de créditos exige en primer lugar. Si un curso termina por debajo de C, la universidad receptora decide sobre ese curso por su cuenta. Los cursos de universidades que aún no están en los datos se marcan como no cubiertos en vez de adivinarlos. Los exámenes AP se verifican según la política estatal AP de Luisiana: una universidad pública otorga crédito por una puntuación de 3 o más una vez que se envía el informe oficial de puntuaciones; una puntuación menor de 3, o un informe nunca enviado, no otorga crédito; las universidades privadas establecen su propia política AP. Esta herramienta ofrece orientación a partir de reglas publicadas, no una decisión oficial. La universidad receptora tiene la última palabra sobre cada crédito.",
+ "Score": "Puntuación",
+ "Senior (12th grade)": "Senior (12.º grado)",
+ "Show my courses": "Mostrar mis cursos",
+ "Social/Behavioral Sciences": "Ciencias sociales y del comportamiento",
+ "Subject": "Materia",
+ "Subject you want to take": "Materia que quiere tomar",
+ "Target college (where you want the courses to count)": "Universidad de destino (donde quiere que cuenten los cursos)",
+ "Technical courses": "Cursos técnicos",
+ "Tell us the college your student attends now and the university they want to finish at, and we will reply with what it takes to get theirs.": "Díganos la universidad a la que asiste su estudiante ahora y la universidad donde quiere terminar, y le responderemos con lo que se necesita para obtener el suyo.",
+ "The Louisiana Transfer Degree plan: 60 hours (39 of general education plus 21 more) that transfer as a block to any Louisiana public university, with general education met in full and junior standing, when every course is passed with a C or better. Built only from courses verified at both colleges.": "El plan del Título de Transferencia de Luisiana: 60 horas (39 de educación general más 21 más) que se transfieren en bloque a cualquier universidad pública de Luisiana, con la educación general cumplida por completo y nivel junior, cuando cada curso se aprueba con C o mejor. Construido solo con cursos verificados en ambas universidades.",
+ "The university you want to finish at": "La universidad donde quiere terminar",
+ "Track": "Ruta",
+ "University": "Universidad",
+ "Warnings": "Advertencias",
+ "Where this data comes from, and what this check assumes": "De dónde vienen estos datos y qué supone esta verificación",
+ "Where your courses come from": "De dónde vienen sus cursos",
+ "Will this credit count?": "¿Contará este crédito?",
+ "Will you be admitted?": "¿Será admitido?",
+ "Your college": "Su universidad",
+ "Your course": "Su curso",
+ "e.g. 18": "ej. 18",
+ "e.g. 19": "ej. 19",
+ "e.g. 2.5": "ej. 2.5",
+ "e.g. 2.8": "ej. 2.8",
+ "e.g. 24": "ej. 24",
+ "the target catalog": "el catálogo de la universidad de destino",
+ "A student may also qualify by meeting the first-time first-year standards; this check does not collect high school records.": "Un estudiante también puede calificar cumpliendo los estándares de primer año por primera vez; esta verificación no recoge expedientes de la escuela secundaria.",
+ "ACT English 18 (for humanities and social sciences courses)": "ACT de inglés 18 (para cursos de humanidades y ciencias sociales)",
+ "ACT Math 19 (for math and science courses)": "ACT de matemáticas 19 (para cursos de matemáticas y ciencias)",
+ "ACT minimums met (composite, English, and Math as published)": "Mínimos del ACT cumplidos (compuesto, inglés y matemáticas, según lo publicado)",
+ "ACT scores, or a counselor recommendation": "Puntuaciones del ACT, o una recomendación del consejero",
+ "Ask the college that awarded the credit to send the official transcript with final grades. High school transcripts cannot be used to award college credit.": "Pida a la universidad que otorgó el crédito que envíe el expediente académico oficial con las calificaciones finales. Los expedientes de la escuela secundaria no pueden usarse para otorgar crédito universitario.",
+ "College credit, including dual enrollment, is awarded from the official college transcript, not the high school transcript. The student asks the college that awarded the credit to send the official transcript with final grades to UL Lafayette.": "El crédito universitario, incluida la inscripción dual, se otorga a partir del expediente universitario oficial, no del expediente de la escuela secundaria. El estudiante pide a la universidad que otorgó el crédito que envíe el expediente oficial con las calificaciones finales a UL Lafayette.",
+ "Counselor recommendation covers the test score minimums": "La recomendación del consejero cubre los mínimos de puntuación de exámenes",
+ "Counselor recommendation on file": "Recomendación del consejero registrada",
+ "Counselor recommendation on file (test scores not needed on this path)": "Recomendación del consejero registrada (en esta ruta no se necesitan puntuaciones de exámenes)",
+ "Counselor recommendation on file covers the 2 GPA minimum": "La recomendación del consejero registrada cubre el mínimo de GPA de 2",
+ "Counselor recommendation on file covers the 2.5 GPA minimum": "La recomendación del consejero registrada cubre el mínimo de GPA de 2.5",
+ "Dual enrollment at this college starts in the sophomore, junior, or senior year": "La inscripción dual en esta universidad comienza en el año sophomore, junior o senior",
+ "Grade level: junior": "Nivel de grado: junior",
+ "Grade level: senior": "Nivel de grado: senior",
+ "Grade level: sophomore": "Nivel de grado: sophomore",
+ "Have the official transcript from every college attended sent to the LSU New Orleans Office of Admissions.": "Haga que el expediente oficial de cada universidad a la que asistió se envíe a la Oficina de Admisiones de LSU New Orleans.",
+ "Published deadlines: Fall: August 7 (final); Fall: December 15 (priority scholarship); Spring: January 2 (final); Spring: November 15 (priority scholarship); Summer: May 28 (final); Summer: April 15 (priority scholarship). Domestic undergraduate application deadlines published by LSU New Orleans (the University of New Orleans). Each term has a priority deadline for scholarship consideration and a final application deadline. Domestic undergraduate application fees are currently waived for Spring and Fall 2027.": "Fechas límite publicadas: Otoño: 7 de agosto (final); Otoño: 15 de diciembre (beca prioritaria); Primavera: 2 de enero (final); Primavera: 15 de noviembre (beca prioritaria); Verano: 28 de mayo (final); Verano: 15 de abril (prioritaria). Fechas límite de solicitud de pregrado nacional publicadas por LSU New Orleans (la Universidad de Nueva Orleans). Cada período tiene una fecha límite prioritaria para la consideración de becas y una fecha límite final de solicitud. Las tarifas de solicitud de pregrado nacional están exentas actualmente para la primavera y el otoño de 2027.",
+ "Published deadlines: Fall: July 1; Spring: November 30; Summer: April 30. First-time freshman application deadlines. Admission is rolling, so these are the published closing dates, not the only dates an application can be sent. $25 application fee": "Fechas límite publicadas: Otoño: 1 de julio; Primavera: 30 de noviembre; Verano: 30 de abril. Fechas límite de solicitud para estudiantes de primer año por primera vez. La admisión es continua, así que estas son las fechas de cierre publicadas, no las únicas fechas en que se puede enviar una solicitud. Tarifa de solicitud de $25",
+ "Sophomores may be eligible in some instances at Delgado; the college decides case by case.": "Los estudiantes sophomore pueden ser elegibles en algunos casos en Delgado; la universidad decide caso por caso.",
+ "Sophomores may be eligible in some instances. Parental permission and school administration permission are required, and the student must be in good standing at the high school.": "Los estudiantes sophomore pueden ser elegibles en algunos casos. Se requiere el permiso de los padres y de la administración escolar, y el estudiante debe estar en buen estado en la escuela secundaria.",
+ "Students must be at least 15, enrolled in a Louisiana high school or approved homeschool, on track for the TOPS core, in good standing, with scores and an official high school transcript on file. Juniors take courses on their high school campus only; seniors may also take courses at UL Lafayette. A student may enroll in at most 7 credit hours per semester.": "Los estudiantes deben tener al menos 15 años, estar inscritos en una escuela secundaria de Luisiana o en un programa de educación en el hogar aprobado, ir en camino de completar el núcleo TOPS, estar en buen estado, y tener las puntuaciones y un expediente oficial de la escuela secundaria registrados. Los juniors toman cursos solo en el campus de su escuela secundaria; los seniors también pueden tomar cursos en UL Lafayette. Un estudiante puede inscribirse en un máximo de 7 horas de crédito por semestre.",
+ "Subject minimums also apply: ACT English 18 (for humanities and social sciences courses); ACT Math 19 (for math and science courses).": "También aplican mínimos por materia: ACT de inglés 18 (para cursos de humanidades y ciencias sociales); ACT de matemáticas 19 (para cursos de matemáticas y ciencias).",
+ "The standards do not apply to private institutions.": "Los estándares no aplican a las instituciones privadas.",
+ "These are the state MINIMUM standards for Louisiana public institutions. An institution may adopt additional, more specific or rigorous requirements, so meeting the state minimum is not a guarantee of admission.": "Estos son los estándares MÍNIMOS estatales para las instituciones públicas de Luisiana. Una institución puede adoptar requisitos adicionales, más específicos o rigurosos, por lo que cumplir el mínimo estatal no es una garantía de admisión.",
+ "This college is not in the application data yet, so no deadlines are printed here. Check the college admissions page for its current dates.": "Esta universidad aún no está en los datos de solicitud, así que aquí no se imprimen fechas límite. Consulte la página de admisiones de la universidad para ver sus fechas actuales.",
+ "Two-year institutions are open admission and have no academic requirements for entry.": "Las instituciones de dos años son de admisión abierta y no tienen requisitos académicos de ingreso.",
+ "UNO runs a dual enrollment program with its own application cycle (a spring application deadline of November 15 is published to counselors). Confirm UNO's own requirements on its admissions pages.": "UNO tiene un programa de inscripción dual con su propio ciclo de solicitud (se publica a los consejeros una fecha límite de solicitud de primavera del 15 de noviembre). Confirme los requisitos propios de UNO en sus páginas de admisiones.",
+ "a GPA of at least 2.0": "un GPA de al menos 2.0",
+ "a GPA of at least 2.25": "un GPA de al menos 2.25",
+ "a GPA of at least 2.5": "un GPA de al menos 2.5",
+ "academic track rules": "reglas de la ruta académica",
+ "age 25 or over": "25 años o más",
+ "an associate degree (AAS, AA, AS, AALT, or ASLT) or higher": "un título asociado (AAS, AA, AS, AALT o ASLT) o superior",
+ "at least 12 college-level credit hours from the bridge program": "al menos 12 horas de crédito de nivel universitario del programa puente",
+ "at least 18 college-level credit hours": "al menos 18 horas de crédito de nivel universitario",
+ "at least 24 college-level credit hours": "al menos 24 horas de crédito de nivel universitario",
+ "at least 30 college-level credit hours": "al menos 30 horas de crédito de nivel universitario",
+ "college-level English with a C or better": "inglés de nivel universitario con C o mejor",
+ "college-level mathematics with a C or better": "matemáticas de nivel universitario con C o mejor",
+ "enrollment in a partnership bridge program": "inscripción en un programa puente en alianza",
+ "grade level": "nivel de grado",
+ "grade level (the GPA minimum depends on it)": "nivel de grado (el mínimo de GPA depende de él)",
+ "high school GPA": "GPA de la escuela secundaria",
+ "subject test scores, or a counselor recommendation": "puntuaciones de exámenes por materia, o una recomendación del consejero",
+ "technical track rules": "reglas de la ruta técnica",
+ "the GPA on college-level courses": "el GPA en los cursos de nivel universitario",
+ "the number of college-level credit hours earned": "la cantidad de horas de crédito de nivel universitario obtenidas",
+ "Accountant": "Contador",
+ "Accounting": "Contabilidad",
+ "Advertising Manager": "Gerente de publicidad",
+ "American Government": "Gobierno estadounidense",
+ "American History": "Historia estadounidense",
+ "American History I": "Historia estadounidense I",
+ "Anatomy and Physiology I and II": "Anatomía y fisiología I y II",
+ "Animator": "Animador",
+ "Anthropology": "Antropología",
+ "Apply through ApplyDE, the state's common dual enrollment application. Delgado is one of the colleges taking dual enrollment applications through ApplyDE, the Board of Regents common application. Approval from the student, a parent, and the high school principal or counselor is required. Delgado posts its dual enrollment application deadline for each session on its dual enrollment page. Check the current deadline table there before the session you want.": "Solicite a través de ApplyDE, la solicitud común estatal de inscripción dual. Delgado es una de las universidades que aceptan solicitudes de inscripción dual por ApplyDE, la solicitud común del Board of Regents. Se requiere la aprobación del estudiante, de un padre y del director o consejero de la escuela secundaria. Delgado publica la fecha límite de solicitud de inscripción dual de cada sesión en su página de inscripción dual. Consulte allí la tabla de fechas límite actual antes de la sesión que quiere.",
+ "Arabic": "Árabe",
+ "Art": "Arte",
+ "Art (100-200 level)": "Arte (nivel 100-200)",
+ "Art Director": "Director de arte",
+ "Art Structure/2D Design": "Estructura del arte/Diseño 2D",
+ "Art Teacher": "Maestro de arte",
+ "Astronomy": "Astronomía",
+ "Athletic Trainer": "Entrenador deportivo",
+ "Auditor": "Auditor",
+ "Basic Drawing/Drawing 1 and Drawing 2/Figure Drawing": "Dibujo básico/Dibujo 1 y Dibujo 2/Dibujo de la figura",
+ "Behavioral Health Specialist": "Especialista en salud conductual",
+ "Bio Technician": "Técnico en biología",
+ "Biological Sciences": "Ciencias biológicas",
+ "Biology Lab I and II": "Laboratorio de biología I y II",
+ "Brand Manager": "Gerente de marca",
+ "Budget Analyst": "Analista de presupuesto",
+ "Budget Manager": "Gerente de presupuesto",
+ "Business": "Negocios",
+ "Business Calculus": "Cálculo para negocios",
+ "Business Statistics II": "Estadística para negocios II",
+ "Calculus I": "Cálculo I",
+ "Calculus II": "Cálculo II",
+ "Campaign Manager": "Gerente de campaña",
+ "Case Manager": "Gestor de casos",
+ "Chemistry": "Química",
+ "Chemistry Lab I and II": "Laboratorio de química I y II",
+ "Child Psychologist": "Psicólogo infantil",
+ "Child Welfare Specialist": "Especialista en bienestar infantil",
+ "Choose 12 credits from the published list (anatomy, biology, physics and chemistry labs, chemistry for science majors, medical terminology, health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics)": "Elija 12 créditos de la lista publicada (anatomía, laboratorios de biología, física y química, química para especialidades de ciencias, terminología médica, salud, primeros auxilios, actividad física, electivas de kinesiología o salud, sistemas de información administrativa, nutrición, estadística)",
+ "Choose 18 credits from the published list (health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics, accounting, economics)": "Elija 18 créditos de la lista publicada (salud, primeros auxilios, actividad física, electivas de kinesiología o salud, sistemas de información administrativa, nutrición, estadística, contabilidad, economía)",
+ "Communication": "Comunicación",
+ "Composition 1": "Composición 1",
+ "Composition 2": "Composición 2",
+ "Composition I and II": "Composición I y II",
+ "Computer Science": "Ciencias de la computación",
+ "Computer Science I": "Ciencias de la computación I",
+ "Computer Science II": "Ciencias de la computación II",
+ "Corporate Treasurer": "Tesorero corporativo",
+ "Corrections Process": "Proceso correccional",
+ "Counselor": "Consejero",
+ "Courts": "Tribunales",
+ "Crime Analyst": "Analista de criminalidad",
+ "Criminal Justice": "Justicia penal",
+ "Criminal Law": "Derecho penal",
+ "Cybersecurity Analyst": "Analista de ciberseguridad",
+ "Dance": "Danza",
+ "Database Administrator": "Administrador de bases de datos",
+ "Dental Hygiene": "Higiene dental",
+ "Developmental Psychology": "Psicología del desarrollo",
+ "Dietitian": "Dietista",
+ "Early Childhood Education": "Educación infantil temprana",
+ "Ecology": "Ecología",
+ "Economics": "Economía",
+ "Education": "Educación",
+ "Emergency Medical Sciences": "Ciencias médicas de emergencia",
+ "Engineering": "Ingeniería",
+ "English": "Inglés",
+ "Environmental Sciences": "Ciencias ambientales",
+ "Exercise Physiologist": "Fisiólogo del ejercicio",
+ "Finance": "Finanzas",
+ "Financial Analyst": "Analista financiero",
+ "Financial Planner": "Planificador financiero",
+ "Finite Math OR Contemporary Math": "Matemáticas finitas O Matemáticas contemporáneas",
+ "Fitness Trainer": "Entrenador físico",
+ "Food Scientist": "Científico de alimentos",
+ "Forensic Scientist": "Científico forense",
+ "French": "Francés",
+ "General Biology": "Biología general",
+ "General Biology and Lab": "Biología general y laboratorio",
+ "General Biology for Science Majors I and II": "Biología general para especialidades de ciencias I y II",
+ "General Chemistry I and II": "Química general I y II",
+ "Geography": "Geografía",
+ "German": "Alemán",
+ "Government Affairs": "Asuntos gubernamentales",
+ "Graphic Designer": "Diseñador gráfico",
+ "Health Educator": "Educador de salud",
+ "Health Science": "Ciencias de la salud",
+ "History": "Historia",
+ "Hospitality And Tourism": "Hospitalidad y turismo",
+ "Human Resource Manager": "Gerente de recursos humanos",
+ "Human Resource Specialist": "Especialista en recursos humanos",
+ "Human Resources Manager": "Gerente de recursos humanos",
+ "Illustrator": "Ilustrador",
+ "Intro Psychology": "Introducción a la psicología",
+ "Intro to Biology I and II": "Introducción a la biología I y II",
+ "Intro to Business OR Business Law": "Introducción a los negocios O Derecho empresarial",
+ "Intro to Criminal Justice": "Introducción a la justicia penal",
+ "Intro to Financial Accounting": "Introducción a la contabilidad financiera",
+ "Intro to Kinesiology": "Introducción a la kinesiología",
+ "Intro to Managerial Accounting": "Introducción a la contabilidad administrativa",
+ "Intro to Psychology": "Introducción a la psicología",
+ "Intro to Social Work": "Introducción al trabajo social",
+ "Intro to Sociology": "Introducción a la sociología",
+ "Intro to Statistics": "Introducción a la estadística",
+ "Investment Banker": "Banquero de inversión",
+ "Kinesiology": "Kinesiología",
+ "Latin": "Latín",
+ "Legal Assistant": "Asistente legal",
+ "Legislative Analyst": "Analista legislativo",
+ "Macro OR Micro Economics": "Macroeconomía O Microeconomía",
+ "Macroeconomics": "Macroeconomía",
+ "Management": "Administración",
+ "Market Research Analyst": "Analista de investigación de mercados",
+ "Marketing": "Mercadotecnia",
+ "Marketing Manager": "Gerente de mercadotecnia",
+ "Microeconomics": "Microeconomía",
+ "Museum Curator": "Curador de museo",
+ "Music": "Música",
+ "Network Administrator": "Administrador de redes",
+ "Nine credits of Political Science": "Nueve créditos de ciencias políticas",
+ "Nine credits of humanities": "Nueve créditos de humanidades",
+ "Nine credits of natural sciences": "Nueve créditos de ciencias naturales",
+ "Occupational Therapist": "Terapeuta ocupacional",
+ "One Behavioral Science Elective": "Una electiva de ciencias del comportamiento",
+ "One English Elective": "Una electiva de inglés",
+ "One Fine Arts Elective": "Una electiva de bellas artes",
+ "One Humanities Elective": "Una electiva de humanidades",
+ "One IT Elective that covers at least 50% Excel": "Una electiva de informática que cubra al menos 50% de Excel",
+ "One Life Science course": "Un curso de ciencias de la vida",
+ "One Math Elective": "Una electiva de matemáticas",
+ "One Math Elective OR Intro to Logical Reasoning": "Una electiva de matemáticas O Introducción al razonamiento lógico",
+ "One Natural Science Elective": "Una electiva de ciencias naturales",
+ "One Physical Science Elective": "Una electiva de ciencias físicas",
+ "One Physical Science course": "Un curso de ciencias físicas",
+ "One art elective": "Una electiva de arte",
+ "One more course in the same discipline from either": "Un curso más en la misma disciplina de cualquiera de las dos",
+ "Open": "Abrir",
+ "Operations Manager": "Gerente de operaciones",
+ "Pharmacy Tech": "Técnico de farmacia",
+ "Philosophy": "Filosofía",
+ "Physical Science": "Ciencias físicas",
+ "Physical Therapist": "Fisioterapeuta",
+ "Physics": "Física",
+ "Physics I and II with labs, or Organic Chemistry I and II with labs": "Física I y II con laboratorios, o Química orgánica I y II con laboratorios",
+ "Police Officer": "Oficial de policía",
+ "Policing": "Función policial",
+ "Political Analyst": "Analista político",
+ "Political Science": "Ciencias políticas",
+ "Probation Officer": "Oficial de libertad condicional",
+ "Project Manager": "Gerente de proyectos",
+ "Psychology": "Psicología",
+ "Public Affairs Manager": "Gerente de asuntos públicos",
+ "Public Speaking": "Oratoria",
+ "Research Psychologist": "Psicólogo investigador",
+ "Research Scientist": "Científico investigador",
+ "Respiratory Therapist": "Terapeuta respiratorio",
+ "Risk Manager": "Gerente de riesgos",
+ "Sales Manager": "Gerente de ventas",
+ "Six credits of biology": "Seis créditos de biología",
+ "Six credits of foreign language": "Seis créditos de lengua extranjera",
+ "Six credits of history": "Seis créditos de historia",
+ "Six credits of social/behavioral science": "Seis créditos de ciencias sociales/del comportamiento",
+ "Social Psychologist": "Psicólogo social",
+ "Social Psychology": "Psicología social",
+ "Social Work": "Trabajo social",
+ "Social Worker": "Trabajador social",
+ "Sociology": "Sociología",
+ "Software Developer": "Desarrollador de software",
+ "Spanish": "Español",
+ "Sports Coach": "Entrenador deportivo",
+ "Statistics 1": "Estadística 1",
+ "Supply Chain Manager": "Gerente de cadena de suministro",
+ "Survey of Western Art 1 and 2": "Estudio del arte occidental 1 y 2",
+ "Tax Advisor": "Asesor fiscal",
+ "Teacher": "Maestro",
+ "Theatre": "Teatro",
+ "Three credits of BSW program-specific": "Tres créditos específicos del programa BSW",
+ "Three credits of behavioral science": "Tres créditos de ciencias del comportamiento",
+ "Three credits of elective": "Tres créditos de electiva",
+ "Three credits of electives": "Tres créditos de electivas",
+ "Three credits of fine arts": "Tres créditos de bellas artes",
+ "Three credits of foreign language": "Tres créditos de lengua extranjera",
+ "Three credits of literature": "Tres créditos de literatura",
+ "Three credits of other English": "Tres créditos de otro inglés",
+ "Three credits of other humanities": "Tres créditos de otras humanidades",
+ "Three credits of other math": "Tres créditos de otras matemáticas",
+ "Three credits of other natural science": "Tres créditos de otra ciencia natural",
+ "Three credits of other natural sciences": "Tres créditos de otras ciencias naturales",
+ "Three credits of physics": "Tres créditos de física",
+ "Three credits of social science": "Tres créditos de ciencias sociales",
+ "Three credits of social/behavioral science (in addition to Pol. Sci. courses)": "Tres créditos de ciencias sociales/del comportamiento (además de los cursos de ciencias políticas)",
+ "Three humanities courses (literature, foreign languages, history, classical studies, communications, philosophy, religious studies, interdisciplinary)": "Tres cursos de humanidades (literatura, lenguas extranjeras, historia, estudios clásicos, comunicaciones, filosofía, estudios religiosos, interdisciplinarios)",
+ "Trigonometry": "Trigonometría",
+ "Twelve college-selected credits": "Doce créditos seleccionados por la universidad",
+ "Twelve credits of other computer science": "Doce créditos de otras ciencias de la computación",
+ "Two Behavioral Science Electives": "Dos electivas de ciencias del comportamiento",
+ "Two Humanities Electives": "Dos electivas de humanidades",
+ "Two Math Electives": "Dos electivas de matemáticas",
+ "Two classes from the published math list": "Dos clases de la lista publicada de matemáticas",
+ "Web Developer": "Desarrollador web",
+ "Your apply ready packet": "Su paquete listo para solicitar",
+ "These colleges are being built. Enter your email and your full report will be sent to you when their course data is verified. Every request moves a college up the list.": "Estas universidades se están construyendo. Ingrese su correo electrónico y se le enviará su informe completo cuando los datos de sus cursos estén verificados. Cada solicitud hace subir una universidad en la lista.",
+ "College not specified": "Universidad no especificada",
+ "2026-2027 fee schedule, verified November 11, 2026": "tarifas 2026-2027, verificadas el 11 de noviembre de 2026",
+ "Fall 2026 fee schedule, verified November 11, 2026": "tarifas del otoño de 2026, verificadas el 11 de noviembre de 2026",
+ "Biology": "Biología",
+ "Kinesiology, Sport Management": "Kinesiología, Gestión deportiva",
+ "Kinesiology, Pre-Allied Health": "Kinesiología, Pre-salud aliada"
+};
+// Credit Crosswalk page wiring v2 (Nov 12, 2026): coverage strip,
+// results additions (savings line, source line), eligibility
+// check, career pathways, transfer degree planner with apply
+// ready packet, admission check, and the FULL Spanish toggle:
+// when Spanish is on, the whole page renders in Spanish (static
+// text through the walker and CTC_ES_DICT, wiring-built sections
+// through bilingual templates, engine item strings through the
+// dictionary and patterns in T()). All verdicts come from the
+// tested engines inlined on this page; nothing here invents an
+// outcome.
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
@@ -16655,6 +17857,7 @@ if (typeof window !== 'undefined') {
   }
   var COLLEGES36 = (typeof LA_COLLEGES !== 'undefined') ? LA_COLLEGES : [];
   var COVERED = (typeof DATA_COLLEGES !== 'undefined') ? DATA_COLLEGES : [];
+  var DICT = (typeof CTC_ES_DICT !== 'undefined') ? CTC_ES_DICT : {};
   function fillSelect(el, names, firstLabel) {
     if (!el) return;
     el.innerHTML = '<option value="">' + esc(firstLabel) + '</option>' +
@@ -16669,9 +17872,117 @@ if (typeof window !== 'undefined') {
     return isNaN(v) ? null : v;
   }
 
+  // ---- Language state, dictionary, patterns ----
+  var spanish = false;
+  function L(en, es) { return spanish ? es : en; }
+  function T(s) {
+    if (!spanish || typeof s !== 'string') return s;
+    if (Object.prototype.hasOwnProperty.call(DICT, s)) return DICT[s];
+    var m;
+    if ((m = s.match(/^(\d+) credit hours in the order listed, semester by semester\. Each one is matched to (.+) in the statewide course data\.$/))) {
+      return m[1] + ' horas de crédito en el orden indicado, semestre por semestre. Cada una está vinculada con ' + m[2] + ' en los datos estatales de cursos.';
+    }
+    if ((m = s.match(/^Send your official (.+) transcript to (.+)$/))) {
+      return 'Envíe su expediente académico oficial de ' + m[1] + ' a ' + m[2];
+    }
+    if ((m = s.match(/^Take these (\d+) courses at (.+)$/))) {
+      return 'Tome estos ' + m[1] + ' cursos en ' + m[2];
+    }
+    if ((m = s.match(/^Apply for admission at (.+)$/))) return 'Solicite la admisión en ' + m[1];
+    if ((m = s.match(/^Apply for dual enrollment at (.+)$/))) return 'Solicite la inscripción dual en ' + m[1];
+    if ((m = s.match(/^A ([\d.]+) cumulative GPA for a (senior|junior) \(yours: ([\d.]+)\)$/))) {
+      return 'Un GPA acumulado de ' + m[1] + ' para ' + (m[2] === 'senior' ? '12.º grado' : '11.º grado') + ' (el suyo: ' + m[3] + ')';
+    }
+    if ((m = s.match(/^A GPA of at least ([\d.]+) \(yours: ([\d.]+)\)$/))) {
+      return 'Un GPA de al menos ' + m[1] + ' (el suyo: ' + m[2] + ')';
+    }
+    if ((m = s.match(/^GPA ([\d.]+) meets the ([\d.]+) minimum( for a (senior|junior))?$/))) {
+      return 'El GPA ' + m[1] + ' cumple el mínimo de ' + m[2] +
+        (m[4] ? ' para ' + (m[4] === 'senior' ? '12.º grado' : '11.º grado') : '');
+    }
+    if ((m = s.match(/^ACT (English|Math) (\d+) \(for (.+?) courses\) \(yours: (\d+)\)$/))) {
+      return 'ACT de ' + (m[1] === 'English' ? 'inglés' : 'matemáticas') + ' ' + m[2] +
+        ' (para cursos de ' + (m[3] === 'humanities and social sciences' ? 'humanidades y ciencias sociales' : 'matemáticas y ciencias') +
+        ') (el suyo: ' + m[4] + ')';
+    }
+    if ((m = s.match(/^ACT (English|Math) (\d+) \(yours: (\d+)\)$/))) {
+      return 'ACT de ' + (m[1] === 'English' ? 'inglés' : 'matemáticas') + ' ' + m[2] + ' (el suyo: ' + m[3] + ')';
+    }
+    if ((m = s.match(/^ACT composite (\d+) \(yours: (\d+)\)$/))) {
+      return 'ACT compuesto ' + m[1] + ' (el suyo: ' + m[2] + ')';
+    }
+    if ((m = s.match(/^Not covered yet: (.+)$/))) return 'Aún no cubierto: ' + m[1];
+    if ((m = s.match(/^All (\d+) credit hours of the transfer degree move, with junior standing\.$/))) {
+      return 'Las ' + m[1] + ' horas de crédito del título de transferencia se mueven todas, con nivel junior.';
+    }
+    if ((m = s.match(/^Transfer degree still in progress: the guarantee is not in hand yet\. (.+)\.$/))) {
+      return 'Título de transferencia aún en curso: la garantía aún no está en mano. ' + m[1] + '.';
+    }
+    if ((m = s.match(/^Flagged: (.+) falls outside the transfer guarantee\. The receiving university decides that course on its own\.$/))) {
+      return 'Marcado: ' + m[1] + ' queda fuera de la garantía de transferencia. La universidad receptora decide sobre ese curso por su cuenta.';
+    }
+    if ((m = s.match(/^The full report for this check lists every course, what it counts as at (.+), and the conditions on it\. Enter your email and it will be sent to you\.$/))) {
+      return 'El informe completo de esta verificación enumera cada curso, como qué cuenta en ' + m[1] + ', y las condiciones que tiene. Ingrese su correo electrónico y se le enviará.';
+    }
+    if ((m = s.match(/^Credit awarded: counts toward (.+)\.$/))) {
+      return 'Crédito otorgado: cuenta para ' + T(m[1]) + '.';
+    }
+    if ((m = s.match(/^Credit awarded: (.+)\.$/))) return 'Crédito otorgado: ' + m[1] + '.';
+    if ((m = s.match(/^Credit awarded as an elective in the subject\. ?(.*)$/))) {
+      return 'Crédito otorgado como electiva en la materia. ' + m[1];
+    }
+    if ((m = s.match(/^No credit\. (.+)$/))) return 'Sin crédito. ' + m[1];
+    return s;
+  }
+
+  // ---- Text walker: translate static and page-rendered text ----
+  var origText = new Map();
+  var origPlaceholder = new Map();
+  function walkTranslate(root) {
+    if (!root || !document.createTreeWalker) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = node.parentNode;
+        if (!p || p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE') return NodeFilter.FILTER_REJECT;
+        if (p.id === 'spanishToggle') return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    var n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function (node) {
+      if (!origText.has(node)) origText.set(node, node.nodeValue);
+      var parts = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      if (parts && DICT[parts[2]]) {
+        node.nodeValue = parts[1] + DICT[parts[2]] + parts[3];
+      } else if (parts) {
+        var t = T(parts[2]);
+        if (t !== parts[2]) node.nodeValue = parts[1] + t + parts[3];
+      }
+    });
+    if (root.querySelectorAll) {
+      root.querySelectorAll('[placeholder]').forEach(function (el) {
+        if (!origPlaceholder.has(el)) origPlaceholder.set(el, el.getAttribute('placeholder'));
+        var ph = el.getAttribute('placeholder');
+        if (ph && DICT[ph]) el.setAttribute('placeholder', DICT[ph]);
+      });
+    }
+  }
+  function walkRestore(root) {
+    origText.forEach(function (orig, node) {
+      if (node.isConnected) node.nodeValue = orig;
+    });
+    origPlaceholder.forEach(function (orig, el) {
+      if (el.isConnected && orig != null) el.setAttribute('placeholder', orig);
+    });
+  }
+
   // ---- Coverage strip ----
-  var strip = $('coverageStrip');
-  if (strip && COVERED.length) {
+  function renderStrip() {
+    var strip = $('coverageStrip');
+    if (!strip || !COVERED.length) return;
     var short = {
       'Delgado Community College': 'Delgado',
       'University of Louisiana at Lafayette': 'UL Lafayette',
@@ -16682,19 +17993,31 @@ if (typeof window !== 'undefined') {
       'Northwestern State University of Louisiana': 'Northwestern State',
       'Louisiana Tech University': 'Louisiana Tech'
     };
-    strip.innerHTML = 'Now checking <strong>' + COVERED.length + ' Louisiana colleges</strong>, ' +
-      'including the five biggest dual enrollment providers: ' +
-      COVERED.map(function (n) { return esc(short[n] || n); }).join(', ') + '.';
+    var names = COVERED.map(function (n2) { return esc(short[n2] || n2); }).join(', ');
+    strip.innerHTML = spanish
+      ? 'Ahora verificamos <strong>' + COVERED.length + ' universidades de Luisiana</strong>, incluidas las cinco mayores proveedoras de inscripción dual: ' + names + '.'
+      : 'Now checking <strong>' + COVERED.length + ' Louisiana colleges</strong>, including the five biggest dual enrollment providers: ' + names + '.';
   }
+  renderStrip();
 
-  // ---- Results additions: savings line, source line, Spanish ----
-  var spanish = false;
+  // ---- Results additions: savings line, source line, Spanish guidance ----
+  function savingsSentence(sv, target, hours) {
+    if (spanish) {
+      return 'Estas ' + (hours ? hours + ' ' : '') + 'horas para el título valen aproximadamente ' +
+        moneyInt(sv.amount) + ' en ' + esc(target) +
+        ', calculado según su matrícula y tarifas publicadas de ' + moneyRate(sv.perCreditHour) +
+        ' por hora de crédito (' + esc(T(sv.schedule)) + ').';
+    }
+    return 'These ' + (hours ? hours + ' ' : '') + 'degree hours are worth about ' +
+      moneyInt(sv.amount) + ' at ' + esc(target) +
+      ', priced from its published tuition and fees of ' + moneyRate(sv.perCreditHour) +
+      ' per credit hour (' + esc(sv.schedule) + ').';
+  }
   function renderAdditions() {
     if (!window._lastStudent || !window._lastReport) return;
     if (typeof buildGuidance !== 'function') return;
     var g = buildGuidance(window._lastStudent, window._lastReport);
     var target = (window._lastStudent.target && window._lastStudent.target.name) || '';
-    // Savings line
     var verdicts = $('verdicts');
     if (verdicts && typeof withSavings === 'function') {
       var withS = withSavings(g, target, TUITION_DATA);
@@ -16704,17 +18027,10 @@ if (typeof window !== 'undefined') {
         sEl.id = 'savingsLine';
         verdicts.appendChild(sEl);
       }
-      if (withS.savings) {
-        var sv = withS.savings;
-        sEl.innerHTML = '<p class="verdict good">These degree hours are worth about ' +
-          moneyInt(sv.amount) + ' at ' + esc(target) +
-          ', priced from its published tuition and fees of ' + moneyRate(sv.perCreditHour) +
-          ' per credit hour (' + esc(sv.schedule) + ').</p>';
-      } else {
-        sEl.innerHTML = '';
-      }
+      sEl.innerHTML = withS.savings
+        ? '<p class="verdict good">' + savingsSentence(withS.savings, target, null) + '</p>'
+        : '';
     }
-    // Source line
     var tableBox = $('courseTable');
     if (tableBox) {
       var srcEl = $('sourceLine');
@@ -16728,14 +18044,19 @@ if (typeof window !== 'undefined') {
       (window._lastReport.courseResults || []).forEach(function (r) {
         if (r.sourceCatalog && !seen[r.sourceInstitution]) {
           seen[r.sourceInstitution] = true;
-          lines.push('Traced from ' + r.sourceCatalog + ' and ' + (r.targetCatalog || 'the target catalog') + '.');
+          if (spanish) {
+            lines.push('Fuentes: ' + T(r.sourceCatalog) + ' y ' + T(r.targetCatalog || 'the target catalog') + '.');
+          } else {
+            lines.push('Traced from ' + r.sourceCatalog + ' and ' + (r.targetCatalog || 'the target catalog') + '.');
+          }
         }
       });
       srcEl.innerHTML = lines.length
-        ? '<p class="fine">' + esc(lines.join(' ')) + ' Statewide course numbers are shown with each match.</p>'
+        ? '<p class="fine">' + esc(lines.join(' ')) + ' ' +
+          L('Statewide course numbers are shown with each match.',
+            'Los números estatales de curso se muestran con cada coincidencia.') + '</p>'
         : '';
     }
-    // Spanish rendering of next steps and advisor questions
     if (spanish && typeof translateGuidance === 'function') {
       var t = translateGuidance(g);
       var ns = $('nextSteps');
@@ -16752,29 +18073,48 @@ if (typeof window !== 'undefined') {
     }
   }
   var runBtn = $('run');
-  if (runBtn) runBtn.addEventListener('click', function () { setTimeout(renderAdditions, 0); });
-  var tog = $('spanishToggle');
-  if (tog) {
-    tog.addEventListener('click', function () {
-      spanish = !spanish;
-      tog.textContent = spanish ? 'View in English' : 'Ver en español';
-      if (!spanish && window._lastReport && typeof render === 'function') {
-        render(window._lastReport);
-        setTimeout(renderAdditions, 0);
-      } else {
+  if (runBtn) {
+    runBtn.addEventListener('click', function () {
+      setTimeout(function () {
         renderAdditions();
-      }
+        if (spanish) walkTranslate(document.body);
+      }, 0);
     });
   }
 
   // ---- Eligibility ----
+  var lastElig = null;
+  function renderEligibility() {
+    if (!lastElig) return;
+    var out = $('eligResult');
+    var r = lastElig.result;
+    var college = lastElig.college;
+    var h = '';
+    if (r.status === 'eligible') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Elegible según los mínimos publicados en ' + esc(college) + '.'
+        : 'Eligible on the published minimums at ' + esc(college) + '.') + '</p>';
+    } else if (r.status === 'not-yet') {
+      h += '<p class="verdict bad">' + (spanish ? 'Todavía no. Aún falta: ' : 'Not yet. Still missing: ') + '</p><ul>' +
+        (r.missing || []).map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    } else {
+      h += '<p class="verdict warn">' + (spanish ? 'Todavía no se puede saber. Esta verificación aún necesita: ' : 'Cannot tell yet. This check still needs: ') + '</p><ul>' +
+        (r.unknown || []).map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    }
+    if (r.met && r.met.length) {
+      h += '<p><strong>' + L('Met:', 'Cumplido:') + '</strong></p><ul>' +
+        r.met.map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    }
+    out.innerHTML = h;
+  }
   if ($('eligCollege') && typeof evaluateEligibility === 'function') {
     fillSelect($('eligCollege'), Object.keys(ELIGIBILITY_DATA.colleges || {}), 'Pick the college');
     $('eligRun').addEventListener('click', function () {
       var out = $('eligResult');
       var college = $('eligCollege').value;
       if (!college) {
-        out.innerHTML = '<p class="verdict warn">Pick a college first.</p>';
+        out.innerHTML = '<p class="verdict warn">' + L('Pick a college first.', 'Primero elija una universidad.') + '</p>';
+        lastElig = null;
         return;
       }
       var student = {
@@ -16787,23 +18127,70 @@ if (typeof window !== 'undefined') {
         counselorRecommendation: $('eligRec').checked,
         subject: $('eligSubject').value || undefined
       };
-      var r = evaluateEligibility(college, student, ELIGIBILITY_DATA);
-      var h = '';
-      if (r.status === 'eligible') {
-        h += '<p class="verdict good">Eligible on the published minimums at ' + esc(college) + '.</p>';
-      } else if (r.status === 'not-yet') {
-        h += '<p class="verdict bad">Not yet. Still missing: ' + (r.missing || []).map(esc).join('; ') + '.</p>';
-      } else {
-        h += '<p class="verdict warn">Cannot tell yet. This check still needs: ' + (r.unknown || []).map(esc).join('; ') + '.</p>';
-      }
-      if (r.met && r.met.length) {
-        h += '<p><strong>Met:</strong> ' + r.met.map(esc).join('; ') + '</p>';
-      }
-      out.innerHTML = h;
+      lastElig = { college: college, result: evaluateEligibility(college, student, ELIGIBILITY_DATA) };
+      renderEligibility();
     });
   }
 
   // ---- Career pathways ----
+  var lastPathway = null;
+  function renderPathway() {
+    if (!lastPathway) return;
+    var out = $('pwResult');
+    var plan = lastPathway.plan;
+    var source = lastPathway.source;
+    var target = lastPathway.target;
+    if (plan.status === 'unknown-pathway') {
+      out.innerHTML = '<p class="verdict warn">' + L('That pathway is not verified yet.', 'Esa ruta aún no está verificada.') + '</p>';
+      return;
+    }
+    var h = '';
+    h += '<h3>' + esc(T(plan.pathwayName)) + ': ' + esc(source) + ' <span aria-hidden="true">→</span> ' + esc(target) + '</h3>';
+    if (plan.careers && plan.careers.length) {
+      h += '<p class="fine">' + L('Careers this pathway feeds: ', 'Carreras a las que lleva esta ruta: ') +
+        plan.careers.map(function (c) { return esc(T(c)); }).join(', ') + '.</p>';
+    }
+    if (plan.status === 'on-pathway') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Cada una de las ' + plan.totalHours + ' horas puede tomarse en ' + esc(source) + ' según sus datos de cursos publicados.'
+        : 'Every one of the ' + plan.totalHours + ' hours can be taken at ' + esc(source) + ' from its published course data.') + '</p>';
+    } else {
+      h += '<p class="verdict warn">' + (spanish
+        ? plan.gapHours + ' de las ' + plan.totalHours + ' horas son vacíos en ' + esc(source) + ': no están en sus datos de cursos publicados. Un vacío se nombra, nunca se rellena con una suposición.'
+        : plan.gapHours + ' of the ' + plan.totalHours + ' hours are gaps at ' + esc(source) + ': not in its published course data. A gap is named, never filled with a guess.') + '</p>';
+    }
+    if (plan.targetCovered === false) {
+      h += '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' aún no está en los datos de cursos, así que todavía no se puede verificar aquí si cada curso cuenta allí.'
+        : esc(target) + ' is not in the course data yet, so whether each course counts there cannot be verified here yet.') + '</p>';
+    }
+    if (plan.nextSemester && plan.nextSemester.length) {
+      h += '<p><strong>' + (spanish
+        ? 'Próximo semestre (' + plan.nextSemesterHours + ' horas):'
+        : 'Next semester (' + plan.nextSemesterHours + ' hours):') + '</strong></p><ul>' +
+        plan.nextSemester.map(function (p) {
+          return '<li>' + esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + ' (' + p.hours + 'h)</li>';
+        }).join('') + '</ul>';
+    }
+    var statusLabel = spanish
+      ? { taken: 'Ya obtenido', available: 'Disponible en su universidad', partial: 'Parcialmente disponible', gap: 'Vacío' }
+      : { taken: 'Already earned', available: 'Available at your college', partial: 'Partly available', gap: 'Gap' };
+    h += '<table class="results"><colgroup><col style="width:30%"><col style="width:12%"><col style="width:38%"><col style="width:20%"></colgroup>' +
+      '<tr><th>' + L('Requirement', 'Requisito') + '</th><th class="num">' + L('Hours', 'Horas') + '</th><th>' +
+      (spanish ? 'Cursos en ' : 'Courses at ') + esc(source) + '</th><th>' + L('Status', 'Estado') + '</th></tr>';
+    h += plan.requirements.map(function (r, i) {
+      var picks = (r.picks || []).map(function (p) {
+        var note = p.countsAtTarget === false
+          ? L(' (not verified at the target)', ' (no verificado en la universidad de destino)') : '';
+        return esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + esc(note);
+      }).join('<br>');
+      return '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + esc(T(r.label)) + '</td>' +
+        '<td class="num">' + r.hours + '</td><td>' + (picks || ' ') + '</td>' +
+        '<td>' + esc(statusLabel[r.status] || r.status) + '</td></tr>';
+    }).join('');
+    h += '</table>';
+    out.innerHTML = h;
+  }
   if ($('pwPathway') && typeof buildPathwayPlan === 'function') {
     $('pwPathway').innerHTML = '<option value="">Pick a career goal</option>' +
       (PATHWAYS_DATA.pathways || []).map(function (p) {
@@ -16817,126 +18204,162 @@ if (typeof window !== 'undefined') {
       var source = $('pwSource').value;
       var target = $('pwTarget').value;
       if (!pathwayId || !source || !target) {
-        out.innerHTML = '<p class="verdict warn">Pick a career goal, your college, and the university.</p>';
+        out.innerHTML = '<p class="verdict warn">' + L('Pick a career goal, your college, and the university.', 'Elija una meta profesional, su universidad y la universidad de destino.') + '</p>';
+        lastPathway = null;
         return;
       }
-      var plan = buildPathwayPlan(
-        { pathwayId: pathwayId, sourceCollege: source, targetCollege: target, takenLccns: [] },
-        { courses: COURSES_DATA, pathways: PATHWAYS_DATA, statewide: STATEWIDE_DATA }
-      );
-      if (plan.status === 'unknown-pathway') {
-        out.innerHTML = '<p class="verdict warn">That pathway is not verified yet.</p>';
-        return;
-      }
-      var h = '';
-      h += '<h3>' + esc(plan.pathwayName) + ': ' + esc(source) + ' <span aria-hidden="true">→</span> ' + esc(target) + '</h3>';
-      if (plan.careers && plan.careers.length) {
-        h += '<p class="fine">Careers this pathway feeds: ' + plan.careers.map(esc).join(', ') + '.</p>';
-      }
-      if (plan.status === 'on-pathway') {
-        h += '<p class="verdict good">Every one of the ' + plan.totalHours + ' hours can be taken at ' + esc(source) + ' from its published course data.</p>';
-      } else {
-        h += '<p class="verdict warn">' + plan.gapHours + ' of the ' + plan.totalHours + ' hours are gaps at ' + esc(source) + ': not in its published course data. A gap is named, never filled with a guess.</p>';
-      }
-      if (plan.targetCovered === false) {
-        h += '<p class="verdict warn">' + esc(target) + ' is not in the course data yet, so whether each course counts there cannot be verified here yet.</p>';
-      }
-      if (plan.nextSemester && plan.nextSemester.length) {
-        h += '<p><strong>Next semester (' + plan.nextSemesterHours + ' hours):</strong></p><ul>' +
-          plan.nextSemester.map(function (p) {
-            return '<li>' + esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + ' (' + p.hours + 'h)</li>';
-          }).join('') + '</ul>';
-      }
-      var statusLabel = {
-        taken: 'Already earned',
-        available: 'Available at your college',
-        partial: 'Partly available',
-        gap: 'Gap'
+      lastPathway = {
+        source: source, target: target,
+        plan: buildPathwayPlan(
+          { pathwayId: pathwayId, sourceCollege: source, targetCollege: target, takenLccns: [] },
+          { courses: COURSES_DATA, pathways: PATHWAYS_DATA, statewide: STATEWIDE_DATA }
+        )
       };
-      h += '<table class="results"><colgroup><col style="width:30%"><col style="width:12%"><col style="width:38%"><col style="width:20%"></colgroup>' +
-        '<tr><th>Requirement</th><th class="num">Hours</th><th>Courses at ' + esc(source) + '</th><th>Status</th></tr>';
-      h += plan.requirements.map(function (r, i) {
-        var picks = (r.picks || []).map(function (p) {
-          var note = p.countsAtTarget === false ? ' (not verified at the target)' : '';
-          return esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + note;
-        }).join('<br>');
-        return '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + esc(r.label) + '</td>' +
-          '<td class="num">' + r.hours + '</td><td>' + (picks || ' ') + '</td>' +
-          '<td>' + esc(statusLabel[r.status] || r.status) + '</td></tr>';
-      }).join('');
-      h += '</table>';
-      out.innerHTML = h;
+      renderPathway();
     });
   }
 
   // ---- Transfer degree planner + apply ready packet ----
+  var lastPlan = null;
+  var AREA_ES = {
+    'english-composition': 'composición en inglés',
+    'mathematics': 'matemáticas',
+    'natural-sciences': 'ciencias naturales',
+    'humanities': 'humanidades',
+    'fine-arts': 'bellas artes',
+    'behavioral-sciences': 'ciencias sociales y del comportamiento',
+    'discipline-electives': 'electivas de la disciplina'
+  };
+  function renderPlan() {
+    if (!lastPlan) return;
+    var out = $('planResult');
+    var pkt = $('packetResult');
+    var plan = lastPlan.plan;
+    var target = lastPlan.target;
+    if (plan.status === 'cannot-plan') {
+      out.innerHTML = '<p class="verdict warn">' + L('A plan cannot be built between these two colleges from the verified data yet.', 'Aún no se puede construir un plan entre estas dos universidades con los datos verificados.') + '</p>';
+      pkt.innerHTML = '';
+      return;
+    }
+    var h = '';
+    if (plan.status === 'complete') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Plan completo: ' + plan.totalHours + ' horas, cada curso verificado en ambas universidades.'
+        : 'Complete plan: ' + plan.totalHours + ' hours, every course verified at both colleges.') + '</p>';
+    } else {
+      var gapText = (plan.gaps || []).map(function (gp) {
+        return spanish
+          ? (AREA_ES[gp.area] || gp.area) + ' necesita ' + gp.needed + ' horas, ' + gp.have + ' en los datos vinculados'
+          : gp.area + ' needs ' + gp.needed + ' hours, ' + gp.have + ' in the matched data';
+      }).join('; ');
+      h += '<p class="verdict warn">' + (spanish
+        ? 'Plan parcial: ' + plan.totalHours + ' horas verificadas. Vacíos: '
+        : 'Partial plan: ' + plan.totalHours + ' hours verified. Gaps: ') + gapText + '.</p>';
+    }
+    var sv = (typeof estimateSavings === 'function')
+      ? estimateSavings(target, plan.totalHours, TUITION_DATA) : null;
+    if (sv) {
+      h += '<p class="verdict good">' + savingsSentence(sv, target, sv.hours) + '</p>';
+    }
+    (plan.semesters || []).forEach(function (sem) {
+      h += '<p><strong>' + (spanish
+        ? 'Semestre ' + sem.number + ' (' + sem.hours + ' horas)'
+        : 'Semester ' + sem.number + ' (' + sem.hours + ' hours)') + '</strong></p><ul>' +
+        sem.courses.map(function (c) {
+          return '<li>' + esc(c.sourceCode) + ' ' + esc(c.sourceTitle) +
+            ' <span aria-hidden="true">→</span> ' + esc(c.targetCode) + ' (' + c.hours + 'h)</li>';
+        }).join('') + '</ul>';
+    });
+    out.innerHTML = h;
+    if (typeof buildPacket === 'function') {
+      var packet = buildPacket(plan, APPLICATIONS_DATA);
+      pkt.innerHTML = '<h3>' + T('Your apply ready packet') + '</h3><ol>' +
+        (packet.steps || []).map(function (s) {
+          var link = s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + T('Open') + '</a>' : '';
+          return '<li><strong>' + esc(T(s.title)) + '</strong>' +
+            (s.detail ? '<br>' + esc(T(s.detail)) : '') + link + '</li>';
+        }).join('') + '</ol>';
+    }
+  }
   if ($('planSource') && typeof buildPlan === 'function') {
     fillSelect($('planSource'), COVERED, 'Pick your college');
     fillSelect($('planTarget'), COVERED, 'Pick the university');
     $('planRun').addEventListener('click', function () {
-      var out = $('planResult');
-      var pkt = $('packetResult');
       var source = $('planSource').value;
       var target = $('planTarget').value;
       if (!source || !target) {
-        out.innerHTML = '<p class="verdict warn">Pick your college and the university.</p>';
-        pkt.innerHTML = '';
+        $('planResult').innerHTML = '<p class="verdict warn">' + L('Pick your college and the university.', 'Elija su universidad y la universidad de destino.') + '</p>';
+        $('packetResult').innerHTML = '';
+        lastPlan = null;
         return;
       }
-      var plan = buildPlan(
-        { sourceCollege: source, targetCollege: target },
-        { courses: COURSES_DATA, framework: FRAMEWORK_DATA, tuition: TUITION_DATA }
-      );
-      if (plan.status === 'cannot-plan') {
-        out.innerHTML = '<p class="verdict warn">A plan cannot be built between these two colleges from the verified data yet.</p>';
-        pkt.innerHTML = '';
-        return;
-      }
-      var h = '';
-      if (plan.status === 'complete') {
-        h += '<p class="verdict good">Complete plan: ' + plan.totalHours + ' hours, every course verified at both colleges.</p>';
-      } else {
-        h += '<p class="verdict warn">Partial plan: ' + plan.totalHours + ' hours verified. Gaps: ' +
-          (plan.gaps || []).map(function (gp) {
-            return esc(gp.area) + ' needs ' + gp.needed + ' hours, ' + gp.have + ' in the matched data';
-          }).join('; ') + '.</p>';
-      }
-      var sv = (typeof estimateSavings === 'function')
-        ? estimateSavings(target, plan.totalHours, TUITION_DATA) : null;
-      if (sv) {
-        h += '<p class="verdict good">These ' + sv.hours + ' degree hours are worth about ' + moneyInt(sv.amount) +
-          ' at ' + esc(target) + ', priced from its published tuition and fees of ' + moneyRate(sv.perCreditHour) +
-          ' per credit hour (' + esc(sv.schedule) + ').</p>';
-      }
-      (plan.semesters || []).forEach(function (sem) {
-        h += '<p><strong>Semester ' + sem.number + ' (' + sem.hours + ' hours)</strong></p><ul>' +
-          sem.courses.map(function (c) {
-            return '<li>' + esc(c.sourceCode) + ' ' + esc(c.sourceTitle) +
-              ' <span aria-hidden="true">→</span> ' + esc(c.targetCode) + ' (' + c.hours + 'h)</li>';
-          }).join('') + '</ul>';
-      });
-      out.innerHTML = h;
-      if (typeof buildPacket === 'function') {
-        var packet = buildPacket(plan, APPLICATIONS_DATA);
-        var ph = '<h3>Your apply ready packet</h3><ol>' +
-          (packet.steps || []).map(function (s) {
-            var link = s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">Open</a>' : '';
-            return '<li><strong>' + esc(s.title) + '</strong>' +
-              (s.detail ? '<br>' + esc(s.detail) : '') + link + '</li>';
-          }).join('') + '</ol>';
-        pkt.innerHTML = ph;
-      }
+      lastPlan = {
+        source: source, target: target,
+        plan: buildPlan(
+          { sourceCollege: source, targetCollege: target },
+          { courses: COURSES_DATA, framework: FRAMEWORK_DATA, tuition: TUITION_DATA }
+        )
+      };
+      renderPlan();
     });
   }
 
   // ---- Admission check ----
+  var lastAdmission = null;
+  var PATH_ES = {
+    'earned-credits': 'créditos obtenidos',
+    'bridge': 'programa puente',
+    'associate-degree': 'título asociado',
+    'adult': 'adulto'
+  };
+  function renderAdmission() {
+    if (!lastAdmission) return;
+    var out = $('admResult');
+    var r = lastAdmission.result;
+    var target = lastAdmission.target;
+    var h = '';
+    if (r.verdict === 'meets-state-minimum') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Cumple el mínimo estatal para la admisión por transferencia en ' + esc(target) + '. La universidad toma la decisión final de admisión.'
+        : 'Meets the state minimum for transfer admission at ' + esc(target) + '. The university makes the final admission call.') + '</p>';
+    } else if (r.verdict === 'open-admission') {
+      h += '<p class="verdict good">' + (spanish
+        ? esc(target) + ' es una universidad de admisión abierta: los mínimos de transferencia anteriores no limitan el ingreso.'
+        : esc(target) + ' is an open admission college: the transfer minimums above do not gate entry.') + '</p>';
+    } else if (r.verdict === 'not-applicable-private') {
+      h += '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' es una universidad privada y establece sus propios estándares de admisión; los mínimos estatales no aplican. Verifíquelo directamente con la universidad.'
+        : esc(target) + ' is a private university and sets its own admission standards; the state minimums do not apply. Verify with the university directly.') + '</p>';
+    } else if (r.verdict === 'cannot-tell') {
+      h += '<p class="verdict warn">' + L('Cannot tell from the state minimums alone. One of the paths below depends on standards the university sets itself.', 'No se puede saber solo con los mínimos estatales. Una de las rutas siguientes depende de estándares que la propia universidad establece.') + '</p>';
+    } else if (r.verdict === 'unknown-college') {
+      h += '<p class="verdict warn">' + L('That university is not in the admission standards data yet.', 'Esa universidad aún no está en los datos de estándares de admisión.') + '</p>';
+    } else {
+      h += '<p class="verdict bad">' + (spanish
+        ? 'Aún no cumple el mínimo estatal para ' + esc(target) + '.'
+        : 'Does not meet the state minimum yet for ' + esc(target) + '.') + '</p>';
+    }
+    var missingLines = [];
+    (r.paths || []).forEach(function (p) {
+      if (p.status !== 'meets' && p.missing && p.missing.length) {
+        var label = spanish ? (PATH_ES[p.id] || p.id) : p.id;
+        missingLines.push('<li>' + esc(label) + (spanish ? ': falta ' : ' path: missing ') +
+          p.missing.map(function (x) { return esc(T(x)); }).join('; ') + '</li>');
+      }
+    });
+    if (missingLines.length && r.verdict !== 'meets-state-minimum') {
+      h += '<p><strong>' + L('What each path still needs:', 'Lo que aún necesita cada ruta:') + '</strong></p><ul>' + missingLines.join('') + '</ul>';
+    }
+    out.innerHTML = h;
+  }
   if ($('admTarget') && typeof evaluateAdmission === 'function') {
     fillSelect($('admTarget'), COLLEGES36, 'Pick the university');
     $('admRun').addEventListener('click', function () {
       var out = $('admResult');
       var target = $('admTarget').value;
       if (!target) {
-        out.innerHTML = '<p class="verdict warn">Pick the university first.</p>';
+        out.innerHTML = '<p class="verdict warn">' + L('Pick the university first.', 'Primero elija la universidad.') + '</p>';
+        lastAdmission = null;
         return;
       }
       var input = {
@@ -16950,33 +18373,49 @@ if (typeof window !== 'undefined') {
         age25OrOver: $('admAge').checked,
         placementMathOrEnglish: $('admPlacement').checked
       };
-      var r = evaluateAdmission(input, ADMISSION_DATA);
-      var h = '';
-      if (r.verdict === 'meets-state-minimum') {
-        h += '<p class="verdict good">Meets the state minimum for transfer admission at ' + esc(target) + '. The university makes the final admission call.</p>';
-      } else if (r.verdict === 'open-admission') {
-        h += '<p class="verdict good">' + esc(target) + ' is an open admission college: the transfer minimums above do not gate entry.</p>';
-      } else if (r.verdict === 'not-applicable-private') {
-        h += '<p class="verdict warn">' + esc(target) + ' is a private university and sets its own admission standards; the state minimums do not apply. Verify with the university directly.</p>';
-      } else if (r.verdict === 'cannot-tell') {
-        h += '<p class="verdict warn">Cannot tell from the state minimums alone. One of the paths below depends on standards the university sets itself.</p>';
-      } else if (r.verdict === 'unknown-college') {
-        h += '<p class="verdict warn">That university is not in the admission standards data yet.</p>';
-      } else {
-        h += '<p class="verdict bad">Does not meet the state minimum yet for ' + esc(target) + '.</p>';
-      }
-      var missingLines = [];
-      (r.paths || []).forEach(function (p) {
-        if (p.status !== 'meets' && p.missing && p.missing.length) {
-          missingLines.push('<li>' + esc(p.id) + ' path: missing ' + p.missing.map(esc).join('; ') + '</li>');
-        }
-      });
-      if (missingLines.length && r.verdict !== 'meets-state-minimum') {
-        h += '<p><strong>What each path still needs:</strong></p><ul>' + missingLines.join('') + '</ul>';
-      }
-      out.innerHTML = h;
+      lastAdmission = { target: target, result: evaluateAdmission(input, ADMISSION_DATA) };
+      renderAdmission();
     });
   }
+
+  // ---- Spanish toggle: the whole page changes language ----
+  var tog = $('spanishToggle');
+  function setSpanish(on) {
+    spanish = on;
+    if (tog) tog.textContent = on ? 'View in English' : 'Ver en español';
+    renderStrip();
+    if (window._lastReport && typeof render === 'function') {
+      render(window._lastReport);
+      renderAdditions();
+    }
+    renderEligibility();
+    renderPathway();
+    renderPlan();
+    renderAdmission();
+    if (on) {
+      walkTranslate(document.body);
+    } else {
+      walkRestore(document.body);
+      // Dynamic areas were rebuilt in English above; static text
+      // is restored from the walker map. Re-run additions so the
+      // savings and source lines are English even without a check.
+      renderAdditions();
+    }
+  }
+  if (tog) {
+    tog.addEventListener('click', function () { setSpanish(!spanish); });
+  }
+  // Dynamically added rows (Add a college, Add an AP exam,
+  // typeahead picks) arrive after the toggle: re-walk after clicks
+  // and changes while Spanish is on.
+  var rewalkTimer = null;
+  function scheduleRewalk() {
+    if (!spanish) return;
+    clearTimeout(rewalkTimer);
+    rewalkTimer = setTimeout(function () { walkTranslate(document.body); }, 60);
+  }
+  document.addEventListener('click', scheduleRewalk);
+  document.addEventListener('change', scheduleRewalk);
 })();
 /*CTC-WIRING-END*/
 </script>
