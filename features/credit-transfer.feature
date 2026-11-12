@@ -139,19 +139,26 @@ Feature: Louisiana dual enrollment credit transfer check
     Given a student plans to attend "University of Louisiana at Lafayette"
     And the student completed "MATH 128" at "Delgado Community College" with a grade of "A"
     When the credit check runs
-    Then the course counts as "MATH 105"
+    Then the course counts as "MATH 103"
+    And the match comes from the current catalog data
+
+  Scenario: A Delgado French course counts as the same course at UL Lafayette
+    Given a student plans to attend "University of Louisiana at Lafayette"
+    And the student completed "FREN 101" at "Delgado Community College" with a grade of "B"
+    When the credit check runs
+    Then the course counts as "FREN 101"
     And the match comes from the current catalog data
 
   Scenario: A state number the university does not carry becomes a level elective in a subject it teaches
     Given a student plans to attend "University of Louisiana at Lafayette"
-    And the student completed "FREN 101" at "Delgado Community College" with a grade of "B"
+    And the student completed "MATH 151" at "Delgado Community College" with a grade of "B"
     When the credit check runs
     Then the course counts as a level elective at the 100 level
     And the student is warned the credit fills no named course requirement
 
   Scenario: A subject outside the course data gets an honest not covered answer
     Given a student plans to attend "University of Louisiana at Lafayette"
-    And the student completed "ACCT 201" at "Delgado Community College" with a grade of "B"
+    And the student completed "PHYS 229" at "Delgado Community College" with a grade of "B"
     When the credit check runs
     Then the course is flagged as not covered by the current course data yet
 
