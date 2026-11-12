@@ -3794,7 +3794,7 @@ function addSourceBlock() {
     '<button type="button" class="secondary small s-addcourse">Add a course at this college</button>';
   div.querySelector('.s-addcourse').addEventListener('click', () => {
     div.querySelector('.s-courses').insertAdjacentHTML('beforeend', courseRowHTML());
-    fillSubjects(div);
+    fillSubjects(div, true);
   });
   sourcesDiv.appendChild(div);
   fillSubjects(div);
@@ -3854,16 +3854,39 @@ function parseNumber(code) {
 function collegeData(name) {
   return (typeof COURSES_DATA !== 'undefined' && COURSES_DATA && COURSES_DATA.colleges[name]) || null;
 }
-function fillSubjects(block) {
+function fillCourseOptions(block, row) {
+  const data = collegeData(block.querySelector('.s-name').value);
+  const subj = row.querySelector('.c-subject');
+  const course = row.querySelector('.c-course');
+  if (!data || !subj.value) { course.disabled = true; return; }
+  const list = data.courses.filter(c => c.lccns.some(l => l.split(' ')[0] === subj.value));
+  course.innerHTML = '<option value="">Pick the course</option>' + list.map(c =>
+    '<option value="' + c.code + '" data-lccn="' + c.lccns[0] + '">' + c.code + ' | ' + c.title + '</option>').join('');
+  course.disabled = false;
+}
+// Rebuilds the subject list for every row in a college block. With
+// preserve set (the Add a course button), each existing row keeps
+// the subject and course it already had picked; only the new row
+// starts empty. Without preserve (the college itself changed), every
+// row resets, because the course list belongs to the old college.
+function fillSubjects(block, preserve) {
   const data = collegeData(block.querySelector('.s-name').value);
   block.querySelectorAll('.row').forEach(row => {
     const subj = row.querySelector('.c-subject');
     const course = row.querySelector('.c-course');
     if (!data) { subj.style.display = 'none'; course.style.display = 'none'; return; }
     subj.style.display = ''; course.style.display = '';
+    const prevSubject = preserve ? subj.value : '';
+    const prevCourse = preserve ? course.value : '';
     const rubrics = [...new Set(data.courses.map(c => c.lccns[0].split(' ')[0]))].sort();
     subj.innerHTML = '<option value="">Pick a subject</option>' + rubrics.map(r =>
       '<option value="' + r + '">' + (COURSES_DATA.subjects[r] || r) + '</option>').join('');
+    if (prevSubject && rubrics.includes(prevSubject)) {
+      subj.value = prevSubject;
+      fillCourseOptions(block, row);
+      if (prevCourse && [...course.options].some(o => o.value === prevCourse)) course.value = prevCourse;
+      return;
+    }
     course.innerHTML = '<option value="">Pick the course</option>';
     course.disabled = true;
   });
@@ -3875,13 +3898,7 @@ sourcesDiv.addEventListener('change', (e) => {
   } else if (t.classList.contains('c-subject')) {
     const block = t.closest('.source');
     const row = t.closest('.row');
-    const data = collegeData(block.querySelector('.s-name').value);
-    const course = row.querySelector('.c-course');
-    if (!data || !t.value) { course.disabled = true; return; }
-    const list = data.courses.filter(c => c.lccns.some(l => l.split(' ')[0] === t.value));
-    course.innerHTML = '<option value="">Pick the course</option>' + list.map(c =>
-      '<option value="' + c.code + '" data-lccn="' + c.lccns[0] + '">' + c.code + ' | ' + c.title + '</option>').join('');
-    course.disabled = false;
+    fillCourseOptions(block, row);
   } else if (t.classList.contains('c-course')) {
     const row = t.closest('.row');
     const opt = t.options[t.selectedIndex];
