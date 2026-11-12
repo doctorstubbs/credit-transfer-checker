@@ -1114,3 +1114,390 @@ counts toward 24%, degree credit 18%), alternating shaded rows,
 the college direction banner as a merged title row inside the
 grid, and the blue column header band kept. Same values, same
 groups; the sheet look is the whole change.
+
+Stage 23 (Nov 11, 2026, evening): the savings number. Kris took
+the four Task Force themes (access, applications, funding,
+accreditation) and directed all four into the checker as one
+connected build. Funding first: data/tuition.json holds one
+verified published rate per college (undergraduate, Louisiana
+resident, the college's tuition and fees for 15 credit hours in
+one semester divided by 15): UL Lafayette $403.27 (Tier 1
+semester total $6,049, Fall 2026 schedule) and UNO $350.58
+(semester total $5,258.75, 2026-2027 schedule; UNO's site now
+lives at lsuneworleans.edu). src/savings.js prices degree hours
+only, never credit-only hours, and returns nothing for a college
+with no verified rate. Checks carry the estimate through guidance
+and plans carry it on their placed hours: Delgado to UNO complete
+plan, 60 hours, $21,035; Delgado to UL Lafayette, $24,196.
+
+Stage 24 (Nov 11, 2026, evening): the trust layer. Every result
+traced from catalog data now names the catalog it came from at
+both colleges (sourceCatalog, targetCatalog) alongside its
+statewide common course number. Guidance adds two protections,
+each fired only while it can change behavior: the choice credit
+step when a course is planned or in progress, and the grade
+protection question (the transfer degree guarantee requires a C
+or better) when a course is planned or a below C grade is on
+record. A clean finished check stays free of extra questions.
+Suite: 96 scenarios, 369 steps, green in both repos.
+
+Stage 24 remainder (Nov 11, 2026, night): quality flags.
+data/quality.json plus src/quality.js implement flags that exist
+only when a named public source lists them. Verified finding:
+NACEP's directory lists Louisiana members (the Board of Regents
+as a state agency, LSU, LSU Shreveport, Bossier Parish Community
+College) but no Louisiana institution with an accredited
+concurrent enrollment program, and none of the three covered
+colleges appears in the directory at all. So the flags ship
+empty, mechanism tested both ways, ready for the first verified
+listing (Southern is working toward NACEP accreditation, with a
+self-study targeted for June 2028).
+
+Stage 25 (Nov 11, 2026, night): the apply-ready packet.
+src/packet.js turns a plan into ordered family steps: apply for
+dual enrollment (through ApplyDE for colleges on the state's
+common application, Delgado among them), take these exact
+courses semester by semester, send the official college
+transcript (high school transcripts cannot award college
+credit), and apply for admission by the target's published
+deadlines. data/applications.json holds only what the colleges
+publish themselves: UL Lafayette freshman deadlines (Fall
+July 1, Spring November 30, Summer April 30, rolling, $25 fee)
+and LSU New Orleans domestic undergraduate deadlines (Fall
+final August 7 with a December 15 priority scholarship date;
+Spring final January 2, priority November 15; Summer final
+May 28, priority April 15; domestic undergraduate fees waived
+for Spring and Fall 2027). Delgado posts session deadlines on
+its dual enrollment page, so the packet links there instead of
+printing a date that would go stale. A target with no data
+yields an honest partial packet.
+
+Stage 26 (Nov 11, 2026, night): the eligibility check.
+src/eligibility.js plus data/eligibility.json, built from
+published rules only. Delgado restates Regents Policy 2.22
+(academic track: GPA 2.5 plus ACT composite 19, English 18,
+Math 19, or a counselor recommendation; technical track: GPA
+2.0). UL Lafayette adds its own criteria (seniors GPA 2.50,
+juniors 2.75; ACT English 18 for humanities and social sciences,
+Math 19 for math and science; juniors high school campus only).
+One discrepancy is recorded in the data: the UL Lafayette
+catalog states an added ACT composite of 21 for the program
+while the program's own criteria page does not list one; the
+check follows the program page and says so. UNO is read against
+the Policy 2.22 state floor, labeled as the floor, because UNO's
+own added criteria are not yet harvested.
+
+Stage 27 (Nov 11, 2026, night): Spanish results. src/i18n.js
+rebuilds the summary headline in Spanish from the guidance
+totals (guidance now returns totals) and translates the fixed
+protective steps and questions (choice credit, grade rule,
+prerequisite, transcript step, AP report step) as templates so
+college names slot in exactly. Status words for the eligibility,
+admission, and plan verdicts translate too. Limit, stated
+plainly: per-course composed lines (the registrar question
+naming one course code) stay in English in this first pass.
+Suite: 116 scenarios, 425 steps, green in both repos.
+
+Stage 28 (Nov 11, 2026, night): BRCC coverage from the Regents
+matrix. Kris named the coverage gap himself (3 of 36 colleges,
+none of the big dual enrollment providers) and chose extraction
+from the Regents matrix, BRCC first. BRCC's 171 matrix rows
+(2025-26, Home Courses page, read discipline by discipline)
+became 159 courses with 167 statewide numbers. BRCC shares 98
+statewide numbers with Delgado, 57 with UL Lafayette, and 48
+with UNO, so checks light up in both directions at once. The
+college's source label in the data is the matrix itself, since
+BRCC's catalog publishes no LCCN tags. Suite: 119 scenarios,
+431 steps, green in both repos. Southeastern is next in
+enrollment order, then LSU A&M, Northwestern State, and
+Louisiana Tech.
+
+Stage 29 (Nov 11, 2026, night): Southeastern Louisiana University
+coverage from the same matrix extraction (224 rows, 37
+disciplines, read with in-discipline scrolling after the window
+truncation was caught and corrected on Biological Sciences).
+206 courses, 214 statewide numbers; overlaps: BRCC 106, Delgado
+96, UL Lafayette 74, UNO 50. Coverage is now 5 of 36 colleges,
+including two of the five largest dual enrollment providers.
+Suite: 121 scenarios, 435 steps, green in both repos. LSU A&M is
+next, then Northwestern State and Louisiana Tech.
+
+Stage 30 (Nov 11, 2026, night): career pathways begin. Kris asked
+for a visitor section where a student names a career interest, their
+college, and their target university, and is told which courses to
+take so everything transfers and counts (his example: BRCC toward
+LSU). The backbone is the Regents Universal Transfer Pathways (Act
+308 of 2022): 24 published pathways, 60 hours each. Nineteen of the
+official pathway PDFs are saved in data/pathways/ (Cybersecurity
+and the four Engineering pathways are not yet located; the Business
+document covers General Business). The student documents name
+courses; statewide numbers come from the Statewide Common Course
+Catalog join, verified title by title. src/pathways.js resolves a
+pathway requirement by requirement against a college's verified
+course data: taken, available, partial, or a named gap, with
+counts-at-target verified where the target is covered, null where
+it is not, and a next-semester list capped at 15 hours in pathway
+order. Psychology is transcribed in full (14 requirements, 60
+hours) as the reference pathway; the remaining 18 documents
+transcribe mechanically into the same shape. Suite: 130 scenarios,
+458 steps, green in both repos.
+
+Stage 31 (Nov 11, 2026, night): LSU A&M coverage from the matrix
+(225 rows, 41 disciplines, filter label LSU, verified with a second
+sweep that corrected three first-pass errors). 206 courses, 209
+statewide numbers; overlaps: Southeastern 151, BRCC 113, Delgado
+92, UL Lafayette 86, UNO 54. Coverage is now 6 of 36 colleges,
+including three of the five largest dual enrollment providers
+(BRCC, Southeastern, LSU). Suite after both stages: 130 scenarios,
+458 steps, green in both repos. Northwestern State extraction is
+running; Louisiana Tech follows.
+
+Stage 32 (Nov 11, 2026, night): Northwestern State coverage from
+the matrix (179 rows, 36 disciplines, filter label NORTHWESTERN;
+the college is keyed by its full name, Northwestern State
+University of Louisiana, matching the admission data). 166
+courses, 177 statewide numbers; overlaps: Southeastern 137, LSU
+131, BRCC 107, Delgado 89. Coverage is now 7 of 36 colleges, four
+of the five largest dual enrollment providers. Louisiana Tech is
+the last of the five.
+
+Stage 33 (Nov 11, 2026, night): Louisiana Tech coverage from the
+matrix (166 rows, 31 disciplines, filter label LA TECH, verified
+with a full unfiltered sweep). 153 courses, 161 statewide numbers;
+overlaps: Southeastern 134, LSU 120, Northwestern 117, BRCC 91.
+Coverage is now 8 of 36 colleges, and all five of the largest dual
+enrollment providers in the state are covered: Southeastern, LSU,
+Northwestern State, BRCC, and Louisiana Tech, together about 42
+percent of statewide dual enrollment. Suite: 134 scenarios, 466
+steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Criminal Justice is
+transcribed (18 requirements, 60 hours, its document prints a
+Common Course Numbers column; the unnumbered Courts line joins to
+CCRJ 2613, Judicial Process, in the statewide catalog). At BRCC
+toward Southeastern the pathway resolves in full: every requirement
+available, zero gap hours, a 15 hour first semester. NURSING IS
+HELD OUT on purpose: the published Nursing document lists only 46
+credits, duplicates American Literature I under two subjects, and
+contains an Accounting block and an Engineering sentence copied
+from other pathways. It cannot be transcribed faithfully until it
+is reconciled against a second official source; the hold and its
+reasons are recorded in data/pathways.json. Suite: 135 scenarios,
+470 steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Biology is transcribed
+(12 requirements, 60 hours). Its math block is a published
+choose-two list, now supported as an explicit candidate list in the
+engine; its general chemistry sequence exists under two statewide
+numberings at different campuses, so both are candidates; its
+closing block (physics with labs, or organic chemistry with labs)
+is one eight hour choice. The engine immediately earned its keep:
+at BRCC toward LSU the Biology pathway reports an honest 8 hour
+gap, because BRCC's matrix record carries no science-majors
+introductory biology sequence (CBIO 1033 and 1043 and their labs);
+that gap is pinned by a scenario so it can never be silently
+padded. BUSINESS (GENERAL BUSINESS) IS HELD OUT: its published
+course list sums to 42 hours and omits the business core entirely,
+the second defective Regents document after Nursing. Suite: 136
+scenarios, 474 steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Accounting and Finance
+are transcribed from their shared published template (18
+requirements, 60 hours each; the Accounting document prints its
+statewide numbers and its two statistics and calculus numbers are
+assigned by verified catalog title). At BRCC both pathways resolve
+with a single honest gap: Business Calculus (CBUS 2323) is not in
+BRCC's matrix record, three hours, named and pinned by scenarios.
+Five pathways are now transcribed, two held. Suite: 138 scenarios,
+483 steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Management and Marketing
+are transcribed from the same published business template (16
+requirements, 60 hours each). Transcribing them caught a fidelity
+error in Finance: its own document prints natural sciences as nine
+free choice credits, where Accounting's document prints the block
+in structured form; Finance is corrected to its own document's
+form and the sibling difference is recorded in the data. All three
+resolve at BRCC with the same single Business Calculus gap. Seven
+pathways are now transcribed, two held. Suite: 140 scenarios, 491
+steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Social Work is
+transcribed (19 requirements, 60 hours). Its two social work block
+items are structural by the document's own design: Intro to Social
+Work joins to the statewide catalog's only social work course
+(CSWK 1101, one credit hour), and the three BSW program-specific
+credits are defined by the receiving university, so both report as
+named gaps wherever the data cannot fill them; at BRCC toward
+Southeastern the plan's only gaps are exactly those six hours.
+SOCIOLOGY IS HELD OUT: its published list sums to 54 of 60 credits
+with no elective block to absorb the difference, the third
+defective Regents document. Eight pathways transcribed, three
+held. Suite: 141 scenarios, 496 steps, green in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Political Science is
+transcribed (14 requirements, 60 hours); at BRCC toward UNO it
+resolves except six of its nine political science elective hours,
+because BRCC's matrix record carries few political science courses
+beyond American Government. ENGLISH, HISTORY, AND COMMUNICATION
+ARE HELD OUT: each published list sums to 54 of 60 credits with no
+elective block to absorb the missing six, joining Nursing, General
+Business, and Sociology. Six of the nineteen sourced Regents
+documents are defective as published. Nine pathways transcribed,
+six held, four documents remain (Art, Computer Science, and the
+two Kinesiology pathways). Suite: 142 scenarios, 500 steps, green
+in both repos.
+
+Stage 30 continued (Nov 11, 2026, night): Art and Computer Science
+are transcribed (16 and 14 requirements, 60 hours each). Building
+them exposed and fixed an engine limitation: choice candidates
+came only from the statewide catalog's 292 numbers, but the matrix
+carries real statewide numbers the catalog does not list (CART
+1123, 3-D Design, is one), so choice candidates are now the union
+of the catalog and the source college's own matrix record. With
+that fix, Art at Northwestern toward Louisiana Tech resolves
+except a genuine six hour gap: Northwestern's matrix record has no
+Survey of Western Art sequence. Computer Science at BRCC toward
+LSU resolves everything except the entire 18 hour computer science
+block, because BRCC's matrix record contains no computer science
+courses at all. Eleven pathways transcribed, six held, two
+documents remain (the Kinesiology pair). Suite: 144 scenarios, 508
+steps, green in both repos.
+
+Stage 30 transcription COMPLETE (Nov 11, 2026, night): the two
+Kinesiology pathways are in (Sport Management 11 requirements,
+Pre-Allied Health 13, both 60 hours; their choose-from pools are
+carried as the union of their identifiable printed numbers and the
+kinesiology and health rubric families, with the documents' own
+number column errors recorded in the data). At Delgado both lack
+their gateway course: Delgado's data carries no Intro to
+Kinesiology at all. FINAL STATE OF THE PATHWAY DOCUMENTS: 19
+sourced, 13 transcribed (Psychology, Criminal Justice, Biology,
+Accounting, Finance, Management, Marketing, Social Work, Political
+Science, Art, Computer Science, Kinesiology Sport Management,
+Kinesiology Pre-Allied Health), 6 held as defective as published
+(Nursing, General Business, Sociology, English, History,
+Communication), and 5 of the 24 official pathways still unsourced
+(Cybersecurity and the four Engineering pathways). Suite: 146
+scenarios, 516 steps, green in both repos.
+
+Stage 30 addendum (Nov 11, 2026, night): the five unsourced
+pathways were hunted. Twelve candidate URLs in the Regents uploads
+library under both established naming patterns all return 404, and
+web searches surface no student document for Cybersecurity or for
+any Engineering pathway. The Regents' own December 2023 release
+lists Engineering as a single pathway (the SHEEO presentation
+splits it into Chemical, Civil, Electrical, and Mechanical
+committee pathways), and the LA Cyber Academy page confirms a
+Cybersecurity pathway exists whose courses were developed through
+the Academy rather than published as a student document. The five
+stay off the list as unsourced. Natural next step, awaiting Kris:
+ask Chris Yandle for them in the existing Regents correspondence.
+
+Page wiring (Nov 12, 2026): the UI sketch Kris approved is live in
+the page build. scripts/build-pages.py splices the tested engines
+into both pages: the DATA block now carries all nine datasets
+(coverage is 8 colleges), the inlined guidance and checker are
+refreshed to the current src versions, and new sections add the
+coverage strip with the Spanish toggle, savings and source lines
+on check results, the dual enrollment eligibility check, the
+career pathways tool, the transfer degree planner with the apply
+ready packet, the admission check, and the full plan block (no
+prices published; the price points are still drafts). Verified by
+extracting the built pages' own scripts and running 14 functional
+assertions in Node (Delgado to UNO plan complete at 60 hours,
+Delgado to UL Lafayette fine arts gap, Psychology on-pathway,
+Biology BRCC to LSU 8 gap hours, UNO savings $21,035 at 60 hours
+and $1,052 at 3 hours, packet of 4 steps, eligibility and
+admission verdicts, Spanish headline). Suite unchanged: 146
+scenarios, 516 steps, green.
+
+UL Lafayette matrix supplement and planner science fill
+(Nov 12, 2026): UL Lafayette's catalog harvest carried no fine
+arts course that Delgado also lists, so the Delgado to UL
+Lafayette plan named a 3 hour fine arts gap. The Regents matrix
+(Home Courses, filter UL LAFAYETTE, MatrixYear 2025-26, 201 rows,
+33 disciplines) was extracted and merged into the existing
+catalog record by home course code, LCCNs unioned: 96 courses
+became 203, the catalog label now names both sources, and the
+plan completes (61 hours, savings $24,599). The wider matched
+pool exposed the planner's greedy science fill (it filled the
+9 hour minimum from biology alone, then the repair pass added
+physical science on top, for 14 science hours and two biology
+sequences), so branched areas now fill branch-aware: first
+branch to its 6 hour same-science sequence minimum, then the
+other branch only until the area minimum is met. Natural
+sciences now land at 9 or 10 hours on every covered pair, and
+the Delgado to UNO plan's general education is exactly 39.
+Five existing scenarios were updated where the wider UL
+Lafayette data changed the honest answer (MATH 128 now shows
+MATH 103, the first of three UL Lafayette courses under
+CMAT 1203; FREN 101 now matches exactly; the level elective
+example is MATH 151; the not covered example is PHYS 229; the
+trust scenario names the combined catalog label). Suite: 151
+scenarios, 532 steps, green in both repos.
+
+Section clarity and full Spanish (Nov 12, 2026, Kris's
+direction): the course checker now sits in one banded group
+labeled "Match your credits" (sources, AP exams, target, the
+Match button, and the results all inside a single blue banded
+panel), and each tool card carries the same banded heading, so
+every section on the page reads as its own section. The Spanish
+toggle is now full-page: a 364 entry dictionary plus pattern
+translators (scripts/page/es-dictionary.json, coverage checked
+against a generated inventory of 450 engine and page strings:
+444 covered directly, 4 admission path ids mapped in the wiring,
+2 proper names left as-is) drive a text walker for static and
+checker-rendered text, bilingual templates for the wiring's own
+sections, and the existing guidance translation for next steps
+and advisor questions. Toggling back restores the English text.
+The build script's guidance and checker replacement now counts
+substitutions instead of diffing, so rebuilds are idempotent.
+
+Spanish gap pass and Counts toward fill (Nov 12, 2026): the
+first live verification of the full Spanish toggle found form
+labels the dictionary had missed. Added 37 dictionary entries
+(college name, courses taken or planned, pick a subject, pick
+the course, pick an AP exam, both score report options, the
+code box placeholder, elective hours, the English composition
+requirement, the AP equivalent course phrase, the new subject
+names, and all 20 AP exam names in Spanish) and three pattern
+translators (College N headings, the coverage data sentence,
+and the new Counts toward label). A rebuild also picked up two
+dictionary entries (Mathematics, College Algebra) that had
+been added to the file after the previous build. The data file
+gained the eight subject names its own courses already used
+but the subjects map lacked (BIO and GBIO as Biological
+Sciences, CGEO and CGES as Geology and Earth Sciences, CLAN
+Latin, CSPA Spanish, CREL Religion, CULA Culinary Arts), so
+subject dropdowns no longer show raw rubric codes in either
+language. Exact catalog matches now fill the Counts toward
+column with "Same requirement as <equivalent course>" instead
+of leaving it blank; the engine result itself is unchanged.
+Verified in a DOM test (jsdom) in both orders: check first then
+toggle, and toggle first then check; the Spanish savings line,
+source line, results table, placeholders, and toggle-back
+restore all pass. Suite unchanged: 151 scenarios, 532 steps,
+green in both repos.
+
+Duplicate block cleanup (Nov 12, 2026): live verification
+found the coverage strip and the whole tool sections block
+each appearing twice on the page (two Spanish toggles, the
+second one dead; two sets of tool cards, the second set
+unbound). Root cause: an earlier insertion glued content onto
+a block's end marker with no trailing newline, so the build's
+marker replacement missed on the next run and inserted a
+second copy instead of replacing. The build now falls back to
+matching the end marker without its newline, and its DATA
+replacement counts substitutions instead of diffing, so
+rebuilds are fully idempotent (verified by building twice:
+identical byte counts, every marker-delimited block and every
+element id exactly once). The duplicate strip and sections
+were removed from both pages. Same pass: subject dropdowns
+now merge rubrics that share one subject name (Biological
+Sciences appeared three times at Delgado for CBIO, BIO, and
+GBIO; the merged option lists all three groups' courses), the
+Spanish toggle also translates the browser tab title and the
+form controls' aria labels, and the email placeholder
+translates. Course titles in the course dropdown remain the
+colleges' official catalog titles in both languages.
