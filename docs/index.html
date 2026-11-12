@@ -85,14 +85,7 @@
 <!--CTC-STRIP-END--><!--CTC-GROUP-OPEN-->
   <div class="secgroup">
     <div class="secband">Match your credits</div>
-<!--/CTC-GROUP-OPEN--><!--CTC-STRIP-START-->
-  <div class="card" style="border:2px solid #1d3fae;background:#f2f4fd;">
-    <p style="margin:0;" id="coverageStrip">Now checking the Louisiana colleges with verified course data.</p>
-    <p style="margin:8px 0 0;"><button type="button" class="secondary" id="spanishToggle">Ver en español</button></p>
-  </div>
-
-<!--CTC-STRIP-END-->
-  <div class="card keycard">
+<!--/CTC-GROUP-OPEN-->  <div class="card keycard">
     <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
     <p class="fine" style="margin-top:0;">Add every college you took courses at, or plan to.</p>
     <div id="sources"></div>
@@ -213,94 +206,7 @@
     <p class="fine" style="color:#dbe2ff;">Tell us the college your student attends now and the university they want to finish at, and we will reply with what it takes to get theirs.</p>
   </div>
 
-<!--CTC-SECTIONS-END--><!--CTC-SECTIONS-START-->
-  <div class="card toolcard">
-    <h2 style="margin-top:0;font-size:20px;">Can you take dual enrollment yet?</h2>
-    <p class="fine" style="margin-top:0;">Checked against the published dual enrollment minimums. Meeting them is not a promise of a seat in a course; the college and your school make the final call.</p>
-    <label for="eligCollege">College</label>
-    <select id="eligCollege"></select>
-    <label for="eligGrade">Grade level</label>
-    <select id="eligGrade">
-      <option value="junior">Junior (11th grade)</option>
-      <option value="senior">Senior (12th grade)</option>
-    </select>
-    <label for="eligTrack">Track</label>
-    <select id="eligTrack">
-      <option value="academic">Academic courses</option>
-      <option value="technical">Technical courses</option>
-    </select>
-    <label for="eligGpa">High school GPA (cumulative, unweighted)</label>
-    <input type="text" id="eligGpa" placeholder="e.g. 2.8">
-    <label for="eligComp">ACT Composite (if you have one)</label>
-    <input type="text" id="eligComp" placeholder="e.g. 19">
-    <label for="eligEng">ACT English (if you have one)</label>
-    <input type="text" id="eligEng" placeholder="e.g. 18">
-    <label for="eligMath">ACT Math (if you have one)</label>
-    <input type="text" id="eligMath" placeholder="e.g. 19">
-    <label for="eligSubject">Subject you want to take</label>
-    <select id="eligSubject">
-      <option value="">Not sure yet</option>
-      <option value="english">English, humanities, or social sciences</option>
-      <option value="math">Math or science</option>
-    </select>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="eligRec" style="width:auto;"> My school counselor will recommend me</label></p>
-    <p><button type="button" id="eligRun">Check eligibility</button></p>
-    <div id="eligResult"></div>
-  </div>
-
-  <div class="card toolcard">
-    <h2 style="margin-top:0;font-size:20px;">Know what to take next semester</h2>
-    <p class="fine" style="margin-top:0;">Built from the Louisiana Universal Transfer Pathways: 60 credit hours that transfer and count toward the degree at any Louisiana public university that offers it. Pick a career goal and see the exact courses at your college, starting with next semester. Thirteen pathways are verified in full today; the rest are being verified before they are listed. A gap is named, never filled with a guess.</p>
-    <label for="pwPathway">Career goal</label>
-    <select id="pwPathway"></select>
-    <label for="pwSource">Your college</label>
-    <select id="pwSource"></select>
-    <label for="pwTarget">The university you want to finish at</label>
-    <select id="pwTarget"></select>
-    <p><button type="button" id="pwRun">Show my courses</button></p>
-    <div id="pwResult"></div>
-  </div>
-
-  <div class="card toolcard">
-    <h2 style="margin-top:0;font-size:20px;">No pathway for your goal? Build the general transfer plan</h2>
-    <p class="fine" style="margin-top:0;">The Louisiana Transfer Degree plan: 60 hours (39 of general education plus 21 more) that transfer as a block to any Louisiana public university, with general education met in full and junior standing, when every course is passed with a C or better. Built only from courses verified at both colleges.</p>
-    <label for="planSource">Your college</label>
-    <select id="planSource"></select>
-    <label for="planTarget">The university you want to finish at</label>
-    <select id="planTarget"></select>
-    <p><button type="button" id="planRun">Build my plan</button></p>
-    <div id="planResult"></div>
-    <div id="packetResult"></div>
-  </div>
-
-  <div class="card toolcard">
-    <h2 style="margin-top:0;font-size:20px;">Will you be admitted?</h2>
-    <p class="fine" style="margin-top:0;">Checked against the Louisiana Board of Regents minimum admission standards for transfer students. Meeting the state minimum is not a promise of admission; the university makes the final call.</p>
-    <label for="admTarget">University</label>
-    <select id="admTarget"></select>
-    <label for="admHours">College credit hours earned</label>
-    <input type="text" id="admHours" placeholder="e.g. 24">
-    <label for="admGpa">College GPA</label>
-    <input type="text" id="admGpa" placeholder="e.g. 2.5">
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admEng" style="width:auto;"> College level English completed with a C or better</label></p>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admMath" style="width:auto;"> College level math completed with a C or better</label></p>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admDegree" style="width:auto;"> I hold an associate degree (AA, AS, AAS, AALT, or ASLT)</label></p>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admBridge" style="width:auto;"> I am in a partnership bridge program with this university</label></p>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admAge" style="width:auto;"> I am 25 or older</label></p>
-    <p><label style="font-weight:normal;"><input type="checkbox" id="admPlacement" style="width:auto;"> I place into standalone college math or English</label></p>
-    <p><button type="button" id="admRun">Check admission standing</button></p>
-    <div id="admResult"></div>
-  </div>
-
-  <div class="card" style="background:#1d3fae;color:#fff;">
-    <h2 style="margin-top:0;font-size:20px;color:#fff;">Get the full plan</h2>
-    <p>Everything on this page, finished for one student: a semester by semester map built only from verified courses, admission standing, the apply ready packet with published deadlines, the savings total at published tuition, and a signed audit reviewed by Dr. Kristofer Stubbs, a working transcript evaluator.</p>
-    <p><a href="mailto:stubbsmediaco@gmail.com?subject=Credit%20Crosswalk%20full%20plan%20request" style="display:inline-block;background:#f5b921;color:#14213d;font-weight:bold;padding:10px 18px;border-radius:8px;text-decoration:none;">Request the full plan</a></p>
-    <p class="fine" style="color:#dbe2ff;">Tell us the college your student attends now and the university they want to finish at, and we will reply with what it takes to get theirs.</p>
-  </div>
-
-<!--CTC-SECTIONS-END-->
-  <div class="card">
+<!--CTC-SECTIONS-END-->  <div class="card">
     <h2 style="margin-top:0;font-size:20px;">About this check</h2>
     <p>A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. What this check assumes, and where its data comes from, is linked at the bottom of this page.</p>
   </div>
@@ -15503,7 +15409,8 @@ function fillCourseOptions(block, row) {
   const subj = row.querySelector('.c-subject');
   const course = row.querySelector('.c-course');
   if (!data || !subj.value) { course.disabled = true; return; }
-  const list = data.courses.filter(c => c.lccns.some(l => l.split(' ')[0] === subj.value));
+  const rubrics = subj.value.split(',');
+  const list = data.courses.filter(c => c.lccns.some(l => rubrics.includes(l.split(' ')[0])));
   course.innerHTML = '<option value="">Pick the course</option>' + list.map(c =>
     '<option value="' + c.code + '" data-lccn="' + c.lccns[0] + '">' + c.code + ' | ' + c.title + '</option>').join('');
   course.disabled = false;
@@ -15522,10 +15429,17 @@ function fillSubjects(block, preserve) {
     subj.style.display = ''; course.style.display = '';
     const prevSubject = preserve ? subj.value : '';
     const prevCourse = preserve ? course.value : '';
-    const rubrics = [...new Set(data.courses.map(c => c.lccns[0].split(' ')[0]))].sort();
-    subj.innerHTML = '<option value="">Pick a subject</option>' + rubrics.map(r =>
-      '<option value="' + r + '">' + (COURSES_DATA.subjects[r] || r) + '</option>').join('');
-    if (prevSubject && rubrics.includes(prevSubject)) {
+    const byLabel = {};
+    data.courses.forEach(c => {
+      const r = c.lccns[0].split(' ')[0];
+      const label = (COURSES_DATA.subjects[r] || r);
+      (byLabel[label] = byLabel[label] || new Set()).add(r);
+    });
+    const labels = Object.keys(byLabel).sort();
+    const valueFor = l => [...byLabel[l]].sort().join(',');
+    subj.innerHTML = '<option value="">Pick a subject</option>' + labels.map(l =>
+      '<option value="' + valueFor(l) + '">' + l + '</option>').join('');
+    if (prevSubject && labels.some(l => valueFor(l) === prevSubject)) {
       subj.value = prevSubject;
       fillCourseOptions(block, row);
       if (prevCourse && [...course.options].some(o => o.value === prevCourse)) course.value = prevCourse;
@@ -17970,7 +17884,14 @@ var CTC_ES_DICT = {
  "AP Human Geography": "AP Geografía Humana",
  "AP Computer Science A": "AP Ciencias de la Computación A",
  "AP Spanish Language and Culture": "AP Lengua y Cultura Españolas",
- "AP French Language and Culture": "AP Lengua y Cultura Francesas"
+ "AP French Language and Culture": "AP Lengua y Cultura Francesas",
+ "Subject": "Materia",
+ "Course": "Curso",
+ "Course code": "Código del curso",
+ "AP exam": "Examen AP",
+ "AP score": "Puntuación AP",
+ "Official score report sent": "Informe oficial de puntuaciones enviado",
+ "you@example.com": "usted@ejemplo.com"
 };
 // Credit Crosswalk page wiring v2 (Nov 12, 2026): coverage strip,
 // results additions (savings line, source line), eligibility
@@ -18087,6 +18008,8 @@ var CTC_ES_DICT = {
   // ---- Text walker: translate static and page-rendered text ----
   var origText = new Map();
   var origPlaceholder = new Map();
+  var origAria = new Map();
+  var origTitle = document.title;
   function walkTranslate(root) {
     if (!root || !document.createTreeWalker) return;
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -18117,6 +18040,11 @@ var CTC_ES_DICT = {
         var ph = el.getAttribute('placeholder');
         if (ph && DICT[ph]) el.setAttribute('placeholder', DICT[ph]);
       });
+      root.querySelectorAll('[aria-label]').forEach(function (el) {
+        if (!origAria.has(el)) origAria.set(el, el.getAttribute('aria-label'));
+        var al = el.getAttribute('aria-label');
+        if (al && DICT[al]) el.setAttribute('aria-label', DICT[al]);
+      });
     }
   }
   function walkRestore(root) {
@@ -18125,6 +18053,9 @@ var CTC_ES_DICT = {
     });
     origPlaceholder.forEach(function (orig, el) {
       if (el.isConnected && orig != null) el.setAttribute('placeholder', orig);
+    });
+    origAria.forEach(function (orig, el) {
+      if (el.isConnected && orig != null) el.setAttribute('aria-label', orig);
     });
   }
 
@@ -18531,6 +18462,9 @@ var CTC_ES_DICT = {
   var tog = $('spanishToggle');
   function setSpanish(on) {
     spanish = on;
+    document.title = on
+      ? '¿Contará este crédito? Verificador de transferencia de créditos de Luisiana'
+      : origTitle;
     if (tog) tog.textContent = on ? 'View in English' : 'Ver en español';
     renderStrip();
     if (window._lastReport && typeof render === 'function') {
