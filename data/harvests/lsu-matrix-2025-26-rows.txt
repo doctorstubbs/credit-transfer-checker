@@ -1,0 +1,225 @@
+CACC 2113 | ACCT 2001 | Intro to Financial Accounting | Accounting
+CACC 2213 | ACCT 2101 | Intro to Managerial Accounting | Accounting
+CACC 3113 | ACCT 3121 | Cost Accounting (Upper Level) | Accounting
+CACC 3213 | ACCT 3221 | Tax I (Upper Level) | Accounting
+CACC 3223 | ACCT 4221 | Tax II (Upper Level) | Accounting
+CATR 2013 | ANTH 1003 | Cultural Anthroplogy | Anthropology
+CATR 2023 | ANTH 1001 | Biological Anthropology | Anthropology
+CARB 1014 | ARAB 1101 | Elementary Arabic I: 4 credit hours | Arabic
+CARB 1024 | ARAB 1102 | Elementary Arabic II: 4 credit hours | Arabic
+CARB 2013 | ARAB 2101 | Intermediate Arabic I | Arabic
+CARB 2023 | ARAB 2102 | Intermediate Arabic II | Arabic
+CART 1023 | ART 1001 | Intro to Visual Arts | Art
+CART 1113 | ART 1008 | Art Structure/2-D Design | Art
+CART 1123 | ART 1009 | 3-D Design | Art
+CART 2103 | ARTH 1440 | Art History I | Art
+CART 2113 | ARTH 1441 | Art History II | Art
+CART 2203 | ART 1010 | Beginning Drawing | Art
+CART 2213 | ART 1848 | Figure Drawing | Art
+CART 2303 | ART 2552 | Color Theory | Art
+CAST 1103 | ASTR 1101 | Astronomy/The Solar System | Astronomy
+CAST 1113 | ASTR 1102 | Astronomy/Stars & Galaxies | Astronomy
+CBIO 1013 | BIOL 1001 | General Biology I | Biological Sciences
+CBIO 1022 | BIOL 1005 | General Biology Lab (I + II) | Biological Sciences
+CBIO 1023 | BIOL 1002 | General Biology II | Biological Sciences
+CBIO 1031 | BIOL 1207 | General Biology I Lab (Science Majors) | Biological Sciences
+CBIO 1031 | BIOL 1208 | General Biology I Lab (Science Majors) | Biological Sciences
+CBIO 1033 | BIOL 1201 | General Biology I (Science Majors) | Biological Sciences
+CBIO 1041 | BIOL 1209 | General Biology II Lab (Science Majors) | Biological Sciences
+CBIO 1043 | BIOL 1202 | General Biology II (Science Majors) | Biological Sciences
+CBIO 2101 | BIOL 1012 | General Microbiology Lab | Biological Sciences
+CBIO 2103 | BIOL 1011 | General Microbiology | Biological Sciences
+CBIO 2111 | BIOL 1012 | Microbiology Lab for Nursing/Allied Health | Biological Sciences
+CBIO 2113 | BIOL 1011 | Microbiology for Nursing & Allied Health | Biological Sciences
+CBIO 2124 | BIOL 2051 | General Microbiology (Sci Majors) Lec + Lab | Biological Sciences
+CBIO 2314 | HORT 2900 | Botany I Lec + Lab | Biological Sciences
+CBIO 2314 | RNR 2900 | Botany I Lec + Lab | Biological Sciences
+CBIO 2513 | BIOL 2153 | Intro to Genetics | Biological Sciences
+CBIO 2703 | NFS 1110 | Nutrition | Biological Sciences
+CBIO 3234 | BIOL 3152 | Comparative Anatomy Lec + Lab (Upper Level) | Biological Sciences
+CBIO 3403 | BIOL 4093 | Biochemistry I (Upper Level) | Biological Sciences
+CBIO 3523 | RNR 4103 | Genetics (Upper Level) | Biological Sciences
+CBIO 3603 | ENTM 4002 | Entomology | Biological Sciences
+CBIO 3623 | BIOL 4105 | Parasitology | Biological Sciences
+CBIO 3633 | BIOL 4160 | Animal Physiology | Biological Sciences
+CBIO 3643 | BIOL 3040 | Evolutionary Biology | Biological Sciences
+CBIO 4143 | BIOL 3090 | Cell Biology (Upper Level) | Biological Sciences
+CBIO 4413 | BIOL 4094 | Biochemistry II (Upper Level) | Biological Sciences
+CBIO 4513 | BIOL 4158 | Endocrinology | Biological Sciences
+CBIO 4523 | BIOL 4123 | Immunology | Biological Sciences
+CBIO 4533 | BIOL 4132 | Molecular Biology | Biological Sciences
+CBIO 4543 | BIOL 4124 | Pathogenic Microbiology | Biological Sciences
+CBIO 4553 | BIOL 4190 | Virology | Biological Sciences
+CBUS 2203 | ISDS 1100 | Computer Applications | Business
+CBUS 2213 | CSC 1250 | Intro to Programming | Business
+CBUS 2303 | ISDS 2000 | Business Statistical Methods I | Business
+CBUS 2313 | ISDS 2001 | Business Statistical Methods II | Business
+CBUS 2323 | MATH 1431 | Business Calculus | Business
+CCEM 1003 | CHEM 1005 | General, Organic & Biochemistry | Chemistry
+CCEM 1103 | CHEM 1001 | Chemistry I (Non-Science Majors) | Chemistry
+CCEM 1113 | CHEM 1002 | Chemistry II (Non-Science Majors) | Chemistry
+CCEM 1123 | CHEM 1201 | Chemistry I (Science Majors) | Chemistry
+CCEM 1132 | CHEM 1212 | Chemistry I + II Lab (Science Majors) | Chemistry
+CCEM 1133 | CHEM 1202 | Chemistry II (Science Majors) | Chemistry
+CCEM 2203 | CHEM 2060 | Organic Chemistry, Survey | Chemistry
+CCEM 2213 | CHEM 2261 | Organic Chemistry I | Chemistry
+CCEM 2222 | CHEM 2364 | Organic Chemistry I+II Lab | Chemistry
+CCEM 2223 | CHEM 2262 | Organic Chemistry II | Chemistry
+CCEM 2301 | CHEM 2002 | Analytical Chemistry Lab | Chemistry
+CCEM 2303 | CHEM 2001 | Analytical Chemistry | Chemistry
+CCOM 1013 | CMST 1061 | Fundamentals of Communication | Communication
+CCOM 1113 | MC 2000 | Intro to Mass Media | Communication
+CCOM 2013 | CMST 2060 | Public Speaking | Communication
+CCOM 2113 | CMST 2063 | Argumentation and Debate | Communication
+CCOM 2213 | CMST 2010 | Interpersonal Communication | Communication
+CCOM 2313 | CMST 2061 | Business & Professional Communication | Communication
+CCSC 1103 | CSC 1253 | Computer Science I | Computer Science
+CCSC 1203 | CSC 1254 | Computer Science II | Computer Science
+CCSC 2103 | CSC 2362 | Cyber Security Principles | Computer Science
+CCSC 2113 | CSC 2700 | Information Assurance & Security | Computer Science
+CCRJ 1013 | SOCL 2371 | Intro to Criminal Justice | Criminal Justice
+CCRJ 2013 | SOCL 2301 | Intro to Corrections | Criminal Justice
+CDNC 1013 | THTR 1800 | Dance Appreciation | Dance
+CECO 4121 | BIOL 4254 | Principles of Ecology Lab (Upper Level) | Ecology
+CECO 4123 | BIOL 4253 | Principles of Ecology (Upper Level) | Ecology
+CECN 2113 | ECON 2030 | Economic Principles | Economics
+CECN 2213 | ECON 2010 | Macroeconomics | Economics
+CECN 2223 | ECON 2000 | Microeconomics | Economics
+CECN 2313 | ECON 2035 | Money, Banking & the Economy (Lower Level) | Economics
+CEDU 1013 | EDCI 2400 | Foundations in Multicultural Education | Education
+CENG 2253 | EE 2120 | Circuits I | Engineering
+CENG 2263 | EE 2130 | Circuits II | Engineering
+CENL 1013* | ENGL 1001 | English Composition I | English
+CENL 1023 | ENGL 2000 | English Composition II | English
+CENL 2103 | ENGL 2123 | British Literature I | English
+CENL 2103 | ENGL 2220 | British Literature I | English
+CENL 2113 | ENGL 2123 | British Literature II | English
+CENL 2113 | ENGL 2220 | British Literature II | English
+CENL 2123 | ENGL 2220 | Major British Writers | English
+CENL 2153 | ENGL 2123 | American Literature I | English
+CENL 2153 | ENGL 2270 | American Literature I | English
+CENL 2163 | ENGL 2123 | American Literature II | English
+CENL 2163 | ENGL 2270 | American Literature II | English
+CENL 2173 | ENGL 2270 | Major American Writers | English
+CENL 2203 | ENGL 2201 | World Literature I | English
+CENL 2213 | ENGL 2202 | World Literature II | English
+CENL 2223 | ENGL 2201 | Major World Writers | English
+CENL 2223 | ENGL 2202 | Major World Writers | English
+CENL 2303 | ENGL 2025 | Intro to Fiction | English
+CENL 2313 | ENGL 2027 | Intro to Poetry and/or Drama | English
+CENL 2313 | ENGL 2029 | Intro to Poetry and/or Drama | English
+CENL 2323 | ENGL 2123 | Intro to Literature | English
+CENL 2403 | ENGL 2674 | Intro to African American Literature | English
+CENL 2413 | ENGL 2593 | Intro to Women's Literature | English
+CENL 2503 | ENGL 2423 | Mythology or Folklore | English
+CENL 2513 | ENGL 2002 | Foundations of Professional Writing (Lower Level) | English
+CENL 2523 | ENGL 2004 | Creative Writing (Various Genres) | English
+CENL 2523 | ENGL 2005 | Creative Writing (Various Genres) | English
+CENL 2523 | ENGL 2007 | Creative Writing (Various Genres) | English
+CENL 2523 | ENGL 2008 | Creative Writing (Various Genres) | English
+CENL 2523 | ENGL 2009 | Creative Writing (Various Genres) | English
+CEVS 1103 | ENVS 1126 | Environmental Science | Environmental Sciences
+CEVS 1113 | ENVS 2126 | Environmental and Anthropogenic Impacts of Microbes | Environmental Sciences
+CFIN 2113 | CFS 1062 | Personal Finance | Finance
+CFIN 3113 | FIN 3716 | Principles of Business Finance (Upper Level) | Finance
+CFRN 1014 | FREN 1001 | Elementary French I: 4 credit hours | French
+CFRN 1024 | FREN 1002 | Elementary French II: 4 credit hours | French
+CFRN 2013 | FREN 2101 | Intermediate French I: 3 credit hours | French
+CFRN 2023 | FREN 2102 | Intermediate French II: 3 credit hours | French
+CGRG 2013 | GEOG 2010 | Human Geography | Geography
+CGRG 2313 | GEOG 2040 | Introduction to Geographic Information Systems | Geography
+CGEO 1101 | GEOL 1601 | Physical Geology Lab | Geology and Earth Sciences
+CGEO 1103 | GEOL 1001 | Physical Geology | Geology and Earth Sciences
+CGEO 1111 | GEOL 1602 | Historical Geology Lab | Geology and Earth Sciences
+CGEO 1113 | GEOL 1003 | Historical Geology | Geology and Earth Sciences
+CGRM 1014 | GERM 1101 | Elementary German I: 4 credit hours | German
+CGRM 1024 | GERM 1102 | Elementary German II: 4 credit hours | German
+CGRM 2013 | GERM 2101 | Intermediate German I: 3 credit hours | German
+CGRM 2023 | GERM 2102 | Intermediate German II: 3 credit hours | German
+CHLT 1103 | KIN 2509 | Medical Terminology | Health Studies
+CHIS 1013 | HIST 1001 | Western Civilization I | History
+CHIS 1023 | HIST 1003 | Western Civilization II | History
+CHIS 1113 | HIST 1005 | World Civilization I | History
+CHIS 1123 | HIST 1007 | World Civilization II | History
+CHIS 2013 | HIST 2055 | American History I | History
+CHIS 2023 | HIST 2057 | American History II | History
+CHIS 2033 | HIST 3071 | Louisiana History | History
+CHIS 2103 | HIST 2061 | African-American History | History
+CHUM 2013 | HIST 2160 | Africa and the Middle East | Humanities
+CHUM 2213 | HIST 1001 | Humanities I | Humanities
+CHUM 2223 | HIST 1003 | Humanities II | Humanities
+CKIN 1013 | KIN 2501 | Intro to Kinesiology | Kinesiology
+CKIN 1113 | KIN 1600 | Personal and Community Health | Kinesiology
+CLTN 1014 | LATN 1001 | Elementary Latin I: 4 credit hours | Latin
+CLTN 1024 | LATN 2051 | Elementary Latin II: 4 credit hours | Latin
+CLTN 2013 | LATN 2053 | Intermediate Latin I: 3 credit hours | Latin
+CLTN 2023 | LATN 2065 | Intermediate Latin II: 3 credit hours | Latin
+CLTN 2023 | LATN 2066 | Intermediate Latin II: 3 credit hours | Latin
+CLTN 2023 | LATN 2073 | Intermediate Latin II: 3 credit hours | Latin
+CLTN 2023 | LATN 2074 | Intermediate Latin II: 3 credit hours | Latin
+CMGM 2413 | ENTR 2000 | Intro to Entrepreneurship (Lower Level) | Management
+CMGM 3103 | MGT 3200 | Principles of Management (Upper Level) | Management
+CMGM 3213 | ISDS 3115 | Production & Operations (Upper Level) | Management
+CMGM 3313 | MGT 3320 | Human Resource Mgt (Upper Level) | Management
+CMGM 3413 | ENTR 4113 | Small Business Mgt (Upper Level) | Management
+CMGM 3513 | ENTR 3111 | Intro to Entrepreneurship (Upper Level) | Management
+CMGM 4103 | MGT 3620 | Organizational Behavior (Upper Level) | Management
+CMGM 4213 | MGT 4430 | Management in a Global Context (Upper Level) | Management
+CMKT 3003 | MKT 3401 | Princples of Marketing (Upper Level) | Marketing
+CMKT 3103 | MKT 3431 | Retail Management | Marketing
+CMKT 3203 | MKT 3427 | Personal/Professional Selling (Upper Level) | Marketing
+CMAT 1103* | MATH 1029 | Contemporary Mathematics | Mathematics
+CMAT 1203* | MATH 1015 | Applied Algebra | Mathematics
+CMAT 1204* | MATH 1100 | The Nature of Mathematics | Mathematics
+CMAT 1213* | MATH 1021 | College Algebra | Mathematics
+CMAT 1223 | MATH 1022 | Trigonometry | Mathematics
+CMAT 1235 | MATH 1023 | Algebra and Trigonometry: 5 credit hours | Mathematics
+CMAT 1236 | MATH 1540 | Algebra and Trigonometry: 6 credit hours | Mathematics
+CMAT 1303* | ISDS 2000 | Introductory Statistics | Mathematics
+CMAT 2103 | MATH 1431 | Applied Calculus | Mathematics
+CMAT 2113 | MATH 1431 | Calculus I : 3 credit hours | Mathematics
+CMAT 2113 | MATH 1530 | Calculus I : 3 credit hours | Mathematics
+CMAT 2115 | MATH 1550 | Calculus I : 5 credit hours | Mathematics
+CMAT 2124 | MATH 1552 | Calculus II : 4 credit hours | Mathematics
+CMUS 1013 | MUS 1751 | Music Appreciation | Music
+CMUS 1023 | MUS 2000 | Jazz Appreciation | Music
+CPHL 1013 | PHIL 1000 | Intro to Philosophy | Philosophy
+CPHL 2013 | PHIL 2020 | Intro to Ethics | Philosophy
+CPHL 2113 | PHIL 1021 | Intro to Logic | Philosophy
+CPHY 1013 | PHYS 2401 | Intro to Concepts in Physics | Physics
+CPHY 1023 | PHSC 1001 | Physical Science I | Physics
+CPHY 1033 | PHSC 1002 | Physical Science II | Physics
+CPHY 2111 | PHYS 2108 | Physics I Lab (Algebra / Trigonometry Based) | Physics
+CPHY 2113 | PHYS 2001 | Physics I (Algebra / Trigonometry Based) | Physics
+CPHY 2121 | PHYS 2109 | Physics II Lab (Algebra / Trigonometry Based) | Physics
+CPHY 2123 | PHYS 2002 | Physics II (Algebra / Trigonometry Based) | Physics
+CPHY 2131 | PHYS 2108 | Physics I Lab (Calculus Based) | Physics
+CPHY 2133 | PHYS 2110 | Physics I (Calculus Based) | Physics
+CPHY 2141 | PHYS 2109 | Physics II Lab (Calculus Based) | Physics
+CPHY 2143 | PHYS 2112 | Physics II (Calculus Based) | Physics
+CPHY 2153 | PHYS 2113 | Physics III (Calculus Based) | Physics
+CPOL 2013 | POLI 2051 | Intro to American Govt | Political Science
+CPOL 2213 | POLI 2053 | Intro to Comparative Govt | Political Science
+CPSY 2013 | PSYC 2000 | Intro to Psychology | Psychology
+CPSY 2113 | PSYC 2070 | Developmental Psychology | Psychology
+CPSY 2213 | PSYC 2078 | Adolescent Psychology | Psychology
+CPSY 2313 | PSYC 2076 | Child Psychology | Psychology
+CPSY 2413 | PSYC 2040 | Social Psychology | Psychology
+CPSY 2613 | PSYC 2060 | Educational Psychology | Psychology
+CREL 2213 | REL 1000 | World Religions | Religion
+CSWK 1103 | SW 2000 | Social Work as a Profession | Social Work
+CSOC 2013 | SOCL 2001 | Intro to Sociology | Sociology
+CSOC 2113 | SOCL 2501 | Social Problems | Sociology
+CSOC 2213 | SOCL 2505 | Marriage and Family | Sociology
+CSOC 2413 | SOCL 2511 | Race, Class & Ethnicity | Sociology
+CSOC 3013 | SOCL 3101 | Sociological Theory | Sociology
+CSPN 1014 | SPAN 1101 | Elementary Spanish I: 4 credit hours | Spanish
+CSPN 1024 | SPAN 1102 | Elementary Spanish II: 4 credit hours | Spanish
+CSPN 1026 | SPAN 1152 | Elementary Spanish I+II: 6 credit hours | Spanish
+CSPN 2013 | SPAN 2101 | Intermediate Spanish I: 3 credit hours | Spanish
+CSPN 2023 | SPAN 2102 | Intermediate Spanish II: 3 credit hours | Spanish
+CTHE 1013 | THTR 1020 | Intro to Theatre | Theatre
+CTHE 2103 | THTR 1025 | Acting I | Theatre
+CTHE 2113 | THTR 2025 | Acting II | Theatre
+CTHE 2203 | THTR 2027 | Voice for the Stage | Theatre
+CTHE 2303 | THTR 1001 | Stagecraft | Theatre

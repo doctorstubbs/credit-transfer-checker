@@ -1,0 +1,3 @@
+Louisiana Tech University, Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page). Extracted Nov 11, 2026.
+Method: the Home Institution filter (listed as LA TECH) was set and the table was read discipline by discipline (31 disciplines, 166 rows), scrolling long tables until rows stopped changing, then verified with a full unfiltered sweep from Accounting to Theatre that matched the per-discipline rows. The report's Home Course column shows codes only, so titles are the matrix Common Course Titles. Asterisks on some Common Course codes are the matrix's own footnote markers, reproduced in the rows file and stripped for matching.
+Rows: data/harvests/latech-matrix-2025-26-rows.txt

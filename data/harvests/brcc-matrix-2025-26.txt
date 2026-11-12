@@ -1,0 +1,4 @@
+Baton Rouge Community College, Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page). Extracted Nov 11, 2026.
+Method: the Home Institution filter was set to BRCC and the table was read discipline by discipline (33 disciplines, 171 rows) so no rows were skipped by scrolling. The report's Home Course column shows codes only, so titles below are the matrix Common Course Titles. Asterisks on some Common Course codes are the matrix's own footnote markers, reproduced in scripts/add-brcc.py and stripped for matching. BRCC's own 2026-2027 catalog publishes no LCCN tags (see brcc-2026-27.txt), so the Regents matrix is the public source for these pairings.
+
+Full row transcription: see ROWS in scripts/add-brcc.py (171 rows, LCCN | home code | common title | discipline).
