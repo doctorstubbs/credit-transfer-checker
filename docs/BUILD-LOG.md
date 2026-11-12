@@ -1107,3 +1107,10 @@ cell padding, and the Degree credit column right-aligned so the
 numbers line up down the page. Groups (toward degree, credit only,
 not counted) and every value the engine produces are unchanged;
 this is presentation only.
+Kris then asked for the results to read like an Excel sheet: the
+results tables are now true grids, with a border around every
+cell, fixed column widths (course 24%, arrow 6%, counts as 28%,
+counts toward 24%, degree credit 18%), alternating shaded rows,
+the college direction banner as a merged title row inside the
+grid, and the blue column header band kept. Same values, same
+groups; the sheet look is the whole change.
