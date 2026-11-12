@@ -1,0 +1,2516 @@
+{
+ "pathways": [
+  {
+   "careers": [
+    "Child Psychologist",
+    "Research Psychologist",
+    "Human Resource Specialist",
+    "Behavioral Health Specialist",
+    "Social Psychologist"
+   ],
+   "document": "LA-Transfer-Pathways-Psychology.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "Southern University and A+M College",
+    "Southern University at New Orleans",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "psychology",
+   "name": "Psychology",
+   "requirements": [
+    {
+     "area": "Math",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "excludeLccns": [
+       "CMAT 1213"
+      ],
+      "rubrics": [
+       "CMAT"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other math"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of biology"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other natural science"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "English",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CENL"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other English"
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of humanities"
+    },
+    {
+     "area": "Psychology",
+     "hours": 3,
+     "label": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "area": "Psychology",
+     "hours": 3,
+     "label": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "area": "Psychology",
+     "hours": 3,
+     "label": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 12,
+     "label": "Twelve college-selected credits"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Police Officer",
+    "Forensic Scientist",
+    "Crime Analyst",
+    "Legal Assistant",
+    "Probation Officer"
+   ],
+   "document": "Criminal-Justice-Pathway.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "Southern University A&M",
+    "Southern University in New Orleans",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe"
+   ],
+   "id": "criminal-justice",
+   "name": "Criminal Justice",
+   "requirements": [
+    {
+     "area": "Criminal Justice",
+     "hours": 3,
+     "label": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "area": "Criminal Justice",
+     "hours": 3,
+     "label": "Corrections Process",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "area": "Criminal Justice",
+     "hours": 3,
+     "label": "Criminal Law",
+     "lccns": [
+      "CCRJ 2213"
+     ]
+    },
+    {
+     "area": "Criminal Justice",
+     "hours": 3,
+     "label": "Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "area": "Criminal Justice",
+     "hours": 3,
+     "label": "Courts",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "English",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CENL"
+      ]
+     },
+     "hours": 3,
+     "label": "One English Elective"
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 3,
+     "label": "One Humanities Elective"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "choice": {
+      "rubrics": [
+       "CMAT"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Math Electives"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "American Government",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Health Educator",
+    "Bio Technician",
+    "Food Scientist",
+    "Pharmacy Tech",
+    "Research Scientist"
+   ],
+   "document": "LA-Transfer-Pathways-Biology.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "Louisiana Tech University",
+    "Northwestern State University",
+    "Southern University + A&M College",
+    "Southern University of New Orleans",
+    "University of Louisiana at Lafayette",
+    "McNeese State University",
+    "Nicholls State University",
+    "University of Lousiana at Monroe"
+   ],
+   "id": "biology",
+   "name": "Biology",
+   "requirements": [
+    {
+     "area": "Math",
+     "choice": {
+      "lccns": [
+       "CMAT 1213",
+       "CMAT 2115",
+       "CMAT 1223",
+       "CMAT 1303",
+       "CMAT 1313",
+       "CMAT 1235",
+       "CMAT 1236",
+       "CMAT 2125"
+      ]
+     },
+     "hours": 6,
+     "label": "Two classes from the published math list"
+    },
+    {
+     "area": "Biology",
+     "hours": 6,
+     "label": "Intro to Biology I and II",
+     "lccns": [
+      "CBIO 1033",
+      "CBIO 1043"
+     ]
+    },
+    {
+     "area": "Biology",
+     "hours": 2,
+     "label": "Biology Lab I and II",
+     "lccns": [
+      "CBIO 1031",
+      "CBIO 1041"
+     ]
+    },
+    {
+     "area": "Biology",
+     "choice": {
+      "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of biology"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of humanities"
+    },
+    {
+     "area": "Chemistry",
+     "choice": {
+      "lccns": [
+       "CCEM 1123",
+       "CCEM 1133",
+       "CCEM 1213",
+       "CCEM 1223"
+      ]
+     },
+     "hours": 6,
+     "label": "General Chemistry I and II"
+    },
+    {
+     "area": "Chemistry",
+     "choice": {
+      "lccns": [
+       "CCEM 1121",
+       "CCEM 1131",
+       "CCEM 1132",
+       "CCEM 2201",
+       "CCEM 2211"
+      ]
+     },
+     "hours": 2,
+     "label": "Chemistry Lab I and II"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CATR",
+       "CCRJ",
+       "CECN",
+       "CGRG",
+       "CPOL",
+       "CPSY",
+       "CSOC"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of social/behavioral science"
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Physics, Chemistry",
+     "choice": {
+      "lccns": [
+       "CPHY 2113",
+       "CPHY 2123",
+       "CPHY 2111",
+       "CPHY 2121",
+       "CPHY 2133",
+       "CPHY 2143",
+       "CPHY 2153",
+       "CPHY 2131",
+       "CPHY 2141",
+       "CCEM 2213",
+       "CCEM 2223",
+       "CCEM 2221",
+       "CCEM 2231",
+       "CCEM 2222"
+      ]
+     },
+     "hours": 8,
+     "label": "Physics I and II with labs, or Organic Chemistry I and II with labs"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Accountant",
+    "Auditor",
+    "Financial Analyst",
+    "Tax Advisor",
+    "Budget Manager"
+   ],
+   "document": "Accounting-Pathway.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "Southern University A&M",
+    "University of New Orleans",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe"
+   ],
+   "id": "accounting",
+   "name": "Accounting",
+   "requirements": [
+    {
+     "area": "Business",
+     "choice": {
+      "lccns": [
+       "CBUS 1003",
+       "CBUS 2103"
+      ]
+     },
+     "hours": 3,
+     "label": "Intro to Business OR Business Law"
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Statistics II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Calculus",
+     "lccns": [
+      "CBUS 2323"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "IT",
+     "choice": {
+      "rubrics": [
+       "CBUS"
+      ]
+     },
+     "hours": 3,
+     "label": "One IT Elective that covers at least 50% Excel"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 3,
+     "label": "Three credits of electives"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Investment Banker",
+    "Financial Analyst",
+    "Corporate Treasurer",
+    "Risk Manager",
+    "Financial Planner"
+   ],
+   "document": "LA-Transfer-Pathways-Finance.pdf",
+   "finishAtPublished": [
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Southeastern Louisiana University",
+    "Southern University + A&M College",
+    "University of New Orleans",
+    "University of Louisiana at Lafayette",
+    "University of Lousiana at Monroe"
+   ],
+   "id": "finance",
+   "name": "Finance",
+   "requirements": [
+    {
+     "area": "Business",
+     "choice": {
+      "lccns": [
+       "CBUS 1003",
+       "CBUS 2103"
+      ]
+     },
+     "hours": 3,
+     "label": "Intro to Business OR Business Law"
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Statistics II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Calculus",
+     "lccns": [
+      "CBUS 2323"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "IT",
+     "choice": {
+      "rubrics": [
+       "CBUS"
+      ]
+     },
+     "hours": 3,
+     "label": "One IT Elective that covers at least 50% Excel"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of natural sciences"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 3,
+     "label": "Three credits of electives"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Operations Manager",
+    "Human Resources Manager",
+    "Project Manager",
+    "Supply Chain Manager",
+    "Budget Analyst"
+   ],
+   "document": "LA-Transfer-Pathways-Management.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "Southern University + A&M College",
+    "University of Louisiana at Lafayette",
+    "University of Lousiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "management",
+   "name": "Management",
+   "requirements": [
+    {
+     "area": "Business",
+     "choice": {
+      "lccns": [
+       "CBUS 1003",
+       "CBUS 2103"
+      ]
+     },
+     "hours": 3,
+     "label": "Intro to Business OR Business Law"
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Statistics II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Calculus",
+     "lccns": [
+      "CBUS 2323"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "IT",
+     "choice": {
+      "rubrics": [
+       "CBUS"
+      ]
+     },
+     "hours": 3,
+     "label": "One IT Elective that covers at least 50% Excel"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of natural sciences"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 3,
+     "label": "Three credits of electives"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Marketing Manager",
+    "Sales Manager",
+    "Brand Manager",
+    "Advertising Manager",
+    "Market Research Analyst"
+   ],
+   "document": "LA-Transfer-Pathways-Marketing.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Southeastern Louisiana University",
+    "Southern University and A+M College",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "marketing",
+   "name": "Marketing",
+   "requirements": [
+    {
+     "area": "Business",
+     "choice": {
+      "lccns": [
+       "CBUS 1003",
+       "CBUS 2103"
+      ]
+     },
+     "hours": 3,
+     "label": "Intro to Business OR Business Law"
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Statistics II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Business Calculus",
+     "lccns": [
+      "CBUS 2323"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "area": "Business",
+     "hours": 3,
+     "label": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "IT",
+     "choice": {
+      "rubrics": [
+       "CBUS"
+      ]
+     },
+     "hours": 3,
+     "label": "One IT Elective that covers at least 50% Excel"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of natural sciences"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 3,
+     "label": "Three credits of electives"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Social Worker",
+    "Case Manager",
+    "Counselor",
+    "Child Welfare Specialist",
+    "Human Resource Manager"
+   ],
+   "document": "LA-Transfer-Pathways-Social-Work.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Southern University and A+M College",
+    "Louisiana State University",
+    "Southern University at New Orleans",
+    "Northwestern State University",
+    "University of Louisiana at Monroe",
+    "Southeastern Louisiana University"
+   ],
+   "id": "social-work",
+   "name": "Social Work",
+   "requirements": [
+    {
+     "area": "Math",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "lccns": [
+       "CMAT 1313",
+       "CMAT 1103"
+      ]
+     },
+     "hours": 3,
+     "label": "Finite Math OR Contemporary Math"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of biology"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other natural science"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "English",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CENL"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of literature"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "lccns": [
+       "CHIS 2013",
+       "CHIS 2023"
+      ]
+     },
+     "hours": 3,
+     "label": "American History"
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other humanities"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Foreign Language",
+     "choice": {
+      "rubrics": [
+       "CARB",
+       "CFRN",
+       "CGRM",
+       "CSPN"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of foreign language"
+    },
+    {
+     "area": "Social Work",
+     "hours": 3,
+     "label": "Intro to Social Work",
+     "lccns": [
+      "CSWK 1101"
+     ]
+    },
+    {
+     "area": "Social Work",
+     "hours": 3,
+     "label": "Three credits of BSW program-specific",
+     "lccns": []
+    },
+    {
+     "area": "Other",
+     "hours": 3,
+     "label": "American Government",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "area": "Other",
+     "choice": {
+      "rubrics": [
+       "CPOL"
+      ]
+     },
+     "hours": 3,
+     "label": "Political Science"
+    },
+    {
+     "area": "Other",
+     "choice": {
+      "lccns": [
+       "CECN 2213",
+       "CECN 2223"
+      ]
+     },
+     "hours": 3,
+     "label": "Macro OR Micro Economics"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Political Analyst",
+    "Campaign Manager",
+    "Government Affairs",
+    "Legislative Analyst",
+    "Public Affairs Manager",
+    "Teacher"
+   ],
+   "document": "LA-Transfer-Pathways-Political-Science.pdf",
+   "finishAtPublished": [
+    "Louisiana State University",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Southeastern Louisiana University",
+    "Southern University and A+M College",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "political-science",
+   "name": "Political Science",
+   "requirements": [
+    {
+     "area": "Math",
+     "hours": 3,
+     "label": "Statistics 1",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "rubrics": [
+       "CMAT"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other math"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of natural sciences"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "English",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CENL"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other English"
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "rubrics": [
+       "CHIS"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of history"
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other humanities"
+    },
+    {
+     "area": "Political Science",
+     "hours": 3,
+     "label": "American Government",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "area": "Political Science",
+     "choice": {
+      "rubrics": [
+       "CPOL"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of Political Science"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CATR",
+       "CCRJ",
+       "CECN",
+       "CGRG",
+       "CPOL",
+       "CPSY",
+       "CSOC"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of social/behavioral science (in addition to Pol. Sci. courses)"
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Foreign Language",
+     "choice": {
+      "rubrics": [
+       "CARB",
+       "CFRN",
+       "CGRM",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of foreign language"
+    },
+    {
+     "area": "Other",
+     "collegeSelected": true,
+     "hours": 3,
+     "label": "Three credits of elective"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Graphic Designer",
+    "Animator",
+    "Art Director",
+    "Museum Curator",
+    "Art Teacher",
+    "Illustrator"
+   ],
+   "document": "LA-Transfer-Pathways-Art.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "Louisiana Tech University",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "art",
+   "name": "Art",
+   "requirements": [
+    {
+     "area": "Math",
+     "choice": {
+      "rubrics": [
+       "CMAT"
+      ]
+     },
+     "hours": 3,
+     "label": "One Math Elective"
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "rubrics": [
+       "CMAT",
+       "CPHL"
+      ]
+     },
+     "hours": 3,
+     "label": "One Math Elective OR Intro to Logical Reasoning"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "lccns": [
+       "CBIO 1013",
+       "CBIO 1033"
+      ]
+     },
+     "hours": 3,
+     "label": "General Biology"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "Physical Science"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Natural Science Elective"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 9,
+     "label": "Three humanities courses (literature, foreign languages, history, classical studies, communications, philosophy, religious studies, interdisciplinary)"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CATR",
+       "CECN",
+       "CGRG",
+       "CPOL",
+       "CSOC"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of social science"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CCRJ",
+       "CPSY"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of behavioral science"
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Art History and Content",
+     "hours": 6,
+     "label": "Survey of Western Art 1 and 2",
+     "lccns": [
+      "CART 2103",
+      "CART 2113"
+     ]
+    },
+    {
+     "area": "Art History and Content",
+     "hours": 6,
+     "label": "Basic Drawing/Drawing 1 and Drawing 2/Figure Drawing",
+     "lccns": [
+      "CART 2203",
+      "CART 2213"
+     ]
+    },
+    {
+     "area": "Art History and Content",
+     "hours": 3,
+     "label": "Art Structure/2D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "area": "Art History and Content",
+     "choice": {
+      "rubrics": [
+       "CART"
+      ]
+     },
+     "hours": 3,
+     "label": "Art (100-200 level)"
+    },
+    {
+     "area": "Art History and Content",
+     "choice": {
+      "rubrics": [
+       "CART"
+      ]
+     },
+     "hours": 3,
+     "label": "One art elective"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Software Developer",
+    "Database Administrator",
+    "Cybersecurity Analyst",
+    "Network Administrator",
+    "Web Developer"
+   ],
+   "document": "LA-Transfer-Pathways-Computer-Science.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "LSU in Shreveport",
+    "Louisiana Tech",
+    "McNeese State University",
+    "Nicholls State University",
+    "Northwestern State University",
+    "Southeastern Louisiana University",
+    "Southern University + A&M College",
+    "University of Louisiana at Lafayette",
+    "University of Lousiana at Monroe",
+    "University of New Orleans"
+   ],
+   "id": "computer-science",
+   "name": "Computer Science",
+   "requirements": [
+    {
+     "area": "Math",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "lccns": [
+       "CMAT 2113",
+       "CMAT 2115",
+       "CMAT 2116"
+      ]
+     },
+     "hours": 3,
+     "label": "Calculus I"
+    },
+    {
+     "area": "Math",
+     "choice": {
+      "lccns": [
+       "CMAT 2123",
+       "CMAT 2125"
+      ]
+     },
+     "hours": 3,
+     "label": "Calculus II"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "lccns": [
+       "CBIO 1013",
+       "CBIO 1033",
+       "CBIO 1011",
+       "CBIO 1031"
+      ]
+     },
+     "hours": 3,
+     "label": "General Biology and Lab"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of physics"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CBIO",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of other natural sciences"
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 1",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 3,
+     "label": "Composition 2",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 9,
+     "label": "Nine credits of humanities"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CATR",
+       "CCRJ",
+       "CECN",
+       "CGRG",
+       "CPOL",
+       "CPSY",
+       "CSOC"
+      ]
+     },
+     "hours": 6,
+     "label": "Six credits of social/behavioral science"
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "Three credits of fine arts"
+    },
+    {
+     "area": "Computer Science",
+     "hours": 3,
+     "label": "Computer Science I",
+     "lccns": [
+      "CCSC 1103"
+     ]
+    },
+    {
+     "area": "Computer Science",
+     "hours": 3,
+     "label": "Computer Science II",
+     "lccns": [
+      "CCSC 1203"
+     ]
+    },
+    {
+     "area": "Computer Science",
+     "choice": {
+      "rubrics": [
+       "CCSC"
+      ]
+     },
+     "hours": 12,
+     "label": "Twelve credits of other computer science"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Athletic Trainer",
+    "Fitness Trainer",
+    "Physical Therapist",
+    "Sports Coach",
+    "Exercise Physiologist"
+   ],
+   "document": "Kinesiology-Sports-Management-Pathway.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "Louisiana Tech University",
+    "Southeastern Louisiana University",
+    "Southern University A&M",
+    "University of Louisiana at Lafayette"
+   ],
+   "id": "kinesiology-sport-management",
+   "name": "Kinesiology, Sport Management",
+   "requirements": [
+    {
+     "area": "Kinesiology",
+     "hours": 3,
+     "label": "Intro to Kinesiology",
+     "lccns": [
+      "CKIN 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "hours": 6,
+     "label": "General Biology for Science Majors I and II",
+     "lccns": [
+      "CBIO 1033",
+      "CBIO 1043"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science Elective"
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CCRJ",
+       "CPSY",
+       "CSOC"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Behavioral Science Electives"
+    },
+    {
+     "area": "Other",
+     "choice": {
+      "lccns": [
+       "CBUS 2203",
+       "CBIO 2703",
+       "CMAT 1303",
+       "CACC 2113",
+       "CECN 2113",
+       "CECN 2213",
+       "CECN 2223"
+      ],
+      "rubrics": [
+       "CKIN",
+       "CHLT"
+      ]
+     },
+     "hours": 18,
+     "label": "Choose 18 credits from the published list (health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics, accounting, economics)"
+    }
+   ]
+  },
+  {
+   "careers": [
+    "Dental Hygiene",
+    "Dietitian",
+    "Emergency Medical Sciences",
+    "Occupational Therapist",
+    "Respiratory Therapist"
+   ],
+   "document": "Kinesiology-Pre-Allied-Health-Pathway.pdf",
+   "finishAtPublished": [
+    "Grambling State University",
+    "Louisiana State University",
+    "LSU at Alexandria",
+    "Louisiana Tech University",
+    "Southeastern Louisiana University",
+    "Southern University A&M",
+    "University of Louisiana at Lafayette"
+   ],
+   "id": "kinesiology-pre-allied-health",
+   "name": "Kinesiology, Pre-Allied Health",
+   "requirements": [
+    {
+     "area": "Kinesiology",
+     "hours": 3,
+     "label": "Intro to Kinesiology",
+     "lccns": [
+      "CKIN 1013"
+     ]
+    },
+    {
+     "area": "English",
+     "hours": 6,
+     "label": "Composition I and II",
+     "lccns": [
+      "CENL 1013",
+      "CENL 1023"
+     ]
+    },
+    {
+     "area": "Fine Arts",
+     "choice": {
+      "rubrics": [
+       "CART",
+       "CDNC",
+       "CMUS",
+       "CTHE"
+      ]
+     },
+     "hours": 3,
+     "label": "One Fine Arts Elective"
+    },
+    {
+     "area": "Humanities",
+     "hours": 3,
+     "label": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "area": "Humanities",
+     "choice": {
+      "excludeLccns": [
+       "CENL 1013",
+       "CENL 1023"
+      ],
+      "rubrics": [
+       "CARB",
+       "CCOM",
+       "CENL",
+       "CFRN",
+       "CGRM",
+       "CHIS",
+       "CHUM",
+       "CLTN",
+       "CPHL",
+       "CSPN"
+      ]
+     },
+     "hours": 6,
+     "label": "Two Humanities Electives"
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "area": "Math/Analytical Reasoning",
+     "hours": 3,
+     "label": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "hours": 6,
+     "label": "General Biology for Science Majors I and II",
+     "lccns": [
+      "CBIO 1033",
+      "CBIO 1043"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "hours": 3,
+     "label": "Physics",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "area": "Natural Sciences",
+     "hours": 6,
+     "label": "Anatomy and Physiology I and II",
+     "lccns": [
+      "CBIO 2213",
+      "CBIO 2223"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "hours": 3,
+     "label": "Intro Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "area": "Social/Behavioral Science",
+     "choice": {
+      "rubrics": [
+       "CCRJ",
+       "CPSY",
+       "CSOC"
+      ]
+     },
+     "hours": 3,
+     "label": "One Behavioral Science Elective"
+    },
+    {
+     "area": "Other",
+     "choice": {
+      "lccns": [
+       "CBIO 2211",
+       "CBIO 2221",
+       "CBIO 1031",
+       "CBIO 1041",
+       "CPHY 2111",
+       "CCEM 1123",
+       "CCEM 1133",
+       "CCEM 1132",
+       "CHLT 1103",
+       "CBUS 2203",
+       "CBIO 2703",
+       "CMAT 1303"
+      ],
+      "rubrics": [
+       "CKIN",
+       "CHLT"
+      ]
+     },
+     "hours": 12,
+     "label": "Choose 12 credits from the published list (anatomy, biology, physics and chemistry labs, chemistry for science majors, medical terminology, health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics)"
+    }
+   ]
+  }
+ ],
+ "source": "Louisiana Board of Regents, Universal Transfer Pathways student documents (laregents.edu, 2024), transcribed from each pathway's published First 60 Credits list. Named required courses carry the statewide course number assigned to that exact title in the Louisiana Statewide Common Course Catalog, AY 2025-26 edition. Choice slots follow the published wording (for example, three credits of other math) and use the rubric families of the Board of Regents general education core as published in the transfer degree framework. The Criminal Justice document prints a Common Course Numbers column for its named courses (CCRJ 1013, CCRJ 2013, CCRJ 2313, CCRJ 2213, CENL 1013 and CENL 1023, CHIS 2013, CCOM 2013, CPOL 2013, CSOC 2013, CPSY 2013); its Courts line carries no printed number and is joined to CCRJ 2613, Judicial Process, the courts course in the statewide catalog. The Nursing document is HELD out of the data: as published it lists only 46 credits, duplicates American Literature I under two subjects, and contains an Accounting block and an Engineering sentence copied from other pathways, so it cannot be transcribed faithfully until it is reconciled against a second official source. Biology notes: the document's math block is a choose-two list, carried as an explicit candidate list; its general chemistry sequence appears under two statewide numberings at different campuses (CCEM 1123 and 1133 with labs 1121 and 1131, and CCEM 1213 and 1223 with labs 2201 and 2211), so both numberings are candidates and the engine matches whichever the student's college uses; the closing block offers physics (either track) with labs or organic chemistry with labs, carried as one eight hour choice. The Business (General Business) document is HELD out: as published its course list sums to 42 hours and omits the business core entirely (no accounting, business law, or statistics beyond Statistics 1), where its sibling Finance document carries that block. Accounting and Finance share one published template (business core, composition, fine arts, public speaking plus two humanities electives, an IT elective covering at least 50 percent Excel, college algebra, introductory statistics, a three part natural sciences block, micro and macro economics, and three elective credits). The Accounting document prints its statewide numbers; its column order places CBUS 2323 before CBUS 2313, and the two are assigned by their verified catalog titles (CBUS 2313 Business Statistical Methods II, CBUS 2323 Business Calculus). The IT elective's Excel coverage share cannot be verified from course data and is carried as a business rubric choice under the document's own label. Management and Marketing publish the same business template as Finance. One sibling difference is preserved: the Accounting document prints its natural sciences block in structured form (one life science, one physical science, and one more from either), while the Finance, Management, and Marketing documents print theirs as nine free choice credits of natural sciences; each pathway is transcribed as its own document prints it (the Finance entry was corrected to its own document's free choice form when Management and Marketing were added). Social Work notes: its Intro to Social Work line joins to CSWK 1101, Social Work as a Profession, the only social work course in the statewide catalog, and that course carries one credit hour against the document's three credit pattern, so the engine reports the block short wherever it appears rather than inflating it; its three credits of BSW program-specific coursework are defined by the receiving university's BSW program and cannot be specified statewide, so that requirement carries no candidates and always reports as a named gap. The Sociology document is HELD out: as published, its course list sums to 54 of the 60 credits (statistics plus three math, nine natural science, six English, nine humanities, twelve social and behavioral science, three fine arts, six sociology, three history) with no elective or college selected block to absorb the missing six hours. The English, History, and Communication documents are HELD out on the same arithmetic ground as Sociology: as published, each list sums to 54 of the 60 credits (English: six math, nine natural science, twelve English, twelve humanities, six foreign language, six social and behavioral science, three fine arts; History: six math, nine natural science, nine English, six humanities sequence, nine social science, three fine arts, twelve chosen credits; Communication: six math, nine natural science, six English, nine humanities, fifteen communications, six social and behavioral science, three fine arts), with no elective or college selected block printed to absorb the missing six hours. Six of the nineteen sourced documents are now held (Nursing, General Business, Sociology, English, History, Communication), each awaiting reconciliation against a second official source. Computer Science note: the document's blocks are carried at the pathway's published 60 credit total; its General Biology and Lab line is carried at three hours because campuses split that course differently (a three hour combined course, or a three hour lecture with a one hour lab under its own number), and its calculus sequence likewise carries different statewide numbers and hour values by campus, so both published numberings are candidates. The two Kinesiology documents print their fixed blocks with statewide numbers and then a choose-from pool (18 credits for Sport Management, 12 for Pre-Allied Health) whose printed number column interleaves numbers from several pool items and contains at least one error (an anatomy lab paired with a lecture number) and one truncated number (CM1303 for CMAT 1303); the pools are carried as the union of their identifiable printed numbers and the kinesiology and health rubric families their item names describe. With these two, every sourced pathway document has been processed: thirteen pathways are transcribed and six are held."
+}

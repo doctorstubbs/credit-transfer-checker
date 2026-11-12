@@ -4,7 +4,14 @@
    "Louisiana Statewide Common Course Catalog, AY 2025-26 edition (Board of Regents)",
    "Delgado Community College Catalog, 2026-2027 (catalog.dcc.edu)",
    "University of Louisiana at Lafayette Undergraduate and Graduate Catalog, 2026-2027 (catalog.louisiana.edu)",
-   "University of New Orleans University Catalog, 2026-2027 (catalog.uno.edu; LCCN tags carried in the catalog search index, each pairing exact-verified Nov 8, 2026)"
+   "University of New Orleans University Catalog, 2026-2027 (catalog.uno.edu; LCCN tags carried in the catalog search index, each pairing exact-verified Nov 8, 2026)",
+   "Baton Rouge Community College: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "Southeastern Louisiana University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; titles are the matrix Common Course Titles)",
+   "Louisiana State University and A&M College: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "Northwestern State University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "Northwestern State University of Louisiana: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "Louisiana Tech University: Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, extracted Nov 11, 2026; BRCC's own catalog publishes no LCCN tags, so the Regents matrix is the public source; titles are the matrix Common Course Titles)",
+   "University of Louisiana at Lafayette: 2026-2027 catalog harvest supplemented Nov 12, 2026 with the Louisiana Board of Regents Course Articulation Matrix, 2025-26 edition (public Power BI view, Home Courses page, filter UL LAFAYETTE; 201 rows merged by home course code, LCCNs unioned) to close the fine arts gap in transfer degree plans"
   ],
   "note": "Every pairing traces to two current catalogs joined on the Louisiana common course number from each college's own current catalog. No AY 2022-2023 matrix data is used."
  },
@@ -49,7 +56,15 @@
   "CSOC": "Sociology",
   "CSWK": "Social Work",
   "CSPN": "Spanish",
-  "CTHE": "Theatre"
+  "CTHE": "Theatre",
+  "BIO": "Biological Sciences",
+  "GBIO": "Biological Sciences",
+  "CGEO": "Geology and Earth Sciences",
+  "CGES": "Geology and Earth Sciences",
+  "CLAN": "Latin",
+  "CSPA": "Spanish",
+  "CREL": "Religion",
+  "CULA": "Culinary Arts"
  },
  "statewide": {
   "CACC 2113": {
@@ -2146,122 +2161,90 @@
    ]
   },
   "University of Louisiana at Lafayette": {
-   "catalog": "2026-2027 catalog",
+   "catalog": "2026-2027 catalog and Board of Regents Articulation Matrix, 2025-26",
    "courses": [
     {
-     "code": "ENGL 101",
-     "title": "Introduction to Academic Writing",
+     "code": "ACCT 201",
+     "title": "Intro to Financial Accounting",
      "lccns": [
-      "CENL 1013"
+      "CACC 2113"
      ]
     },
     {
-     "code": "ENGL 102",
-     "title": "Writing and Research About Culture",
+     "code": "ACCT 202",
+     "title": "Intro to Managerial Accounting",
      "lccns": [
-      "CENL 1023"
+      "CACC 2213"
      ]
     },
     {
-     "code": "ENGL 103",
-     "title": "Foundations of Academic Writing",
+     "code": "ACCT 305",
+     "title": "Cost Accounting (Upper Level)",
      "lccns": [
-      "CENL 1013"
+      "CACC 3113"
      ]
     },
     {
-     "code": "ENGL 201",
-     "title": "British Literature from the Medieval Period to 1800",
+     "code": "ACCT 409",
+     "title": "Auditing (Upper Level)",
      "lccns": [
-      "CENL 2103"
+      "CACC 3313"
      ]
     },
     {
-     "code": "ENGL 202",
-     "title": "British Literature from 1800 to the Present",
+     "code": "ACCT 420",
+     "title": "Tax I (Upper Level)",
      "lccns": [
-      "CENL 2113"
+      "CACC 3213"
      ]
     },
     {
-     "code": "ENGL 205",
-     "title": "American Literature to 1865",
+     "code": "ACCT 421",
+     "title": "Tax II (Upper Level)",
      "lccns": [
-      "CENL 2153"
+      "CACC 3223"
      ]
     },
     {
-     "code": "ENGL 206",
-     "title": "American Literature since 1865",
+     "code": "ANTH 100",
+     "title": "Intro to Anthropology",
      "lccns": [
-      "CENL 2163"
+      "CATR 1013"
      ]
     },
     {
-     "code": "ENGL 210",
-     "title": "Literary Genres",
+     "code": "ANTH 201",
+     "title": "Cultural Anthroplogy",
      "lccns": [
-      "CENL 2303",
-      "CENL 2313"
+      "CATR 2013"
      ]
     },
     {
-     "code": "ENGL 211",
-     "title": "Thematic Approaches to Literature",
+     "code": "ANTH 202",
+     "title": "Biological Anthropology",
      "lccns": [
-      "CENL 2203",
-      "CENL 2213",
-      "CENL 2403",
-      "CENL 2413"
+      "CATR 2023"
      ]
     },
     {
-     "code": "MATH 105",
-     "title": "Applied College Algebra",
+     "code": "ARAB 101",
+     "title": "Elementary Arabic I: 3 credit hours",
      "lccns": [
-      "CMAT 1203"
+      "CARB 1013"
      ]
     },
     {
-     "code": "MATH 109",
-     "title": "Pre-calculus Algebra",
+     "code": "ARAB 102",
+     "title": "Elementary Arabic II: 3 credit hours",
      "lccns": [
-      "CMAT 1213"
+      "CARB 1023"
      ]
     },
     {
-     "code": "MATH 110",
-     "title": "Pre-calculus Trigonometry",
+     "code": "BADM 101",
+     "title": "General/Intro to Business",
      "lccns": [
-      "CMAT 1223"
-     ]
-    },
-    {
-     "code": "MATH 143",
-     "title": "Business Calculus",
-     "lccns": [
-      "CMAT 1233"
-     ]
-    },
-    {
-     "code": "MATH 250",
-     "title": "Survey of Calculus",
-     "lccns": [
-      "CMAT 2103"
-     ]
-    },
-    {
-     "code": "MATH 270",
-     "title": "Calculus I",
-     "lccns": [
-      "CMAT 2114"
-     ]
-    },
-    {
-     "code": "MATH 301",
-     "title": "Calculus II",
-     "lccns": [
-      "CMAT 2124"
+      "CBUS 1003"
      ]
     },
     {
@@ -2330,6 +2313,20 @@
      ]
     },
     {
+     "code": "BIOL 233",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513"
+     ]
+    },
+    {
+     "code": "BIOL 234",
+     "title": "Intro to Genetics Lab",
+     "lccns": [
+      "CBIO 2511"
+     ]
+    },
+    {
      "code": "BIOL 261",
      "title": "General Microbiology",
      "lccns": [
@@ -2352,7 +2349,8 @@
       "CBIO 2101",
       "CBIO 2104",
       "CBIO 2111",
-      "CBIO 2114"
+      "CBIO 2114",
+      "CBIO 2121"
      ]
     },
     {
@@ -2405,10 +2403,59 @@
      ]
     },
     {
+     "code": "BIOL 403G",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BIOL 425",
+     "title": "Dev Bio",
+     "lccns": [
+      "CBIO 4503"
+     ]
+    },
+    {
+     "code": "BIOL 434G",
+     "title": "Histology",
+     "lccns": [
+      "CBIO 3613"
+     ]
+    },
+    {
+     "code": "BIOL 436G",
+     "title": "Comparative Anatomy Lec + Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3234"
+     ]
+    },
+    {
+     "code": "BIOL 442",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
      "code": "BIOL 442G",
      "title": "Immunobiology",
      "lccns": [
       "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BIOL 452",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BIOL 457",
+     "title": "Cell Bio",
+     "lccns": [
+      "CBIO 4143"
      ]
     },
     {
@@ -2417,6 +2464,13 @@
      "lccns": [
       "CBIO 4143",
       "CBIO 4144"
+     ]
+    },
+    {
+     "code": "BIOL 458",
+     "title": "Cell Bio Lab",
+     "lccns": [
+      "CBIO 4141"
      ]
     },
     {
@@ -2431,14 +2485,16 @@
      "code": "CHEM 101",
      "title": "Survey of Chemistry I",
      "lccns": [
-      "CCEM 1013"
+      "CCEM 1013",
+      "CCEM 1103"
      ]
     },
     {
      "code": "CHEM 102",
      "title": "Survey of Chemistry II",
      "lccns": [
-      "CCEM 1103"
+      "CCEM 1103",
+      "CCEM 1113"
      ]
     },
     {
@@ -2540,10 +2596,347 @@
      ]
     },
     {
+     "code": "CHEM 417",
+     "title": "Biochemistry II",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
      "code": "CHEM 417G",
      "title": "Biochemistry II",
      "lccns": [
       "CBIO 4413"
+     ]
+    },
+    {
+     "code": "CJUS 101",
+     "title": "Introduction to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "CJUS 203",
+     "title": "Introduction to Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "code": "CJUS 204",
+     "title": "Judicial Process",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "code": "CJUS 205",
+     "title": "Introduction to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "CMCN 100",
+     "title": "Fundamentals of Public Speaking",
+     "lccns": [
+      "CCOM 2113",
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "CMCN 170",
+     "title": "Intro to Mass Media",
+     "lccns": [
+      "CCOM 1113"
+     ]
+    },
+    {
+     "code": "CMCN 202",
+     "title": "Argumentation",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "CMCN 210",
+     "title": "Introduction to Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "CMCN 310",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "ECON 201",
+     "title": "Principles of Microeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 202",
+     "title": "Principles of Macroeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 320",
+     "title": "Intermediate Macroeconomics",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "ENGL 101",
+     "title": "Introduction to Academic Writing",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 102",
+     "title": "Writing and Research About Culture",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 103",
+     "title": "Foundations of Academic Writing",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 201",
+     "title": "British Literature from the Medieval Period to 1800",
+     "lccns": [
+      "CENL 2103"
+     ]
+    },
+    {
+     "code": "ENGL 202",
+     "title": "British Literature from 1800 to the Present",
+     "lccns": [
+      "CENL 2113"
+     ]
+    },
+    {
+     "code": "ENGL 203",
+     "title": "World Literature I",
+     "lccns": [
+      "CENL 2203"
+     ]
+    },
+    {
+     "code": "ENGL 204",
+     "title": "World Literature II",
+     "lccns": [
+      "CENL 2213"
+     ]
+    },
+    {
+     "code": "ENGL 205",
+     "title": "American Literature to 1865",
+     "lccns": [
+      "CENL 2153"
+     ]
+    },
+    {
+     "code": "ENGL 206",
+     "title": "American Literature since 1865",
+     "lccns": [
+      "CENL 2163"
+     ]
+    },
+    {
+     "code": "ENGL 210",
+     "title": "Literary Genres",
+     "lccns": [
+      "CENL 2303",
+      "CENL 2313"
+     ]
+    },
+    {
+     "code": "ENGL 211",
+     "title": "Thematic Approaches to Literature",
+     "lccns": [
+      "CENL 2203",
+      "CENL 2213",
+      "CENL 2403",
+      "CENL 2413",
+      "CENL 2123",
+      "CENL 2173",
+      "CENL 2223",
+      "CENL 2323",
+      "CENL 2503"
+     ]
+    },
+    {
+     "code": "ENGL 223",
+     "title": "Creative Writing",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENVS 100",
+     "title": "Introduction to Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "FNAN 230",
+     "title": "Intro to Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "FNAN 300",
+     "title": "Advanced Topics in Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FNAN 320",
+     "title": "Money and Banking (Upper Level)",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "FREN 101",
+     "title": "Elementary French I",
+     "lccns": [
+      "CFRN 1014",
+      "CFRN 1013"
+     ]
+    },
+    {
+     "code": "FREN 102",
+     "title": "Elementary French II",
+     "lccns": [
+      "CFRN 1023"
+     ]
+    },
+    {
+     "code": "FREN 201",
+     "title": "Intermediate French I",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 202",
+     "title": "Intermediate French II",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 103",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOG 104",
+     "title": "Physical Geography",
+     "lccns": [
+      "CGRG 2213"
+     ]
+    },
+    {
+     "code": "GEOG 201",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GEOG 380",
+     "title": "Intro to GIS",
+     "lccns": [
+      "CGRG 2313"
+     ]
+    },
+    {
+     "code": "GEOL 107",
+     "title": "Physical Geology Laboratory",
+     "lccns": [
+      "CGEO 1101"
+     ]
+    },
+    {
+     "code": "GEOL 108",
+     "title": "Historical Geology Laboratory",
+     "lccns": [
+      "CGEO 1111"
+     ]
+    },
+    {
+     "code": "GEOL 111",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103",
+      "CGES 1101",
+      "CGES 1103"
+     ]
+    },
+    {
+     "code": "GEOL 112",
+     "title": "Historical Geology",
+     "lccns": [
+      "CGEO 1113",
+      "CGES 1111",
+      "CGES 1113"
+     ]
+    },
+    {
+     "code": "GEOL 355",
+     "title": "Environmental Geology",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "GERM 101",
+     "title": "Elementary German I: 3 credit hours",
+     "lccns": [
+      "CGRM 1013"
+     ]
+    },
+    {
+     "code": "GERM 102",
+     "title": "Elementary German II: 3 credit hours",
+     "lccns": [
+      "CGRM 1023"
+     ]
+    },
+    {
+     "code": "GERM 201",
+     "title": "Intermediate German I: 3 credit hours",
+     "lccns": [
+      "CGRM 2013"
+     ]
+    },
+    {
+     "code": "GERM 202",
+     "title": "Intermediate German II: 3 credit hours",
+     "lccns": [
+      "CGRM 2023"
      ]
     },
     {
@@ -2582,87 +2975,269 @@
      ]
     },
     {
-     "code": "PSYC 110",
-     "title": "Introduction to Psychology",
+     "code": "HIST 355",
+     "title": "African-American History",
      "lccns": [
-      "CPSY 2013"
+      "CHIS 2103"
      ]
     },
     {
-     "code": "PSYC 220",
-     "title": "Educational Psychology",
+     "code": "HUMA 101",
+     "title": "Intro to Humanities I",
      "lccns": [
-      "CPSY 2613"
+      "CHUM 2113"
      ]
     },
     {
-     "code": "SOCI 100",
-     "title": "General Sociology",
+     "code": "HUMA 102",
+     "title": "Introduction to Humanities",
      "lccns": [
-      "CSOC 2013"
+      "CHUM 2013"
      ]
     },
     {
-     "code": "SOCI 241",
-     "title": "Contemporary Social Problems",
+     "code": "HUMA 103",
+     "title": "Intro to Humanities II",
      "lccns": [
-      "CSOC 2113"
+      "CHUM 2123"
      ]
     },
     {
-     "code": "SOCI 411G",
-     "title": "Sociological Theory",
+     "code": "INFX 205",
+     "title": "Computer Applications (Business)",
      "lccns": [
-      "CSOC 3013"
+      "CBUS 2203"
      ]
     },
     {
-     "code": "CMCN 100",
-     "title": "Fundamentals of Public Speaking",
+     "code": "IPHE 200",
+     "title": "Nutrition",
      "lccns": [
-      "CCOM 2113"
+      "CBIO 2703"
      ]
     },
     {
-     "code": "CMCN 210",
-     "title": "Introduction to Communication",
+     "code": "LATN 101",
+     "title": "Elementary Latin I: 3 credit hours",
      "lccns": [
-      "CCOM 2213"
+      "CLAN 1013"
      ]
     },
     {
-     "code": "POLS 110",
-     "title": "U.S. Government",
+     "code": "LATN 102",
+     "title": "Elementary Latin II: 3 credit hours",
      "lccns": [
-      "CPOL 2013"
+      "CLAN 1023"
      ]
     },
     {
-     "code": "POLS 220",
-     "title": "World Politics",
+     "code": "LATN 201",
+     "title": "Intermediate Latin I: 3 credit hours",
      "lccns": [
-      "CPOL 2213"
+      "CLAN 2013"
      ]
     },
     {
-     "code": "ECON 201",
-     "title": "Principles of Microeconomics",
+     "code": "LATN 202",
+     "title": "Intermediate Latin II: 3 credit hours",
      "lccns": [
-      "CECN 2213"
+      "CLAN 2023"
      ]
     },
     {
-     "code": "ECON 202",
-     "title": "Principles of Macroeconomics",
+     "code": "MATH 102",
+     "title": "Contemporary Math",
      "lccns": [
-      "CECN 2223"
+      "CMAT 1103"
      ]
     },
     {
-     "code": "ECON 320",
-     "title": "Intermediate Macroeconomics",
+     "code": "MATH 103",
+     "title": "Applied Mathematics",
      "lccns": [
-      "CECN 3113"
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 105",
+     "title": "Applied College Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 109",
+     "title": "Pre-calculus Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 110",
+     "title": "Pre-calculus Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 117",
+     "title": "Math for Elementary Teachers I",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 143",
+     "title": "Business Calculus",
+     "lccns": [
+      "CMAT 1233"
+     ]
+    },
+    {
+     "code": "MATH 217",
+     "title": "Geometry for Elementary Teachers",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MATH 250",
+     "title": "Survey of Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 270",
+     "title": "Calculus I",
+     "lccns": [
+      "CMAT 2114"
+     ]
+    },
+    {
+     "code": "MATH 301",
+     "title": "Calculus II",
+     "lccns": [
+      "CMAT 2124"
+     ]
+    },
+    {
+     "code": "MATH 302",
+     "title": "Calculus III",
+     "lccns": [
+      "CMAT 2133"
+     ]
+    },
+    {
+     "code": "MGMT 201",
+     "title": "Intro to Management",
+     "lccns": [
+      "CMGM 1003"
+     ]
+    },
+    {
+     "code": "MGMT 300",
+     "title": "Principles of Management",
+     "lccns": [
+      "CMGM 2103"
+     ]
+    },
+    {
+     "code": "MGMT 310",
+     "title": "Management Information Systems",
+     "lccns": [
+      "CMGM 2303"
+     ]
+    },
+    {
+     "code": "MGMT 320",
+     "title": "Human Behavior in Organizations",
+     "lccns": [
+      "CMGM 2013"
+     ]
+    },
+    {
+     "code": "MGMT 335",
+     "title": "Human Resources Management",
+     "lccns": [
+      "CMGM 3013"
+     ]
+    },
+    {
+     "code": "MGMT 345",
+     "title": "International Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103"
+     ]
+    },
+    {
+     "code": "MGMT 410",
+     "title": "Production/Operations Management (Upper Level)",
+     "lccns": [
+      "CMGM 3003"
+     ]
+    },
+    {
+     "code": "MGMT 412",
+     "title": "Business Law/Environmental Analysis (Upper Level)",
+     "lccns": [
+      "CMGM 3203"
+     ]
+    },
+    {
+     "code": "MKTG 300",
+     "title": "Principles of Marketing",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MKTG 350",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "MKTG 357",
+     "title": "Personal Selling",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MTHS 102",
+     "title": "Contemporary Math",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MTHS 105",
+     "title": "Applied Mathematics",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MTHS 109",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MUS 105",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "MUS 108",
+     "title": "Music Theory I",
+     "lccns": [
+      "CMUS 1023"
      ]
     },
     {
@@ -2680,6 +3255,13 @@
      ]
     },
     {
+     "code": "PHIL 130",
+     "title": "Introduction to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
      "code": "PHIL 202",
      "title": "History of Western Philosophy",
      "lccns": [
@@ -2687,38 +3269,31 @@
      ]
     },
     {
-     "code": "GEOL 107",
-     "title": "Physical Geology Laboratory",
+     "code": "PHIL 230",
+     "title": "Ethics",
      "lccns": [
-      "CGEO 1101"
+      "CPHL 2013"
      ]
     },
     {
-     "code": "GEOL 108",
-     "title": "Historical Geology Laboratory",
+     "code": "PHIL 345",
+     "title": "Logic",
      "lccns": [
-      "CGEO 1111"
+      "CPHL 2113"
      ]
     },
     {
-     "code": "GEOL 111",
-     "title": "Physical Geology",
+     "code": "PHYS 101",
+     "title": "Intro to Physics",
      "lccns": [
-      "CGEO 1103"
+      "CPHY 1013"
      ]
     },
     {
-     "code": "GEOL 112",
-     "title": "Historical Geology",
+     "code": "PHYS 103",
+     "title": "General Physics Survey",
      "lccns": [
-      "CGEO 1113"
-     ]
-    },
-    {
-     "code": "GEOL 355",
-     "title": "Environmental Geology",
-     "lccns": [
-      "CEVS 1103"
+      "CPHY 1023"
      ]
     },
     {
@@ -2739,28 +3314,32 @@
      "code": "PHYS 201",
      "title": "Calculus-Based University Physics I",
      "lccns": [
-      "CPHY 2133"
+      "CPHY 2133",
+      "CPHY 2113"
      ]
     },
     {
      "code": "PHYS 202",
      "title": "Calculus-Based University Physics II",
      "lccns": [
-      "CPHY 2143"
+      "CPHY 2143",
+      "CPHY 2123"
      ]
     },
     {
      "code": "PHYS 207",
      "title": "General Physics I",
      "lccns": [
-      "CPHY 2113"
+      "CPHY 2113",
+      "CPHY 2111"
      ]
     },
     {
      "code": "PHYS 208",
      "title": "General Physics II",
      "lccns": [
-      "CPHY 2123"
+      "CPHY 2123",
+      "CPHY 2121"
      ]
     },
     {
@@ -2787,52 +3366,260 @@
      ]
     },
     {
-     "code": "FREN 101",
-     "title": "Elementary French I",
+     "code": "POLS 110",
+     "title": "U.S. Government",
      "lccns": [
-      "CFRN 1014"
+      "CPOL 2013"
      ]
     },
     {
-     "code": "FREN 102",
-     "title": "Elementary French II",
+     "code": "POLS 220",
+     "title": "World Politics",
      "lccns": [
-      "CFRN 1023"
+      "CPOL 2213",
+      "CPOL 2113"
      ]
     },
     {
-     "code": "FREN 201",
-     "title": "Intermediate French I",
+     "code": "POLS 300",
+     "title": "American Politics",
      "lccns": [
-      "CFRN 2013"
+      "CPOL 2213"
      ]
     },
     {
-     "code": "FREN 202",
-     "title": "Intermediate French II",
+     "code": "PSYC 110",
+     "title": "Introduction to Psychology",
      "lccns": [
-      "CFRN 2023"
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 210",
+     "title": "Introduction to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 220",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "PSYC 250",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213"
+     ]
+    },
+    {
+     "code": "PSYC 310",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 311",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "PSYC 330",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "QMET 251",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "SOCI 100",
+     "title": "General Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOCI 241",
+     "title": "Contemporary Social Problems",
+     "lccns": [
+      "CSOC 2113",
+      "CSOC 2213"
+     ]
+    },
+    {
+     "code": "SOCI 260",
+     "title": "Contemporary Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOCI 310",
+     "title": "Social Statistics",
+     "lccns": [
+      "CSOC 2313"
+     ]
+    },
+    {
+     "code": "SOCI 320",
+     "title": "Social Psychology",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SOCI 335",
+     "title": "Race & Ethnic Relations (Upper Level)",
+     "lccns": [
+      "CSOC 3013"
+     ]
+    },
+    {
+     "code": "SOCI 410",
+     "title": "Sociology of Deviance (Upper Level)",
+     "lccns": [
+      "CSOC 3113"
+     ]
+    },
+    {
+     "code": "SOCI 411G",
+     "title": "Sociological Theory",
+     "lccns": [
+      "CSOC 3013"
      ]
     },
     {
      "code": "SPAN 101",
      "title": "Elementary Spanish I",
      "lccns": [
-      "CSPN 1014"
+      "CSPN 1014",
+      "CSPA 1013"
      ]
     },
     {
      "code": "SPAN 102",
      "title": "Elementary Spanish II",
      "lccns": [
-      "CSPN 1023"
+      "CSPN 1023",
+      "CSPA 1023"
      ]
     },
     {
      "code": "SPAN 201",
      "title": "Intermediate Spanish I",
      "lccns": [
-      "CSPN 2013"
+      "CSPN 2013",
+      "CSPA 2013"
+     ]
+    },
+    {
+     "code": "SPAN 202",
+     "title": "Intermediate Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPA 2023"
+     ]
+    },
+    {
+     "code": "STAT 214",
+     "title": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "THEA 161",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THEA 251",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THEA 260",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    },
+    {
+     "code": "THEA 261",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THEA 262",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    },
+    {
+     "code": "VIAR 101",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "VIAR 102",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "VIAR 111",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "VIAR 120",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "VIAR 121",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "VIAR 122",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "VIAR 211",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
      ]
     }
    ]
@@ -3349,6 +4136,6336 @@
      "title": "Intro to the Arts",
      "lccns": [
       "CART 1013"
+     ]
+    }
+   ]
+  },
+  "Baton Rouge Community College": {
+   "catalog": "Board of Regents Articulation Matrix, 2025-26",
+   "courses": [
+    {
+     "code": "ACCT 2113",
+     "title": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "code": "ACCT 2213",
+     "title": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "code": "ACCT 2313",
+     "title": "Principles of Accounting Part I",
+     "lccns": [
+      "CACC 2313"
+     ]
+    },
+    {
+     "code": "ACCT 2323",
+     "title": "Principles of Accounting Part II",
+     "lccns": [
+      "CACC 2323"
+     ]
+    },
+    {
+     "code": "ACCT 2413",
+     "title": "Computerized Accounting",
+     "lccns": [
+      "CACC 2413"
+     ]
+    },
+    {
+     "code": "ACCT 2513",
+     "title": "Payroll Accounting",
+     "lccns": [
+      "CACC 2513"
+     ]
+    },
+    {
+     "code": "ACCT 2613",
+     "title": "Tax Accounting - Individuals",
+     "lccns": [
+      "CACC 2613"
+     ]
+    },
+    {
+     "code": "ANTH 1013",
+     "title": "Intro to Anthropology",
+     "lccns": [
+      "CATR 1013"
+     ]
+    },
+    {
+     "code": "ANTH 2013",
+     "title": "Cultural Anthroplogy",
+     "lccns": [
+      "CATR 2013"
+     ]
+    },
+    {
+     "code": "ARTS 1023",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "ARTS 1113",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "ARTS 1123",
+     "title": "Art Structure/3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "ARTS 2103",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "ARTS 2113",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "ARTS 2203",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "ARTS 2213",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
+     ]
+    },
+    {
+     "code": "ASTR 1103",
+     "title": "Astronomy/The Solar System",
+     "lccns": [
+      "CAST 1103",
+      "CAST 1113"
+     ]
+    },
+    {
+     "code": "BIOL 1011",
+     "title": "General Biology I (Science Majors) Lecture",
+     "lccns": [
+      "CBIO 1011"
+     ]
+    },
+    {
+     "code": "BIOL 1013",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 1013"
+     ]
+    },
+    {
+     "code": "BIOL 1021",
+     "title": "General Biology II (Science Majors) Lecture",
+     "lccns": [
+      "CBIO 1021"
+     ]
+    },
+    {
+     "code": "BIOL 1023",
+     "title": "General Biology II (Science Majors)",
+     "lccns": [
+      "CBIO 1023"
+     ]
+    },
+    {
+     "code": "BIOL 1103",
+     "title": "General Biology I (Non-Science Majors)",
+     "lccns": [
+      "CBIO 1103"
+     ]
+    },
+    {
+     "code": "BIOL 1203",
+     "title": "Human Biology",
+     "lccns": [
+      "CBIO 1203"
+     ]
+    },
+    {
+     "code": "BIOL 2043",
+     "title": "General Microbiology",
+     "lccns": [
+      "CBIO 1113"
+     ]
+    },
+    {
+     "code": "BIOL 2211",
+     "title": "Human Anatomy & Physiology I Lab",
+     "lccns": [
+      "CBIO 2211"
+     ]
+    },
+    {
+     "code": "BIOL 2213",
+     "title": "Human Anatomy & Physiology I",
+     "lccns": [
+      "CBIO 2213"
+     ]
+    },
+    {
+     "code": "BIOL 2221",
+     "title": "Human Anatomy & Physiology II Lab",
+     "lccns": [
+      "CBIO 2221"
+     ]
+    },
+    {
+     "code": "BIOL 2223",
+     "title": "Human Anatomy & Physiology II",
+     "lccns": [
+      "CBIO 2223"
+     ]
+    },
+    {
+     "code": "BIOL 2313",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 2313"
+     ]
+    },
+    {
+     "code": "BIOL 2611",
+     "title": "Principles of Microbiology Lab",
+     "lccns": [
+      "CBIO 2611"
+     ]
+    },
+    {
+     "code": "BIOL 2613",
+     "title": "Principles of Microbiology",
+     "lccns": [
+      "CBIO 2613"
+     ]
+    },
+    {
+     "code": "BIOL 2903",
+     "title": "Marine Biology",
+     "lccns": [
+      "CBIO 2903"
+     ]
+    },
+    {
+     "code": "BIOL 3103",
+     "title": "Genetics",
+     "lccns": [
+      "CBIO 3103"
+     ]
+    },
+    {
+     "code": "BIOL 3113",
+     "title": "Ecology",
+     "lccns": [
+      "CBIO 3113"
+     ]
+    },
+    {
+     "code": "BIOL 3333",
+     "title": "Botany",
+     "lccns": [
+      "CBIO 3333"
+     ]
+    },
+    {
+     "code": "BUSN 1003",
+     "title": "General/Intro to Business Administration",
+     "lccns": [
+      "CBUS 1003"
+     ]
+    },
+    {
+     "code": "BUSN 2003",
+     "title": "Foundations of Marketing (Lower Level)",
+     "lccns": [
+      "CMKT 2003"
+     ]
+    },
+    {
+     "code": "BUSN 2103",
+     "title": "Business Law",
+     "lccns": [
+      "CBUS 2103"
+     ]
+    },
+    {
+     "code": "CHEM 1003",
+     "title": "General, Organic & Biochemistry",
+     "lccns": [
+      "CCEM 1003"
+     ]
+    },
+    {
+     "code": "CHEM 1121",
+     "title": "Chemistry I (Science Majors) Lab",
+     "lccns": [
+      "CCEM 1121"
+     ]
+    },
+    {
+     "code": "CHEM 1123",
+     "title": "Chemistry I (Science Majors)",
+     "lccns": [
+      "CCEM 1123"
+     ]
+    },
+    {
+     "code": "CHEM 1131",
+     "title": "Chemistry II (Science Majors) Lab",
+     "lccns": [
+      "CCEM 1131"
+     ]
+    },
+    {
+     "code": "CHEM 1133",
+     "title": "Chemistry II (Science Majors)",
+     "lccns": [
+      "CCEM 1133"
+     ]
+    },
+    {
+     "code": "CHEM 2211",
+     "title": "Organic Chemistry I Lab",
+     "lccns": [
+      "CCEM 2211"
+     ]
+    },
+    {
+     "code": "CHEM 2213",
+     "title": "Organic Chemistry I",
+     "lccns": [
+      "CCEM 2213"
+     ]
+    },
+    {
+     "code": "CHEM 2221",
+     "title": "Organic Chemistry II Lab",
+     "lccns": [
+      "CCEM 2221"
+     ]
+    },
+    {
+     "code": "CHEM 2223",
+     "title": "Organic Chemistry II",
+     "lccns": [
+      "CCEM 2223"
+     ]
+    },
+    {
+     "code": "CJUS 1013",
+     "title": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "CJUS 2013",
+     "title": "Intro to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "CJUS 2213",
+     "title": "Criminal Law",
+     "lccns": [
+      "CCRJ 2213"
+     ]
+    },
+    {
+     "code": "CJUS 2313",
+     "title": "Intro to Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "code": "CJUS 2413",
+     "title": "Juvenile Justice",
+     "lccns": [
+      "CCRJ 2413"
+     ]
+    },
+    {
+     "code": "CJUS 2513",
+     "title": "Criminology",
+     "lccns": [
+      "CCRJ 2113"
+     ]
+    },
+    {
+     "code": "CJUS 2613",
+     "title": "Judicial Process",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "code": "CSCI 1933",
+     "title": "Intro to Programming",
+     "lccns": [
+      "CBUS 2213"
+     ]
+    },
+    {
+     "code": "CSCI 2203",
+     "title": "Computer Applications",
+     "lccns": [
+      "CBUS 2203"
+     ]
+    },
+    {
+     "code": "CULN 1123",
+     "title": "Survey of Hospitality and Tourism",
+     "lccns": [
+      "CHTM 1003"
+     ]
+    },
+    {
+     "code": "CULN 1133",
+     "title": "Food Service Layout, Equipment, Safety and Sanitation",
+     "lccns": [
+      "CULA 2053",
+      "CHTM 2053"
+     ]
+    },
+    {
+     "code": "CULN 1143",
+     "title": "Introduction to Culinary Arts",
+     "lccns": [
+      "CULA 1013"
+     ]
+    },
+    {
+     "code": "ECON 2113",
+     "title": "Economic Principles",
+     "lccns": [
+      "CECN 2113"
+     ]
+    },
+    {
+     "code": "ECON 2213",
+     "title": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 2223",
+     "title": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 2313",
+     "title": "Money, Banking & the Economy (Lower Level)",
+     "lccns": [
+      "CECN 2313"
+     ]
+    },
+    {
+     "code": "ENGL 1013",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 1023",
+     "title": "English Composition II",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 2023",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2033",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2053",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2093",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2123",
+     "title": "Major British Writers",
+     "lccns": [
+      "CENL 2123"
+     ]
+    },
+    {
+     "code": "ENGL 2173",
+     "title": "Major American Writers",
+     "lccns": [
+      "CENL 2173"
+     ]
+    },
+    {
+     "code": "ENGL 2223",
+     "title": "Major World Writers",
+     "lccns": [
+      "CENL 2223"
+     ]
+    },
+    {
+     "code": "ENGL 2303",
+     "title": "Intro to Fiction",
+     "lccns": [
+      "CENL 2303"
+     ]
+    },
+    {
+     "code": "ENGL 2313",
+     "title": "Intro to Poetry and/or Drama",
+     "lccns": [
+      "CENL 2313"
+     ]
+    },
+    {
+     "code": "ENGL 2323",
+     "title": "Intro to Literature",
+     "lccns": [
+      "CENL 2323"
+     ]
+    },
+    {
+     "code": "ENGL 2403",
+     "title": "Intro to African American Literature",
+     "lccns": [
+      "CENL 2403"
+     ]
+    },
+    {
+     "code": "ENGL 2503",
+     "title": "Mythology or Folklore",
+     "lccns": [
+      "CENL 2503"
+     ]
+    },
+    {
+     "code": "ENGL 2513",
+     "title": "Foundations of Professional Writing (Lower Level)",
+     "lccns": [
+      "CENL 2513"
+     ]
+    },
+    {
+     "code": "ENSC 1103",
+     "title": "Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "FREN 1013",
+     "title": "Elementary French I (3 credit hours)",
+     "lccns": [
+      "CFRN 1013",
+      "CFRN 1014"
+     ]
+    },
+    {
+     "code": "FREN 1023",
+     "title": "Elementary French II (3 credit hours)",
+     "lccns": [
+      "CFRN 1023",
+      "CFRN 1024"
+     ]
+    },
+    {
+     "code": "FREN 2013",
+     "title": "Intermediate French I (3 credit hours)",
+     "lccns": [
+      "CFRN 2013",
+      "CFRN 2014"
+     ]
+    },
+    {
+     "code": "FREN 2023",
+     "title": "Intermediate French II (3 credit hours)",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 2113",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOL 1103",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103"
+     ]
+    },
+    {
+     "code": "HIST 1113",
+     "title": "World Civilizations I",
+     "lccns": [
+      "CHIS 1113"
+     ]
+    },
+    {
+     "code": "HIST 1123",
+     "title": "World Civilizations II",
+     "lccns": [
+      "CHIS 1123"
+     ]
+    },
+    {
+     "code": "HIST 2013",
+     "title": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "code": "HIST 2023",
+     "title": "American History II",
+     "lccns": [
+      "CHIS 2023"
+     ]
+    },
+    {
+     "code": "HIST 2033",
+     "title": "Louisiana History",
+     "lccns": [
+      "CHIS 2033"
+     ]
+    },
+    {
+     "code": "HIST 2103",
+     "title": "African-American History",
+     "lccns": [
+      "CHIS 2103"
+     ]
+    },
+    {
+     "code": "HLSC 1103",
+     "title": "Medical Terminology",
+     "lccns": [
+      "CHLT 1103"
+     ]
+    },
+    {
+     "code": "HUMN 2013",
+     "title": "Africa and the Middle East",
+     "lccns": [
+      "CHUM 2013"
+     ]
+    },
+    {
+     "code": "HUMN 2103",
+     "title": "Mythology or Folklore",
+     "lccns": [
+      "CENL 2503"
+     ]
+    },
+    {
+     "code": "HUMN 2213",
+     "title": "Humanities I",
+     "lccns": [
+      "CHUM 2213"
+     ]
+    },
+    {
+     "code": "HUMN 2223",
+     "title": "Humanities II",
+     "lccns": [
+      "CHUM 2223"
+     ]
+    },
+    {
+     "code": "MANG 2103",
+     "title": "Principles of Management (Lower Level)",
+     "lccns": [
+      "CMGM 2013"
+     ]
+    },
+    {
+     "code": "MANG 2213",
+     "title": "Human Resource Mgt (Lower Level)",
+     "lccns": [
+      "CMGM 2213"
+     ]
+    },
+    {
+     "code": "MANG 2313",
+     "title": "Small Business Mgt (Lower Level)",
+     "lccns": [
+      "CMGM 2313"
+     ]
+    },
+    {
+     "code": "MANG 2413",
+     "title": "Intro to Entrepreneurship (Lower Level)",
+     "lccns": [
+      "CMGM 2413"
+     ]
+    },
+    {
+     "code": "MATH 1003",
+     "title": "Nature of Mathematics",
+     "lccns": [
+      "CMAT 1204"
+     ]
+    },
+    {
+     "code": "MATH 1103",
+     "title": "Contemporary Mathematics",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MATH 1203",
+     "title": "Applied Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 1213",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1223",
+     "title": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 1235",
+     "title": "College Algebra and Trigonometry (5 credit hours)",
+     "lccns": [
+      "CMAT 1235",
+      "CMAT 1236"
+     ]
+    },
+    {
+     "code": "MATH 1303",
+     "title": "Intro to Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "MATH 1313",
+     "title": "Finite Mathematics",
+     "lccns": [
+      "CMAT 1313"
+     ]
+    },
+    {
+     "code": "MATH 1673",
+     "title": "Mathematics for Elementary Teachers",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 1683",
+     "title": "Geometry for Elementary Teachers",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MATH 2103",
+     "title": "Applied Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 2115",
+     "title": "Calculus I (5 credit hours)",
+     "lccns": [
+      "CMAT 2115",
+      "CMAT 2116"
+     ]
+    },
+    {
+     "code": "MATH 2125",
+     "title": "Calculus II (5 credit hours)",
+     "lccns": [
+      "CMAT 2125"
+     ]
+    },
+    {
+     "code": "MATH 2134",
+     "title": "Calculus III",
+     "lccns": [
+      "CMAT 2133"
+     ]
+    },
+    {
+     "code": "MATH 2303",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "MATH 2313",
+     "title": "Business Statistical Methods II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "code": "MUSC 1013",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "MUSC 1023",
+     "title": "Jazz Appreciation",
+     "lccns": [
+      "CMUS 1023"
+     ]
+    },
+    {
+     "code": "PHIL 1013",
+     "title": "Intro to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
+     "code": "PHIL 2013",
+     "title": "Intro to Ethics",
+     "lccns": [
+      "CPHL 2013"
+     ]
+    },
+    {
+     "code": "PHIL 2113",
+     "title": "Intro to Logic",
+     "lccns": [
+      "CPHL 2113"
+     ]
+    },
+    {
+     "code": "PHIL 2283",
+     "title": "World Religions",
+     "lccns": [
+      "CREL 2213"
+     ]
+    },
+    {
+     "code": "PHSC 1023",
+     "title": "Physical Science I",
+     "lccns": [
+      "CPHY 1023"
+     ]
+    },
+    {
+     "code": "PHSC 1033",
+     "title": "Physical Science II",
+     "lccns": [
+      "CPHY 1033"
+     ]
+    },
+    {
+     "code": "PHYS 1013",
+     "title": "Intro to the Concepts in Physics",
+     "lccns": [
+      "CPHY 1013"
+     ]
+    },
+    {
+     "code": "PHYS 2111",
+     "title": "Physics I Lab (Algebra/Trigonometry)",
+     "lccns": [
+      "CPHY 2111",
+      "CPHY 2131"
+     ]
+    },
+    {
+     "code": "PHYS 2113",
+     "title": "Physics I (Algebra/Trigonometry)",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "code": "PHYS 2121",
+     "title": "Physics II Lab (Algebra/Trigonometry)",
+     "lccns": [
+      "CPHY 2121",
+      "CPHY 2141"
+     ]
+    },
+    {
+     "code": "PHYS 2123",
+     "title": "Physics II (Algebra/Trigonometry)",
+     "lccns": [
+      "CPHY 2123"
+     ]
+    },
+    {
+     "code": "PHYS 2133",
+     "title": "Physics I (Calculus)",
+     "lccns": [
+      "CPHY 2133"
+     ]
+    },
+    {
+     "code": "PHYS 2143",
+     "title": "Physics II (Calculus)",
+     "lccns": [
+      "CPHY 2143"
+     ]
+    },
+    {
+     "code": "PHYS 2153",
+     "title": "Physics III (Calculus)",
+     "lccns": [
+      "CPHY 2153"
+     ]
+    },
+    {
+     "code": "POLI 2013",
+     "title": "Intro to American Government",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "code": "POLI 2213",
+     "title": "Intro to Comparative Government",
+     "lccns": [
+      "CPOL 2213"
+     ]
+    },
+    {
+     "code": "PSYC 2013",
+     "title": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 2083",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213"
+     ]
+    },
+    {
+     "code": "PSYC 2113",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 2313",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "PSYC 2413",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "PSYC 2613",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "SOCL 2013",
+     "title": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOCL 2113",
+     "title": "Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOCL 2213",
+     "title": "Marriage and Family",
+     "lccns": [
+      "CSOC 2213"
+     ]
+    },
+    {
+     "code": "SOCL 2413",
+     "title": "Race, Class & Ethnicity",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SPAN 1013",
+     "title": "Elementary Spanish I (3 credit hours)",
+     "lccns": [
+      "CSPN 1013",
+      "CSPN 1014"
+     ]
+    },
+    {
+     "code": "SPAN 1023",
+     "title": "Elementary Spanish II (3 credit hours)",
+     "lccns": [
+      "CSPN 1023",
+      "CSPN 1024"
+     ]
+    },
+    {
+     "code": "SPAN 2013",
+     "title": "Intermediate Spanish I (3 credit hours)",
+     "lccns": [
+      "CSPN 2013",
+      "CSPN 2014"
+     ]
+    },
+    {
+     "code": "SPAN 2023",
+     "title": "Intermediate Spanish II (3 credit hours)",
+     "lccns": [
+      "CSPN 2023"
+     ]
+    },
+    {
+     "code": "SPCH 1013",
+     "title": "Fundamentals of Communication",
+     "lccns": [
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "SPCH 2013",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "SPCH 2113",
+     "title": "Argumentation and Debate",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "SPCH 2213",
+     "title": "Interpersonal Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "SPCH 2313",
+     "title": "Business & Professional Communication",
+     "lccns": [
+      "CCOM 2313"
+     ]
+    },
+    {
+     "code": "TEAC 2033",
+     "title": "Foundations in Multicultural Education",
+     "lccns": [
+      "CEDU 1013"
+     ]
+    },
+    {
+     "code": "THTR 1013",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THTR 1023",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THTR 2103",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THTR 2113",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    },
+    {
+     "code": "THTR 2203",
+     "title": "Voice for the Stage",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    }
+   ]
+  },
+  "Southeastern Louisiana University": {
+   "catalog": "Board of Regents Articulation Matrix, 2025-26",
+   "courses": [
+    {
+     "code": "ACCT 2000",
+     "title": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "code": "ACCT 2250",
+     "title": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "code": "ACCT 3310",
+     "title": "Cost Accounting (Upper Level)",
+     "lccns": [
+      "CACC 3113"
+     ]
+    },
+    {
+     "code": "ACCT 3410",
+     "title": "Tax I (Upper Level)",
+     "lccns": [
+      "CACC 3213"
+     ]
+    },
+    {
+     "code": "ACCT 4070",
+     "title": "Auditing (Upper Level)",
+     "lccns": [
+      "CACC 3313"
+     ]
+    },
+    {
+     "code": "ACCT 4420",
+     "title": "Tax II (Upper Level)",
+     "lccns": [
+      "CACC 3223"
+     ]
+    },
+    {
+     "code": "ANTH 1010",
+     "title": "Cultural Anthroplogy",
+     "lccns": [
+      "CATR 2013"
+     ]
+    },
+    {
+     "code": "ANTH 1100",
+     "title": "Biological Anthropology",
+     "lccns": [
+      "CATR 2023"
+     ]
+    },
+    {
+     "code": "ANTH 4110",
+     "title": "Race, Class & Ethnicity",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "ART 1010",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "ART 1050",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "ART 1060",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "ART 1110",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "ART 1120",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
+     ]
+    },
+    {
+     "code": "ART 1510",
+     "title": "Color Theory",
+     "lccns": [
+      "CART 2303"
+     ]
+    },
+    {
+     "code": "ART 1520",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "ART 1530",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "ART 1540",
+     "title": "Color Theory",
+     "lccns": [
+      "CART 2303"
+     ]
+    },
+    {
+     "code": "BIOL 1060",
+     "title": "General Biology I",
+     "lccns": [
+      "CBIO 1013"
+     ]
+    },
+    {
+     "code": "BIOL 1070",
+     "title": "General Biology II",
+     "lccns": [
+      "CBIO 1023"
+     ]
+    },
+    {
+     "code": "BIOL 1510",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 1033"
+     ]
+    },
+    {
+     "code": "BIOL 1520",
+     "title": "General Biology I Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1031"
+     ]
+    },
+    {
+     "code": "BIOL 1530",
+     "title": "General Biology II (Science Majors)",
+     "lccns": [
+      "CBIO 1043"
+     ]
+    },
+    {
+     "code": "BIOL 1540",
+     "title": "General Biology II Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1041"
+     ]
+    },
+    {
+     "code": "BIOL 2000",
+     "title": "Cell Biology",
+     "lccns": [
+      "CBIO 2133"
+     ]
+    },
+    {
+     "code": "BIOL 2050",
+     "title": "General Microbiology (Science Majors)",
+     "lccns": [
+      "CBIO 2123"
+     ]
+    },
+    {
+     "code": "BIOL 2070",
+     "title": "General Microbiology Lab (Science Majors)",
+     "lccns": [
+      "CBIO 2121"
+     ]
+    },
+    {
+     "code": "BIOL 2080",
+     "title": "Botany I Lec + Lab",
+     "lccns": [
+      "CBIO 2314"
+     ]
+    },
+    {
+     "code": "BIOL 2230",
+     "title": "Microbiology for Nursing & Allied Health",
+     "lccns": [
+      "CBIO 2113"
+     ]
+    },
+    {
+     "code": "BIOL 2240",
+     "title": "Microbiology Lab for Nursing/Allied Health",
+     "lccns": [
+      "CBIO 2111"
+     ]
+    },
+    {
+     "code": "BIOL 2500",
+     "title": "Human Anatomy and Physiology I",
+     "lccns": [
+      "CBIO 2213"
+     ]
+    },
+    {
+     "code": "BIOL 2510",
+     "title": "Human Anatomy and Physiology II",
+     "lccns": [
+      "CBIO 2223"
+     ]
+    },
+    {
+     "code": "BIOL 2520",
+     "title": "Human Anatomy and Physiology I Lab",
+     "lccns": [
+      "CBIO 2211"
+     ]
+    },
+    {
+     "code": "BIOL 2530",
+     "title": "Human Anatomy and Physiology II Lab",
+     "lccns": [
+      "CBIO 2221"
+     ]
+    },
+    {
+     "code": "BIOL 2810",
+     "title": "Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "BIOL 3020",
+     "title": "Comparative Anatomy Lec + Lab",
+     "lccns": [
+      "CBIO 2234",
+      "CBIO 3234"
+     ]
+    },
+    {
+     "code": "BIOL 3120",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513",
+      "CBIO 3523"
+     ]
+    },
+    {
+     "code": "BIOL 3140",
+     "title": "Intro to Genetics Lab",
+     "lccns": [
+      "CBIO 2511",
+      "CBIO 3521"
+     ]
+    },
+    {
+     "code": "BIOL 3320",
+     "title": "Histology",
+     "lccns": [
+      "CBIO 3613"
+     ]
+    },
+    {
+     "code": "BIOL 3920",
+     "title": "Animal Physiology",
+     "lccns": [
+      "CBIO 3633"
+     ]
+    },
+    {
+     "code": "BIOL 3950",
+     "title": "Principles of Ecology (Upper Level)",
+     "lccns": [
+      "CECO 4123"
+     ]
+    },
+    {
+     "code": "BIOL 3970",
+     "title": "Principles of Ecology Lab (Upper Level)",
+     "lccns": [
+      "CECO 4121"
+     ]
+    },
+    {
+     "code": "BIOL 4050",
+     "title": "Evolutionary Biology",
+     "lccns": [
+      "CBIO 3643"
+     ]
+    },
+    {
+     "code": "BIOL 4090",
+     "title": "Entomology",
+     "lccns": [
+      "CBIO 3603"
+     ]
+    },
+    {
+     "code": "BIOL 4340",
+     "title": "Molecular Biol (Lec+Lab)",
+     "lccns": [
+      "CBIO 4534"
+     ]
+    },
+    {
+     "code": "BIOL 4360",
+     "title": "Pathogenic Microbiology",
+     "lccns": [
+      "CBIO 4543"
+     ]
+    },
+    {
+     "code": "BIOL 4410",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BIOL 4550",
+     "title": "Parasitology",
+     "lccns": [
+      "CBIO 3623"
+     ]
+    },
+    {
+     "code": "BIOL 4600",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BIOL 4630",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BIOL 4650",
+     "title": "Developmental Biology",
+     "lccns": [
+      "CBIO 4503"
+     ]
+    },
+    {
+     "code": "BIOL 4710",
+     "title": "Endocrinology",
+     "lccns": [
+      "CBIO 4513"
+     ]
+    },
+    {
+     "code": "BLAW 2310",
+     "title": "Legal Environment",
+     "lccns": [
+      "CBUS 2003",
+      "CBUS 2103"
+     ]
+    },
+    {
+     "code": "CHEM 1010",
+     "title": "Chemistry for Engineering Majors",
+     "lccns": [
+      "CCEM 1233",
+      "CCEM 2113"
+     ]
+    },
+    {
+     "code": "CHEM 1020",
+     "title": "Introductory Chemistry",
+     "lccns": [
+      "CCEM 1103",
+      "CCEM 1213"
+     ]
+    },
+    {
+     "code": "CHEM 1030",
+     "title": "Introductory Chemistry II",
+     "lccns": [
+      "CCEM 1113",
+      "CCEM 1223"
+     ]
+    },
+    {
+     "code": "CHEM 1230",
+     "title": "Organic Chemistry I",
+     "lccns": [
+      "CCEM 2123"
+     ]
+    },
+    {
+     "code": "CHEM 1240",
+     "title": "Organic Chemistry II",
+     "lccns": [
+      "CCEM 2133"
+     ]
+    },
+    {
+     "code": "CHEM 2010",
+     "title": "Quantitative Analysis",
+     "lccns": [
+      "CCEM 2303"
+     ]
+    },
+    {
+     "code": "CHEM 4810",
+     "title": "Biochemistry I (Upper Level)",
+     "lccns": [
+      "CBIO 3403"
+     ]
+    },
+    {
+     "code": "CHEM 4820",
+     "title": "Biochemistry II (Upper Level)",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
+     "code": "CJ 1010",
+     "title": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "CJ 2010",
+     "title": "Criminal Law",
+     "lccns": [
+      "CCRJ 2213"
+     ]
+    },
+    {
+     "code": "CJ 2020",
+     "title": "Judicial Process",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "code": "CJ 2040",
+     "title": "Intro to Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "code": "CJ 2050",
+     "title": "Intro to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "CJ 2140",
+     "title": "Juvenile Justice",
+     "lccns": [
+      "CCRJ 2413"
+     ]
+    },
+    {
+     "code": "CJ 2960",
+     "title": "Deviance",
+     "lccns": [
+      "CCRJ 2513",
+      "CSOC 2313"
+     ]
+    },
+    {
+     "code": "CLAB 1030",
+     "title": "Introductory Chemistry Lab",
+     "lccns": [
+      "CCEM 1101"
+     ]
+    },
+    {
+     "code": "CLAB 1210",
+     "title": "General Chemistry I Lab (Science Majors)",
+     "lccns": [
+      "CCEM 2201"
+     ]
+    },
+    {
+     "code": "CLAB 1220",
+     "title": "General Chemistry II Lab (Science Majors)",
+     "lccns": [
+      "CCEM 2211"
+     ]
+    },
+    {
+     "code": "CLAB 2010",
+     "title": "Quantitative Analysis Lab",
+     "lccns": [
+      "CCEM 2301"
+     ]
+    },
+    {
+     "code": "CLAB 2510",
+     "title": "Analytical Chemistry Lab",
+     "lccns": [
+      "CCEM 2241"
+     ]
+    },
+    {
+     "code": "CLAB 2610",
+     "title": "Organic Chemistry I Lab",
+     "lccns": [
+      "CCEM 2221"
+     ]
+    },
+    {
+     "code": "CLAB 2620",
+     "title": "Organic Chemistry II Lab",
+     "lccns": [
+      "CCEM 2231"
+     ]
+    },
+    {
+     "code": "CLAB 4850",
+     "title": "Biochemistry I Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3401"
+     ]
+    },
+    {
+     "code": "CLAB 4860",
+     "title": "Biochemistry II Lab (Upper Level)",
+     "lccns": [
+      "CBIO 4411"
+     ]
+    },
+    {
+     "code": "CMPS 1610",
+     "title": "Intro to Programming",
+     "lccns": [
+      "CBUS 2213",
+      "CCSC 1103"
+     ]
+    },
+    {
+     "code": "CMPS 2800",
+     "title": "Computer Science II",
+     "lccns": [
+      "CCSC 1203"
+     ]
+    },
+    {
+     "code": "COMM 2110",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "COMM 2130",
+     "title": "Argumentation and Debate",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "COMM 2150",
+     "title": "Interpersonal Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "COMM 4130",
+     "title": "Business & Professional Communication",
+     "lccns": [
+      "CCOM 2313"
+     ]
+    },
+    {
+     "code": "DNC 1000",
+     "title": "Dance Appreciation",
+     "lccns": [
+      "CDNC 1013"
+     ]
+    },
+    {
+     "code": "ECON 1020",
+     "title": "Economic Principles",
+     "lccns": [
+      "CECN 2113"
+     ]
+    },
+    {
+     "code": "ECON 2010",
+     "title": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 2020",
+     "title": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 3330",
+     "title": "Money, Banking & the Economy (Upper Level)",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "EDCI 1010",
+     "title": "Foundations in Multicultural Education",
+     "lccns": [
+      "CEDU 1013"
+     ]
+    },
+    {
+     "code": "EDCI 2040",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "ENGL 1010",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 101A",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 1020",
+     "title": "English Composition II",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 2290",
+     "title": "Intro to Women's Literature",
+     "lccns": [
+      "CENL 2413"
+     ]
+    },
+    {
+     "code": "ENGL 2300",
+     "title": "World Literature I",
+     "lccns": [
+      "CENL 2203",
+      "CENL 2213",
+      "CENL 2223"
+     ]
+    },
+    {
+     "code": "ENGL 2310",
+     "title": "British Literature I",
+     "lccns": [
+      "CENL 2103",
+      "CENL 2113",
+      "CENL 2123"
+     ]
+    },
+    {
+     "code": "ENGL 2320",
+     "title": "American Literature I",
+     "lccns": [
+      "CENL 2153",
+      "CENL 2163",
+      "CENL 2173"
+     ]
+    },
+    {
+     "code": "ENGL 2330",
+     "title": "Intro to African American Literature",
+     "lccns": [
+      "CENL 2403"
+     ]
+    },
+    {
+     "code": "ENGL 3250",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 3700",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 3710",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 3720",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 3800",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ESSC 1010",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103"
+     ]
+    },
+    {
+     "code": "ESSC 1020",
+     "title": "Astronomy/Stars & Galaxies",
+     "lccns": [
+      "CAST 1113"
+     ]
+    },
+    {
+     "code": "ESSL 1030",
+     "title": "Physical Geology Lab",
+     "lccns": [
+      "CGEO 1101"
+     ]
+    },
+    {
+     "code": "ET 2130",
+     "title": "Circuits I",
+     "lccns": [
+      "CENG 2253"
+     ]
+    },
+    {
+     "code": "ET 2140",
+     "title": "Circuits II",
+     "lccns": [
+      "CENG 2263"
+     ]
+    },
+    {
+     "code": "ET 2410",
+     "title": "Material Science",
+     "lccns": [
+      "CENG 2033"
+     ]
+    },
+    {
+     "code": "ET 2710",
+     "title": "Statics",
+     "lccns": [
+      "CENG 2013"
+     ]
+    },
+    {
+     "code": "ET 3710",
+     "title": "Dynamics",
+     "lccns": [
+      "CENG 2023"
+     ]
+    },
+    {
+     "code": "FIN 1230",
+     "title": "Personal Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "FIN 3810",
+     "title": "Principles of Business Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FREN 1010",
+     "title": "Elementary French I: 3 credit hours",
+     "lccns": [
+      "CFRN 1013"
+     ]
+    },
+    {
+     "code": "FREN 1020",
+     "title": "Elementary French II: 3 credit hours",
+     "lccns": [
+      "CFRN 1023"
+     ]
+    },
+    {
+     "code": "FREN 2010",
+     "title": "Intermediate French I: 3 credit hours",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 2020",
+     "title": "Intermediate French II: 3 credit hours",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 1410",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOG 1420",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOG 3090",
+     "title": "Physical Geography",
+     "lccns": [
+      "CGRG 2213"
+     ]
+    },
+    {
+     "code": "GEOG 3430",
+     "title": "Introduction to Geographic Information Systems",
+     "lccns": [
+      "CGRG 2313"
+     ]
+    },
+    {
+     "code": "GEOG 4100",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GERM 1010",
+     "title": "Elementary German I: 3 credit hours",
+     "lccns": [
+      "CGRM 1013"
+     ]
+    },
+    {
+     "code": "GERM 1020",
+     "title": "Elementary German II",
+     "lccns": [
+      "CGRM 1023"
+     ]
+    },
+    {
+     "code": "GERM 2010",
+     "title": "Intermediate German I",
+     "lccns": [
+      "CGRM 2013"
+     ]
+    },
+    {
+     "code": "GERM 2020",
+     "title": "Intermediate German II",
+     "lccns": [
+      "CGRM 2023"
+     ]
+    },
+    {
+     "code": "HIST 1010",
+     "title": "Western Civilization I",
+     "lccns": [
+      "CHIS 1013"
+     ]
+    },
+    {
+     "code": "HIST 1020",
+     "title": "Western Civilization II",
+     "lccns": [
+      "CHIS 1023"
+     ]
+    },
+    {
+     "code": "HIST 1070",
+     "title": "World Civilization I",
+     "lccns": [
+      "CHIS 1113"
+     ]
+    },
+    {
+     "code": "HIST 1080",
+     "title": "World Civilization II",
+     "lccns": [
+      "CHIS 1123"
+     ]
+    },
+    {
+     "code": "HIST 2010",
+     "title": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "code": "HIST 2020",
+     "title": "American History II",
+     "lccns": [
+      "CHIS 2023"
+     ]
+    },
+    {
+     "code": "HIST 3210",
+     "title": "Louisiana History",
+     "lccns": [
+      "CHIS 2033"
+     ]
+    },
+    {
+     "code": "HS 1310",
+     "title": "First Aid",
+     "lccns": [
+      "CKIN 1213"
+     ]
+    },
+    {
+     "code": "HS 1330",
+     "title": "Personal and Community Health",
+     "lccns": [
+      "CKIN 1113"
+     ]
+    },
+    {
+     "code": "KIN 1200",
+     "title": "Intro to Kinesiology",
+     "lccns": [
+      "CKIN 1013"
+     ]
+    },
+    {
+     "code": "LAT 1010",
+     "title": "Elementary Latin I: 3 credit hours",
+     "lccns": [
+      "CLTN 1013"
+     ]
+    },
+    {
+     "code": "LAT 1020",
+     "title": "Elementary Latin II",
+     "lccns": [
+      "CLTN 1023"
+     ]
+    },
+    {
+     "code": "LAT 2010",
+     "title": "Intermediate Latin I",
+     "lccns": [
+      "CLTN 2013"
+     ]
+    },
+    {
+     "code": "LAT 2020",
+     "title": "Intermediate Latin II",
+     "lccns": [
+      "CLTN 2023"
+     ]
+    },
+    {
+     "code": "MATH 1050",
+     "title": "Finite Mathematics",
+     "lccns": [
+      "CMAT 1313"
+     ]
+    },
+    {
+     "code": "MATH 1070",
+     "title": "Applied Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 1610",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1620",
+     "title": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 1630",
+     "title": "Applied Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 1750",
+     "title": "Algebra and Trigonometry: 5 credit hours",
+     "lccns": [
+      "CMAT 1235"
+     ]
+    },
+    {
+     "code": "MATH 1850",
+     "title": "Contemporary Mathematics",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MATH 2000",
+     "title": "Calculus I : 5 credit hours",
+     "lccns": [
+      "CMAT 2115"
+     ]
+    },
+    {
+     "code": "MATH 2010",
+     "title": "Calculus II : 5 credit hours",
+     "lccns": [
+      "CMAT 2125"
+     ]
+    },
+    {
+     "code": "MATH 2410",
+     "title": "Introductory Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "MATH 2470",
+     "title": "Math for Elem Tchrs",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 2480",
+     "title": "Geometry for Elem Tchrs",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MGMT 1410",
+     "title": "General/Intro to Business Administration",
+     "lccns": [
+      "CBUS 1003"
+     ]
+    },
+    {
+     "code": "MGMT 2100",
+     "title": "Computer Applications",
+     "lccns": [
+      "CBUS 2203"
+     ]
+    },
+    {
+     "code": "MGMT 2850",
+     "title": "Intro to Entrepreneurship (Lower Level)",
+     "lccns": [
+      "CMGM 2413"
+     ]
+    },
+    {
+     "code": "MGMT 3510",
+     "title": "Principles of Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103"
+     ]
+    },
+    {
+     "code": "MGMT 3750",
+     "title": "Small Business Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3413"
+     ]
+    },
+    {
+     "code": "MGMT 4250",
+     "title": "Management in a Global Context (Upper Level)",
+     "lccns": [
+      "CMGM 4213"
+     ]
+    },
+    {
+     "code": "MGMT 4710",
+     "title": "Human Resource Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3313"
+     ]
+    },
+    {
+     "code": "MGMT 4730",
+     "title": "Organizational Behavior (Upper Level)",
+     "lccns": [
+      "CMGM 4103"
+     ]
+    },
+    {
+     "code": "MGMT 4850",
+     "title": "Intro to Entrepreneurship (Upper Level)",
+     "lccns": [
+      "CMGM 3513"
+     ]
+    },
+    {
+     "code": "MRKT 1230",
+     "title": "Foundations of Marketing (Lower Level)",
+     "lccns": [
+      "CMKT 2003"
+     ]
+    },
+    {
+     "code": "MRKT 3030",
+     "title": "Princples of Marketing (Upper Level)",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MRKT 3210",
+     "title": "Personal/Professional Selling (Upper Level)",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MRKT 3310",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "MUS 1510",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "MUS 2510",
+     "title": "Jazz Appreciation",
+     "lccns": [
+      "CMUS 1023"
+     ]
+    },
+    {
+     "code": "NURS 2140",
+     "title": "Medical Terminology",
+     "lccns": [
+      "CHLT 1103"
+     ]
+    },
+    {
+     "code": "OMIS 2000",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "OMIS 2100",
+     "title": "Business Statistical Methods II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "code": "OMIS 3500",
+     "title": "Management Information Systems",
+     "lccns": [
+      "CMGM 3013"
+     ]
+    },
+    {
+     "code": "OMIS 4300",
+     "title": "Production & Operations (Upper Level)",
+     "lccns": [
+      "CMGM 3213"
+     ]
+    },
+    {
+     "code": "PHIL 2010",
+     "title": "Intro to Logic",
+     "lccns": [
+      "CPHL 2113"
+     ]
+    },
+    {
+     "code": "PHSC 1010",
+     "title": "Intro to Concepts in Physics",
+     "lccns": [
+      "CPHY 1013",
+      "CPHY 1023"
+     ]
+    },
+    {
+     "code": "PHSC 1020",
+     "title": "Physical Science II",
+     "lccns": [
+      "CPHY 1033"
+     ]
+    },
+    {
+     "code": "PHYS 1910",
+     "title": "Physics I (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "code": "PHYS 1920",
+     "title": "Physics II (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2123"
+     ]
+    },
+    {
+     "code": "PHYS 2210",
+     "title": "Physics I for Engineering & Science",
+     "lccns": [
+      "CENG 2113",
+      "CPHY 2133"
+     ]
+    },
+    {
+     "code": "PHYS 2220",
+     "title": "Physics II for Engineering & Science",
+     "lccns": [
+      "CENG 2123",
+      "CPHY 2153"
+     ]
+    },
+    {
+     "code": "PHYS 2410",
+     "title": "Statics",
+     "lccns": [
+      "CENG 2013"
+     ]
+    },
+    {
+     "code": "PHYS 2420",
+     "title": "Circuits I",
+     "lccns": [
+      "CENG 2253"
+     ]
+    },
+    {
+     "code": "PLAB 1930",
+     "title": "Physics I Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2111"
+     ]
+    },
+    {
+     "code": "PLAB 1940",
+     "title": "Physics II Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2121"
+     ]
+    },
+    {
+     "code": "PLAB 2230",
+     "title": "Physics I Lab (Calculus Based)",
+     "lccns": [
+      "CPHY 2131"
+     ]
+    },
+    {
+     "code": "PLAB 2240",
+     "title": "Physics II Lab (Calculus Based)",
+     "lccns": [
+      "CPHY 2141"
+     ]
+    },
+    {
+     "code": "POLI 2010",
+     "title": "Intro to American Govt",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "code": "POLI 2020",
+     "title": "Intro to State & Local Government",
+     "lccns": [
+      "CPOL 2113"
+     ]
+    },
+    {
+     "code": "PSYC 1010",
+     "title": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 2040",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 2100",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "PSYC 3240",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "SOC 1010",
+     "title": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOC 2120",
+     "title": "Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOC 2220",
+     "title": "Marriage and Family",
+     "lccns": [
+      "CSOC 2213"
+     ]
+    },
+    {
+     "code": "SOC 3050",
+     "title": "Intro to Statistical Analysis",
+     "lccns": [
+      "CSOC 3113"
+     ]
+    },
+    {
+     "code": "SOC 4110",
+     "title": "Race, Class & Ethnicity",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SOC 4300",
+     "title": "Sociological Theory",
+     "lccns": [
+      "CSOC 3013"
+     ]
+    },
+    {
+     "code": "SPAN 1010",
+     "title": "Elementary Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 1013"
+     ]
+    },
+    {
+     "code": "SPAN 1020",
+     "title": "Elementary Spanish II",
+     "lccns": [
+      "CSPN 1023"
+     ]
+    },
+    {
+     "code": "SPAN 2010",
+     "title": "Intermediate Spanish I",
+     "lccns": [
+      "CSPN 2013"
+     ]
+    },
+    {
+     "code": "SPAN 2020",
+     "title": "Intermediate Spanish II",
+     "lccns": [
+      "CSPN 2023"
+     ]
+    },
+    {
+     "code": "THEA 1310",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THEA 2010",
+     "title": "Voice for the Stage",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    },
+    {
+     "code": "THEA 2310",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THEA 2340",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THEA 3350",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    }
+   ]
+  },
+  "Louisiana State University and A&M College": {
+   "catalog": "Board of Regents Articulation Matrix, 2025-26",
+   "courses": [
+    {
+     "code": "ACCT 2001",
+     "title": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "code": "ACCT 2101",
+     "title": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "code": "ACCT 3121",
+     "title": "Cost Accounting (Upper Level)",
+     "lccns": [
+      "CACC 3113"
+     ]
+    },
+    {
+     "code": "ACCT 3221",
+     "title": "Tax I (Upper Level)",
+     "lccns": [
+      "CACC 3213"
+     ]
+    },
+    {
+     "code": "ACCT 4221",
+     "title": "Tax II (Upper Level)",
+     "lccns": [
+      "CACC 3223"
+     ]
+    },
+    {
+     "code": "ANTH 1001",
+     "title": "Biological Anthropology",
+     "lccns": [
+      "CATR 2023"
+     ]
+    },
+    {
+     "code": "ANTH 1003",
+     "title": "Cultural Anthroplogy",
+     "lccns": [
+      "CATR 2013"
+     ]
+    },
+    {
+     "code": "ARAB 1101",
+     "title": "Elementary Arabic I: 4 credit hours",
+     "lccns": [
+      "CARB 1014"
+     ]
+    },
+    {
+     "code": "ARAB 1102",
+     "title": "Elementary Arabic II: 4 credit hours",
+     "lccns": [
+      "CARB 1024"
+     ]
+    },
+    {
+     "code": "ARAB 2101",
+     "title": "Intermediate Arabic I",
+     "lccns": [
+      "CARB 2013"
+     ]
+    },
+    {
+     "code": "ARAB 2102",
+     "title": "Intermediate Arabic II",
+     "lccns": [
+      "CARB 2023"
+     ]
+    },
+    {
+     "code": "ART 1001",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "ART 1008",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "ART 1009",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "ART 1010",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "ART 1848",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
+     ]
+    },
+    {
+     "code": "ART 2552",
+     "title": "Color Theory",
+     "lccns": [
+      "CART 2303"
+     ]
+    },
+    {
+     "code": "ARTH 1440",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "ARTH 1441",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "ASTR 1101",
+     "title": "Astronomy/The Solar System",
+     "lccns": [
+      "CAST 1103"
+     ]
+    },
+    {
+     "code": "ASTR 1102",
+     "title": "Astronomy/Stars & Galaxies",
+     "lccns": [
+      "CAST 1113"
+     ]
+    },
+    {
+     "code": "BIOL 1001",
+     "title": "General Biology I",
+     "lccns": [
+      "CBIO 1013"
+     ]
+    },
+    {
+     "code": "BIOL 1002",
+     "title": "General Biology II",
+     "lccns": [
+      "CBIO 1023"
+     ]
+    },
+    {
+     "code": "BIOL 1005",
+     "title": "General Biology Lab (I + II)",
+     "lccns": [
+      "CBIO 1022"
+     ]
+    },
+    {
+     "code": "BIOL 1011",
+     "title": "General Microbiology",
+     "lccns": [
+      "CBIO 2103",
+      "CBIO 2113"
+     ]
+    },
+    {
+     "code": "BIOL 1012",
+     "title": "General Microbiology Lab",
+     "lccns": [
+      "CBIO 2101",
+      "CBIO 2111"
+     ]
+    },
+    {
+     "code": "BIOL 1201",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 1033"
+     ]
+    },
+    {
+     "code": "BIOL 1202",
+     "title": "General Biology II (Science Majors)",
+     "lccns": [
+      "CBIO 1043"
+     ]
+    },
+    {
+     "code": "BIOL 1207",
+     "title": "General Biology I Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1031"
+     ]
+    },
+    {
+     "code": "BIOL 1208",
+     "title": "General Biology I Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1031"
+     ]
+    },
+    {
+     "code": "BIOL 1209",
+     "title": "General Biology II Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1041"
+     ]
+    },
+    {
+     "code": "BIOL 2051",
+     "title": "General Microbiology (Sci Majors) Lec + Lab",
+     "lccns": [
+      "CBIO 2124"
+     ]
+    },
+    {
+     "code": "BIOL 2153",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513"
+     ]
+    },
+    {
+     "code": "BIOL 3040",
+     "title": "Evolutionary Biology",
+     "lccns": [
+      "CBIO 3643"
+     ]
+    },
+    {
+     "code": "BIOL 3090",
+     "title": "Cell Biology (Upper Level)",
+     "lccns": [
+      "CBIO 4143"
+     ]
+    },
+    {
+     "code": "BIOL 3152",
+     "title": "Comparative Anatomy Lec + Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3234"
+     ]
+    },
+    {
+     "code": "BIOL 4093",
+     "title": "Biochemistry I (Upper Level)",
+     "lccns": [
+      "CBIO 3403"
+     ]
+    },
+    {
+     "code": "BIOL 4094",
+     "title": "Biochemistry II (Upper Level)",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
+     "code": "BIOL 4105",
+     "title": "Parasitology",
+     "lccns": [
+      "CBIO 3623"
+     ]
+    },
+    {
+     "code": "BIOL 4123",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BIOL 4124",
+     "title": "Pathogenic Microbiology",
+     "lccns": [
+      "CBIO 4543"
+     ]
+    },
+    {
+     "code": "BIOL 4132",
+     "title": "Molecular Biology",
+     "lccns": [
+      "CBIO 4533"
+     ]
+    },
+    {
+     "code": "BIOL 4158",
+     "title": "Endocrinology",
+     "lccns": [
+      "CBIO 4513"
+     ]
+    },
+    {
+     "code": "BIOL 4160",
+     "title": "Animal Physiology",
+     "lccns": [
+      "CBIO 3633"
+     ]
+    },
+    {
+     "code": "BIOL 4190",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BIOL 4253",
+     "title": "Principles of Ecology (Upper Level)",
+     "lccns": [
+      "CECO 4123"
+     ]
+    },
+    {
+     "code": "BIOL 4254",
+     "title": "Principles of Ecology Lab (Upper Level)",
+     "lccns": [
+      "CECO 4121"
+     ]
+    },
+    {
+     "code": "CFS 1062",
+     "title": "Personal Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "CHEM 1001",
+     "title": "Chemistry I (Non-Science Majors)",
+     "lccns": [
+      "CCEM 1103"
+     ]
+    },
+    {
+     "code": "CHEM 1002",
+     "title": "Chemistry II (Non-Science Majors)",
+     "lccns": [
+      "CCEM 1113"
+     ]
+    },
+    {
+     "code": "CHEM 1005",
+     "title": "General, Organic & Biochemistry",
+     "lccns": [
+      "CCEM 1003"
+     ]
+    },
+    {
+     "code": "CHEM 1201",
+     "title": "Chemistry I (Science Majors)",
+     "lccns": [
+      "CCEM 1123"
+     ]
+    },
+    {
+     "code": "CHEM 1202",
+     "title": "Chemistry II (Science Majors)",
+     "lccns": [
+      "CCEM 1133"
+     ]
+    },
+    {
+     "code": "CHEM 1212",
+     "title": "Chemistry I + II Lab (Science Majors)",
+     "lccns": [
+      "CCEM 1132"
+     ]
+    },
+    {
+     "code": "CHEM 2001",
+     "title": "Analytical Chemistry",
+     "lccns": [
+      "CCEM 2303"
+     ]
+    },
+    {
+     "code": "CHEM 2002",
+     "title": "Analytical Chemistry Lab",
+     "lccns": [
+      "CCEM 2301"
+     ]
+    },
+    {
+     "code": "CHEM 2060",
+     "title": "Organic Chemistry, Survey",
+     "lccns": [
+      "CCEM 2203"
+     ]
+    },
+    {
+     "code": "CHEM 2261",
+     "title": "Organic Chemistry I",
+     "lccns": [
+      "CCEM 2213"
+     ]
+    },
+    {
+     "code": "CHEM 2262",
+     "title": "Organic Chemistry II",
+     "lccns": [
+      "CCEM 2223"
+     ]
+    },
+    {
+     "code": "CHEM 2364",
+     "title": "Organic Chemistry I+II Lab",
+     "lccns": [
+      "CCEM 2222"
+     ]
+    },
+    {
+     "code": "CMST 1061",
+     "title": "Fundamentals of Communication",
+     "lccns": [
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "CMST 2010",
+     "title": "Interpersonal Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "CMST 2060",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "CMST 2061",
+     "title": "Business & Professional Communication",
+     "lccns": [
+      "CCOM 2313"
+     ]
+    },
+    {
+     "code": "CMST 2063",
+     "title": "Argumentation and Debate",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "CSC 1250",
+     "title": "Intro to Programming",
+     "lccns": [
+      "CBUS 2213"
+     ]
+    },
+    {
+     "code": "CSC 1253",
+     "title": "Computer Science I",
+     "lccns": [
+      "CCSC 1103"
+     ]
+    },
+    {
+     "code": "CSC 1254",
+     "title": "Computer Science II",
+     "lccns": [
+      "CCSC 1203"
+     ]
+    },
+    {
+     "code": "CSC 2362",
+     "title": "Cyber Security Principles",
+     "lccns": [
+      "CCSC 2103"
+     ]
+    },
+    {
+     "code": "CSC 2700",
+     "title": "Information Assurance & Security",
+     "lccns": [
+      "CCSC 2113"
+     ]
+    },
+    {
+     "code": "ECON 2000",
+     "title": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 2010",
+     "title": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 2030",
+     "title": "Economic Principles",
+     "lccns": [
+      "CECN 2113"
+     ]
+    },
+    {
+     "code": "ECON 2035",
+     "title": "Money, Banking & the Economy (Lower Level)",
+     "lccns": [
+      "CECN 2313"
+     ]
+    },
+    {
+     "code": "EDCI 2400",
+     "title": "Foundations in Multicultural Education",
+     "lccns": [
+      "CEDU 1013"
+     ]
+    },
+    {
+     "code": "EE 2120",
+     "title": "Circuits I",
+     "lccns": [
+      "CENG 2253"
+     ]
+    },
+    {
+     "code": "EE 2130",
+     "title": "Circuits II",
+     "lccns": [
+      "CENG 2263"
+     ]
+    },
+    {
+     "code": "ENGL 1001",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 2000",
+     "title": "English Composition II",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 2002",
+     "title": "Foundations of Professional Writing (Lower Level)",
+     "lccns": [
+      "CENL 2513"
+     ]
+    },
+    {
+     "code": "ENGL 2004",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2005",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2007",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2008",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2009",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "ENGL 2025",
+     "title": "Intro to Fiction",
+     "lccns": [
+      "CENL 2303"
+     ]
+    },
+    {
+     "code": "ENGL 2027",
+     "title": "Intro to Poetry and/or Drama",
+     "lccns": [
+      "CENL 2313"
+     ]
+    },
+    {
+     "code": "ENGL 2029",
+     "title": "Intro to Poetry and/or Drama",
+     "lccns": [
+      "CENL 2313"
+     ]
+    },
+    {
+     "code": "ENGL 2123",
+     "title": "British Literature I",
+     "lccns": [
+      "CENL 2103",
+      "CENL 2113",
+      "CENL 2153",
+      "CENL 2163",
+      "CENL 2323"
+     ]
+    },
+    {
+     "code": "ENGL 2201",
+     "title": "World Literature I",
+     "lccns": [
+      "CENL 2203",
+      "CENL 2223"
+     ]
+    },
+    {
+     "code": "ENGL 2202",
+     "title": "World Literature II",
+     "lccns": [
+      "CENL 2213",
+      "CENL 2223"
+     ]
+    },
+    {
+     "code": "ENGL 2220",
+     "title": "British Literature I",
+     "lccns": [
+      "CENL 2103",
+      "CENL 2113",
+      "CENL 2123"
+     ]
+    },
+    {
+     "code": "ENGL 2270",
+     "title": "American Literature I",
+     "lccns": [
+      "CENL 2153",
+      "CENL 2163",
+      "CENL 2173"
+     ]
+    },
+    {
+     "code": "ENGL 2423",
+     "title": "Mythology or Folklore",
+     "lccns": [
+      "CENL 2503"
+     ]
+    },
+    {
+     "code": "ENGL 2593",
+     "title": "Intro to Women's Literature",
+     "lccns": [
+      "CENL 2413"
+     ]
+    },
+    {
+     "code": "ENGL 2674",
+     "title": "Intro to African American Literature",
+     "lccns": [
+      "CENL 2403"
+     ]
+    },
+    {
+     "code": "ENTM 4002",
+     "title": "Entomology",
+     "lccns": [
+      "CBIO 3603"
+     ]
+    },
+    {
+     "code": "ENTR 2000",
+     "title": "Intro to Entrepreneurship (Lower Level)",
+     "lccns": [
+      "CMGM 2413"
+     ]
+    },
+    {
+     "code": "ENTR 3111",
+     "title": "Intro to Entrepreneurship (Upper Level)",
+     "lccns": [
+      "CMGM 3513"
+     ]
+    },
+    {
+     "code": "ENTR 4113",
+     "title": "Small Business Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3413"
+     ]
+    },
+    {
+     "code": "ENVS 1126",
+     "title": "Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "ENVS 2126",
+     "title": "Environmental and Anthropogenic Impacts of Microbes",
+     "lccns": [
+      "CEVS 1113"
+     ]
+    },
+    {
+     "code": "FIN 3716",
+     "title": "Principles of Business Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FREN 1001",
+     "title": "Elementary French I: 4 credit hours",
+     "lccns": [
+      "CFRN 1014"
+     ]
+    },
+    {
+     "code": "FREN 1002",
+     "title": "Elementary French II: 4 credit hours",
+     "lccns": [
+      "CFRN 1024"
+     ]
+    },
+    {
+     "code": "FREN 2101",
+     "title": "Intermediate French I: 3 credit hours",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 2102",
+     "title": "Intermediate French II: 3 credit hours",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 2010",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GEOG 2040",
+     "title": "Introduction to Geographic Information Systems",
+     "lccns": [
+      "CGRG 2313"
+     ]
+    },
+    {
+     "code": "GEOL 1001",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103"
+     ]
+    },
+    {
+     "code": "GEOL 1003",
+     "title": "Historical Geology",
+     "lccns": [
+      "CGEO 1113"
+     ]
+    },
+    {
+     "code": "GEOL 1601",
+     "title": "Physical Geology Lab",
+     "lccns": [
+      "CGEO 1101"
+     ]
+    },
+    {
+     "code": "GEOL 1602",
+     "title": "Historical Geology Lab",
+     "lccns": [
+      "CGEO 1111"
+     ]
+    },
+    {
+     "code": "GERM 1101",
+     "title": "Elementary German I: 4 credit hours",
+     "lccns": [
+      "CGRM 1014"
+     ]
+    },
+    {
+     "code": "GERM 1102",
+     "title": "Elementary German II: 4 credit hours",
+     "lccns": [
+      "CGRM 1024"
+     ]
+    },
+    {
+     "code": "GERM 2101",
+     "title": "Intermediate German I: 3 credit hours",
+     "lccns": [
+      "CGRM 2013"
+     ]
+    },
+    {
+     "code": "GERM 2102",
+     "title": "Intermediate German II: 3 credit hours",
+     "lccns": [
+      "CGRM 2023"
+     ]
+    },
+    {
+     "code": "HIST 1001",
+     "title": "Western Civilization I",
+     "lccns": [
+      "CHIS 1013",
+      "CHUM 2213"
+     ]
+    },
+    {
+     "code": "HIST 1003",
+     "title": "Western Civilization II",
+     "lccns": [
+      "CHIS 1023",
+      "CHUM 2223"
+     ]
+    },
+    {
+     "code": "HIST 1005",
+     "title": "World Civilization I",
+     "lccns": [
+      "CHIS 1113"
+     ]
+    },
+    {
+     "code": "HIST 1007",
+     "title": "World Civilization II",
+     "lccns": [
+      "CHIS 1123"
+     ]
+    },
+    {
+     "code": "HIST 2055",
+     "title": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "code": "HIST 2057",
+     "title": "American History II",
+     "lccns": [
+      "CHIS 2023"
+     ]
+    },
+    {
+     "code": "HIST 2061",
+     "title": "African-American History",
+     "lccns": [
+      "CHIS 2103"
+     ]
+    },
+    {
+     "code": "HIST 2160",
+     "title": "Africa and the Middle East",
+     "lccns": [
+      "CHUM 2013"
+     ]
+    },
+    {
+     "code": "HIST 3071",
+     "title": "Louisiana History",
+     "lccns": [
+      "CHIS 2033"
+     ]
+    },
+    {
+     "code": "HORT 2900",
+     "title": "Botany I Lec + Lab",
+     "lccns": [
+      "CBIO 2314"
+     ]
+    },
+    {
+     "code": "ISDS 1100",
+     "title": "Computer Applications",
+     "lccns": [
+      "CBUS 2203"
+     ]
+    },
+    {
+     "code": "ISDS 2000",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303",
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "ISDS 2001",
+     "title": "Business Statistical Methods II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "code": "ISDS 3115",
+     "title": "Production & Operations (Upper Level)",
+     "lccns": [
+      "CMGM 3213"
+     ]
+    },
+    {
+     "code": "KIN 1600",
+     "title": "Personal and Community Health",
+     "lccns": [
+      "CKIN 1113"
+     ]
+    },
+    {
+     "code": "KIN 2501",
+     "title": "Intro to Kinesiology",
+     "lccns": [
+      "CKIN 1013"
+     ]
+    },
+    {
+     "code": "KIN 2509",
+     "title": "Medical Terminology",
+     "lccns": [
+      "CHLT 1103"
+     ]
+    },
+    {
+     "code": "LATN 1001",
+     "title": "Elementary Latin I: 4 credit hours",
+     "lccns": [
+      "CLTN 1014"
+     ]
+    },
+    {
+     "code": "LATN 2051",
+     "title": "Elementary Latin II: 4 credit hours",
+     "lccns": [
+      "CLTN 1024"
+     ]
+    },
+    {
+     "code": "LATN 2053",
+     "title": "Intermediate Latin I: 3 credit hours",
+     "lccns": [
+      "CLTN 2013"
+     ]
+    },
+    {
+     "code": "LATN 2065",
+     "title": "Intermediate Latin II: 3 credit hours",
+     "lccns": [
+      "CLTN 2023"
+     ]
+    },
+    {
+     "code": "LATN 2066",
+     "title": "Intermediate Latin II: 3 credit hours",
+     "lccns": [
+      "CLTN 2023"
+     ]
+    },
+    {
+     "code": "LATN 2073",
+     "title": "Intermediate Latin II: 3 credit hours",
+     "lccns": [
+      "CLTN 2023"
+     ]
+    },
+    {
+     "code": "LATN 2074",
+     "title": "Intermediate Latin II: 3 credit hours",
+     "lccns": [
+      "CLTN 2023"
+     ]
+    },
+    {
+     "code": "MATH 1015",
+     "title": "Applied Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 1021",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1022",
+     "title": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 1023",
+     "title": "Algebra and Trigonometry: 5 credit hours",
+     "lccns": [
+      "CMAT 1235"
+     ]
+    },
+    {
+     "code": "MATH 1029",
+     "title": "Contemporary Mathematics",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MATH 1100",
+     "title": "The Nature of Mathematics",
+     "lccns": [
+      "CMAT 1204"
+     ]
+    },
+    {
+     "code": "MATH 1431",
+     "title": "Business Calculus",
+     "lccns": [
+      "CBUS 2323",
+      "CMAT 2103",
+      "CMAT 2113"
+     ]
+    },
+    {
+     "code": "MATH 1530",
+     "title": "Calculus I : 3 credit hours",
+     "lccns": [
+      "CMAT 2113"
+     ]
+    },
+    {
+     "code": "MATH 1540",
+     "title": "Algebra and Trigonometry: 6 credit hours",
+     "lccns": [
+      "CMAT 1236"
+     ]
+    },
+    {
+     "code": "MATH 1550",
+     "title": "Calculus I : 5 credit hours",
+     "lccns": [
+      "CMAT 2115"
+     ]
+    },
+    {
+     "code": "MATH 1552",
+     "title": "Calculus II : 4 credit hours",
+     "lccns": [
+      "CMAT 2124"
+     ]
+    },
+    {
+     "code": "MC 2000",
+     "title": "Intro to Mass Media",
+     "lccns": [
+      "CCOM 1113"
+     ]
+    },
+    {
+     "code": "MGT 3200",
+     "title": "Principles of Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103"
+     ]
+    },
+    {
+     "code": "MGT 3320",
+     "title": "Human Resource Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3313"
+     ]
+    },
+    {
+     "code": "MGT 3620",
+     "title": "Organizational Behavior (Upper Level)",
+     "lccns": [
+      "CMGM 4103"
+     ]
+    },
+    {
+     "code": "MGT 4430",
+     "title": "Management in a Global Context (Upper Level)",
+     "lccns": [
+      "CMGM 4213"
+     ]
+    },
+    {
+     "code": "MKT 3401",
+     "title": "Princples of Marketing (Upper Level)",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MKT 3427",
+     "title": "Personal/Professional Selling (Upper Level)",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MKT 3431",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "MUS 1751",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "MUS 2000",
+     "title": "Jazz Appreciation",
+     "lccns": [
+      "CMUS 1023"
+     ]
+    },
+    {
+     "code": "NFS 1110",
+     "title": "Nutrition",
+     "lccns": [
+      "CBIO 2703"
+     ]
+    },
+    {
+     "code": "PHIL 1000",
+     "title": "Intro to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
+     "code": "PHIL 1021",
+     "title": "Intro to Logic",
+     "lccns": [
+      "CPHL 2113"
+     ]
+    },
+    {
+     "code": "PHIL 2020",
+     "title": "Intro to Ethics",
+     "lccns": [
+      "CPHL 2013"
+     ]
+    },
+    {
+     "code": "PHSC 1001",
+     "title": "Physical Science I",
+     "lccns": [
+      "CPHY 1023"
+     ]
+    },
+    {
+     "code": "PHSC 1002",
+     "title": "Physical Science II",
+     "lccns": [
+      "CPHY 1033"
+     ]
+    },
+    {
+     "code": "PHYS 2001",
+     "title": "Physics I (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "code": "PHYS 2002",
+     "title": "Physics II (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2123"
+     ]
+    },
+    {
+     "code": "PHYS 2108",
+     "title": "Physics I Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2111",
+      "CPHY 2131"
+     ]
+    },
+    {
+     "code": "PHYS 2109",
+     "title": "Physics II Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2121",
+      "CPHY 2141"
+     ]
+    },
+    {
+     "code": "PHYS 2110",
+     "title": "Physics I (Calculus Based)",
+     "lccns": [
+      "CPHY 2133"
+     ]
+    },
+    {
+     "code": "PHYS 2112",
+     "title": "Physics II (Calculus Based)",
+     "lccns": [
+      "CPHY 2143"
+     ]
+    },
+    {
+     "code": "PHYS 2113",
+     "title": "Physics III (Calculus Based)",
+     "lccns": [
+      "CPHY 2153"
+     ]
+    },
+    {
+     "code": "PHYS 2401",
+     "title": "Intro to Concepts in Physics",
+     "lccns": [
+      "CPHY 1013"
+     ]
+    },
+    {
+     "code": "POLI 2051",
+     "title": "Intro to American Govt",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "code": "POLI 2053",
+     "title": "Intro to Comparative Govt",
+     "lccns": [
+      "CPOL 2213"
+     ]
+    },
+    {
+     "code": "PSYC 2000",
+     "title": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 2040",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "PSYC 2060",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "PSYC 2070",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 2076",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "PSYC 2078",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213"
+     ]
+    },
+    {
+     "code": "REL 1000",
+     "title": "World Religions",
+     "lccns": [
+      "CREL 2213"
+     ]
+    },
+    {
+     "code": "RNR 2900",
+     "title": "Botany I Lec + Lab",
+     "lccns": [
+      "CBIO 2314"
+     ]
+    },
+    {
+     "code": "RNR 4103",
+     "title": "Genetics (Upper Level)",
+     "lccns": [
+      "CBIO 3523"
+     ]
+    },
+    {
+     "code": "SOCL 2001",
+     "title": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOCL 2301",
+     "title": "Intro to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "SOCL 2371",
+     "title": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "SOCL 2501",
+     "title": "Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOCL 2505",
+     "title": "Marriage and Family",
+     "lccns": [
+      "CSOC 2213"
+     ]
+    },
+    {
+     "code": "SOCL 2511",
+     "title": "Race, Class & Ethnicity",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SOCL 3101",
+     "title": "Sociological Theory",
+     "lccns": [
+      "CSOC 3013"
+     ]
+    },
+    {
+     "code": "SPAN 1101",
+     "title": "Elementary Spanish I: 4 credit hours",
+     "lccns": [
+      "CSPN 1014"
+     ]
+    },
+    {
+     "code": "SPAN 1102",
+     "title": "Elementary Spanish II: 4 credit hours",
+     "lccns": [
+      "CSPN 1024"
+     ]
+    },
+    {
+     "code": "SPAN 1152",
+     "title": "Elementary Spanish I+II: 6 credit hours",
+     "lccns": [
+      "CSPN 1026"
+     ]
+    },
+    {
+     "code": "SPAN 2101",
+     "title": "Intermediate Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 2013"
+     ]
+    },
+    {
+     "code": "SPAN 2102",
+     "title": "Intermediate Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPN 2023"
+     ]
+    },
+    {
+     "code": "SW 2000",
+     "title": "Social Work as a Profession",
+     "lccns": [
+      "CSWK 1103"
+     ]
+    },
+    {
+     "code": "THTR 1001",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THTR 1020",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THTR 1025",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THTR 1800",
+     "title": "Dance Appreciation",
+     "lccns": [
+      "CDNC 1013"
+     ]
+    },
+    {
+     "code": "THTR 2025",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    },
+    {
+     "code": "THTR 2027",
+     "title": "Voice for the Stage",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    }
+   ]
+  },
+  "Northwestern State University of Louisiana": {
+   "catalog": "Board of Regents Articulation Matrix, 2025-26",
+   "courses": [
+    {
+     "code": "ACCT 1040",
+     "title": "Computerized Accounting",
+     "lccns": [
+      "CACC 2413"
+     ]
+    },
+    {
+     "code": "ACCT 2000",
+     "title": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "code": "ACCT 2010",
+     "title": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "code": "ACCT 3060",
+     "title": "Tax I (Upper Level)",
+     "lccns": [
+      "CACC 3213"
+     ]
+    },
+    {
+     "code": "ACCT 3080",
+     "title": "Cost Accounting (Upper Level)",
+     "lccns": [
+      "CACC 3113"
+     ]
+    },
+    {
+     "code": "ACCT 4080",
+     "title": "Auditing (Upper Level)",
+     "lccns": [
+      "CACC 3313"
+     ]
+    },
+    {
+     "code": "ACCT 4140",
+     "title": "Tax II (Upper Level)",
+     "lccns": [
+      "CACC 3223"
+     ]
+    },
+    {
+     "code": "ANTH 1510",
+     "title": "Intro to Anthropology",
+     "lccns": [
+      "CATR 1013"
+     ]
+    },
+    {
+     "code": "ANTH 2010",
+     "title": "Cultural Anthroplogy",
+     "lccns": [
+      "CATR 2013"
+     ]
+    },
+    {
+     "code": "ANTH 3050",
+     "title": "Biological Anthropology",
+     "lccns": [
+      "CATR 2023"
+     ]
+    },
+    {
+     "code": "ART 1010",
+     "title": "Color Theory",
+     "lccns": [
+      "CART 2303"
+     ]
+    },
+    {
+     "code": "ART 1020",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "ART 1060",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "ART 2120",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
+     ]
+    },
+    {
+     "code": "ART 2560",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "BIOL 1010",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 1033"
+     ]
+    },
+    {
+     "code": "BIOL 1011",
+     "title": "General Biology I Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1031"
+     ]
+    },
+    {
+     "code": "BIOL 1020",
+     "title": "General Biology II (Science Majors)",
+     "lccns": [
+      "CBIO 1043"
+     ]
+    },
+    {
+     "code": "BIOL 1021",
+     "title": "General Biology II Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1041"
+     ]
+    },
+    {
+     "code": "BIOL 2060",
+     "title": "General Microbiology (Science Majors)",
+     "lccns": [
+      "CBIO 2123"
+     ]
+    },
+    {
+     "code": "BIOL 2061",
+     "title": "General Microbiology Lab (Science Majors)",
+     "lccns": [
+      "CBIO 2121"
+     ]
+    },
+    {
+     "code": "BIOL 2080",
+     "title": "Comparative Anatomy",
+     "lccns": [
+      "CBIO 2233"
+     ]
+    },
+    {
+     "code": "BIOL 2081",
+     "title": "Comparative Anatomy Lab",
+     "lccns": [
+      "CBIO 2231"
+     ]
+    },
+    {
+     "code": "BIOL 2100",
+     "title": "Botany I",
+     "lccns": [
+      "CBIO 2313"
+     ]
+    },
+    {
+     "code": "BIOL 2101",
+     "title": "Botany I Lab",
+     "lccns": [
+      "CBIO 2311"
+     ]
+    },
+    {
+     "code": "BIOL 2210",
+     "title": "Microbiology for Nursing & Allied Health",
+     "lccns": [
+      "CBIO 2113"
+     ]
+    },
+    {
+     "code": "BIOL 2240",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513"
+     ]
+    },
+    {
+     "code": "BIOL 2250",
+     "title": "Human Anatomy and Physiology I",
+     "lccns": [
+      "CBIO 2213"
+     ]
+    },
+    {
+     "code": "BIOL 2251",
+     "title": "Human Anatomy and Physiology I Lab",
+     "lccns": [
+      "CBIO 2211"
+     ]
+    },
+    {
+     "code": "BIOL 2260",
+     "title": "Human Anatomy and Physiology II",
+     "lccns": [
+      "CBIO 2223"
+     ]
+    },
+    {
+     "code": "BIOL 2261",
+     "title": "Human Anatomy and Physiology II Lab",
+     "lccns": [
+      "CBIO 2221"
+     ]
+    },
+    {
+     "code": "BIOL 3010",
+     "title": "Entomology",
+     "lccns": [
+      "CBIO 3603"
+     ]
+    },
+    {
+     "code": "BIOL 3170",
+     "title": "Histology",
+     "lccns": [
+      "CBIO 3613"
+     ]
+    },
+    {
+     "code": "BIOL 3250",
+     "title": "Cell Biology (Upper Level)",
+     "lccns": [
+      "CBIO 4143"
+     ]
+    },
+    {
+     "code": "BIOL 3270",
+     "title": "Genetics (Upper Level)",
+     "lccns": [
+      "CBIO 3523"
+     ]
+    },
+    {
+     "code": "BIOL 3271",
+     "title": "Genetics Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3521"
+     ]
+    },
+    {
+     "code": "BIOL 3280",
+     "title": "Evolutionary Biology",
+     "lccns": [
+      "CBIO 3643"
+     ]
+    },
+    {
+     "code": "BIOL 4060",
+     "title": "Developmental Biology",
+     "lccns": [
+      "CBIO 4503"
+     ]
+    },
+    {
+     "code": "BIOL 4120",
+     "title": "Pathogenic Microbiology",
+     "lccns": [
+      "CBIO 4543"
+     ]
+    },
+    {
+     "code": "BIOL 4190",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BIOL 4220",
+     "title": "Animal Physiology",
+     "lccns": [
+      "CBIO 3633"
+     ]
+    },
+    {
+     "code": "BIOL 4270",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BIOL 4300",
+     "title": "Molecular Biology",
+     "lccns": [
+      "CBIO 4533"
+     ]
+    },
+    {
+     "code": "BIOL 4400",
+     "title": "Principles of Ecology (Upper Level)",
+     "lccns": [
+      "CECO 4123"
+     ]
+    },
+    {
+     "code": "BIOL 4401",
+     "title": "Principles of Ecology Lab (Upper Level)",
+     "lccns": [
+      "CECO 4121"
+     ]
+    },
+    {
+     "code": "BIOL 4900",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BIOL 4910",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BUAD 1040",
+     "title": "General/Intro to Business Administration",
+     "lccns": [
+      "CBUS 1003"
+     ]
+    },
+    {
+     "code": "BUAD 2120",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "BUAD 3120",
+     "title": "Business Statistical Methods II",
+     "lccns": [
+      "CBUS 2313"
+     ]
+    },
+    {
+     "code": "BUAD 4190",
+     "title": "Intro to Entrepreneurship (Upper Level)",
+     "lccns": [
+      "CMGM 3513"
+     ]
+    },
+    {
+     "code": "CHEM 1030",
+     "title": "Chemistry I (Science Majors)",
+     "lccns": [
+      "CCEM 1123"
+     ]
+    },
+    {
+     "code": "CHEM 1031",
+     "title": "Chemistry I Lab (Science Majors)",
+     "lccns": [
+      "CCEM 1121"
+     ]
+    },
+    {
+     "code": "CHEM 1040",
+     "title": "Chemistry II (Science Majors)",
+     "lccns": [
+      "CCEM 1133"
+     ]
+    },
+    {
+     "code": "CHEM 1041",
+     "title": "Chemistry II Lab (Science Majors)",
+     "lccns": [
+      "CCEM 1131"
+     ]
+    },
+    {
+     "code": "CHEM 1070",
+     "title": "General, Organic & Biochemistry",
+     "lccns": [
+      "CCEM 1003"
+     ]
+    },
+    {
+     "code": "CHEM 2110",
+     "title": "Analytical Chemistry",
+     "lccns": [
+      "CCEM 2303"
+     ]
+    },
+    {
+     "code": "CHEM 2111",
+     "title": "Analytical Chemistry Lab",
+     "lccns": [
+      "CCEM 2301"
+     ]
+    },
+    {
+     "code": "CHEM 3020",
+     "title": "Organic Chemistry II",
+     "lccns": [
+      "CCEM 2223"
+     ]
+    },
+    {
+     "code": "CHEM 4040",
+     "title": "Biochemistry I (Upper Level)",
+     "lccns": [
+      "CBIO 3403"
+     ]
+    },
+    {
+     "code": "CHEM 4041",
+     "title": "Biochemistry I Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3401"
+     ]
+    },
+    {
+     "code": "CHEM 4050",
+     "title": "Biochemistry II (Upper Level)",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
+     "code": "CIS 1030",
+     "title": "Intro to Programming",
+     "lccns": [
+      "CBUS 2213"
+     ]
+    },
+    {
+     "code": "CIS 1090",
+     "title": "Computer Applications",
+     "lccns": [
+      "CBUS 2203"
+     ]
+    },
+    {
+     "code": "CIS 3100",
+     "title": "Management Information Systems",
+     "lccns": [
+      "CMGM 3013"
+     ]
+    },
+    {
+     "code": "CJ 1100",
+     "title": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "CJ 2300",
+     "title": "Intro to Policing",
+     "lccns": [
+      "CCRJ 2313"
+     ]
+    },
+    {
+     "code": "CJ 2400",
+     "title": "Judicial Process",
+     "lccns": [
+      "CCRJ 2613"
+     ]
+    },
+    {
+     "code": "CJ 2500",
+     "title": "Intro to Corrections",
+     "lccns": [
+      "CCRJ 2013"
+     ]
+    },
+    {
+     "code": "CJ 4200",
+     "title": "Intro to Statistical Analysis",
+     "lccns": [
+      "CSOC 3113"
+     ]
+    },
+    {
+     "code": "COM 207",
+     "title": "Fundamentals of Communication",
+     "lccns": [
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "COMM 1010",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013",
+      "CCOM 2313"
+     ]
+    },
+    {
+     "code": "COMM 2020",
+     "title": "Intro to Mass Media",
+     "lccns": [
+      "CCOM 1113"
+     ]
+    },
+    {
+     "code": "COMM 2050",
+     "title": "Argumentation and Debate",
+     "lccns": [
+      "CCOM 2113"
+     ]
+    },
+    {
+     "code": "COMM 2500",
+     "title": "Interpersonal Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "CULA 2010",
+     "title": "Introduction to Culinary Arts",
+     "lccns": [
+      "CULA 1013"
+     ]
+    },
+    {
+     "code": "CULA 2050",
+     "title": "Food Service Layout, Equipment, Safety and Sanitation",
+     "lccns": [
+      "CULA 2053"
+     ]
+    },
+    {
+     "code": "CULA 3100",
+     "title": "Advanced Professional Culinary Preparation and Presentation",
+     "lccns": [
+      "CULA 3013"
+     ]
+    },
+    {
+     "code": "ECON 2000",
+     "title": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 2010",
+     "title": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "EDUC 2020",
+     "title": "Foundations in Multicultural Education",
+     "lccns": [
+      "CEDU 1013"
+     ]
+    },
+    {
+     "code": "ENGL 1010",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 1020",
+     "title": "English Composition II",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 2070",
+     "title": "Major World Writers",
+     "lccns": [
+      "CENL 2223"
+     ]
+    },
+    {
+     "code": "ENGL 2110",
+     "title": "Intro to Literature",
+     "lccns": [
+      "CENL 2323"
+     ]
+    },
+    {
+     "code": "ENGL 2120",
+     "title": "Creative Writing (Various Genres)",
+     "lccns": [
+      "CENL 2523"
+     ]
+    },
+    {
+     "code": "EPSY 2020",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213",
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "FA 1040",
+     "title": "Exploring the Arts",
+     "lccns": [
+      "CART 1013",
+      "CDNC 1013",
+      "CMUS 1013",
+      "CMUS 1023"
+     ]
+    },
+    {
+     "code": "FIN 2150",
+     "title": "Personal Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "FIN 3090",
+     "title": "Principles of Business Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FIN 3100",
+     "title": "Money, Banking & the Economy (Upper Level)",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "FREN 1010",
+     "title": "Elementary French I: 3 credit hours",
+     "lccns": [
+      "CFRN 1013"
+     ]
+    },
+    {
+     "code": "FREN 1020",
+     "title": "Elementary French II: 3 credit hours",
+     "lccns": [
+      "CFRN 1023"
+     ]
+    },
+    {
+     "code": "FREN 2010",
+     "title": "Intermediate French I: 3 credit hours",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 2020",
+     "title": "Intermediate French II: 3 credit hours",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 1010",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOG 2010",
+     "title": "Physical Geography",
+     "lccns": [
+      "CGRG 2213"
+     ]
+    },
+    {
+     "code": "GEOG 2020",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GEOL 1030",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103"
+     ]
+    },
+    {
+     "code": "GEOL 1031",
+     "title": "Physical Geology Lab",
+     "lccns": [
+      "CGEO 1101"
+     ]
+    },
+    {
+     "code": "GEOL 1040",
+     "title": "Historical Geology",
+     "lccns": [
+      "CGEO 1113"
+     ]
+    },
+    {
+     "code": "GEOL 1041",
+     "title": "Historical Geology Lab",
+     "lccns": [
+      "CGEO 1111"
+     ]
+    },
+    {
+     "code": "HIST 1010",
+     "title": "Western Civilization I",
+     "lccns": [
+      "CHIS 1013",
+      "CHIS 1113",
+      "CHUM 2213"
+     ]
+    },
+    {
+     "code": "HIST 1020",
+     "title": "Western Civilization II",
+     "lccns": [
+      "CHIS 1023",
+      "CHIS 1123",
+      "CHUM 2013",
+      "CHUM 2223"
+     ]
+    },
+    {
+     "code": "HIST 2010",
+     "title": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "code": "HIST 2020",
+     "title": "American History II",
+     "lccns": [
+      "CHIS 2023"
+     ]
+    },
+    {
+     "code": "HIST 3040",
+     "title": "Louisiana History",
+     "lccns": [
+      "CHIS 2033"
+     ]
+    },
+    {
+     "code": "HMT 1000",
+     "title": "Survey of Hospitality and Tourism",
+     "lccns": [
+      "CHTM 1003"
+     ]
+    },
+    {
+     "code": "HMT 1050",
+     "title": "Introduction to Professionalism",
+     "lccns": [
+      "CHTM 1053"
+     ]
+    },
+    {
+     "code": "HMT 2010",
+     "title": "Food Safety and Sanitation",
+     "lccns": [
+      "CHTM 2053"
+     ]
+    },
+    {
+     "code": "LATN 1010",
+     "title": "Elementary Latin I: 3 credit hours",
+     "lccns": [
+      "CLTN 1013"
+     ]
+    },
+    {
+     "code": "LATN 1020",
+     "title": "Elementary Latin II: 3 credit hours",
+     "lccns": [
+      "CLTN 1023"
+     ]
+    },
+    {
+     "code": "MATH 1020",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1035",
+     "title": "Contemporary Mathematics",
+     "lccns": [
+      "CMAT 1103",
+      "CMAT 1204"
+     ]
+    },
+    {
+     "code": "MATH 1060",
+     "title": "Finite Mathematics",
+     "lccns": [
+      "CMAT 1313"
+     ]
+    },
+    {
+     "code": "MATH 1090",
+     "title": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 1100",
+     "title": "Algebra and Trigonometry: 6 credit hours",
+     "lccns": [
+      "CMAT 1236"
+     ]
+    },
+    {
+     "code": "MATH 1810",
+     "title": "Algebra and Trigonometry: 6 credit hours",
+     "lccns": [
+      "CMAT 1236"
+     ]
+    },
+    {
+     "code": "MATH 2010",
+     "title": "Applied Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 2030",
+     "title": "Math for Elem Tchrs",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 2040",
+     "title": "Geometry for Elem Tchrs",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MATH 2050",
+     "title": "Introductory Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "MATH 2100",
+     "title": "Calculus I : 3 credit hours",
+     "lccns": [
+      "CMAT 2113",
+      "CMAT 2115"
+     ]
+    },
+    {
+     "code": "MATH 2110",
+     "title": "Calculus II : 5 credit hours",
+     "lccns": [
+      "CMAT 2125"
+     ]
+    },
+    {
+     "code": "MGT 3220",
+     "title": "Principles of Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103",
+      "CMGM 4103"
+     ]
+    },
+    {
+     "code": "MGT 3580",
+     "title": "Production & Operations (Upper Level)",
+     "lccns": [
+      "CMGM 3213"
+     ]
+    },
+    {
+     "code": "MGT 4270",
+     "title": "Human Resource Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3313"
+     ]
+    },
+    {
+     "code": "MGT 4350",
+     "title": "Management in a Global Context (Upper Level)",
+     "lccns": [
+      "CMGM 4213"
+     ]
+    },
+    {
+     "code": "MKTG 3230",
+     "title": "Principles of Marketing (Upper Level)",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MKTG 4200",
+     "title": "Personal/Professional Selling (Upper Level)",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MKTG 4350",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "NUTR 1030",
+     "title": "Nutrition",
+     "lccns": [
+      "CBIO 2703"
+     ]
+    },
+    {
+     "code": "PHIL 1010",
+     "title": "Intro to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
+     "code": "PHIL 1020",
+     "title": "World Religions",
+     "lccns": [
+      "CREL 2213"
+     ]
+    },
+    {
+     "code": "PHIL 2020",
+     "title": "Intro to Ethics",
+     "lccns": [
+      "CPHL 2013"
+     ]
+    },
+    {
+     "code": "PHIL 2030",
+     "title": "Intro to Logic",
+     "lccns": [
+      "CPHL 2113"
+     ]
+    },
+    {
+     "code": "PHYS 2030",
+     "title": "Physics I (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "code": "PHYS 2031",
+     "title": "Physics I Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2111"
+     ]
+    },
+    {
+     "code": "PHYS 2040",
+     "title": "Physics II (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2123"
+     ]
+    },
+    {
+     "code": "PHYS 2041",
+     "title": "Physics II Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2121"
+     ]
+    },
+    {
+     "code": "PHYS 2510",
+     "title": "Physics I (Calculus Based)",
+     "lccns": [
+      "CPHY 2133"
+     ]
+    },
+    {
+     "code": "PHYS 2511",
+     "title": "Physics I Lab (Calculus Based)",
+     "lccns": [
+      "CPHY 2131"
+     ]
+    },
+    {
+     "code": "PHYS 2520",
+     "title": "Physics II (Calculus Based)",
+     "lccns": [
+      "CPHY 2143"
+     ]
+    },
+    {
+     "code": "PHYS 2521",
+     "title": "Physics II Lab (Calculus Based)",
+     "lccns": [
+      "CPHY 2141"
+     ]
+    },
+    {
+     "code": "PSCI 2010",
+     "title": "Intro to American Govt",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "code": "PSCI 2020",
+     "title": "Intro to State & Local Government",
+     "lccns": [
+      "CPOL 2113"
+     ]
+    },
+    {
+     "code": "PSYC 1010",
+     "title": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 2050",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "PSYC 3060",
+     "title": "Social Psychology",
+     "lccns": [
+      "CPSY 2413"
+     ]
+    },
+    {
+     "code": "SCI 1010",
+     "title": "Physical Science I",
+     "lccns": [
+      "CPHY 1023"
+     ]
+    },
+    {
+     "code": "SCI 1020",
+     "title": "General Biology I",
+     "lccns": [
+      "CBIO 1013"
+     ]
+    },
+    {
+     "code": "SCI 1120",
+     "title": "Astronomy/The Solar System",
+     "lccns": [
+      "CAST 1103"
+     ]
+    },
+    {
+     "code": "SCI 2010",
+     "title": "Physical Science II",
+     "lccns": [
+      "CPHY 1033"
+     ]
+    },
+    {
+     "code": "SCI 2020",
+     "title": "General Biology II",
+     "lccns": [
+      "CBIO 1023"
+     ]
+    },
+    {
+     "code": "SOC 1010",
+     "title": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOWK 2100",
+     "title": "Social Work as a Profession",
+     "lccns": [
+      "CSWK 1103"
+     ]
+    },
+    {
+     "code": "SPAN 1010",
+     "title": "Elementary Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 1013"
+     ]
+    },
+    {
+     "code": "SPAN 1020",
+     "title": "Elementary Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPN 1023"
+     ]
+    },
+    {
+     "code": "SPAN 2010",
+     "title": "Intermediate Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 2013"
+     ]
+    },
+    {
+     "code": "SPAN 2020",
+     "title": "Intermediate Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPN 2023"
+     ]
+    },
+    {
+     "code": "THEA 2300",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THEA 2310",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THEA 2320",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THEA 2340",
+     "title": "Voice for the Stage",
+     "lccns": [
+      "CTHE 2203"
+     ]
+    },
+    {
+     "code": "THEA 3320",
+     "title": "Acting II",
+     "lccns": [
+      "CTHE 2113"
+     ]
+    },
+    {
+     "code": "VET 3100",
+     "title": "Parasitology",
+     "lccns": [
+      "CBIO 3623"
+     ]
+    }
+   ]
+  },
+  "Louisiana Tech University": {
+   "catalog": "Board of Regents Articulation Matrix, 2025-26",
+   "courses": [
+    {
+     "code": "ACCT 2013",
+     "title": "Intro to Financial Accounting",
+     "lccns": [
+      "CACC 2113"
+     ]
+    },
+    {
+     "code": "ACCT 2023",
+     "title": "Intro to Managerial Accounting",
+     "lccns": [
+      "CACC 2213"
+     ]
+    },
+    {
+     "code": "ACCT 3073",
+     "title": "Tax I (Upper Level)",
+     "lccns": [
+      "CACC 3213"
+     ]
+    },
+    {
+     "code": "ACCT 3083",
+     "title": "Cost Accounting (Upper Level)",
+     "lccns": [
+      "CACC 3113"
+     ]
+    },
+    {
+     "code": "ACCT 4063",
+     "title": "Tax II (Upper Level)",
+     "lccns": [
+      "CACC 3223"
+     ]
+    },
+    {
+     "code": "ACCT 4133",
+     "title": "Auditing (Upper Level)",
+     "lccns": [
+      "CACC 3313"
+     ]
+    },
+    {
+     "code": "ART 1153",
+     "title": "Art Structure/2-D Design",
+     "lccns": [
+      "CART 1113"
+     ]
+    },
+    {
+     "code": "ART 1163",
+     "title": "Color Theory",
+     "lccns": [
+      "CART 2303"
+     ]
+    },
+    {
+     "code": "ART 1183",
+     "title": "3-D Design",
+     "lccns": [
+      "CART 1123"
+     ]
+    },
+    {
+     "code": "ART 1253",
+     "title": "Beginning Drawing",
+     "lccns": [
+      "CART 2203"
+     ]
+    },
+    {
+     "code": "ART 2253",
+     "title": "Figure Drawing",
+     "lccns": [
+      "CART 2213"
+     ]
+    },
+    {
+     "code": "ART 2663",
+     "title": "Art History I",
+     "lccns": [
+      "CART 2103"
+     ]
+    },
+    {
+     "code": "ART 2673",
+     "title": "Art History II",
+     "lccns": [
+      "CART 2113"
+     ]
+    },
+    {
+     "code": "ART 2903",
+     "title": "Intro to Visual Arts",
+     "lccns": [
+      "CART 1023"
+     ]
+    },
+    {
+     "code": "BISC 1013",
+     "title": "General Biology I",
+     "lccns": [
+      "CBIO 1013"
+     ]
+    },
+    {
+     "code": "BISC 1023",
+     "title": "General Biology II",
+     "lccns": [
+      "CBIO 1023"
+     ]
+    },
+    {
+     "code": "BISC 1303",
+     "title": "General Biology I (Science Majors)",
+     "lccns": [
+      "CBIO 1033"
+     ]
+    },
+    {
+     "code": "BISC 1311",
+     "title": "General Biology I Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1031"
+     ]
+    },
+    {
+     "code": "BISC 1323",
+     "title": "General Biology II (Science Majors)",
+     "lccns": [
+      "CBIO 1043"
+     ]
+    },
+    {
+     "code": "BISC 1331",
+     "title": "General Biology II Lab (Science Majors)",
+     "lccns": [
+      "CBIO 1041"
+     ]
+    },
+    {
+     "code": "BISC 2003",
+     "title": "Intro to Genetics",
+     "lccns": [
+      "CBIO 2513"
+     ]
+    },
+    {
+     "code": "BISC 2113",
+     "title": "Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "BISC 2144",
+     "title": "General Microbiology Lec + Lab",
+     "lccns": [
+      "CBIO 2104"
+     ]
+    },
+    {
+     "code": "BISC 2163",
+     "title": "Botany I",
+     "lccns": [
+      "CBIO 2313"
+     ]
+    },
+    {
+     "code": "BISC 2171",
+     "title": "Botany I Lab",
+     "lccns": [
+      "CBIO 2311"
+     ]
+    },
+    {
+     "code": "BISC 2253",
+     "title": "Human Anatomy and Physiology I",
+     "lccns": [
+      "CBIO 2213"
+     ]
+    },
+    {
+     "code": "BISC 2261",
+     "title": "Human Anatomy and Physiology I Lab",
+     "lccns": [
+      "CBIO 2211"
+     ]
+    },
+    {
+     "code": "BISC 2273",
+     "title": "Human Anatomy and Physiology II",
+     "lccns": [
+      "CBIO 2223"
+     ]
+    },
+    {
+     "code": "BISC 2281",
+     "title": "Human Anatomy and Physiology II Lab",
+     "lccns": [
+      "CBIO 2221"
+     ]
+    },
+    {
+     "code": "BISC 2604",
+     "title": "General Microbiology (Sci Majors) Lec + Lab",
+     "lccns": [
+      "CBIO 2124"
+     ]
+    },
+    {
+     "code": "BISC 3103",
+     "title": "Genetics (Upper Level)",
+     "lccns": [
+      "CBIO 3523"
+     ]
+    },
+    {
+     "code": "BISC 3133",
+     "title": "Principles of Ecology Lec + Lab (Upper Level)",
+     "lccns": [
+      "CECO 4124"
+     ]
+    },
+    {
+     "code": "BISC 3144",
+     "title": "Entomology",
+     "lccns": [
+      "CBIO 3603"
+     ]
+    },
+    {
+     "code": "BISC 3153",
+     "title": "Cell Biology (Upper Level)",
+     "lccns": [
+      "CBIO 4143"
+     ]
+    },
+    {
+     "code": "BISC 3203",
+     "title": "Animal Physiology",
+     "lccns": [
+      "CBIO 3633"
+     ]
+    },
+    {
+     "code": "BISC 4023",
+     "title": "Immunology",
+     "lccns": [
+      "CBIO 4523"
+     ]
+    },
+    {
+     "code": "BISC 4063",
+     "title": "Endocrinology",
+     "lccns": [
+      "CBIO 4513"
+     ]
+    },
+    {
+     "code": "BISC 4073",
+     "title": "Histology",
+     "lccns": [
+      "CBIO 3613"
+     ]
+    },
+    {
+     "code": "BISC 4093",
+     "title": "Virology",
+     "lccns": [
+      "CBIO 4553"
+     ]
+    },
+    {
+     "code": "BISC 4113",
+     "title": "Developmental Biology",
+     "lccns": [
+      "CBIO 4503"
+     ]
+    },
+    {
+     "code": "BISC 4223",
+     "title": "Molecular Biology",
+     "lccns": [
+      "CBIO 4533"
+     ]
+    },
+    {
+     "code": "BISC 4263",
+     "title": "Evolutionary Biology",
+     "lccns": [
+      "CBIO 3643"
+     ]
+    },
+    {
+     "code": "BISC 4801",
+     "title": "Biology Seminar",
+     "lccns": [
+      "CBIO 4561"
+     ]
+    },
+    {
+     "code": "BLAW 2553",
+     "title": "Business Law",
+     "lccns": [
+      "CBUS 2103"
+     ]
+    },
+    {
+     "code": "BUSN 1103",
+     "title": "General/Intro to Business Administration",
+     "lccns": [
+      "CBUS 1003"
+     ]
+    },
+    {
+     "code": "BUSN 1153",
+     "title": "Personal Finance",
+     "lccns": [
+      "CFIN 2113"
+     ]
+    },
+    {
+     "code": "CHEM 1003",
+     "title": "General Chemistry Survey",
+     "lccns": [
+      "CCEM 1013"
+     ]
+    },
+    {
+     "code": "CHEM 1011",
+     "title": "General Chemistry I Lab",
+     "lccns": [
+      "CCEM 1101"
+     ]
+    },
+    {
+     "code": "CHEM 1013",
+     "title": "General Chemistry I",
+     "lccns": [
+      "CCEM 1103"
+     ]
+    },
+    {
+     "code": "CHEM 1023",
+     "title": "General Chemistry II",
+     "lccns": [
+      "CCEM 1113"
+     ]
+    },
+    {
+     "code": "CHEM 1031",
+     "title": "General Chemistry II Lab",
+     "lccns": [
+      "CCEM 1111"
+     ]
+    },
+    {
+     "code": "CHEM 1203",
+     "title": "Intro to Organic and Biochemistry",
+     "lccns": [
+      "CCEM 1203"
+     ]
+    },
+    {
+     "code": "CHEM 2513",
+     "title": "Organic Chemistry I",
+     "lccns": [
+      "CCEM 2103"
+     ]
+    },
+    {
+     "code": "CHEM 2521",
+     "title": "Organic Chemistry I Lab",
+     "lccns": [
+      "CCEM 2111"
+     ]
+    },
+    {
+     "code": "CHEM 3103",
+     "title": "Quantitative Analysis",
+     "lccns": [
+      "CCEM 2113"
+     ]
+    },
+    {
+     "code": "CHEM 3113",
+     "title": "Instrumental Analysis",
+     "lccns": [
+      "CCEM 2223"
+     ]
+    },
+    {
+     "code": "CHEM 3513",
+     "title": "Biochemistry I (Upper Level)",
+     "lccns": [
+      "CBIO 3403",
+      "CCEM 2303"
+     ]
+    },
+    {
+     "code": "CHEM 3523",
+     "title": "Biochemistry II (Upper Level)",
+     "lccns": [
+      "CBIO 4413"
+     ]
+    },
+    {
+     "code": "CHEM 3531",
+     "title": "Biochemistry I Lab (Upper Level)",
+     "lccns": [
+      "CBIO 3401"
+     ]
+    },
+    {
+     "code": "CHEM 3533",
+     "title": "Organic Chemistry II",
+     "lccns": [
+      "CCEM 2203"
+     ]
+    },
+    {
+     "code": "CHEM 3541",
+     "title": "Biochemistry II Lab (Upper Level)",
+     "lccns": [
+      "CBIO 4411",
+      "CCEM 2211"
+     ]
+    },
+    {
+     "code": "CHEM 3543",
+     "title": "Biochemistry",
+     "lccns": [
+      "CCEM 2213"
+     ]
+    },
+    {
+     "code": "CHEM 4024",
+     "title": "Physical Chemistry Lec + Lab",
+     "lccns": [
+      "CCEM 2224"
+     ]
+    },
+    {
+     "code": "CHEM 4044",
+     "title": "Physical Chemistry Lec + Lab",
+     "lccns": [
+      "CCEM 2234"
+     ]
+    },
+    {
+     "code": "CIS 1103",
+     "title": "Computer Applications",
+     "lccns": [
+      "CBUS 2203"
+     ]
+    },
+    {
+     "code": "CIS 3103",
+     "title": "Management Information Systems",
+     "lccns": [
+      "CMGM 3013"
+     ]
+    },
+    {
+     "code": "COM 2073",
+     "title": "Fundamentals of Communication",
+     "lccns": [
+      "CCOM 1013"
+     ]
+    },
+    {
+     "code": "COMM 1003",
+     "title": "Intro to Mass Media",
+     "lccns": [
+      "CCOM 1113"
+     ]
+    },
+    {
+     "code": "COMM 2033",
+     "title": "Interpersonal Communication",
+     "lccns": [
+      "CCOM 2213"
+     ]
+    },
+    {
+     "code": "COMM 2073",
+     "title": "Public Speaking",
+     "lccns": [
+      "CCOM 2013"
+     ]
+    },
+    {
+     "code": "ECON 2013",
+     "title": "Macroeconomics",
+     "lccns": [
+      "CECN 2213"
+     ]
+    },
+    {
+     "code": "ECON 2023",
+     "title": "Microeconomics",
+     "lccns": [
+      "CECN 2223"
+     ]
+    },
+    {
+     "code": "ECON 2153",
+     "title": "Economic Principles",
+     "lccns": [
+      "CECN 2113"
+     ]
+    },
+    {
+     "code": "ECON 3123",
+     "title": "Money, Banking & the Economy (Upper Level)",
+     "lccns": [
+      "CECN 3113"
+     ]
+    },
+    {
+     "code": "ENGL 1013",
+     "title": "English Composition I",
+     "lccns": [
+      "CENL 1013"
+     ]
+    },
+    {
+     "code": "ENGL 1023",
+     "title": "English Composition II",
+     "lccns": [
+      "CENL 1023"
+     ]
+    },
+    {
+     "code": "ENGL 2103",
+     "title": "British Literature I",
+     "lccns": [
+      "CENL 2103",
+      "CENL 2123"
+     ]
+    },
+    {
+     "code": "ENGL 2113",
+     "title": "British Literature II",
+     "lccns": [
+      "CENL 2113",
+      "CENL 2123"
+     ]
+    },
+    {
+     "code": "ENGL 2123",
+     "title": "American Literature I",
+     "lccns": [
+      "CENL 2153",
+      "CENL 2163",
+      "CENL 2173",
+      "CENL 2403"
+     ]
+    },
+    {
+     "code": "ENSC 2113",
+     "title": "Environmental Science",
+     "lccns": [
+      "CEVS 1103"
+     ]
+    },
+    {
+     "code": "ENSC 3133",
+     "title": "Principles of Ecology Lec + Lab (Upper Level)",
+     "lccns": [
+      "CECO 4124"
+     ]
+    },
+    {
+     "code": "FINC 3183",
+     "title": "Principles of Business Finance (Upper Level)",
+     "lccns": [
+      "CFIN 3113"
+     ]
+    },
+    {
+     "code": "FREN 1013",
+     "title": "Elementary French I: 3 credit hours",
+     "lccns": [
+      "CFRN 1013"
+     ]
+    },
+    {
+     "code": "FREN 1023",
+     "title": "Elementary French II: 3 credit hours",
+     "lccns": [
+      "CFRN 1023"
+     ]
+    },
+    {
+     "code": "FREN 2013",
+     "title": "Intermediate French I: 3 credit hours",
+     "lccns": [
+      "CFRN 2013"
+     ]
+    },
+    {
+     "code": "FREN 2023",
+     "title": "Intermediate French II: 3 credit hours",
+     "lccns": [
+      "CFRN 2023"
+     ]
+    },
+    {
+     "code": "GEOG 2033",
+     "title": "Physical Geography",
+     "lccns": [
+      "CGRG 2213"
+     ]
+    },
+    {
+     "code": "GEOG 2053",
+     "title": "Human Geography",
+     "lccns": [
+      "CGRG 2013"
+     ]
+    },
+    {
+     "code": "GEOG 2103",
+     "title": "World Regional Geography",
+     "lccns": [
+      "CGRG 2113"
+     ]
+    },
+    {
+     "code": "GEOL 1113",
+     "title": "Physical Geology",
+     "lccns": [
+      "CGEO 1103"
+     ]
+    },
+    {
+     "code": "HIM 1033",
+     "title": "Medical Terminology",
+     "lccns": [
+      "CHLT 1103"
+     ]
+    },
+    {
+     "code": "HIST 1013",
+     "title": "Western Civilization I",
+     "lccns": [
+      "CHIS 1013",
+      "CHIS 1113"
+     ]
+    },
+    {
+     "code": "HIST 1023",
+     "title": "Western Civilization II",
+     "lccns": [
+      "CHIS 1023",
+      "CHIS 1123"
+     ]
+    },
+    {
+     "code": "HIST 2013",
+     "title": "American History I",
+     "lccns": [
+      "CHIS 2013"
+     ]
+    },
+    {
+     "code": "HIST 2023",
+     "title": "American History II",
+     "lccns": [
+      "CHIS 2023"
+     ]
+    },
+    {
+     "code": "HIST 3603",
+     "title": "Louisiana History",
+     "lccns": [
+      "CHIS 2033"
+     ]
+    },
+    {
+     "code": "KINE 2803",
+     "title": "Dance Appreciation",
+     "lccns": [
+      "CDNC 1013"
+     ]
+    },
+    {
+     "code": "MATH 1003",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1013",
+     "title": "College Algebra",
+     "lccns": [
+      "CMAT 1213"
+     ]
+    },
+    {
+     "code": "MATH 1023",
+     "title": "Applied Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 1032",
+     "title": "Applied Algebra",
+     "lccns": [
+      "CMAT 1203"
+     ]
+    },
+    {
+     "code": "MATH 1123",
+     "title": "Trigonometry",
+     "lccns": [
+      "CMAT 1223"
+     ]
+    },
+    {
+     "code": "MATH 1253",
+     "title": "Finite Mathematics",
+     "lccns": [
+      "CMAT 1313"
+     ]
+    },
+    {
+     "code": "MATH 1303",
+     "title": "Contemporary Mathematics",
+     "lccns": [
+      "CMAT 1103"
+     ]
+    },
+    {
+     "code": "MATH 2033",
+     "title": "Math for Elem Tchrs",
+     "lccns": [
+      "CMAT 1413"
+     ]
+    },
+    {
+     "code": "MATH 2043",
+     "title": "Geometry for Elem Tchrs",
+     "lccns": [
+      "CMAT 1423"
+     ]
+    },
+    {
+     "code": "MATH 2223",
+     "title": "Applied Calculus",
+     "lccns": [
+      "CMAT 2103"
+     ]
+    },
+    {
+     "code": "MATH 2403",
+     "title": "Algebra and Trigonometry: 3 credit hours",
+     "lccns": [
+      "CMAT 1233"
+     ]
+    },
+    {
+     "code": "MATH 2413",
+     "title": "Calculus I : 3 credit hours",
+     "lccns": [
+      "CMAT 2113"
+     ]
+    },
+    {
+     "code": "MATH 2423",
+     "title": "Calculus I : 6 credit hours",
+     "lccns": [
+      "CMAT 2116"
+     ]
+    },
+    {
+     "code": "MGMT 3103",
+     "title": "Principles of Management (Upper Level)",
+     "lccns": [
+      "CMGM 3103"
+     ]
+    },
+    {
+     "code": "MGMT 3333",
+     "title": "Production & Operations (Upper Level)",
+     "lccns": [
+      "CMGM 3213"
+     ]
+    },
+    {
+     "code": "MGMT 3403",
+     "title": "Small Business Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3413",
+      "CMGM 3513"
+     ]
+    },
+    {
+     "code": "MGMT 4703",
+     "title": "Human Resource Mgt (Upper Level)",
+     "lccns": [
+      "CMGM 3313"
+     ]
+    },
+    {
+     "code": "MGMT 4853",
+     "title": "Management in a Global Context (Upper Level)",
+     "lccns": [
+      "CMGM 4213"
+     ]
+    },
+    {
+     "code": "MKTG 3003",
+     "title": "Princples of Marketing (Upper Level)",
+     "lccns": [
+      "CMKT 3003"
+     ]
+    },
+    {
+     "code": "MKTG 3073",
+     "title": "Personal/Professional Selling (Upper Level)",
+     "lccns": [
+      "CMKT 3203"
+     ]
+    },
+    {
+     "code": "MKTG 4353",
+     "title": "Retail Management",
+     "lccns": [
+      "CMKT 3103"
+     ]
+    },
+    {
+     "code": "MUGN 2903",
+     "title": "Music Appreciation",
+     "lccns": [
+      "CMUS 1013"
+     ]
+    },
+    {
+     "code": "PHIL 2013",
+     "title": "Intro to Philosophy",
+     "lccns": [
+      "CPHL 1013"
+     ]
+    },
+    {
+     "code": "PHIL 2053",
+     "title": "Intro to Ethics",
+     "lccns": [
+      "CPHL 2013"
+     ]
+    },
+    {
+     "code": "PHYS 2013",
+     "title": "Physics I (Calculus Based)",
+     "lccns": [
+      "CPHY 2133"
+     ]
+    },
+    {
+     "code": "PHYS 2053",
+     "title": "Intro to Concepts in Physics",
+     "lccns": [
+      "CPHY 1013",
+      "CPHY 1023"
+     ]
+    },
+    {
+     "code": "PHYS 2063",
+     "title": "Physical Science II",
+     "lccns": [
+      "CPHY 1033"
+     ]
+    },
+    {
+     "code": "PHYS 2093",
+     "title": "Physics I (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2113"
+     ]
+    },
+    {
+     "code": "PHYS 2103",
+     "title": "Physics II (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2123"
+     ]
+    },
+    {
+     "code": "PHYS 2203",
+     "title": "Astronomy/The Solar System",
+     "lccns": [
+      "CAST 1103"
+     ]
+    },
+    {
+     "code": "PHYS 2303",
+     "title": "Astronomy/Stars & Galaxies",
+     "lccns": [
+      "CAST 1113"
+     ]
+    },
+    {
+     "code": "PHYS 2611",
+     "title": "Physics I Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2111",
+      "CPHY 2131"
+     ]
+    },
+    {
+     "code": "PHYS 2621",
+     "title": "Physics II Lab (Algebra / Trigonometry Based)",
+     "lccns": [
+      "CPHY 2121",
+      "CPHY 2141"
+     ]
+    },
+    {
+     "code": "POLS 2013",
+     "title": "Intro to American Govt",
+     "lccns": [
+      "CPOL 2013"
+     ]
+    },
+    {
+     "code": "PSYC 1023",
+     "title": "Intro to Psychology",
+     "lccns": [
+      "CPSY 2013"
+     ]
+    },
+    {
+     "code": "PSYC 2043",
+     "title": "Educational Psychology",
+     "lccns": [
+      "CPSY 2613"
+     ]
+    },
+    {
+     "code": "PSYC 2053",
+     "title": "Child Psychology",
+     "lccns": [
+      "CPSY 2313"
+     ]
+    },
+    {
+     "code": "PSYC 2063",
+     "title": "Adolescent Psychology",
+     "lccns": [
+      "CPSY 2213"
+     ]
+    },
+    {
+     "code": "PSYC 2083",
+     "title": "Developmental Psychology",
+     "lccns": [
+      "CPSY 2113"
+     ]
+    },
+    {
+     "code": "QA 2333",
+     "title": "Business Statistical Methods I",
+     "lccns": [
+      "CBUS 2303"
+     ]
+    },
+    {
+     "code": "SOC 2013",
+     "title": "Intro to Sociology",
+     "lccns": [
+      "CSOC 2013"
+     ]
+    },
+    {
+     "code": "SOC 2023",
+     "title": "Social Problems",
+     "lccns": [
+      "CSOC 2113"
+     ]
+    },
+    {
+     "code": "SOC 2053",
+     "title": "Intro to Anthropology",
+     "lccns": [
+      "CATR 1013"
+     ]
+    },
+    {
+     "code": "SOC 2103",
+     "title": "Intro to Criminal Justice",
+     "lccns": [
+      "CCRJ 1013"
+     ]
+    },
+    {
+     "code": "SOC 3123",
+     "title": "Race, Class & Ethnicity",
+     "lccns": [
+      "CSOC 2413"
+     ]
+    },
+    {
+     "code": "SOC 3133",
+     "title": "Sociology of Deviance",
+     "lccns": [
+      "CSOC 2313"
+     ]
+    },
+    {
+     "code": "SOC 4013",
+     "title": "Sociological Theory",
+     "lccns": [
+      "CSOC 3013"
+     ]
+    },
+    {
+     "code": "SPAN 1013",
+     "title": "Elementary Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 1013"
+     ]
+    },
+    {
+     "code": "SPAN 1023",
+     "title": "Elementary Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPN 1023"
+     ]
+    },
+    {
+     "code": "SPAN 2013",
+     "title": "Intermediate Spanish I: 3 credit hours",
+     "lccns": [
+      "CSPN 2013"
+     ]
+    },
+    {
+     "code": "SPAN 2023",
+     "title": "Intermediate Spanish II: 3 credit hours",
+     "lccns": [
+      "CSPN 2023"
+     ]
+    },
+    {
+     "code": "STAT 2003",
+     "title": "Introductory Statistics",
+     "lccns": [
+      "CMAT 1303"
+     ]
+    },
+    {
+     "code": "THTR 1003",
+     "title": "Intro to Theatre",
+     "lccns": [
+      "CTHE 1013"
+     ]
+    },
+    {
+     "code": "THTR 1013",
+     "title": "Stagecraft",
+     "lccns": [
+      "CTHE 2303"
+     ]
+    },
+    {
+     "code": "THTR 2103",
+     "title": "Acting I",
+     "lccns": [
+      "CTHE 2103"
+     ]
+    },
+    {
+     "code": "THTR 2113",
+     "title": "Voice for the Stage",
+     "lccns": [
+      "CTHE 2203"
      ]
     }
    ]
