@@ -1092,3 +1092,18 @@ college itself still resets the rows, which is correct, since the
 course list belongs to the old college. The course-list fill now
 lives in one helper (fillCourseOptions) shared by the subject
 change handler and the preserve path.
+
+## Results table redesign (Nov 11, 2026)
+
+Kris, from his screenshot of a Delgado to UNO check: the course by
+course results were hard to read, and nothing showed the direction
+of the transfer. Changes, applied to both page copies: each college
+group now opens with a direction banner naming the flow with an
+arrow (Delgado Community College → University of New Orleans);
+every course row carries its own arrow cell between "Your course"
+and "Counts as", so each line reads as a mapping; the results
+tables get a solid brand-blue header row with white text, roomier
+cell padding, and the Degree credit column right-aligned so the
+numbers line up down the page. Groups (toward degree, credit only,
+not counted) and every value the engine produces are unchanged;
+this is presentation only.
