@@ -138,7 +138,8 @@ function dataCourseResult(course, target, sourceInstitution) {
     if (partner) {
       return { code: course.code, shownAs: partner.code, degreeCredit: lccnHours(l),
         countsToward: null, warning: null,
-        matchedBy: 'catalog-data', dataStatus: 'matched', lccn: l };
+        matchedBy: 'catalog-data', dataStatus: 'matched', lccn: l,
+        sourceCatalog: srcCol.catalog || null, targetCatalog: tgtCol.catalog || null };
     }
   }
   const rubric = srcCourse.lccns[0].split(' ')[0];
@@ -148,12 +149,14 @@ function dataCourseResult(course, target, sourceInstitution) {
     return { code: course.code, shownAs: fam.code.split(' ')[0] + ' ' + lvl + 'XX',
       degreeCredit: lccnHours(srcCourse.lccns[0]), countsToward: 'elective hours',
       warning: 'Elective credit does not satisfy a named course requirement.',
-      matchedBy: 'catalog-data', dataStatus: 'subject-elective', lccn: srcCourse.lccns[0] };
+      matchedBy: 'catalog-data', dataStatus: 'subject-elective', lccn: srcCourse.lccns[0],
+      sourceCatalog: srcCol.catalog || null, targetCatalog: tgtCol.catalog || null };
   }
   return { code: course.code, shownAs: 'not in the course data yet', degreeCredit: 0,
     countsToward: null,
     warning: 'This course is not in the course data we have for that university yet, so the tool cannot call it. The university decides it on its own.',
-    matchedBy: 'catalog-data', dataStatus: 'no-match-in-data', lccn: srcCourse.lccns[0] };
+    matchedBy: 'catalog-data', dataStatus: 'no-match-in-data', lccn: srcCourse.lccns[0],
+    sourceCatalog: srcCol.catalog || null, targetCatalog: tgtCol.catalog || null };
 }
 const BELOW_C_GRADES = ['D', 'F'];
 

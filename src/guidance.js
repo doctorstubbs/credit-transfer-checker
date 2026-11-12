@@ -67,6 +67,15 @@ function buildGuidance(student, report) {
   for (const c of creditOnly) {
     nextSteps.push('Ask the registrar at ' + target + ' about ' + c.code + ', since it counts as an elective there, not a direct match, and confirm it fits your degree plan before you count on it.');
   }
+  // Choice credit (Stage 24): a course still in progress can still
+  // be protected. Under Louisiana's choice credit option, the grade
+  // for a dual enrollment course goes on the high school transcript,
+  // and the student chooses whether it also goes on the college
+  // transcript. The window closes when the course ends, so the step
+  // only appears while a course is planned or in progress.
+  if (courses.some((c) => c && c.status === 'planned')) {
+    nextSteps.push('If any of these courses is a dual enrollment course you are taking now, ask your school counselor about choice credit before the course ends: you can choose whether the grade goes on your college transcript.');
+  }
 
   const advisorQuestions = [];
   for (const c of creditOnly) {
@@ -83,8 +92,29 @@ function buildGuidance(student, report) {
   if (report && report.prerequisiteStillRequired) {
     advisorQuestions.push('A required major prerequisite is still missing. Which course fills it, and where can it be taken so the credit transfers?');
   }
+  // Grade protection (Stage 24): the transfer degree guarantee
+  // requires a C or better in each course. The question is only
+  // raised while it can still change behavior: a course is planned
+  // or in progress, or a below C grade is already on record. A
+  // clean finished check stays free of extra questions.
+  const anyPlanned = courses.some((c) => c && c.status === 'planned');
+  const anyBelowC = courses.some(
+    (c) => c && c.grade && ['D', 'F'].includes(String(c.grade).toUpperCase())
+  );
+  if (anyPlanned || anyBelowC) {
+    advisorQuestions.push('Does a grade below a C in any of these courses change what counts? The transfer degree guarantee requires a C or better in each course.');
+  }
 
-  return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions };
+  const sumHours = (list) => list.reduce((a, c) => a + (c.degreeCredit || 0), 0);
+  const totals = {
+    degreeHours: sumHours(degree),
+    creditOnlyHours: sumHours(creditOnly),
+    notCountedCourses: notCounted.length,
+    apDegreeHours: sumHours(apDegree),
+    apCreditHours: sumHours(apCreditOnly),
+  };
+
+  return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions, totals };
 }
 
 // Coverage requests (Kris, Nov 10, 2026): the production design
