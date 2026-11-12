@@ -966,3 +966,129 @@ by title words, capped at 8.
   yet). The logic is src/suggest.js, pinned by 5 scenarios.
 
 Suite: 59 scenarios, 250 steps, all passing, in both repos.
+
+## Stage 21: Transfer admission check, rules engine (Kris, Nov 11, 2026)
+
+Kris, reading the LSU Admissions Coordinator/Evaluator role he
+was just offered, asked what the role suggests adding to the
+checker, and chose item 1 from the list: a "will I be admitted"
+check beside the existing "will my credits count" check.
+
+Source: Louisiana Board of Regents, Minimum Admission
+Standards, Fall 2024 edition with policy updates March 21,
+2025 and February 3, 2026 (current edition; the AY 2022-2023
+ban is untouched). PDF kept at data/regents/ alongside the
+institution table Chris Yandle sent. The transfer rules were
+read from the document itself, not from summaries.
+
+Built (engine only, no page or API wiring yet):
+- data/admission-standards.json: every one of the 36 listed
+  colleges mapped to its Regents institution type (flagship 1,
+  statewide 3, regional 7, HBCU 3, two-year 14, private 8;
+  Southern University Shreveport is two-year per the Regents
+  list), plus the transfer thresholds.
+- src/admission.js: evaluateAdmission scores the four
+  evaluable paths from the standards. Earned credits:
+  flagship 30 hours and 2.5 GPA, statewide 24 and 2.25,
+  regional and HBCU 18 and 2.0, and every tier also requires
+  college-level English and mathematics with a C or better.
+  Bridge: 12 or more hours from a partnership bridge program
+  plus the same English and mathematics. Associate degree:
+  AAS, AA, AS, AALT, or ASLT or higher meets the minimum at
+  any four-year type. Adult (25+): never scored, because the
+  state leaves the adult bar to each institution; the path
+  reports cannot-tell and names what the institution decides.
+  The first-year path is named in the notes, never scored
+  (no high school record is collected).
+- Verdicts are honest about scope: "meets-state-minimum" is
+  never a guarantee (a college may set higher requirements),
+  two-year targets return open-admission, private targets
+  return not-applicable-private, and missing inputs return
+  cannot-tell rather than a guessed no.
+- features/admission.feature: 11 scenarios pin the type map,
+  each path, the GPA-only failure, the missing-English
+  failure, and the undecidable cases. Red run logged
+  (run-2026-11-11-admission-red.log), green run logged
+  (run-2026-11-11-admission-green.log).
+
+Suite: 70 scenarios, 298 steps, all passing, in both repos.
+Not yet done, on purpose: no UI, no /api/admission endpoint.
+Where the check lives (its own short check on the results
+page, or inside the emailed full report) is Kris's next
+decision; the input model differs between the two, because
+the course checker today deliberately collects no GPA.
+
+## Stage 22 (Nov 11, 2026): transfer degree planner, rules engine
+
+Built the night Kris decided the product is a business, not a
+lookup: families first, a forward plan as the paid core. The
+planner answers what TES cannot: what to take next, in what
+order, so every course counts.
+
+- data/transfer-degree.json: the Louisiana Transfer Degree
+  framework as data. 60 hours: 39 general education across six
+  areas (English Composition 6, Mathematics 6, Natural
+  Sciences 9, Humanities 9, Fine Arts 3, Social/Behavioral
+  Sciences 6) plus 21 discipline hours. Sources recorded in
+  the file: the Board of Regents core and its discipline lists
+  as published in the UL Lafayette catalog's General Education
+  Curriculum table, Delgado's Transfer Degree program pages,
+  the Transfer Degree Guarantee terms, and the Common Course
+  Catalog naming rubric (the fourth digit of an LCCN is the
+  credit value in semester hours).
+- src/planner.js: buildPlan takes a source and a target
+  college and assembles a plan ONLY from courses verified at
+  both colleges under a shared LCCN. Areas fill in Regents
+  order by ascending LCCN; natural sciences additionally
+  enforces the Regents rule (both a biological and a physical
+  science, six hours in the same science). Discipline hours
+  top the plan up to 60. Picks are chunked into semesters of
+  at most 15 hours. Statuses: complete (every area met, 60
+  hours, guarantee stated with its limits), partial (gaps
+  named by area with hours needed and in hand, guarantee NOT
+  claimed), cannot-plan (a college has no verified data).
+- Live behavior on the current dataset: Delgado to UNO is a
+  complete 60-hour plan. Delgado to UL Lafayette is partial
+  with exactly one named gap: Fine Arts, 3 hours needed, 0
+  verified matched courses, because UL Lafayette's harvested
+  course list carries no fine arts LCCN that Delgado also
+  lists. The gap is the product working as designed; it also
+  marks a harvest target for coverage expansion.
+- Known v1 refinement for later: the greedy fill takes
+  courses in LCCN order, so lab fragments (1-hour LCCNs) can
+  be picked early and science areas can overshoot their
+  minimums (13 to 14 hours). Minimums and branch rules always
+  hold; sequence-aware picks are a presentation-stage pass.
+- features/planner.feature: 10 scenarios pin the complete
+  UNO plan, the composition pair, both-verified provenance,
+  the science branches, the named ULL gap, the uncovered
+  target, LCCN hour counting on a 4-hour course, guarantee on
+  complete only, and the 15-hour semester cap. Red run logged
+  (run-2026-11-11-planner-red.log), green run in the full
+  suite log (run-2026-11-11-planner-green.log).
+
+Suite: 80 scenarios, 327 steps, all passing, in both repos.
+Not yet done, on purpose: no UI, no /api/plans endpoint, no
+payments. The money steps are the two seated sittings already
+queued: hosting for the private API, then the parked Stripe
+connection. Placement of the Stage 21 admission check (own
+check vs inside the paid report) is still Kris's open call
+and now folds into the plan product's shape.
+
+## Bug fix (Nov 11, 2026): Add a course no longer wipes the rows above it
+
+Kris reported it from the live page: pick a subject and a course,
+click "Add a course at this college," and every existing row reset
+to "Pick a subject." Cause: the add-course handler called
+fillSubjects, which rebuilt the subject and course selects for
+EVERY row in the block, discarding their selections. Fix, applied
+to both page copies (public/index.html and the Pages copy in
+docs/index.html): fillSubjects takes a preserve flag; the
+add-course path passes it and each existing row keeps its picked
+subject and course (its course list is rebuilt for that subject
+and the selection restored), while the typed code and the matched
+state number were never touched and still are not. Changing the
+college itself still resets the rows, which is correct, since the
+course list belongs to the old college. The course-list fill now
+lives in one helper (fillCourseOptions) shared by the subject
+change handler and the preserve path.
