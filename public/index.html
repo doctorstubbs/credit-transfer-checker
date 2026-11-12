@@ -33,9 +33,12 @@
   table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
   td, th { border-bottom: 1px solid #e3ddcc; padding: 6px 4px; text-align: left; vertical-align: top; }
   tr.srchead td { background: #eef0fa; font-weight: bold; border-bottom: 1px solid #c6cdea; }
-  table.results th { background: #1d3fae; color: #fff; padding: 8px 6px; font-size: 14px; }
-  table.results td { padding: 8px 6px; }
-  table.results td.arrow { width: 30px; text-align: center; font-weight: bold; color: #1d3fae; font-size: 17px; }
+  table.results { border: 1px solid #8f9bbd; table-layout: fixed; }
+  table.results th { background: #1d3fae; color: #fff; padding: 8px 6px; font-size: 14px; border: 1px solid #8f9bbd; }
+  table.results td { padding: 8px 6px; border: 1px solid #bfc7de; }
+  table.results tr.alt td { background: #eef0fa; }
+  table.results tr.srchead td { background: #d7def5; }
+  table.results td.arrow { text-align: center; font-weight: bold; color: #1d3fae; font-size: 17px; }
   table.results th.num, table.results td.num { text-align: right; }
   .fine { font-size: 13px; color: #5a6376; }
   #report { display: none; }
@@ -4138,7 +4141,7 @@ function render(r) {
     let h = '';
     Object.keys(groups).forEach(college => {
       h += '<tr class="srchead"><td colspan="5">' + college + ' <span aria-hidden="true">→</span> ' + targetLabel + '</td></tr>';
-      h += groups[college].map(c => '<tr><td>' + c.code + '</td><td class="arrow" aria-hidden="true">→</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td class="num">' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
+      h += groups[college].map((c, i) => '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + c.code + '</td><td class="arrow" aria-hidden="true">→</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || ' ') + '</td><td class="num">' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
     });
     return h;
   }
@@ -4160,8 +4163,8 @@ function render(r) {
   ].forEach(([label, cs, aps]) => {
     if (!cs.length && !aps.length) return;
     t += '<h3>' + label + '</h3>';
-    if (cs.length) t += '<table class="results"><tr><th>Your course</th><th></th><th>Counts as</th><th>Counts toward</th><th class="num">Degree credit</th></tr>' + courseRows(cs) + '</table>';
-    if (aps.length) t += '<table class="results"><tr><th>AP exam</th><th>Score</th><th>Result</th><th class="num">Degree credit</th></tr>' + apRows(aps) + '</table>';
+    if (cs.length) t += '<table class="results"><colgroup><col style="width:24%"><col style="width:6%"><col style="width:28%"><col style="width:24%"><col style="width:18%"></colgroup><tr><th>Your course</th><th></th><th>Counts as</th><th>Counts toward</th><th class="num">Degree credit</th></tr>' + courseRows(cs) + '</table>';
+    if (aps.length) t += '<table class="results"><colgroup><col style="width:30%"><col style="width:10%"><col style="width:42%"><col style="width:18%"></colgroup><tr><th>AP exam</th><th>Score</th><th>Result</th><th class="num">Degree credit</th></tr>' + apRows(aps) + '</table>';
   });
   document.getElementById('courseTable').innerHTML = t;
   document.getElementById('apResults').innerHTML = '';
