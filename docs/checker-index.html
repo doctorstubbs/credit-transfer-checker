@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will This Credit Count? Louisiana Credit Transfer Checker</title>
+<meta name="description" content="A Louisiana college credit check for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Will This Credit Count? Louisiana Credit Transfer Checker">
+<meta property="og:description" content="A Louisiana college credit check for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges.">
+<meta property="og:url" content="https://doctorstubbs.github.io/credit-transfer-checker/">
+<meta property="og:image" content="https://doctorstubbs.github.io/credit-transfer-checker/share-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #f7f5ef; color: #1c2430; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 8px 0 4px; }
+  .sub { color: #44506a; margin: 0 0 20px; }
+  .card { background: #fff; border: 1px solid #ddd6c4; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+  .source { border: 1px solid #cfc8b2; border-radius: 8px; padding: 12px; margin-bottom: 12px; background: #fbf9f3; }
+  .source h3 { margin: 0 0 6px; font-size: 17px; }
+  label { display: block; font-weight: bold; margin: 12px 0 4px; font-size: 15px; }
+  select, input[type=text] { width: 100%; padding: 9px; font-size: 16px; border: 1px solid #b9b2a0; border-radius: 6px; box-sizing: border-box; background: #fff; }
+  .row { display: grid; grid-template-columns: 0.95fr 1.05fr 0.6fr 1.5fr; gap: 8px; margin-bottom: 8px; }
+  .check { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; font-weight: normal; }
+  .check input { margin-top: 3px; }
+  button { background: #1d3fae; color: #ffd21f; border: 0; border-radius: 8px; padding: 13px 20px; font-size: 17px; font-weight: bold; cursor: pointer; width: 100%; }
+  button.secondary { background: #e9e4d4; color: #1c2430; margin-top: 8px; }
+  button.small { width: auto; padding: 8px 14px; font-size: 14px; }
+  .verdict { font-size: 19px; font-weight: bold; margin: 6px 0; }
+  .good { color: #146c2e; } .warn { color: #9a5b00; } .bad { color: #a31621; }
+  ul { margin: 6px 0 6px 18px; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
+  td, th { border-bottom: 1px solid #e3ddcc; padding: 6px 4px; text-align: left; vertical-align: top; }
+  tr.srchead td { background: #eef0fa; font-weight: bold; border-bottom: 1px solid #c6cdea; }
+  table.results { border: 1px solid #8f9bbd; table-layout: fixed; }
+  table.results th { background: #1d3fae; color: #fff; padding: 8px 6px; font-size: 14px; border: 1px solid #8f9bbd; }
+  table.results td { padding: 8px 6px; border: 1px solid #bfc7de; }
+  table.results tr.alt td { background: #eef0fa; }
+  table.results tr.srchead td { background: #d7def5; }
+  table.results td.arrow { text-align: center; font-weight: bold; color: #1d3fae; font-size: 17px; }
+  table.results th.num, table.results td.num { text-align: right; }
+  .fine { font-size: 13px; color: #5a6376; }
+  #report { display: none; }
+  .hero { background: #1d3fae; color: #fff; margin: 0 0 22px; }
+  .hero-inner { max-width: 760px; margin: 0 auto; padding: 34px 16px 30px; }
+  .hero-state { color: #ffd21f; font-weight: bold; letter-spacing: 3px; font-size: 15px; margin: 0 0 8px; }
+  .hero h1 { color: #fff; margin: 0; font-size: 34px; }
+  .hero-tag { color: #ffd21f; font-size: 19px; font-style: italic; margin: 8px 0 0; }
+  .tagline-foot { text-align: center; color: #1d3fae; font-weight: bold; font-size: 18px; letter-spacing: 1px; margin: 24px 0 0; }
+  .keycard { border: 2px solid #1d3fae; background: #f2f4fd; }
+  .keycard h2, .keycard label { color: #16307a; }
+  .optional-card { border: 1px dashed #b9b2a0; background: #fbf9f3; }
+
+  .row { position: relative; }
+  .suggest { position: absolute; top: calc(100% + 2px); left: 0; right: 0; background: #fff; border: 1.5px solid #1d3fae; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.15); z-index: 40; overflow: hidden; }
+  .suggest div { padding: 8px 10px; cursor: pointer; font-size: .95rem; }
+  .suggest div:hover { background: #eef1fd; }
+</style>
+<style>
+/*CTC-STYLE-START*/
+.secgroup { border: 3px solid #1d3fae; border-radius: 12px; background: #e8ecfd; padding: 16px 16px 4px; margin-bottom: 16px; }
+.secgroup > .secband { background: #1d3fae; color: #fff; font-size: 22px; font-weight: bold; margin: -16px -16px 14px; padding: 12px 16px; border-radius: 9px 9px 0 0; }
+.toolcard { border: 2px solid #1d3fae; }
+.toolcard > h2:first-child { background: #1d3fae; color: #fff; margin: -18px -18px 14px; padding: 10px 18px; border-radius: 8px 8px 0 0; }
+html { scroll-behavior: smooth; }
+.secgroup, .toolcard { scroll-margin-top: 10px; }
+.pathgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+@media (max-width: 640px) { .pathgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .pathgrid { grid-template-columns: 1fr; } }
+.pathbox { display: block; border: 2px solid #1d3fae; border-radius: 10px; background: #f2f4fd; padding: 12px; text-decoration: none; color: #1c2430; }
+.pathbox:hover { background: #e8ecfd; }
+.pathbox-title { display: block; font-weight: bold; font-size: 16px; color: #16307a; margin-bottom: 4px; }
+.pathbox-desc { display: block; font-size: 13px; color: #44506a; }
+/*CTC-STYLE-END*/
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-state">LOUISIANA</p>
+    <h1>Will this credit count?</h1>
+    <p class="hero-tag">Match your credits. Know what transfers.</p>
+  </div>
+</header>
+<div class="wrap">
+
+<!--CTC-PATHGRID-START-->
+  <div class="card toolcard">
+    <h2 style="margin-top:0;font-size:20px;">Select Your Path</h2>
+    <div class="pathgrid">
+      <a class="pathbox" href="#check-credits">
+        <span class="pathbox-title">🔍 Check My Credits</span>
+        <span class="pathbox-desc">See which of your courses count at the college you choose.</span>
+      </a>
+      <a class="pathbox" href="#compare">
+        <span class="pathbox-title">⚖️ Compare Two Colleges</span>
+        <span class="pathbox-desc">Run the same courses against two colleges, side by side.</span>
+      </a>
+      <a class="pathbox" href="#what-to-take-next">
+        <span class="pathbox-title">🧭 What to Take Next</span>
+        <span class="pathbox-desc">Find the courses still guaranteed to count toward your pathway.</span>
+      </a>
+      <a class="pathbox" href="#eligibility">
+        <span class="pathbox-title">📋 Eligibility Check</span>
+        <span class="pathbox-desc">See if you meet the minimums to start dual enrollment.</span>
+      </a>
+      <a class="pathbox" href="#pathways">
+        <span class="pathbox-title">🛤️ Transfer Pathways</span>
+        <span class="pathbox-desc">Browse the 16 Louisiana transfer pathways.</span>
+      </a>
+      <a class="pathbox" href="#degree-planner">
+        <span class="pathbox-title">🗺️ Degree Planner</span>
+        <span class="pathbox-desc">Map out your degree plan semester by semester.</span>
+      </a>
+      <a class="pathbox" href="#admission">
+        <span class="pathbox-title">🎯 Admission Check</span>
+        <span class="pathbox-desc">Check your standing for admission at your target college.</span>
+      </a>
+      <a class="pathbox" href="#coverage-colleges">
+        <span class="pathbox-title">🏫 Coverage</span>
+        <span class="pathbox-desc">See all 33 covered Louisiana colleges and when each was last verified.</span>
+      </a>
+    </div>
+  </div>
+<!--CTC-PATHGRID-END--><!--CTC-STRIP-START-->
+  <div class="card" style="border:2px solid #1d3fae;background:#f2f4fd;">
+    <p style="margin:0;" id="coverageStrip">Now checking the Louisiana colleges with verified course data.</p>
+    <p style="margin:8px 0 0;"><button type="button" class="secondary" id="spanishToggle">Ver en español</button></p>
+  </div>
+
+<!--CTC-STRIP-END--><!--CTC-GROUP-OPEN-->
+  <div class="secgroup" id="check-credits">
+    <div class="secband">Match your credits</div>
+<!--/CTC-GROUP-OPEN-->  <div class="card keycard">
+    <h2 style="margin-top:0;font-size:20px;">Where your courses come from</h2>
+    <p class="fine" style="margin-top:0;">Add every college you took courses at, or plan to.</p>
+    <div id="sources"></div>
+    <button type="button" class="secondary" id="addSource">Add another college</button>
+  </div>
+
+  <div class="card optional-card">
+    <h2 style="margin-top:0;font-size:20px;">AP exams (optional)</h2>
+    <div id="apExams"></div>
+    <button type="button" class="secondary" id="addAp">Add an AP exam</button>
+  </div>
+
+  <div class="card keycard">
+    <label for="target" style="margin-top:0;">Target college (where you want the courses to count)</label>
+    <select id="target">
+      <option value="">Pick the target college</option>
+    </select>
+  </div>
+
+  <button type="button" id="run">Match your credits</button>
+
+  <div class="card" id="report">
+<!--CTC-RESULTS-NOTE-START-->
+    <p class="fine" style="margin-top:0;">These results use course data from the AY 2025-26 statewide common course catalog.</p>
+<!--CTC-RESULTS-NOTE-END-->    <div id="verdicts" aria-live="polite"></div>
+    <div id="courseTable"></div>
+    <div id="apResults"></div>
+    <div id="warnings" aria-live="polite"></div>
+    <div id="coverageRequest"></div>
+    <div id="nextSteps"></div>
+    <div id="advisorBox"></div>
+    <div id="reportCta"></div>
+<!--CTC-REPORT-ERROR-START-->
+    <p class="fine">See something wrong in these results? <a href="mailto:plans@creditsthatcount.com?subject=Error%20report%3A%20Credits%20That%20Count%20checker">Report an error</a></p>
+<!--CTC-REPORT-ERROR-END-->  </div>
+
+<!--CTC-GROUP-CLOSE-->
+  </div>
+<!--/CTC-GROUP-CLOSE--><!--CTC-SECTIONS-START-->
+  <div class="card toolcard" id="eligibility">
+    <h2 style="margin-top:0;font-size:20px;">Can you take dual enrollment yet?</h2>
+    <p class="fine" style="margin-top:0;">Checked against the published dual enrollment minimums. Meeting them is not a promise of a seat in a course; the college and your school make the final call.</p>
+    <label for="eligCollege">College</label>
+    <select id="eligCollege"></select>
+    <label for="eligGrade">Grade level</label>
+    <select id="eligGrade">
+      <option value="junior">Junior (11th grade)</option>
+      <option value="senior">Senior (12th grade)</option>
+    </select>
+    <label for="eligTrack">Track</label>
+    <select id="eligTrack">
+      <option value="academic">Academic courses</option>
+      <option value="technical">Technical courses</option>
+    </select>
+    <label for="eligGpa">High school GPA (cumulative, unweighted)</label>
+    <input type="text" id="eligGpa" placeholder="e.g. 2.8">
+    <label for="eligComp">ACT Composite (if you have one)</label>
+    <input type="text" id="eligComp" placeholder="e.g. 19">
+    <label for="eligEng">ACT English (if you have one)</label>
+    <input type="text" id="eligEng" placeholder="e.g. 18">
+    <label for="eligMath">ACT Math (if you have one)</label>
+    <input type="text" id="eligMath" placeholder="e.g. 19">
+    <label for="eligSubject">Subject you want to take</label>
+    <select id="eligSubject">
+      <option value="">Not sure yet</option>
+      <option value="english">English, humanities, or social sciences</option>
+      <option value="math">Math or science</option>
+    </select>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="eligRec" style="width:auto;"> My school counselor will recommend me</label></p>
+    <p><button type="button" id="eligRun">Check eligibility</button></p>
+    <div id="eligResult"></div>
+  </div>
+
+  <div class="card toolcard" id="pathways">
+    <h2 style="margin-top:0;font-size:20px;">Know what to take next semester</h2>
+    <p class="fine" style="margin-top:0;">Built from the Louisiana Universal Transfer Pathways: 60 credit hours that transfer and count toward the degree at any Louisiana public university that offers it. Pick a career goal and see the exact courses at your college, starting with next semester. Sixteen pathways are verified in full today; the rest are being verified before they are listed. A gap is named, never filled with a guess.</p>
+    <label for="pwPathway">Career goal</label>
+    <select id="pwPathway"></select>
+    <label for="pwSource">Your college</label>
+    <select id="pwSource"></select>
+    <label for="pwTarget">The university you want to finish at</label>
+    <select id="pwTarget"></select>
+    <p><button type="button" id="pwRun">Show my courses</button></p>
+    <div id="pwResult"></div>
+  </div>
+
+  <div class="card toolcard" id="degree-planner">
+    <h2 style="margin-top:0;font-size:20px;">No pathway for your goal? Build the general transfer plan</h2>
+    <p class="fine" style="margin-top:0;">The Louisiana Transfer Degree plan: 60 hours (39 of general education plus 21 more) that transfer as a block to any Louisiana public university, with general education met in full and junior standing, when every course is passed with a C or better. Built only from courses verified at both colleges.</p>
+    <label for="planSource">Your college</label>
+    <select id="planSource"></select>
+    <label for="planTarget">The university you want to finish at</label>
+    <select id="planTarget"></select>
+    <p><button type="button" id="planRun">Build my plan</button></p>
+    <div id="planResult"></div>
+    <div id="packetResult"></div>
+  </div>
+
+  <div class="card toolcard" id="compare">
+    <h2 style="margin-top:0;font-size:20px;">Compare two universities side by side</h2>
+    <p class="fine" style="margin-top:0;">Same courses, two universities, one answer. Add the courses from one college, pick two universities, and see what each one counts, side by side. Every verdict comes from the same verified course data as the main check.</p>
+    <label for="cmpSource">Your college</label>
+    <select id="cmpSource"></select>
+    <label for="cmpSubject">Subject</label>
+    <select id="cmpSubject"></select>
+    <label for="cmpCourse">Course</label>
+    <select id="cmpCourse"></select>
+    <p><button type="button" id="cmpAdd">Add course</button></p>
+    <div id="cmpList"></div>
+    <label for="cmpTargetA">First university</label>
+    <select id="cmpTargetA"></select>
+    <label for="cmpTargetB">Second university</label>
+    <select id="cmpTargetB"></select>
+    <p><button type="button" id="cmpRun">Compare</button></p>
+    <div id="cmpResult"></div>
+  </div>
+
+  <div class="card toolcard" id="coverage-colleges">
+    <h2 style="margin-top:0;font-size:20px;">Coverage: the colleges we check</h2>
+    <p class="fine" style="margin-top:0;">Every verdict on this page comes from a college's published catalog or the Board of Regents Articulation Matrix, 2025-26. This list names each covered college and the date its course data was last verified against that source.</p>
+    <p class="fine">Spot a mistake in this list? <a href="mailto:plans@creditsthatcount.com?subject=Error%20report%3A%20Credits%20That%20Count%20checker">Report an error</a></p>
+    <div id="coverageList"></div>
+  </div>
+
+  <div class="card toolcard" id="what-to-take-next">
+    <h2 style="margin-top:0;font-size:20px;">What to take next</h2>
+    <p class="fine" style="margin-top:0;">Start from what you have already taken. Add your finished courses, pick a major pathway if you have one, and see exactly what is left, with the courses at your own college that count at the university you want. No pathway picked means the 39 hour general education block of the transfer degree.</p>
+    <label for="gapSource">Your college</label>
+    <select id="gapSource"></select>
+    <label for="gapSubject">Subject</label>
+    <select id="gapSubject"></select>
+    <label for="gapCourse">Course</label>
+    <select id="gapCourse"></select>
+    <p><button type="button" id="gapAdd">Add course</button></p>
+    <div id="gapList"></div>
+    <label for="gapPathway">Major pathway (optional)</label>
+    <select id="gapPathway"></select>
+    <label for="gapTarget">The university you want to finish at</label>
+    <select id="gapTarget"></select>
+    <p><button type="button" id="gapRun">Show what is left</button></p>
+    <div id="gapResult"></div>
+  </div>
+
+  <div class="card toolcard" id="admission">
+    <h2 style="margin-top:0;font-size:20px;">Will you be admitted?</h2>
+    <p class="fine" style="margin-top:0;">Checked against the Louisiana Board of Regents minimum admission standards for transfer students. Meeting the state minimum is not a promise of admission; the university makes the final call.</p>
+    <label for="admTarget">University</label>
+    <select id="admTarget"></select>
+    <label for="admHours">College credit hours earned</label>
+    <input type="text" id="admHours" placeholder="e.g. 24">
+    <label for="admGpa">College GPA</label>
+    <input type="text" id="admGpa" placeholder="e.g. 2.5">
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admEng" style="width:auto;"> College level English completed with a C or better</label></p>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admMath" style="width:auto;"> College level math completed with a C or better</label></p>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admDegree" style="width:auto;"> I hold an associate degree (AA, AS, AAS, AALT, or ASLT)</label></p>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admBridge" style="width:auto;"> I am in a partnership bridge program with this university</label></p>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admAge" style="width:auto;"> I am 25 or older</label></p>
+    <p><label style="font-weight:normal;"><input type="checkbox" id="admPlacement" style="width:auto;"> I place into standalone college math or English</label></p>
+    <p><button type="button" id="admRun">Check admission standing</button></p>
+    <div id="admResult"></div>
+  </div>
+
+<!--CTC-SECTIONS-END-->  <div class="card">
+    <h2 style="margin-top:0;font-size:20px;">About this check</h2>
+    <p>A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. What this check assumes, and where its data comes from, is linked at the bottom of this page.</p>
+  </div>
+  <details class="disclosure"><summary>Where this data comes from, and what this check assumes</summary>
+    <p class="fine" id="coverage"></p>
+  <p class="fine">Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course is passed with a grade of C or better, which is what transfer credit requires in the first place. If a course ends below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. AP exams are checked under the Louisiana statewide AP policy: a public college awards credit for a score of 3 or higher once the official score report is sent; a score below 3, or a score report never sent, earns no credit; private universities set their own AP policy. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.</p>
+  </details>
+  <p class="tagline-foot">Know before you go.</p>
+</div>
+
+<script>/*DATA-START*/
+// Migration (Nov 19, 2026): this page no longer carries
+// the course dataset. The colleges list, the dropdown
+// options, and every tool answer come from the Credits
+// That Count API. CTC_COLLEGES_PROMISE resolves with the
+// colleges array (empty if the API cannot be reached).
+var CTC_API_BASE = 'https://credits-that-count-api.onrender.com';
+var CTC_COLLEGES = [];
+var CTC_COLLEGES_PROMISE = fetch(CTC_API_BASE + '/api/colleges')
+  .then(function (r) { return r.ok ? r.json() : { colleges: [] }; })
+  .then(function (d) { CTC_COLLEGES = (d && d.colleges) || []; return CTC_COLLEGES; })
+  .catch(function () { CTC_COLLEGES = []; return CTC_COLLEGES; });
+/*DATA-END*/</script>
+<script>
+// Coverage design (Kris, Nov 10, 2026, superseding the Nov 8, 2026
+// dropdown rule for this build): the dropdowns list EVERY Louisiana
+// college, covered or not. Covered colleges (DATA_COLLEGES) check
+// instantly from verified course data. An uncovered college is not
+// a dead end: its courses come back as not covered, and the result
+// offers the email request that queues the college for harvesting,
+// which is how the verified dataset grows. The first three entries
+// are the covered colleges today.
+// Migration (Nov 19, 2026): the covered college list comes
+// from the API now (see the DATA block at the top of this
+// page). It starts empty and fills when the colleges answer
+// lands; the Match button waits for the same answer before
+// it reads this list.
+let DATA_COLLEGES = [];
+if (typeof CTC_COLLEGES_PROMISE !== 'undefined') {
+  CTC_COLLEGES_PROMISE.then((colleges) => {
+    DATA_COLLEGES = (colleges || []).filter((c) => c.covered).map((c) => c.name);
+  });
+}
+// Repair (Nov 19, 2026): the API fetch caches are declared
+// here, before the first source block is built below;
+// declaring them beside their first readers stopped the
+// whole main script with a temporal dead zone error.
+var ctcSubjectsCache = {};
+var ctcCoursesCache = {};
+var CTC_API = (typeof CTC_API_BASE !== 'undefined') ? CTC_API_BASE : '';
+const LA_COLLEGES = [
+  'Delgado Community College',
+  'University of Louisiana at Lafayette',
+  'University of New Orleans',
+  'Baton Rouge Community College',
+  'Bossier Parish Community College',
+  'Centenary College of Louisiana',
+  'Central Louisiana Technical Community College',
+  'Dillard University',
+  'Fletcher Technical Community College',
+  'Franciscan Missionaries of Our Lady University',
+  'Grambling State University',
+  'Louisiana Christian University',
+  'Louisiana Delta Community College',
+  'Louisiana State University and A&M College',
+  'Louisiana State University at Alexandria',
+  'Louisiana State University Eunice',
+  'Louisiana State University Shreveport',
+  'Louisiana Tech University',
+  'Loyola University New Orleans',
+  'McNeese State University',
+  'Nicholls State University',
+  'Northshore Technical Community College',
+  'Northwest Louisiana Technical Community College',
+  'Northwestern State University of Louisiana',
+  'Nunez Community College',
+  'River Parishes Community College',
+  'South Louisiana Community College',
+  'SOWELA Technical Community College',
+  'Southeastern Louisiana University',
+  'Southern University and A&M College',
+  'Southern University at New Orleans',
+  'Southern University Shreveport',
+  'Tulane University',
+  'University of Holy Cross',
+  'University of Louisiana at Monroe',
+  'Xavier University of Louisiana'
+];
+const LA_PRIVATE = [
+  'Centenary College of Louisiana',
+  'Dillard University',
+  'Franciscan Missionaries of Our Lady University',
+  'Louisiana Christian University',
+  'Loyola University New Orleans',
+  'Tulane University',
+  'University of Holy Cross',
+  'Xavier University of Louisiana'
+];
+const LA_PUBLIC = LA_COLLEGES.filter(c => !LA_PRIVATE.includes(c));
+(function fillTargets() {
+  const sel = document.getElementById('target');
+  if (!sel) return;
+  sel.innerHTML = LA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+})();
+
+const sourcesDiv = document.getElementById('sources');
+let sourceCount = 0;
+
+function courseRowHTML() {
+  return '<div class="row">' +
+    '<select class="c-subject" aria-label="Subject"><option value="">Pick a subject</option></select>' +
+    '<select class="c-course" aria-label="Course" disabled><option value="">Pick the course</option></select>' +
+    '<input type="text" class="c-code" placeholder="or type the code: ENGL 1010" aria-label="Course code">' +
+    '</div>';
+}
+
+function addSourceBlock() {
+  sourceCount += 1;
+  const div = document.createElement('div');
+  div.className = 'source';
+  const options = LA_COLLEGES.map(c => '<option>' + c + '</option>').join('');
+  div.innerHTML =
+    '<h3>College ' + sourceCount + '</h3>' +
+    '<label>College name</label><select class="s-name">' + options + '</select>' +
+    '<label>Courses taken or planned at this college</label>' +
+    '<div class="s-courses">' + courseRowHTML() + courseRowHTML() + '</div>' +
+    '<button type="button" class="secondary small s-addcourse">Add a course at this college</button>';
+  div.querySelector('.s-addcourse').addEventListener('click', () => {
+    div.querySelector('.s-courses').insertAdjacentHTML('beforeend', courseRowHTML());
+    fillSubjects(div, true);
+  });
+  sourcesDiv.appendChild(div);
+  fillSubjects(div);
+}
+addSourceBlock();
+document.getElementById('addSource').addEventListener('click', addSourceBlock);
+
+const AP_EXAMS = [
+  'AP English Language and Composition',
+  'AP English Literature and Composition',
+  'AP Calculus AB',
+  'AP Calculus BC',
+  'AP Statistics',
+  'AP Biology',
+  'AP Chemistry',
+  'AP Physics 1',
+  'AP Environmental Science',
+  'AP Psychology',
+  'AP United States History',
+  'AP World History',
+  'AP European History',
+  'AP United States Government and Politics',
+  'AP Macroeconomics',
+  'AP Microeconomics',
+  'AP Human Geography',
+  'AP Computer Science A',
+  'AP Spanish Language and Culture',
+  'AP French Language and Culture'
+];
+
+const apDiv = document.getElementById('apExams');
+
+function apRowHTML() {
+  const exams = AP_EXAMS.map(e => '<option>' + e + '</option>').join('');
+  const scores = [1, 2, 3, 4, 5].map(n => '<option value="' + n + '"' + (n === 3 ? ' selected' : '') + '>' + n + '</option>').join('');
+  return '<div class="row ap-row">' +
+    '<select class="a-exam" aria-label="AP exam"><option value="">Pick an AP exam</option>' + exams + '</select>' +
+    '<select class="a-score" aria-label="AP score">' + scores + '</select>' +
+    '<select class="a-sent" aria-label="Official score report sent">' +
+    '<option value="yes">Score report sent</option>' +
+    '<option value="no">Score report not sent yet</option>' +
+    '</select>' +
+    '</div>';
+}
+
+function addApRow() {
+  apDiv.insertAdjacentHTML('beforeend', apRowHTML());
+}
+addApRow();
+document.getElementById('addAp').addEventListener('click', addApRow);
+
+function parseNumber(code) {
+  const m = String(code).match(/(\d+)\s*$/);
+  return m ? parseInt(m[1], 10) : null;
+}
+
+// Migration (Nov 19, 2026): the subject and course dropdowns
+// are fed by the API, one college at a time, and cached. A
+// fill that resolves after the visitor changed the college
+// again is dropped, so a slow answer can never paint the
+// wrong college's courses.
+function ctcApiGet(path) {
+  return fetch(CTC_API + path).then((r) => {
+    if (!r.ok) throw new Error('API ' + r.status);
+    return r.json();
+  });
+}
+function ctcSubjectsFor(college) {
+  if (!ctcSubjectsCache[college]) {
+    ctcSubjectsCache[college] = ctcApiGet('/api/subjects?college=' + encodeURIComponent(college))
+      .then((d) => (d && d.subjects) || [])
+      .catch(() => null);
+  }
+  return ctcSubjectsCache[college];
+}
+function ctcCoursesFor(college, prefix) {
+  const key = college + '|' + prefix;
+  if (!ctcCoursesCache[key]) {
+    ctcCoursesCache[key] = ctcApiGet('/api/courses?college=' + encodeURIComponent(college) + '&subject=' + encodeURIComponent(prefix))
+      .then((d) => (d && d.courses) || [])
+      .catch(() => []);
+  }
+  return ctcCoursesCache[key];
+}
+function fillCourseOptions(block, row) {
+  const college = block.querySelector('.s-name').value;
+  const subj = row.querySelector('.c-subject');
+  const course = row.querySelector('.c-course');
+  if (!subj.value) { course.disabled = true; return Promise.resolve(); }
+  const wanted = subj.value;
+  const rubrics = wanted.split(',');
+  return Promise.all(rubrics.map((prefix) => ctcCoursesFor(college, prefix))).then((lists) => {
+    if (block.querySelector('.s-name').value !== college || subj.value !== wanted) return;
+    const seen = {};
+    const list = [];
+    lists.forEach((entries) => (entries || []).forEach((c) => {
+      if (!seen[c.code]) { seen[c.code] = true; list.push(c); }
+    }));
+    list.sort((a, b) => a.code.localeCompare(b.code));
+    course.innerHTML = '<option value="">Pick the course</option>' + list.map(c =>
+      '<option value="' + c.code + '" data-lccn="' + (c.lccn || '') + '">' + c.code + ' | ' + c.title + '</option>').join('');
+    course.disabled = false;
+  });
+}
+function fillSubjects(block, preserve) {
+  const college = block.querySelector('.s-name').value;
+  const done = ctcSubjectsFor(college).then((subjects) => {
+    if (block.querySelector('.s-name').value !== college) return undefined;
+    const jobs = [];
+    block.querySelectorAll('.row').forEach(row => {
+      const subj = row.querySelector('.c-subject');
+      const course = row.querySelector('.c-course');
+      if (!subjects) { subj.style.display = 'none'; course.style.display = 'none'; return; }
+      subj.style.display = ''; course.style.display = '';
+      const prevSubject = preserve ? subj.value : '';
+      const prevCourse = preserve ? course.value : '';
+      const byLabel = {};
+      subjects.forEach(s2 => { (byLabel[s2.label] = byLabel[s2.label] || []).push(s2.key); });
+      const labels = Object.keys(byLabel).sort();
+      const valueFor = l => [...byLabel[l]].sort().join(',');
+      subj.innerHTML = '<option value="">Pick a subject</option>' + labels.map(l =>
+        '<option value="' + valueFor(l) + '">' + l + '</option>').join('');
+      if (prevSubject && labels.some(l => valueFor(l) === prevSubject)) {
+        subj.value = prevSubject;
+        jobs.push(fillCourseOptions(block, row).then(() => {
+          if (prevCourse && [...course.options].some(o => o.value === prevCourse)) course.value = prevCourse;
+        }));
+        return;
+      }
+      course.innerHTML = '<option value="">Pick the course</option>';
+      course.disabled = true;
+    });
+    return Promise.all(jobs);
+  });
+  block._ctcSubjects = done;
+  return done;
+}
+sourcesDiv.addEventListener('change', (e) => {
+  const t = e.target;
+  if (t.classList.contains('s-name')) {
+    fillSubjects(t.closest('.source'));
+  } else if (t.classList.contains('c-subject')) {
+    const block = t.closest('.source');
+    const row = t.closest('.row');
+    row._ctcFill = fillCourseOptions(block, row);
+  } else if (t.classList.contains('c-course')) {
+    const row = t.closest('.row');
+    const opt = t.options[t.selectedIndex];
+    if (opt && opt.value) {
+      row.querySelector('.c-code').value = opt.value;
+      row.dataset.lccn = opt.getAttribute('data-lccn') || '';
+    } else {
+      row.dataset.lccn = '';
+    }
+  }
+});
+// Migration (Nov 19, 2026): the same provenance line, built
+// from the colleges answer (name, catalog, course count).
+(function coverage() {
+  const el = document.getElementById('coverage');
+  if (!el || typeof CTC_COLLEGES_PROMISE === 'undefined') return;
+  CTC_COLLEGES_PROMISE.then((colleges) => {
+    const covered = (colleges || []).filter((c) => c.covered);
+    if (!covered.length) return;
+    const parts = covered.map(c =>
+      c.name + ' (' + c.catalog + ', ' + c.courseCount + ' courses with state numbers)');
+    el.textContent = 'Course data built from current catalogs: ' + parts.join(' and ') +
+      ', joined on the Louisiana common course numbers in the AY 2025-26 statewide catalog. ' +
+      'For these colleges, pick the subject, then the course, and the tool finds the match itself. More colleges are being added the same way.';
+  });
+})();
+document.getElementById('run').addEventListener('click', async () => {
+  const targetEl = document.getElementById('target');
+  const isPublic = LA_PUBLIC.includes(targetEl.value);
+  const target = { name: targetEl.value, isPublic: isPublic, teachesSubject: isPublic ? true : null };
+
+  const sources = [];
+  document.querySelectorAll('#sources .source').forEach(block => {
+    const courses = [];
+    block.querySelectorAll('.s-courses .row').forEach(r => {
+      const code = r.querySelector('.c-code').value.trim();
+      if (!code) return;
+      courses.push({
+        code: code.toUpperCase(),
+        lccn: r.dataset.lccn || undefined,
+        number: parseNumber(code)
+      });
+    });
+    sources.push({
+      institution: block.querySelector('.s-name').value,
+      degree: null,
+      degreeStatus: 'completed',
+      allGradesCOrBetter: false,
+      courses: courses
+    });
+  });
+
+  const apExams = [];
+  document.querySelectorAll('#apExams .ap-row').forEach(r => {
+    const exam = r.querySelector('.a-exam').value;
+    if (!exam) return;
+    apExams.push({
+      exam: exam,
+      score: parseInt(r.querySelector('.a-score').value, 10),
+      scoreReportSent: r.querySelector('.a-sent').value === 'yes'
+    });
+  });
+
+  const student = {
+    sources: sources,
+    apExams: apExams,
+    dualEnrollmentCredits: true,
+    missingMajorPrerequisite: false,
+    target: target,
+    programType: 'general'
+  };
+
+  window._lastStudent = student;
+  let report = null;
+  try {
+    const res = await fetch(CTC_API + '/api/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(student) });
+    if (!res.ok) throw new Error('API ' + res.status);
+    report = await res.json();
+  } catch (e) {
+    const box = document.getElementById('report');
+    box.style.display = 'block';
+    document.getElementById('verdicts').innerHTML = '<p class="verdict warn">We could not reach the credit checker just now. Check your connection and try again.</p>';
+    document.getElementById('courseTable').innerHTML = '';
+    document.getElementById('warnings').innerHTML = '';
+    document.getElementById('nextSteps').innerHTML = '';
+    document.getElementById('advisorBox').innerHTML = '';
+    box.scrollIntoView({ behavior: 'smooth' });
+    document.dispatchEvent(new Event('change', { bubbles: true }));
+    return;
+  }
+  if (typeof CTC_COLLEGES_PROMISE !== 'undefined') await CTC_COLLEGES_PROMISE;
+  render(report);
+});
+
+// Guidance layer: turns an engine report into an actionable
+// result (Kris's direction, Nov 10, 2026).
+//
+// Three things come out:
+// 1. Groups: which courses count toward the degree, which count
+//    as credit only, and which are not counted in this check.
+//    That degree vs credit-only distinction is the one families
+//    miss, so the result shows it as separate groups, never one
+//    mixed list.
+// 2. Next steps: concrete actions that end the result, naming the
+//    target college and the flagged courses.
+// 3. Advisor questions: built only from the flagged courses (the
+//    electives and the uncovered ones), so a clean check produces
+//    none.
+//
+// Pure functions over the student record and the engine report;
+// the page inlines the same code.
+
+function targetNameOf(student) {
+  if (!student) return 'the target college';
+  if (student.target && student.target.name) return student.target.name;
+  if (student.targetCollege) return student.targetCollege;
+  return 'the target college';
+}
+
+function classifyCourse(c) {
+  if (!c) return 'not-counted';
+  if (c.dataStatus === 'subject-elective') return 'credit-only';
+  if (c.dataStatus === 'no-match-in-data' || c.dataStatus === 'not-in-data') return 'not-counted';
+  if (c.degreeCredit && c.countsToward === 'elective hours') return 'credit-only';
+  if (c.degreeCredit && c.degreeCredit > 0) return 'degree';
+  return 'not-counted';
+}
+
+function classifyAp(a) {
+  if (!a) return 'not-counted';
+  if (a.outcome === 'exact-equivalent') return 'degree';
+  if (a.outcome === 'subject-elective') return 'credit-only';
+  return 'not-counted';
+}
+
+function buildGuidance(student, report) {
+  const target = targetNameOf(student);
+  const courses = (report && report.courseResults) || [];
+  const aps = (report && report.apResults) || [];
+
+  const degree = [];
+  const creditOnly = [];
+  const notCounted = [];
+  for (const c of courses) {
+    const kind = classifyCourse(c);
+    if (kind === 'degree') degree.push(c);
+    else if (kind === 'credit-only') creditOnly.push(c);
+    else notCounted.push(c);
+  }
+  const apDegree = aps.filter((a) => classifyAp(a) === 'degree');
+  const apCreditOnly = aps.filter((a) => classifyAp(a) === 'credit-only');
+  const apNotCounted = aps.filter((a) => classifyAp(a) === 'not-counted');
+
+  const nextSteps = [];
+  if (courses.length) {
+    nextSteps.push('Send your official transcript to ' + target + ' so the credits that count can be posted to your record there.');
+  }
+  if (apDegree.length || apCreditOnly.length) {
+    nextSteps.push('Have your official AP score report sent to ' + target + '; AP credit is only awarded once the university receives it.');
+  }
+  for (const c of creditOnly) {
+    nextSteps.push('Ask the registrar at ' + target + ' about ' + c.code + ', since it counts as an elective there, not a direct match, and confirm it fits your degree plan before you count on it.');
+  }
+  // Choice credit (Stage 24): a course still in progress can still
+  // be protected. Under Louisiana's choice credit option, the grade
+  // for a dual enrollment course goes on the high school transcript,
+  // and the student chooses whether it also goes on the college
+  // transcript. The window closes when the course ends, so the step
+  // only appears while a course is planned or in progress.
+  if (courses.some((c) => c && c.status === 'planned')) {
+    nextSteps.push('If any of these courses is a dual enrollment course you are taking now, ask your school counselor about choice credit before the course ends: you can choose whether the grade goes on your college transcript.');
+  }
+
+  const advisorQuestions = [];
+  for (const c of creditOnly) {
+    advisorQuestions.push('Will ' + c.code + ' count toward my degree plan at ' + target + ', or only as elective hours?');
+  }
+  for (const c of notCounted) {
+    if (c.dataStatus === 'verify-individually') {
+      advisorQuestions.push('What will ' + c.code + ' count as at ' + target + '? Private universities decide transfer credit course by course; ask for the answer in writing.');
+    } else {
+      advisorQuestions.push('What will ' + c.code + ' count as at ' + target + '? It was not in the course data this check is built on.');
+    }
+  }
+  for (const a of apNotCounted) {
+    if (a.outcome === 'verify-individually') {
+      advisorQuestions.push('What credit does ' + target + ' award for ' + a.exam + '?');
+    }
+  }
+  if (report && report.prerequisiteStillRequired) {
+    advisorQuestions.push('A required major prerequisite is still missing. Which course fills it, and where can it be taken so the credit transfers?');
+  }
+  // Grade protection (Stage 24): the transfer degree guarantee
+  // requires a C or better in each course. The question is only
+  // raised while it can still change behavior: a course is planned
+  // or in progress, or a below C grade is already on record. A
+  // clean finished check stays free of extra questions.
+  const anyPlanned = courses.some((c) => c && c.status === 'planned');
+  const anyBelowC = courses.some(
+    (c) => c && c.grade && ['D', 'F'].includes(String(c.grade).toUpperCase())
+  );
+  if (anyPlanned || anyBelowC) {
+    advisorQuestions.push('Does a grade below a C in any of these courses change what counts? The transfer degree guarantee requires a C or better in each course.');
+  }
+
+  const sumHours = (list) => list.reduce((a, c) => a + (c.degreeCredit || 0), 0);
+  const totals = {
+    degreeHours: sumHours(degree),
+    creditOnlyHours: sumHours(creditOnly),
+    notCountedCourses: notCounted.length,
+    apDegreeHours: sumHours(apDegree),
+    apCreditHours: sumHours(apCreditOnly),
+  };
+
+  return { degree, creditOnly, notCounted, apDegree, apCreditOnly, apNotCounted, nextSteps, advisorQuestions, totals };
+}
+
+// Coverage requests (Kris, Nov 10, 2026): the production design
+// lists every college up front. A college with no verified data
+// is not a dead end; it is named here so the page can offer the
+// email request that queues it for harvesting. Covered colleges
+// are the ones with verified course data.
+function uncoveredColleges(student, coveredNames) {
+  const covered = new Set(coveredNames || []);
+  const out = [];
+  const add = (name) => { if (name && !covered.has(name) && !out.includes(name)) out.push(name); };
+  if (student) {
+    (student.sources || []).forEach((s) => add(s.institution));
+    add(targetNameOf(student) === 'the target college' ? null : targetNameOf(student));
+  }
+  return out;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { buildGuidance, classifyCourse, classifyAp, targetNameOf, uncoveredColleges };
+}
+if (typeof window !== 'undefined') {
+  window.buildGuidance = buildGuidance;
+  window.classifyCourse = classifyCourse;
+}
+function suggestionPool(collegeName) {
+  if (!ctcPoolCache[collegeName]) {
+    const ready = (typeof CTC_COLLEGES_PROMISE !== 'undefined')
+      ? CTC_COLLEGES_PROMISE : Promise.resolve([]);
+    ctcPoolCache[collegeName] = ready.then((colleges) => {
+      const covered = (colleges || []).some((c) => c.name === collegeName && c.covered);
+      if (covered) {
+        return ctcApiGet('/api/course-index?college=' + encodeURIComponent(collegeName))
+          .then((d) => ((d && d.courses) || []).map((c) => ({
+            code: c.code, title: c.title || '', lccn: c.lccn || null, statewide: false })))
+          .catch(() => []);
+      }
+      return ctcApiGet('/api/statewide')
+        .then((d) => ((d && d.courses) || []).map((c) => ({
+          code: c.lccn, title: c.title || '', lccn: c.lccn, statewide: true })))
+        .catch(() => []);
+    });
+  }
+  return ctcPoolCache[collegeName];
+}
+const ctcPoolCache = {};
+function matchSuggestions(pool, typed, limit) {
+  const q = suggestNorm(typed);
+  if (q.length < 2) return [];
+  const cap = limit || 8;
+  const titleQuery = String(typed || '').trim().toLowerCase();
+  const codeMatches = [];
+  const titleMatches = [];
+  (pool || []).forEach(entry => {
+    const codeN = suggestNorm(entry.code);
+    const lccnN = suggestNorm(entry.lccn || '');
+    if (codeN.includes(q) || (lccnN && lccnN.includes(q))) codeMatches.push(entry);
+    else if (titleQuery.length >= 2 && entry.title.toLowerCase().includes(titleQuery)) titleMatches.push(entry);
+  });
+  codeMatches.sort((a, b) => suggestNorm(a.code).indexOf(q) - suggestNorm(b.code).indexOf(q));
+  return codeMatches.concat(titleMatches).slice(0, cap);
+}
+// Suggestions appear while typing in a course code box (Stage 20).
+(function wireSuggestions() {
+  const sourcesDiv = document.getElementById('sources');
+  if (!sourcesDiv) return;
+  function closeSuggest(row) {
+    const box = row && row.querySelector('.c-suggest');
+    if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+  }
+  sourcesDiv.addEventListener('input', (e) => {
+    if (!e.target.classList || !e.target.classList.contains('c-code')) return;
+    const input = e.target;
+    const row = input.closest('.row');
+    const block = input.closest('.source');
+    if (!row || !block) return;
+    const college = block.querySelector('.s-name').value;
+    suggestionPool(college).then((pool) => {
+      const matches = matchSuggestions(pool, input.value);
+      closeSuggest(row);
+      if (!matches.length) return;
+      const box = row.querySelector('.c-suggest');
+      if (!box) return;
+      box.innerHTML = matches.map((c, i) =>
+        '<button type="button" class="suggest-item" data-i="' + i + '">' +
+        '<strong>' + c.code + '</strong> ' + c.title +
+        (c.statewide ? ' <span class="fine">(statewide catalog: confirm the college offers it)</span>' : '') +
+        '</button>').join('');
+      box.style.display = 'block';
+      box.querySelectorAll('.suggest-item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const c = matches[Number(btn.getAttribute('data-i'))];
+          input.value = c.code;
+          row.dataset.lccn = c.lccn || '';
+          closeSuggest(row);
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+      });
+    });
+  });
+  sourcesDiv.addEventListener('change', (e) => {
+    if (e.target.classList && e.target.classList.contains('s-name')) {
+      sourcesDiv.querySelectorAll('.c-suggest').forEach(b => { b.style.display = 'none'; b.innerHTML = ''; });
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest || !e.target.closest('.row')) {
+      sourcesDiv.querySelectorAll('.c-suggest').forEach(b => { b.style.display = 'none'; });
+    }
+  });
+})();
+// The main check's results renderer, restored Nov 19, 2026.
+// The migration's suggestion wiring span patch replaced
+// everything from the wireSuggestions IIFE to the Saved
+// entries comment, and this renderer (with its course and AP
+// row builders) sat in between, so it was silently deleted:
+// the Match button fetched the report and then had nothing
+// to draw it with. The text below is the pre-migration
+// renderer verbatim (git d2dd9e6), including the coverage
+// request panel it fills when a check names a college with
+// no verified course data. build-pages.py reinserts it into
+// the main script, just before the Saved entries section,
+// whenever a built page is missing it.
+function render(r) {
+  window._lastReport = r;
+  const box = document.getElementById('report');
+  box.style.display = 'block';
+  const v = [];
+  if (r.allCoursesVerifyIndividually) {
+    v.push('<p class="verdict warn">Private university: the Louisiana state guarantee does not apply here.</p>');
+    v.push('<p>Every course must be verified with the university individually. Nothing on this report is promised.</p>');
+  }
+  if (r.genEdComplete) v.push('<p class="verdict good">General education: complete. No additional general education courses required under the transfer guarantee.</p>');
+  if (r.hoursTransferred) v.push('<p class="verdict good">All ' + r.hoursTransferred + ' credit hours of the transfer degree move, with junior standing.</p>');
+  if (r.flaggedCoursesOutsideGuarantee && r.flaggedCoursesOutsideGuarantee.length) {
+    v.push('<p class="verdict bad">Flagged: ' + r.flaggedCoursesOutsideGuarantee.map(c => (c.code === 'UNSPECIFIED' ? 'a course below a C' : c.code) + (c.sourceInstitution ? ' at ' + c.sourceInstitution : '')).join(', ') + ' falls outside the transfer guarantee. The receiving university decides that course on its own.</p>');
+  }
+  if (r.programAdmissionSeparate) v.push('<p class="verdict warn">Limited access program: admission is a separate decision. The program\'s own admission requirements still have to be met.</p>');
+  if (r.prerequisiteStillRequired) v.push('<p class="verdict warn">A required major prerequisite is still missing. Elective credit does not substitute for it.</p>');
+  if (r.degreeGuaranteeOnCompletion) v.push('<p class="verdict warn">Transfer degree still in progress: the guarantee is not in hand yet. ' + r.degreeGuaranteeCondition + '.</p>');
+  document.getElementById('verdicts').innerHTML = v.join('') || '<p class="verdict">Course by course results below.</p>';
+
+  const g = buildGuidance(window._lastStudent, r);
+  const targetLabel = (window._lastStudent && window._lastStudent.target && window._lastStudent.target.name) || '';
+  function courseRows(list) {
+    const groups = {};
+    list.forEach(c => {
+      const key = c.sourceInstitution || 'College not specified';
+      (groups[key] = groups[key] || []).push(c);
+    });
+    let h = '';
+    Object.keys(groups).forEach(college => {
+      h += '<tr class="srchead"><td colspan="5">' + college + ' <span aria-hidden="true">→</span> ' + targetLabel + '</td></tr>';
+      h += groups[college].map((c, i) => '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + c.code + '</td><td class="arrow" aria-hidden="true">→</td><td>' + c.shownAs + (c.status === 'planned' ? '<br><span class="fine">' + (c.condition || '') + '</span>' : '') + '</td><td>' + (c.countsToward || (c.dataStatus === 'matched' ? 'Same requirement as ' + c.shownAs : ' ')) + '</td><td class="num">' + (c.degreeCredit === null ? ' ' : c.degreeCredit) + '</td></tr>').join('');
+    });
+    return h;
+  }
+  function apRows(list) {
+    return list.map(a => {
+      let result;
+      if (a.outcome === 'exact-equivalent') result = (a.shownAs ? 'Credit awarded: ' + a.shownAs + '.' : 'Credit awarded: counts toward ' + a.countsToward + '.') + (a.higherScoreNote ? ' ' + a.higherScoreNote : '');
+      else if (a.outcome === 'subject-elective') result = 'Credit awarded as an elective in the subject. ' + (a.higherScoreNote || '');
+      else if (a.outcome === 'verify-individually') result = a.note;
+      else result = 'No credit. ' + a.note;
+      return '<tr><td>' + a.exam + '</td><td>' + a.score + '</td><td>' + result + '</td><td class="num">' + (a.degreeCredit || 0) + '</td></tr>';
+    }).join('');
+  }
+  let t = '';
+  [
+    ['Counts toward your degree', g.degree, g.apDegree],
+    ['Counts as credit only', g.creditOnly, g.apCreditOnly],
+    ['Not counted in this check', g.notCounted, g.apNotCounted]
+  ].forEach(([label, cs, aps]) => {
+    if (!cs.length && !aps.length) return;
+    t += '<h3>' + label + '</h3>';
+    if (cs.length) t += '<table class="results"><colgroup><col style="width:24%"><col style="width:6%"><col style="width:28%"><col style="width:24%"><col style="width:18%"></colgroup><tr><th>Your course</th><th></th><th>Counts as</th><th>Counts toward</th><th class="num">Degree credit</th></tr>' + courseRows(cs) + '</table>';
+    if (aps.length) t += '<table class="results"><colgroup><col style="width:30%"><col style="width:10%"><col style="width:42%"><col style="width:18%"></colgroup><tr><th>AP exam</th><th>Score</th><th>Result</th><th class="num">Degree credit</th></tr>' + apRows(aps) + '</table>';
+  });
+  document.getElementById('courseTable').innerHTML = t;
+  document.getElementById('apResults').innerHTML = '';
+
+  document.getElementById('warnings').innerHTML = (r.warnings && r.warnings.length)
+    ? '<p><strong>Warnings</strong></p><ul>' + r.warnings.map(w => '<li>' + w + '</li>').join('') + '</ul>'
+    : '';
+  document.getElementById('nextSteps').innerHTML = g.nextSteps.length
+    ? '<p><strong>Next steps</strong></p><ul>' + g.nextSteps.map(s => '<li>' + s + '</li>').join('') + '</ul>'
+    : '';
+  document.getElementById('advisorBox').innerHTML = g.advisorQuestions.length
+    ? '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;"><p style="margin-top:0;"><strong>Questions to ask your advisor</strong></p><ul>' + g.advisorQuestions.map(q => '<li>' + q + '</li>').join('') + '</ul></div>'
+    : '';
+  const uncovered = uncoveredColleges(window._lastStudent, DATA_COLLEGES);
+  const cr = document.getElementById('coverageRequest');
+  const stu = window._lastStudent || {};
+  const rep = window._lastReport || {};
+  const targetName = (stu.target && stu.target.name) || 'the target college';
+  // The checker is a free tool (Nov 19, 2026): a completed check
+  // no longer offers a full report by email, and the plan section
+  // is gone from the page. The only capture left is the coverage
+  // request for colleges still being built, and it now promises
+  // a notice when the course data is verified, not a report.
+  if (uncovered.length) {
+    const heading = 'Not covered yet: ' + uncovered.join(', ');
+    const blurb = 'These colleges are being built. Enter your email and we will let you know when their course data is verified. Every request moves a college up the list.';
+    const subject = 'Credits That Count coverage request: ' + uncovered.join(', ');
+    cr.innerHTML = '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;">' +
+      '<p style="margin-top:0;"><strong>' + heading + '</strong></p>' +
+      '<p>' + blurb + '</p>' +
+      '<label for="crEmail">Your email</label>' +
+      '<input type="text" id="crEmail" placeholder="you@example.com">' +
+      '<p><button type="button" id="crBtn">Send the request</button></p>' +
+      '<p class="fine"><span>By sending this request, you confirm you may share this contact information with us so we can write back about your request.</span> <span>We never sell contact information.</span></p></div>';
+    document.getElementById('crBtn').addEventListener('click', () => {
+      const email = (document.getElementById('crEmail').value || '').trim();
+      const lines = ['Coverage request from the credit checker', '', 'Email to notify: ' + email, 'Target college: ' + targetName];
+      lines.push('Colleges to build: ' + uncovered.join(', '));
+      (stu.sources || []).forEach(src => { lines.push('Courses from ' + src.institution + ': ' + (src.courses || []).map(c => c.code).join(', ')); });
+      (rep.courseResults || []).forEach(c => { lines.push(c.code + ': ' + c.shownAs); });
+      (rep.apResults || []).forEach(a => { lines.push('AP ' + a.exam + ': ' + a.shownAs); });
+      window.location.href = 'mailto:plans@creditsthatcount.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+  } else {
+    cr.innerHTML = '';
+  }
+  box.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Saved entries (Stage 16): what the student typed stays in this
+// browser when the page reloads, so nobody has to retype ten
+// courses. Nothing leaves the device.
+(function () {
+  const KEY = 'ctc-entries-v1';
+  function snapshot() {
+    const sources = [];
+    document.querySelectorAll('#sources .source').forEach(block => {
+      const rows = [];
+      block.querySelectorAll('.s-courses .row').forEach(r => {
+        rows.push({
+          subject: r.querySelector('.c-subject').value || '',
+          course: r.querySelector('.c-course').value || '',
+          code: r.querySelector('.c-code').value || '',
+          lccn: r.dataset.lccn || ''
+        });
+      });
+      sources.push({ institution: block.querySelector('.s-name').value || '', rows });
+    });
+    const ap = [];
+    document.querySelectorAll('#apExams .ap-row').forEach(r => {
+      ap.push({
+        exam: r.querySelector('.a-exam').value || '',
+        score: r.querySelector('.a-score').value || '',
+        sent: r.querySelector('.a-sent').value || ''
+      });
+    });
+    const targetEl = document.getElementById('target');
+    return { sources, ap, target: targetEl ? targetEl.value || '' : '' };
+  }
+  let timer = null;
+  function save() {
+    clearTimeout(timer);
+    timer = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify(snapshot())); } catch (e) {} }, 250);
+  }
+  document.addEventListener('change', save);
+  document.addEventListener('input', save);
+  function fireChange(el) { el.dispatchEvent(new Event('change', { bubbles: true })); }
+  function restore() {
+    let data = null;
+    try { data = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!data) return;
+    const targetEl = document.getElementById('target');
+    if (data.target && targetEl) targetEl.value = data.target;
+    (data.sources || []).forEach((s, i) => {
+      if (i > 0) addSourceBlock();
+      const block = document.querySelectorAll('#sources .source')[i];
+      if (!block) return;
+      const nameSel = block.querySelector('.s-name');
+      if (s.institution && [...nameSel.options].some(o => o.value === s.institution || o.text === s.institution)) { nameSel.value = s.institution; fireChange(nameSel); }
+      const rows = s.rows || [];
+      for (let j = 2; j < rows.length; j++) block.querySelector('.s-addcourse').click();
+      rows.forEach((row, j) => {
+        const r = block.querySelectorAll('.s-courses .row')[j];
+        if (!r) return;
+        const subj = r.querySelector('.c-subject');
+        const courseSel = r.querySelector('.c-course');
+        if (row.code) r.querySelector('.c-code').value = row.code;
+        if (row.lccn) r.dataset.lccn = row.lccn;
+        // Migration (Nov 19, 2026): the dropdown options now
+        // arrive from the API, so the saved picks are applied
+        // once this block's subject list has landed.
+        const painted = block._ctcSubjects || Promise.resolve();
+        painted.then(() => {
+          if (row.subject && [...subj.options].some(o => o.value === row.subject)) { subj.value = row.subject; fireChange(subj); }
+          const filled = r._ctcFill || Promise.resolve();
+          return filled.then(() => {
+            if (row.course && [...courseSel.options].some(o => o.value === row.course)) { courseSel.value = row.course; fireChange(courseSel); }
+            // Align the dropdowns with the code box when the snapshot
+            // holds a typed code but no dropdown picks (restore fix,
+            // Nov 12, 2026): find the course in the college's course
+            // index by code, set the subject from its state number,
+            // then set the course dropdown to the same code, so what
+            // the visitor sees is what the check will read.
+            if (row.code && (!row.subject || !row.course)) {
+              return ctcApiGet('/api/course-index?college=' + encodeURIComponent(s.institution))
+                .then((d) => {
+                  const rec = ((d && d.courses) || []).find(c => c.code === row.code.toUpperCase()) || null;
+                  const lccn = (rec && rec.lccn) || row.lccn || '';
+                  const rubric = lccn ? lccn.split(' ')[0] : '';
+                  const group = rubric ? [...subj.options].find(o => o.value.split(',').includes(rubric)) : null;
+                  if (rec && group) {
+                    subj.value = group.value;
+                    fireChange(subj);
+                    return (r._ctcFill || Promise.resolve()).then(() => {
+                      if ([...courseSel.options].some(o => o.value === rec.code)) { courseSel.value = rec.code; }
+                      if (lccn) r.dataset.lccn = lccn;
+                    });
+                  }
+                  if (rec && lccn) r.dataset.lccn = lccn;
+                  return null;
+                })
+                .catch(() => null);
+            }
+            return null;
+          });
+        });
+      });
+    });
+    (data.ap || []).forEach((a, i) => {
+      if (i > 0) addApRow();
+      const r = document.querySelectorAll('#apExams .ap-row')[i];
+      if (!r) return;
+      if (a.exam) r.querySelector('.a-exam').value = a.exam;
+      if (a.score) r.querySelector('.a-score').value = a.score;
+      if (a.sent) r.querySelector('.a-sent').value = a.sent;
+    });
+  }
+  restore();
+})();
+</script>
+<script>
+// The full audit: the printable document built from one check.
+// Same engine output in, a structured audit document and a
+// standalone printable HTML page out. No form elements ever
+// appear in the printed document.
+
+const LIMITS =
+  'This audit is a planning check built from current college catalogs and the Louisiana articulation rules. ' +
+  'It assumes every course was passed with a grade of C or better. ' +
+  'It is not an official evaluation, and the receiving university makes the final call on every credit.';
+
+function buildAudit(student, report) {
+  const groupsByInstitution = new Map();
+  const notCovered = [];
+  let total = 0;
+
+  for (const r of report.courseResults || []) {
+    const institution = r.sourceInstitution || 'College not specified';
+    if (!groupsByInstitution.has(institution)) {
+      groupsByInstitution.set(institution, { institution, courses: [] });
+    }
+    const uncovered = r.dataStatus === 'not-in-data';
+    const entry = {
+      code: r.code,
+      countsAs: r.shownAs,
+      countsToward: r.countsToward || null,
+      degreeCredit: r.degreeCredit === null || r.degreeCredit === undefined ? 0 : r.degreeCredit,
+      condition: r.status === 'planned' ? r.condition || null : null,
+      notCovered: uncovered
+    };
+    if (uncovered) notCovered.push({ code: r.code, sourceInstitution: institution });
+    total += entry.degreeCredit;
+    groupsByInstitution.get(institution).courses.push(entry);
+  }
+
+  const ap = (report.apResults || []).map((a) => {
+    const credit = a.degreeCredit || 0;
+    total += credit;
+    return {
+      exam: a.exam,
+      score: a.score,
+      outcome: a.outcome,
+      countsAs: a.shownAs || null,
+      countsToward: a.countsToward || null,
+      degreeCredit: credit,
+      note: a.note || null,
+      higherScoreNote: a.higherScoreNote || null
+    };
+  });
+
+  return {
+    target: report.targetCollege || (student.target && student.target.name) || student.targetCollege,
+    groups: [...groupsByInstitution.values()],
+    ap,
+    notCovered,
+    totalDegreeCredits: total,
+    limits: LIMITS
+  };
+}
+
+function esc(s) {
+  return String(s === null || s === undefined ? '' : s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function renderAuditHtml(audit) {
+  const parts = [];
+  parts.push('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">');
+  parts.push('<title>Credit Transfer Audit</title>');
+  parts.push('<style>body{font-family:Georgia,serif;max-width:760px;margin:40px auto;padding:0 20px;color:#111}');
+  parts.push('h1{font-size:26px;margin:0 0 4px}.band{background:#1d3fae;color:#fff;padding:18px 20px;border-radius:8px}.band .fromto{font-size:16px;margin:0}.band .tgt{color:#ffd21f}h2{font-size:19px;margin-top:28px}h2 .tgt{color:#1d3fae}');
+  parts.push('table{border-collapse:collapse;width:100%;margin-top:8px}th,td{border:1px solid #999;padding:6px 8px;text-align:left;font-size:15px}');
+  parts.push('.total{font-size:18px;font-weight:bold;margin-top:24px}.limits{margin-top:32px;font-size:14px;color:#333}</style></head><body>');
+  const fromList = audit.groups.map((g) => g.institution).join(' and ');
+  parts.push('<div class="band"><h1>Credit Transfer Audit</h1>');
+  parts.push('<p class="fromto">Courses from <strong>' + esc(fromList) + '</strong> counting at <strong class="tgt">' + esc(audit.target) + '</strong></p></div>');
+
+  for (const g of audit.groups) {
+    parts.push('<h2>Courses from ' + esc(g.institution) + ', counting at <span class="tgt">' + esc(audit.target) + '</span></h2>');
+    parts.push('<table><tr><th>Course</th><th>Counts as</th><th>Degree credit</th></tr>');
+    for (const c of g.courses) {
+      let countsAs = esc(c.countsAs);
+      if (c.condition) countsAs += '<br>' + esc(c.condition);
+      parts.push('<tr><td>' + esc(c.code) + '</td><td>' + countsAs + '</td><td>' + c.degreeCredit + '</td></tr>');
+    }
+    parts.push('</table>');
+  }
+
+  if (audit.ap.length) {
+    parts.push('<h2>AP exams</h2>');
+    parts.push('<table><tr><th>AP exam</th><th>Score</th><th>Result</th><th>Degree credit</th></tr>');
+    for (const a of audit.ap) {
+      let result;
+      if (a.outcome === 'exact-equivalent') {
+        result = 'Credit awarded: ' + esc(a.countsAs || a.countsToward || '') + '.' + (a.higherScoreNote ? ' ' + esc(a.higherScoreNote) : '');
+      } else if (a.outcome === 'subject-elective') {
+        result = 'Credit awarded as an elective in the subject. ' + esc(a.higherScoreNote || '');
+      } else if (a.outcome === 'verify-individually') {
+        result = esc(a.note || '');
+      } else {
+        result = 'No credit. ' + esc(a.note || '');
+      }
+      parts.push('<tr><td>' + esc(a.exam) + '</td><td>' + a.score + '</td><td>' + result + '</td><td>' + a.degreeCredit + '</td></tr>');
+    }
+    parts.push('</table>');
+  }
+
+  if (audit.notCovered.length) {
+    parts.push('<h2>Not covered yet</h2>');
+    parts.push('<p>' + audit.notCovered.map((c) => esc(c.code) + ' (from ' + esc(c.sourceInstitution) + ')').join(', ') +
+      ': not in the course data yet, so this audit makes no call on ' +
+      (audit.notCovered.length === 1 ? 'it' : 'them') + '. The receiving college can still evaluate ' +
+      (audit.notCovered.length === 1 ? 'it' : 'them') + ' from a transcript or syllabus.</p>');
+  }
+
+  parts.push('<p class="total">Total degree credits that count at ' + esc(audit.target) + ': ' + audit.totalDegreeCredits + '</p>');
+  parts.push('<p class="limits">' + esc(audit.limits) + '</p>');
+  parts.push('</body></html>');
+  return parts.join('\n');
+}
+
+window.buildAudit = buildAudit; window.renderAuditHtml = renderAuditHtml;
+
+</script>
+<script>
+/*CTC-ENGINES-START*/
+// src/savings.js
+(function () {
+'use strict';
+
+// Savings estimator (Kris, Nov 11, 2026: the funding theme from the
+// Dual Enrollment Task Force work, added to the checker).
+//
+// The estimate answers the family's money question with published
+// numbers only: hours that count TOWARD THE DEGREE at the target
+// college, multiplied by that college's published tuition and fees
+// per credit hour (its 15-hour semester total divided by 15, from
+// data/tuition.json, each rate traceable to the college's own fee
+// schedule).
+//
+// Rules:
+// - credit-only (elective) hours are never counted: they may not
+//   shorten the degree, so pricing them would overstate savings;
+// - a college with no verified published rate returns null, and no
+//   figure is shown for it, never an interpolated or guessed one;
+// - the figure is an estimate at published rates before financial
+//   aid, and the result carries its source so it can be checked.
+
+function rateFor(college, ratesData) {
+  if (!college || !ratesData || !ratesData.rates) return null;
+  return ratesData.rates[college] || null;
+}
+
+function estimateSavings(college, degreeHours, ratesData) {
+  if (!college || !degreeHours || degreeHours <= 0) return null;
+  const rate = rateFor(college, ratesData);
+  if (!rate) return null;
+  return {
+    college,
+    hours: degreeHours,
+    perCreditHour: rate.perCreditHour,
+    amount: Math.round(degreeHours * rate.perCreditHour),
+    basis: rate.basis,
+    schedule: rate.schedule,
+    sourceName: rate.sourceName,
+    sourceUrl: rate.sourceUrl,
+  };
+}
+
+// Degree hours inside a guidance result: the courses and AP results
+// the guidance layer classified as counting toward the degree.
+function degreeHoursOf(guidance) {
+  if (!guidance) return 0;
+  const fromCourses = (guidance.degree || []).reduce(
+    (sum, c) => sum + (c.degreeCredit || 0), 0
+  );
+  const fromAp = (guidance.apDegree || []).reduce(
+    (sum, a) => sum + (a.degreeCredit || 0), 0
+  );
+  return fromCourses + fromAp;
+}
+
+// Attach the estimate to a guidance result for a target college.
+// Returns the guidance object with a `savings` field (null when no
+// estimate can be made).
+function withSavings(guidance, college, ratesData) {
+  if (!guidance) return guidance;
+  guidance.savings = estimateSavings(college, degreeHoursOf(guidance), ratesData);
+  return guidance;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { estimateSavings, degreeHoursOf, rateFor, withSavings };
+}
+if (typeof window !== 'undefined') {
+  window.estimateSavings = estimateSavings;
+}
+  window.estimateSavings = estimateSavings;
+  window.degreeHoursOf = degreeHoursOf;
+  window.rateFor = rateFor;
+  window.withSavings = withSavings;
+})();
+// src/i18n.js
+(function () {
+'use strict';
+
+// Spanish results (Stage 27, access theme).
+//
+// A parent who reads Spanish first should get the sentences that
+// matter most in Spanish: the summary headline, rebuilt from the
+// guidance totals so the numbers are the engine's own, and the
+// fixed protective steps and questions (choice credit, the grade
+// rule, the transcript step, the AP report step), translated as
+// templates so college names slot in exactly. Per-course composed
+// lines (the registrar question naming one course code) stay in
+// English in this first pass and are passed through unchanged;
+// the build log records that limit plainly.
+
+const FIXED = {
+  'If any of these courses is a dual enrollment course you are taking now, ask your school counselor about choice credit before the course ends: you can choose whether the grade goes on your college transcript.':
+    'Si alguna de estas clases es de doble inscripción y la estás tomando ahora, pregunta a tu consejero escolar sobre el crédito por elección (choice credit) antes de que termine el curso: tú decides si la calificación aparece en tu transcripción universitaria.',
+  'Does a grade below a C in any of these courses change what counts? The transfer degree guarantee requires a C or better in each course.':
+    '¿Una calificación menor que C en alguna de estas clases cambia lo que cuenta? La garantía del título de transferencia exige una C o mejor en cada clase.',
+  'A required major prerequisite is still missing. Which course fills it, and where can it be taken so the credit transfers?':
+    'Todavía falta un prerrequisito obligatorio de la especialidad. ¿Qué clase lo cubre y dónde se puede tomar para que el crédito se transfiera?',
+};
+
+const TEMPLATES = [
+  {
+    re: /^What will (.+) count as at (.+)\? Private universities decide transfer credit course by course; ask for the answer in writing\.$/,
+    make: (m) => `¿Como qué contará ${m[1]} en ${m[2]}? Las universidades privadas deciden el crédito de transferencia curso por curso; pida la respuesta por escrito.`,
+  },
+  {
+    re: /^Send your official transcript to (.+) so the credits that count can be posted to your record there\.$/,
+    make: (m) => `Envía tu transcripción oficial a ${m[1]} para que los créditos que cuentan queden registrados en tu expediente allí.`,
+  },
+  {
+    re: /^Send your official AP score report to (.+)\. AP credit counts only once the university has the official report\.$/,
+    make: (m) => `Envía tu informe oficial de puntajes AP a ${m[1]}. El crédito AP solo cuenta cuando la universidad recibe el informe oficial.`,
+  },
+];
+
+function translateLine(line) {
+  if (FIXED[line]) return FIXED[line];
+  for (const t of TEMPLATES) {
+    const m = line.match(t.re);
+    if (m) return t.make(m);
+  }
+  return line;
+}
+
+function spanishHeadline(guidance, target) {
+  const t = (guidance && guidance.totals) || { degreeHours: 0, creditOnlyHours: 0, notCountedCourses: 0 };
+  if (!t.degreeHours && !t.creditOnlyHours && t.notCountedCourses > 0) {
+    return `Aún no hay datos verificados de cursos para ${target}, así que ${t.notCountedCourses} de tus cursos aún no se pueden evaluar.`;
+  }
+  let out = `En ${target}: ${t.degreeHours} de tus horas de crédito cuentan para el título`;
+  if (t.creditOnlyHours) out += `, ${t.creditOnlyHours} cuentan solo como crédito`;
+  if (t.notCountedCourses) {
+    out += `, ${t.notCountedCourses} ${t.notCountedCourses === 1 ? 'curso aún no cuenta' : 'cursos aún no cuentan'}`;
+  }
+  return out + '.';
+}
+
+function translateGuidance(guidance) {
+  if (!guidance) return guidance;
+  return {
+    ...guidance,
+    nextSteps: (guidance.nextSteps || []).map(translateLine),
+    advisorQuestions: (guidance.advisorQuestions || []).map(translateLine),
+  };
+}
+
+const STATUS_ES = {
+  'eligible': 'Cumple los requisitos publicados',
+  'not-yet': 'Todavía no',
+  'cannot-tell': 'No se puede determinar todavía',
+  'complete': 'Completo',
+  'partial': 'Parcial',
+  'meets-state-minimum': 'Cumple el mínimo estatal',
+  'does-not-meet-state-minimum': 'No cumple el mínimo estatal',
+  'open-admission': 'Admisión abierta',
+};
+
+function statusLabel(status, lang) {
+  if (lang === 'es') return STATUS_ES[status] || status;
+  return status;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { spanishHeadline, translateGuidance, translateLine, statusLabel };
+}
+if (typeof window !== 'undefined') {
+  window.spanishHeadline = spanishHeadline;
+  window.translateGuidance = translateGuidance;
+  window.statusLabel = statusLabel;
+}
+  window.spanishHeadline = spanishHeadline;
+  window.translateGuidance = translateGuidance;
+  window.statusLabel = statusLabel;
+})();
+/*CTC-ENGINES-END*/
+</script>
+<script>
+/*CTC-WIRING-START*/
+var CTC_ES_DICT = {
+ "2026-2027 catalog": "catálogo 2026-2027",
+ "2026-2027 catalog and Board of Regents Articulation Matrix, 2025-26": "catálogo 2026-2027 y la Matriz de Articulación del Board of Regents, 2025-26",
+ "A Louisiana college credit check: for community college transfers, dual enrollment and early college students, and anyone moving credits between Louisiana colleges. Built on the Board of Regents articulation rules and the colleges' own current catalogs. What this check assumes, and where its data comes from, is linked at the bottom of this page.": "Una verificación de créditos universitarios de Luisiana: para transferencias desde colegios comunitarios, estudiantes de inscripción dual y de universidad temprana, y cualquiera que mueva créditos entre universidades de Luisiana. Se basa en las reglas de articulación del Board of Regents y en los catálogos actuales de cada universidad. Lo que esta verificación supone, y de dónde vienen sus datos, está enlazado al final de esta página.",
+ "A required major prerequisite is still missing. Elective credit does not substitute for it.": "Aún falta un prerrequisito obligatorio de la especialidad. El crédito electivo no lo sustituye.",
+ "ACT Composite (if you have one)": "ACT compuesto (si tiene uno)",
+ "ACT English (if you have one)": "ACT de inglés (si tiene uno)",
+ "ACT Math (if you have one)": "ACT de matemáticas (si tiene uno)",
+ "AP exam": "Examen AP",
+ "AP exams (optional)": "Exámenes AP (opcional)",
+ "About this check": "Acerca de esta verificación",
+ "Academic courses": "Cursos académicos",
+ "Add a course at this college": "Agregar un curso en esta universidad",
+ "Add an AP exam": "Agregar un examen AP",
+ "Add another college": "Agregar otra universidad",
+ "Add every college you took courses at, or plan to.": "Agregue cada universidad donde tomó cursos, o donde planea tomarlos.",
+ "Board of Regents Articulation Matrix, 2025-26": "Matriz de Articulación del Board of Regents, 2025-26",
+ "Build my plan": "Construir mi plan",
+ "Built from the Louisiana Universal Transfer Pathways: 60 credit hours that transfer and count toward the degree at any Louisiana public university that offers it. Pick a career goal and see the exact courses at your college, starting with next semester. Sixteen pathways are verified in full today; the rest are being verified before they are listed. A gap is named, never filled with a guess.": "Basado en las Rutas Universales de Transferencia de Luisiana: 60 horas de crédito que se transfieren y cuentan para el título en cualquier universidad pública de Luisiana que lo ofrezca. Elija una meta profesional y vea los cursos exactos en su universidad, empezando por el próximo semestre. Dieciséis rutas están verificadas por completo hoy; el resto se está verificando antes de publicarse. Un vacío se nombra, nunca se rellena con una suposición.",
+ "By sending this request, you confirm you may share this contact information with us so we can write back about your request.": "Al enviar esta solicitud, usted confirma que puede compartir esta información de contacto con nosotros para que podamos responderle sobre su solicitud.",
+ "Can you take dual enrollment yet?": "¿Ya puede tomar inscripción dual?",
+ "Career goal": "Meta profesional",
+ "Check admission standing": "Verificar mi situación de admisión",
+ "Check eligibility": "Verificar elegibilidad",
+ "Checked against the Louisiana Board of Regents minimum admission standards for transfer students. Meeting the state minimum is not a promise of admission; the university makes the final call.": "Verificado contra los estándares mínimos de admisión del Board of Regents de Luisiana para estudiantes de transferencia. Cumplir el mínimo estatal no es una promesa de admisión; la universidad toma la decisión final.",
+ "Checked against the published dual enrollment minimums. Meeting them is not a promise of a seat in a course; the college and your school make the final call.": "Verificado contra los mínimos publicados de inscripción dual. Cumplirlos no es una promesa de un cupo en un curso; la universidad y su escuela toman la decisión final.",
+ "College": "Universidad",
+ "College GPA": "GPA universitario",
+ "College credit hours earned": "Horas de crédito universitarias obtenidas",
+ "College level English completed with a C or better": "Inglés de nivel universitario completado con C o mejor",
+ "College level math completed with a C or better": "Matemáticas de nivel universitario completadas con C o mejor",
+ "Counts as": "Cuenta como",
+ "Counts as credit only": "Cuenta solo como crédito",
+ "Counts toward": "Cuenta para",
+ "Counts toward your degree": "Cuenta para su título",
+ "Course": "Curso",
+ "Course by course results below.": "Resultados curso por curso a continuación.",
+ "Degree credit": "Crédito para el título",
+ "Elective": "Electiva",
+ "English Composition": "Composición en inglés",
+ "English, humanities, or social sciences": "Inglés, humanidades o ciencias sociales",
+ "Every course must be verified with the university individually. Nothing on this report is promised.": "Cada curso debe verificarse con la universidad de forma individual. Nada en este informe está prometido.",
+ "Fine Arts": "Bellas artes",
+ "General education": "Educación general",
+ "General education: complete. No additional general education courses required under the transfer guarantee.": "Educación general: completa. No se requieren cursos adicionales de educación general bajo la garantía de transferencia.",
+ "Grade level": "Nivel de grado",
+ "High school GPA (cumulative, unweighted)": "GPA de la escuela secundaria (acumulado, sin ponderar)",
+ "Humanities": "Humanidades",
+ "I am 25 or older": "Tengo 25 años o más",
+ "I am in a partnership bridge program with this university": "Estoy en un programa puente en alianza con esta universidad",
+ "I hold an associate degree (AA, AS, AAS, AALT, or ASLT)": "Tengo un título asociado (AA, AS, AAS, AALT o ASLT)",
+ "I place into standalone college math or English": "Mi nivel corresponde a matemáticas o inglés universitarios independientes",
+ "Junior (11th grade)": "Junior (11.º grado)",
+ "Know before you go.": "Infórmese antes de ir.",
+ "Know what to take next semester": "Sepa qué tomar el próximo semestre",
+ "Limited access program: admission is a separate decision. The program's own admission requirements still have to be met.": "Programa de acceso limitado: la admisión es una decisión separada. Aún deben cumplirse los requisitos de admisión propios del programa.",
+ "Match your credits": "Verifique sus créditos",
+ "Match your credits. Know what transfers.": "Verifique sus créditos. Sepa qué se transfiere.",
+ "Math or science": "Matemáticas o ciencias",
+ "Mathematics/Analytical Reasoning": "Matemáticas/Razonamiento analítico",
+ "My school counselor will recommend me": "Mi consejero escolar me recomendará",
+ "Natural Sciences": "Ciencias naturales",
+ "Next steps": "Próximos pasos",
+ "No pathway for your goal? Build the general transfer plan": "¿No hay una ruta para su meta? Construya el plan general de transferencia",
+ "Not counted in this check": "No contado en esta verificación",
+ "Not sure yet": "Aún no lo sé",
+ "Now checking the Louisiana colleges with verified course data.": "Ahora verificamos las universidades de Luisiana con datos de cursos verificados.",
+ "Pick a career goal": "Elija una meta profesional",
+ "Pick the college": "Elija la universidad",
+ "Pick the target college": "Elija la universidad de destino",
+ "Pick the university": "Elija la universidad",
+ "Pick your college": "Elija su universidad",
+ "Private university: the Louisiana state guarantee does not apply here.": "Universidad privada: la garantía estatal de Luisiana no aplica aquí.",
+ "Questions to ask your advisor": "Preguntas para su asesor",
+ "Report an error": "Reportar un error",
+ "Result": "Resultado",
+ "Rules in this version: course outcomes are direct equivalent, level elective, or general elective, from current college catalogs and the Louisiana articulation rules; private universities are not bound by the state guarantee; courses numbered below 100 earn no degree credit; limited access program admission is always a separate decision; electives never replace a missing major prerequisite. The Louisiana Transfer Degree block guarantee (general education complete, all 60 hours, junior standing) is not applied by this quick check: a degree is read from a transcript, not a dropdown, and that is what the full audit does. Credits from several colleges are evaluated together and reported college by college. This check assumes every course is passed with a grade of C or better, which is what transfer credit requires in the first place. If a course ends below a C, the receiving university decides that course on its own. Courses from colleges not yet in the course data are flagged as not covered yet rather than guessed. AP exams are checked under the Louisiana statewide AP policy: a public college awards credit for a score of 3 or higher once the official score report is sent; a score below 3, or a score report never sent, earns no credit; private universities set their own AP policy. This tool gives guidance from published rules, not an official ruling. The receiving university makes the final call on every credit.": "Reglas de esta versión: los resultados de los cursos son equivalente directo, electiva por nivel o electiva general, según los catálogos actuales y las reglas de articulación de Luisiana; las universidades privadas no están sujetas a la garantía estatal; los cursos con número menor de 100 no otorgan crédito para el título; la admisión a programas de acceso limitado siempre es una decisión separada; las electivas nunca reemplazan un prerrequisito faltante de la especialidad. La garantía en bloque del Título de Transferencia de Luisiana (educación general completa, las 60 horas y nivel junior) no se aplica en esta verificación rápida: un título se lee de un expediente académico, no de un menú, y eso es lo que hace la auditoría completa. Los créditos de varias universidades se evalúan juntos y se informan universidad por universidad. Esta verificación supone que cada curso se aprueba con una calificación de C o mejor, que es lo que la transferencia de créditos exige en primer lugar. Si un curso termina por debajo de C, la universidad receptora decide sobre ese curso por su cuenta. Los cursos de universidades que aún no están en los datos se marcan como no cubiertos en vez de adivinarlos. Los exámenes AP se verifican según la política estatal AP de Luisiana: una universidad pública otorga crédito por una puntuación de 3 o más una vez que se envía el informe oficial de puntuaciones; una puntuación menor de 3, o un informe nunca enviado, no otorga crédito; las universidades privadas establecen su propia política AP. Esta herramienta ofrece orientación a partir de reglas publicadas, no una decisión oficial. La universidad receptora tiene la última palabra sobre cada crédito.",
+ "Score": "Puntuación",
+ "See something wrong in these results?": "¿Ve algo incorrecto en estos resultados?",
+ "Send the request": "Enviar la solicitud",
+ "Senior (12th grade)": "Senior (12.º grado)",
+ "Show my courses": "Mostrar mis cursos",
+ "Social/Behavioral Sciences": "Ciencias sociales y del comportamiento",
+ "Spot a mistake in this list?": "¿Ve un error en esta lista?",
+ "Subject": "Materia",
+ "Subject you want to take": "Materia que quiere tomar",
+ "Target college (where you want the courses to count)": "Universidad de destino (donde quiere que cuenten los cursos)",
+ "Technical courses": "Cursos técnicos",
+ "The Louisiana Transfer Degree plan: 60 hours (39 of general education plus 21 more) that transfer as a block to any Louisiana public university, with general education met in full and junior standing, when every course is passed with a C or better. Built only from courses verified at both colleges.": "El plan del Título de Transferencia de Luisiana: 60 horas (39 de educación general más 21 más) que se transfieren en bloque a cualquier universidad pública de Luisiana, con la educación general cumplida por completo y nivel junior, cuando cada curso se aprueba con C o mejor. Construido solo con cursos verificados en ambas universidades.",
+ "The university you want to finish at": "La universidad donde quiere terminar",
+ "These results use course data from the AY 2025-26 statewide common course catalog.": "Estos resultados usan los datos de cursos del catálogo estatal de cursos comunes del año académico 2025-26.",
+ "Track": "Ruta",
+ "University": "Universidad",
+ "Warnings": "Advertencias",
+ "Where this data comes from, and what this check assumes": "De dónde vienen estos datos y qué supone esta verificación",
+ "Where your courses come from": "De dónde vienen sus cursos",
+ "Will this credit count?": "¿Contará este crédito?",
+ "Will you be admitted?": "¿Será admitido?",
+ "Your college": "Su universidad",
+ "Your email": "Su correo electrónico",
+ "Your course": "Su curso",
+ "e.g. 18": "ej. 18",
+ "e.g. 19": "ej. 19",
+ "e.g. 2.5": "ej. 2.5",
+ "e.g. 2.8": "ej. 2.8",
+ "e.g. 24": "ej. 24",
+ "the target catalog": "el catálogo de la universidad de destino",
+ "A student may also qualify by meeting the first-time first-year standards; this check does not collect high school records.": "Un estudiante también puede calificar cumpliendo los estándares de primer año por primera vez; esta verificación no recoge expedientes de la escuela secundaria.",
+ "ACT English 18 (for humanities and social sciences courses)": "ACT de inglés 18 (para cursos de humanidades y ciencias sociales)",
+ "ACT Math 19 (for math and science courses)": "ACT de matemáticas 19 (para cursos de matemáticas y ciencias)",
+ "ACT minimums met (composite, English, and Math as published)": "Mínimos del ACT cumplidos (compuesto, inglés y matemáticas, según lo publicado)",
+ "ACT scores, or a counselor recommendation": "Puntuaciones del ACT, o una recomendación del consejero",
+ "Ask the college that awarded the credit to send the official transcript with final grades. High school transcripts cannot be used to award college credit.": "Pida a la universidad que otorgó el crédito que envíe el expediente académico oficial con las calificaciones finales. Los expedientes de la escuela secundaria no pueden usarse para otorgar crédito universitario.",
+ "College credit, including dual enrollment, is awarded from the official college transcript, not the high school transcript. The student asks the college that awarded the credit to send the official transcript with final grades to UL Lafayette.": "El crédito universitario, incluida la inscripción dual, se otorga a partir del expediente universitario oficial, no del expediente de la escuela secundaria. El estudiante pide a la universidad que otorgó el crédito que envíe el expediente oficial con las calificaciones finales a UL Lafayette.",
+ "Counselor recommendation covers the test score minimums": "La recomendación del consejero cubre los mínimos de puntuación de exámenes",
+ "Counselor recommendation on file": "Recomendación del consejero registrada",
+ "Counselor recommendation on file (test scores not needed on this path)": "Recomendación del consejero registrada (en esta ruta no se necesitan puntuaciones de exámenes)",
+ "Counselor recommendation on file covers the 2 GPA minimum": "La recomendación del consejero registrada cubre el mínimo de GPA de 2",
+ "Counselor recommendation on file covers the 2.5 GPA minimum": "La recomendación del consejero registrada cubre el mínimo de GPA de 2.5",
+ "Dual enrollment at this college starts in the sophomore, junior, or senior year": "La inscripción dual en esta universidad comienza en el año sophomore, junior o senior",
+ "Grade level: junior": "Nivel de grado: junior",
+ "Grade level: senior": "Nivel de grado: senior",
+ "Grade level: sophomore": "Nivel de grado: sophomore",
+ "Have the official transcript from every college attended sent to the LSU New Orleans Office of Admissions.": "Haga que el expediente oficial de cada universidad a la que asistió se envíe a la Oficina de Admisiones de LSU New Orleans.",
+ "Published deadlines: Fall: August 7 (final); Fall: December 15 (priority scholarship); Spring: January 2 (final); Spring: November 15 (priority scholarship); Summer: May 28 (final); Summer: April 15 (priority scholarship). Domestic undergraduate application deadlines published by LSU New Orleans (the University of New Orleans). Each term has a priority deadline for scholarship consideration and a final application deadline. Domestic undergraduate application fees are currently waived for Spring and Fall 2027.": "Fechas límite publicadas: Otoño: 7 de agosto (final); Otoño: 15 de diciembre (beca prioritaria); Primavera: 2 de enero (final); Primavera: 15 de noviembre (beca prioritaria); Verano: 28 de mayo (final); Verano: 15 de abril (prioritaria). Fechas límite de solicitud de pregrado nacional publicadas por LSU New Orleans (la Universidad de Nueva Orleans). Cada período tiene una fecha límite prioritaria para la consideración de becas y una fecha límite final de solicitud. Las tarifas de solicitud de pregrado nacional están exentas actualmente para la primavera y el otoño de 2027.",
+ "Published deadlines: Fall: July 1; Spring: November 30; Summer: April 30. First-time freshman application deadlines. Admission is rolling, so these are the published closing dates, not the only dates an application can be sent. $25 application fee": "Fechas límite publicadas: Otoño: 1 de julio; Primavera: 30 de noviembre; Verano: 30 de abril. Fechas límite de solicitud para estudiantes de primer año por primera vez. La admisión es continua, así que estas son las fechas de cierre publicadas, no las únicas fechas en que se puede enviar una solicitud. Tarifa de solicitud de $25",
+ "Sophomores may be eligible in some instances at Delgado; the college decides case by case.": "Los estudiantes sophomore pueden ser elegibles en algunos casos en Delgado; la universidad decide caso por caso.",
+ "Sophomores may be eligible in some instances. Parental permission and school administration permission are required, and the student must be in good standing at the high school.": "Los estudiantes sophomore pueden ser elegibles en algunos casos. Se requiere el permiso de los padres y de la administración escolar, y el estudiante debe estar en buen estado en la escuela secundaria.",
+ "Students must be at least 15, enrolled in a Louisiana high school or approved homeschool, on track for the TOPS core, in good standing, with scores and an official high school transcript on file. Juniors take courses on their high school campus only; seniors may also take courses at UL Lafayette. A student may enroll in at most 7 credit hours per semester.": "Los estudiantes deben tener al menos 15 años, estar inscritos en una escuela secundaria de Luisiana o en un programa de educación en el hogar aprobado, ir en camino de completar el núcleo TOPS, estar en buen estado, y tener las puntuaciones y un expediente oficial de la escuela secundaria registrados. Los juniors toman cursos solo en el campus de su escuela secundaria; los seniors también pueden tomar cursos en UL Lafayette. Un estudiante puede inscribirse en un máximo de 7 horas de crédito por semestre.",
+ "Subject minimums also apply: ACT English 18 (for humanities and social sciences courses); ACT Math 19 (for math and science courses).": "También aplican mínimos por materia: ACT de inglés 18 (para cursos de humanidades y ciencias sociales); ACT de matemáticas 19 (para cursos de matemáticas y ciencias).",
+ "The standards do not apply to private institutions.": "Los estándares no aplican a las instituciones privadas.",
+ "These are the state MINIMUM standards for Louisiana public institutions. An institution may adopt additional, more specific or rigorous requirements, so meeting the state minimum is not a guarantee of admission.": "Estos son los estándares MÍNIMOS estatales para las instituciones públicas de Luisiana. Una institución puede adoptar requisitos adicionales, más específicos o rigurosos, por lo que cumplir el mínimo estatal no es una garantía de admisión.",
+ "This college is not in the application data yet, so no deadlines are printed here. Check the college admissions page for its current dates.": "Esta universidad aún no está en los datos de solicitud, así que aquí no se imprimen fechas límite. Consulte la página de admisiones de la universidad para ver sus fechas actuales.",
+ "This college does not publish its transfer equivalencies in the state's public sources, so there is no public data for us to check against.": "Esta universidad no publica sus equivalencias de transferencia en las fuentes públicas del estado, así que no hay datos públicos con los que podamos verificar.",
+ "Two-year institutions are open admission and have no academic requirements for entry.": "Las instituciones de dos años son de admisión abierta y no tienen requisitos académicos de ingreso.",
+ "UNO runs a dual enrollment program with its own application cycle (a spring application deadline of November 15 is published to counselors). Confirm UNO's own requirements on its admissions pages.": "UNO tiene un programa de inscripción dual con su propio ciclo de solicitud (se publica a los consejeros una fecha límite de solicitud de primavera del 15 de noviembre). Confirme los requisitos propios de UNO en sus páginas de admisiones.",
+ "a GPA of at least 2.0": "un GPA de al menos 2.0",
+ "a GPA of at least 2.25": "un GPA de al menos 2.25",
+ "a GPA of at least 2.5": "un GPA de al menos 2.5",
+ "academic track rules": "reglas de la ruta académica",
+ "age 25 or over": "25 años o más",
+ "an associate degree (AAS, AA, AS, AALT, or ASLT) or higher": "un título asociado (AAS, AA, AS, AALT o ASLT) o superior",
+ "at least 12 college-level credit hours from the bridge program": "al menos 12 horas de crédito de nivel universitario del programa puente",
+ "at least 18 college-level credit hours": "al menos 18 horas de crédito de nivel universitario",
+ "at least 24 college-level credit hours": "al menos 24 horas de crédito de nivel universitario",
+ "at least 30 college-level credit hours": "al menos 30 horas de crédito de nivel universitario",
+ "college-level English with a C or better": "inglés de nivel universitario con C o mejor",
+ "college-level mathematics with a C or better": "matemáticas de nivel universitario con C o mejor",
+ "enrollment in a partnership bridge program": "inscripción en un programa puente en alianza",
+ "grade level": "nivel de grado",
+ "grade level (the GPA minimum depends on it)": "nivel de grado (el mínimo de GPA depende de él)",
+ "high school GPA": "GPA de la escuela secundaria",
+ "subject test scores, or a counselor recommendation": "puntuaciones de exámenes por materia, o una recomendación del consejero",
+ "technical track rules": "reglas de la ruta técnica",
+ "the GPA on college-level courses": "el GPA en los cursos de nivel universitario",
+ "the number of college-level credit hours earned": "la cantidad de horas de crédito de nivel universitario obtenidas",
+ "Accountant": "Contador",
+ "Accounting": "Contabilidad",
+ "Advertising Manager": "Gerente de publicidad",
+ "American Government": "Gobierno estadounidense",
+ "American History": "Historia estadounidense",
+ "American History I": "Historia estadounidense I",
+ "Anatomy and Physiology I and II": "Anatomía y fisiología I y II",
+ "Animator": "Animador",
+ "Anthropology": "Antropología",
+ "Apply through ApplyDE, the state's common dual enrollment application. Delgado is one of the colleges taking dual enrollment applications through ApplyDE, the Board of Regents common application. Approval from the student, a parent, and the high school principal or counselor is required. Delgado posts its dual enrollment application deadline for each session on its dual enrollment page. Check the current deadline table there before the session you want.": "Solicite a través de ApplyDE, la solicitud común estatal de inscripción dual. Delgado es una de las universidades que aceptan solicitudes de inscripción dual por ApplyDE, la solicitud común del Board of Regents. Se requiere la aprobación del estudiante, de un padre y del director o consejero de la escuela secundaria. Delgado publica la fecha límite de solicitud de inscripción dual de cada sesión en su página de inscripción dual. Consulte allí la tabla de fechas límite actual antes de la sesión que quiere.",
+ "Arabic": "Árabe",
+ "Art": "Arte",
+ "Art (100-200 level)": "Arte (nivel 100-200)",
+ "Art Director": "Director de arte",
+ "Art Structure/2D Design": "Estructura del arte/Diseño 2D",
+ "Art Teacher": "Maestro de arte",
+ "Astronomy": "Astronomía",
+ "Athletic Trainer": "Entrenador deportivo",
+ "Auditor": "Auditor",
+ "Basic Drawing/Drawing 1 and Drawing 2/Figure Drawing": "Dibujo básico/Dibujo 1 y Dibujo 2/Dibujo de la figura",
+ "Behavioral Health Specialist": "Especialista en salud conductual",
+ "Bio Technician": "Técnico en biología",
+ "Biological Sciences": "Ciencias biológicas",
+ "Biology Lab I and II": "Laboratorio de biología I y II",
+ "Brand Manager": "Gerente de marca",
+ "Budget Analyst": "Analista de presupuesto",
+ "Budget Manager": "Gerente de presupuesto",
+ "Business": "Negocios",
+ "Business Calculus": "Cálculo para negocios",
+ "Business Statistics II": "Estadística para negocios II",
+ "Calculus I": "Cálculo I",
+ "Calculus II": "Cálculo II",
+ "Campaign Manager": "Gerente de campaña",
+ "Case Manager": "Gestor de casos",
+ "Chemistry": "Química",
+ "Chemistry Lab I and II": "Laboratorio de química I y II",
+ "Child Psychologist": "Psicólogo infantil",
+ "Child Welfare Specialist": "Especialista en bienestar infantil",
+ "Choose 12 credits from the published list (anatomy, biology, physics and chemistry labs, chemistry for science majors, medical terminology, health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics)": "Elija 12 créditos de la lista publicada (anatomía, laboratorios de biología, física y química, química para especialidades de ciencias, terminología médica, salud, primeros auxilios, actividad física, electivas de kinesiología o salud, sistemas de información administrativa, nutrición, estadística)",
+ "Choose 18 credits from the published list (health, first aid, physical activity, kinesiology or health electives, management information systems, nutrition, statistics, accounting, economics)": "Elija 18 créditos de la lista publicada (salud, primeros auxilios, actividad física, electivas de kinesiología o salud, sistemas de información administrativa, nutrición, estadística, contabilidad, economía)",
+ "Communication": "Comunicación",
+ "Composition 1": "Composición 1",
+ "Composition 2": "Composición 2",
+ "Composition I and II": "Composición I y II",
+ "Computer Science": "Ciencias de la computación",
+ "Computer Science I": "Ciencias de la computación I",
+ "Computer Science II": "Ciencias de la computación II",
+ "Corporate Treasurer": "Tesorero corporativo",
+ "Corrections Process": "Proceso correccional",
+ "Counselor": "Consejero",
+ "Courts": "Tribunales",
+ "Crime Analyst": "Analista de criminalidad",
+ "Criminal Justice": "Justicia penal",
+ "Criminal Law": "Derecho penal",
+ "Cybersecurity Analyst": "Analista de ciberseguridad",
+ "Dance": "Danza",
+ "Database Administrator": "Administrador de bases de datos",
+ "Dental Hygiene": "Higiene dental",
+ "Developmental Psychology": "Psicología del desarrollo",
+ "Dietitian": "Dietista",
+ "Early Childhood Education": "Educación infantil temprana",
+ "Ecology": "Ecología",
+ "Economics": "Economía",
+ "Education": "Educación",
+ "Emergency Medical Sciences": "Ciencias médicas de emergencia",
+ "Engineering": "Ingeniería",
+ "English": "Inglés",
+ "Environmental Sciences": "Ciencias ambientales",
+ "Exercise Physiologist": "Fisiólogo del ejercicio",
+ "Finance": "Finanzas",
+ "Financial Analyst": "Analista financiero",
+ "Financial Planner": "Planificador financiero",
+ "Finite Math OR Contemporary Math": "Matemáticas finitas O Matemáticas contemporáneas",
+ "Fitness Trainer": "Entrenador físico",
+ "Food Scientist": "Científico de alimentos",
+ "Forensic Scientist": "Científico forense",
+ "French": "Francés",
+ "General Biology": "Biología general",
+ "General Biology and Lab": "Biología general y laboratorio",
+ "General Biology for Science Majors I and II": "Biología general para especialidades de ciencias I y II",
+ "General Chemistry I and II": "Química general I y II",
+ "Geography": "Geografía",
+ "German": "Alemán",
+ "Government Affairs": "Asuntos gubernamentales",
+ "Graphic Designer": "Diseñador gráfico",
+ "Health Educator": "Educador de salud",
+ "Health Science": "Ciencias de la salud",
+ "History": "Historia",
+ "Hospitality And Tourism": "Hospitalidad y turismo",
+ "Human Resource Manager": "Gerente de recursos humanos",
+ "Human Resource Specialist": "Especialista en recursos humanos",
+ "Human Resources Manager": "Gerente de recursos humanos",
+ "Illustrator": "Ilustrador",
+ "Intro Psychology": "Introducción a la psicología",
+ "Intro to Biology I and II": "Introducción a la biología I y II",
+ "Intro to Business OR Business Law": "Introducción a los negocios O Derecho empresarial",
+ "Intro to Criminal Justice": "Introducción a la justicia penal",
+ "Intro to Financial Accounting": "Introducción a la contabilidad financiera",
+ "Intro to Kinesiology": "Introducción a la kinesiología",
+ "Intro to Managerial Accounting": "Introducción a la contabilidad administrativa",
+ "Intro to Psychology": "Introducción a la psicología",
+ "Intro to Social Work": "Introducción al trabajo social",
+ "Intro to Sociology": "Introducción a la sociología",
+ "Intro to Statistics": "Introducción a la estadística",
+ "Investment Banker": "Banquero de inversión",
+ "Kinesiology": "Kinesiología",
+ "Latin": "Latín",
+ "Legal Assistant": "Asistente legal",
+ "Legislative Analyst": "Analista legislativo",
+ "Macro OR Micro Economics": "Macroeconomía O Microeconomía",
+ "Macroeconomics": "Macroeconomía",
+ "Management": "Administración",
+ "Market Research Analyst": "Analista de investigación de mercados",
+ "Marketing": "Mercadotecnia",
+ "Marketing Manager": "Gerente de mercadotecnia",
+ "Microeconomics": "Microeconomía",
+ "Museum Curator": "Curador de museo",
+ "Music": "Música",
+ "Network Administrator": "Administrador de redes",
+ "Nine credits of Political Science": "Nueve créditos de ciencias políticas",
+ "Nine credits of humanities": "Nueve créditos de humanidades",
+ "Nine credits of natural sciences": "Nueve créditos de ciencias naturales",
+ "Occupational Therapist": "Terapeuta ocupacional",
+ "One Behavioral Science Elective": "Una electiva de ciencias del comportamiento",
+ "One English Elective": "Una electiva de inglés",
+ "One Fine Arts Elective": "Una electiva de bellas artes",
+ "One Humanities Elective": "Una electiva de humanidades",
+ "One IT Elective that covers at least 50% Excel": "Una electiva de informática que cubra al menos 50% de Excel",
+ "One Life Science course": "Un curso de ciencias de la vida",
+ "One Math Elective": "Una electiva de matemáticas",
+ "One Math Elective OR Intro to Logical Reasoning": "Una electiva de matemáticas O Introducción al razonamiento lógico",
+ "One Natural Science Elective": "Una electiva de ciencias naturales",
+ "One Physical Science Elective": "Una electiva de ciencias físicas",
+ "One Physical Science course": "Un curso de ciencias físicas",
+ "One art elective": "Una electiva de arte",
+ "One more course in the same discipline from either": "Un curso más en la misma disciplina de cualquiera de las dos",
+ "Open": "Abrir",
+ "Operations Manager": "Gerente de operaciones",
+ "Pharmacy Tech": "Técnico de farmacia",
+ "Philosophy": "Filosofía",
+ "Physical Science": "Ciencias físicas",
+ "Physical Therapist": "Fisioterapeuta",
+ "Physics": "Física",
+ "Physics I and II with labs, or Organic Chemistry I and II with labs": "Física I y II con laboratorios, o Química orgánica I y II con laboratorios",
+ "Police Officer": "Oficial de policía",
+ "Policing": "Función policial",
+ "Political Analyst": "Analista político",
+ "Political Science": "Ciencias políticas",
+ "Probation Officer": "Oficial de libertad condicional",
+ "Project Manager": "Gerente de proyectos",
+ "Psychology": "Psicología",
+ "Public Affairs Manager": "Gerente de asuntos públicos",
+ "Public Speaking": "Oratoria",
+ "Research Psychologist": "Psicólogo investigador",
+ "Research Scientist": "Científico investigador",
+ "Respiratory Therapist": "Terapeuta respiratorio",
+ "Risk Manager": "Gerente de riesgos",
+ "Sales Manager": "Gerente de ventas",
+ "Six credits of biology": "Seis créditos de biología",
+ "Six credits of foreign language": "Seis créditos de lengua extranjera",
+ "Six credits of history": "Seis créditos de historia",
+ "Six credits of social/behavioral science": "Seis créditos de ciencias sociales/del comportamiento",
+ "Social Psychologist": "Psicólogo social",
+ "Social Psychology": "Psicología social",
+ "Social Work": "Trabajo social",
+ "Social Worker": "Trabajador social",
+ "Sociology": "Sociología",
+ "Software Developer": "Desarrollador de software",
+ "Spanish": "Español",
+ "Sports Coach": "Entrenador deportivo",
+ "Statistics 1": "Estadística 1",
+ "Supply Chain Manager": "Gerente de cadena de suministro",
+ "Survey of Western Art 1 and 2": "Estudio del arte occidental 1 y 2",
+ "Tax Advisor": "Asesor fiscal",
+ "Teacher": "Maestro",
+ "Theatre": "Teatro",
+ "Three credits of BSW program-specific": "Tres créditos específicos del programa BSW",
+ "Three credits of behavioral science": "Tres créditos de ciencias del comportamiento",
+ "Three credits of elective": "Tres créditos de electiva",
+ "Three credits of electives": "Tres créditos de electivas",
+ "Three credits of fine arts": "Tres créditos de bellas artes",
+ "Three credits of foreign language": "Tres créditos de lengua extranjera",
+ "Three credits of literature": "Tres créditos de literatura",
+ "Three credits of other English": "Tres créditos de otro inglés",
+ "Three credits of other humanities": "Tres créditos de otras humanidades",
+ "Three credits of other math": "Tres créditos de otras matemáticas",
+ "Three credits of other natural science": "Tres créditos de otra ciencia natural",
+ "Three credits of other natural sciences": "Tres créditos de otras ciencias naturales",
+ "Three credits of physics": "Tres créditos de física",
+ "Three credits of social science": "Tres créditos de ciencias sociales",
+ "Three credits of social/behavioral science (in addition to Pol. Sci. courses)": "Tres créditos de ciencias sociales/del comportamiento (además de los cursos de ciencias políticas)",
+ "Three humanities courses (literature, foreign languages, history, classical studies, communications, philosophy, religious studies, interdisciplinary)": "Tres cursos de humanidades (literatura, lenguas extranjeras, historia, estudios clásicos, comunicaciones, filosofía, estudios religiosos, interdisciplinarios)",
+ "Trigonometry": "Trigonometría",
+ "Twelve college-selected credits": "Doce créditos seleccionados por la universidad",
+ "Twelve credits of other computer science": "Doce créditos de otras ciencias de la computación",
+ "Two Behavioral Science Electives": "Dos electivas de ciencias del comportamiento",
+ "Two Humanities Electives": "Dos electivas de humanidades",
+ "Two Math Electives": "Dos electivas de matemáticas",
+ "Two classes from the published math list": "Dos clases de la lista publicada de matemáticas",
+ "Web Developer": "Desarrollador web",
+ "Your apply ready packet": "Su paquete listo para solicitar",
+ "College not specified": "Universidad no especificada",
+ "2026-2027 fee schedule, verified November 11, 2026": "tarifas 2026-2027, verificadas el 11 de noviembre de 2026",
+ "Fall 2026 fee schedule, verified November 11, 2026": "tarifas del otoño de 2026, verificadas el 11 de noviembre de 2026",
+ "Biology": "Biología",
+ "Kinesiology, Sport Management": "Kinesiología, Gestión deportiva",
+ "Kinesiology, Pre-Allied Health": "Kinesiología, Pre-salud aliada",
+ "College Algebra": "Álgebra universitaria",
+ "Mathematics": "Matemáticas",
+ "College name": "Nombre de la universidad",
+ "Courses taken or planned at this college": "Cursos tomados o planeados en esta universidad",
+ "Pick a subject": "Elija una materia",
+ "Pick the course": "Elija el curso",
+ "Pick an AP exam": "Elija un examen AP",
+ "Score report sent": "Informe de puntuaciones enviado",
+ "Score report not sent yet": "Informe de puntuaciones aún no enviado",
+ "or type the code: ENGL 1010": "o escriba el código: ENGL 1010",
+ "elective hours": "horas electivas",
+ "English composition requirement": "requisito de composición en inglés",
+ "the university's equivalent course for this exam": "el curso equivalente de la universidad para este examen",
+ "Geology and Earth Sciences": "Geología y Ciencias de la Tierra",
+ "Religion": "Religión",
+ "Culinary Arts": "Artes Culinarias",
+ "AP English Language and Composition": "AP Lengua Inglesa y Composición",
+ "AP English Literature and Composition": "AP Literatura Inglesa y Composición",
+ "AP Calculus AB": "AP Cálculo AB",
+ "AP Calculus BC": "AP Cálculo BC",
+ "AP Statistics": "AP Estadística",
+ "AP Biology": "AP Biología",
+ "AP Chemistry": "AP Química",
+ "AP Physics 1": "AP Física 1",
+ "AP Environmental Science": "AP Ciencias Ambientales",
+ "AP Psychology": "AP Psicología",
+ "AP United States History": "AP Historia de los Estados Unidos",
+ "AP World History": "AP Historia Mundial",
+ "AP European History": "AP Historia Europea",
+ "AP United States Government and Politics": "AP Gobierno y Política de los Estados Unidos",
+ "AP Macroeconomics": "AP Macroeconomía",
+ "AP Microeconomics": "AP Microeconomía",
+ "AP Human Geography": "AP Geografía Humana",
+ "AP Computer Science A": "AP Ciencias de la Computación A",
+ "AP Spanish Language and Culture": "AP Lengua y Cultura Españolas",
+ "AP French Language and Culture": "AP Lengua y Cultura Francesas",
+ "Course code": "Código del curso",
+ "AP score": "Puntuación AP",
+ "Official score report sent": "Informe oficial de puntuaciones enviado",
+ "you@example.com": "usted@ejemplo.com",
+ "Verify with the university": "Verificar con la universidad",
+ "The Louisiana state guarantee does not cover private universities.": "La garantía estatal de Luisiana no cubre a las universidades privadas.",
+ "Coverage: the colleges we check": "Cobertura: las universidades que verificamos",
+ "Every verdict on this page comes from a college's published catalog or the Board of Regents Articulation Matrix, 2025-26. This list names each covered college and the date its course data was last verified against that source.": "Cada veredicto en esta página proviene del catálogo publicado de una universidad o de la Matriz de Articulación de la Junta de Regentes, 2025-26. Esta lista nombra cada universidad cubierta y la fecha en que sus datos de cursos se verificaron por última vez contra esa fuente.",
+ "Louisiana colleges covered": "universidades de Luisiana cubiertas",
+ "course data last verified": "datos de cursos verificados por última vez el",
+ "Three Louisiana colleges are not covered yet: Dillard University, Tulane University, and Xavier University of Louisiana. They do not appear in the Board of Regents matrix for 2025-26. Name one as your college or your target in the check above and the coverage request panel will offer to queue it; every request moves a college up the list.": "Tres universidades de Luisiana aún no están cubiertas: Dillard University, Tulane University y Xavier University of Louisiana. No aparecen en la matriz de la Junta de Regentes para 2025-26. Nombre una como su universidad o su destino en la verificación de arriba y el panel de solicitud de cobertura ofrecerá ponerla en la lista; cada solicitud hace que una universidad suba en la lista.",
+ "Compare two universities side by side": "Compare dos universidades lado a lado",
+ "Same courses, two universities, one answer. Add the courses from one college, pick two universities, and see what each one counts, side by side. Every verdict comes from the same verified course data as the main check.": "Los mismos cursos, dos universidades, una respuesta. Agregue los cursos de una universidad, elija dos universidades y vea qué cuenta cada una, lado a lado. Cada veredicto proviene de los mismos datos verificados de cursos que la verificación principal.",
+ "Add course": "Agregar curso",
+ "First university": "Primera universidad",
+ "Second university": "Segunda universidad",
+ "Compare": "Comparar",
+ "Pick the subject": "Elija la materia",
+ "Remove": "Quitar",
+ "Total degree hours": "Total de horas para el título",
+ "What to take next": "Qué tomar a continuación",
+ "We could not reach the credit checker just now. Check your connection and try again.": "No pudimos comunicarnos con el verificador de créditos en este momento. Revise su conexión e inténtelo de nuevo.",
+ "We never sell contact information.": "Nunca vendemos información de contacto.",
+ "We only report what is publicly available, and we will add this college if its data becomes public.": "Solo informamos lo que está disponible públicamente, y agregaremos esta universidad si sus datos se hacen públicos.",
+ "Start from what you have already taken. Add your finished courses, pick a major pathway if you have one, and see exactly what is left, with the courses at your own college that count at the university you want. No pathway picked means the 39 hour general education block of the transfer degree.": "Parta de lo que ya ha tomado. Agregue sus cursos terminados, elija una ruta de especialidad si tiene una, y vea exactamente lo que falta, con los cursos de su propia universidad que cuentan en la universidad que desea. Sin ruta elegida significa el bloque de educación general de 39 horas del título de transferencia.",
+ "Major pathway (optional)": "Ruta de especialidad (opcional)",
+ "No specific major: general education block": "Sin especialidad específica: bloque de educación general",
+ "Show what is left": "Mostrar lo que falta",
+ "Taken": "Obtenido",
+ "Met": "Cumplido",
+ "Select Your Path": "Seleccione su ruta",
+ "🔍 Check My Credits": "🔍 Verifique mis créditos",
+ "⚖️ Compare Two Colleges": "⚖️ Compare dos universidades",
+ "🧭 What to Take Next": "🧭 Qué tomar a continuación",
+ "📋 Eligibility Check": "📋 Verificación de elegibilidad",
+ "🛤️ Transfer Pathways": "🛤️ Rutas de transferencia",
+ "🗺️ Degree Planner": "🗺️ Planificador de título",
+ "🎯 Admission Check": "🎯 Verificación de admisión",
+ "🏫 Coverage": "🏫 Cobertura",
+ "See which of your courses count at the college you choose.": "Vea cuáles de sus cursos cuentan en la universidad que elija.",
+ "Run the same courses against two colleges, side by side.": "Compare los mismos cursos en dos universidades, lado a lado.",
+ "Find the courses still guaranteed to count toward your pathway.": "Encuentre los cursos que todavía tienen garantizado contar para su ruta.",
+ "See if you meet the minimums to start dual enrollment.": "Vea si cumple los mínimos para empezar la inscripción dual.",
+ "Browse the 16 Louisiana transfer pathways.": "Explore las 16 rutas de transferencia de Luisiana.",
+ "Map out your degree plan semester by semester.": "Trace su plan de título semestre a semestre.",
+ "Check your standing for admission at your target college.": "Consulte su situación de admisión en la universidad que desea.",
+ "See all 33 covered Louisiana colleges and when each was last verified.": "Vea las 33 universidades de Luisiana cubiertas y cuándo se verificó cada una por última vez."
+};
+// Credits That Count page wiring v2 (Nov 12, 2026): coverage strip,
+// results additions (savings line, source line), eligibility
+// check, career pathways, transfer degree planner with apply
+// ready packet, admission check, and the FULL Spanish toggle:
+// when Spanish is on, the whole page renders in Spanish (static
+// text through the walker and CTC_ES_DICT, wiring-built sections
+// through bilingual templates, engine item strings through the
+// dictionary and patterns in T()).
+// Migration (Nov 19, 2026): the page no longer carries the
+// dataset or the engines. Every verdict below comes from the
+// Credits That Count API, which runs the same tested engines
+// server-side; dropdown options are fetched per college;
+// nothing here invents an outcome.
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  }
+  function moneyInt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function moneyRate(n) {
+    return '$' + Number(n).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  var COLLEGES36 = (typeof LA_COLLEGES !== 'undefined') ? LA_COLLEGES : [];
+  var COVERED = [];
+  var ALLNAMES = [];
+  var UNCOVERED = [];
+  var TYPES = {};
+  var DICT = (typeof CTC_ES_DICT !== 'undefined') ? CTC_ES_DICT : {};
+  function fillSelect(el, names, firstLabel) {
+    if (!el) return;
+    el.innerHTML = '<option value="">' + esc(firstLabel) + '</option>' +
+      names.map(function (n) { return '<option>' + esc(n) + '</option>'; }).join('');
+  }
+  function num(id) {
+    var v = parseFloat(($(id) || {}).value);
+    return isNaN(v) ? null : v;
+  }
+  function intOrNull(id) {
+    var v = parseInt(($(id) || {}).value, 10);
+    return isNaN(v) ? null : v;
+  }
+
+  // ---- API access (Migration, Nov 19, 2026) ----
+  var API = (typeof CTC_API_BASE !== 'undefined') ? CTC_API_BASE : '';
+  function apiGet(path) {
+    return fetch(API + path).then(function (r) {
+      if (!r.ok) throw new Error('API ' + r.status);
+      return r.json();
+    });
+  }
+  function apiPost(path, body) {
+    return fetch(API + path, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('API ' + r.status);
+      return r.json();
+    });
+  }
+  function apiError(el) {
+    if (el) {
+      el.innerHTML = '<p class="verdict warn">' + L(
+        'We could not reach the credit checker just now. Check your connection and try again.',
+        'No pudimos comunicarnos con el verificador de créditos en este momento. Revise su conexión e inténtelo de nuevo.') + '</p>';
+    }
+  }
+  var subjectsCache = {};
+  function apiSubjects(college) {
+    if (!subjectsCache[college]) {
+      subjectsCache[college] = apiGet('/api/subjects?college=' + encodeURIComponent(college))
+        .then(function (d) { return (d && d.subjects) || []; })
+        .catch(function () { return []; });
+    }
+    return subjectsCache[college];
+  }
+  var coursesCache = {};
+  function apiCourses(college, prefix) {
+    var key = college + '|' + prefix;
+    if (!coursesCache[key]) {
+      coursesCache[key] = apiGet('/api/courses?college=' + encodeURIComponent(college) +
+          '&subject=' + encodeURIComponent(prefix))
+        .then(function (d) { return (d && d.courses) || []; })
+        .catch(function () { return []; });
+    }
+    return coursesCache[key];
+  }
+  var pathwaysListPromise = null;
+  function apiPathways() {
+    if (!pathwaysListPromise) {
+      pathwaysListPromise = apiGet('/api/pathways')
+        .then(function (d) { return (d && d.pathways) || []; })
+        .catch(function () { return []; });
+    }
+    return pathwaysListPromise;
+  }
+  // The colleges answer drives the coverage strip, the
+  // coverage list, the dropdown fills, and the target
+  // type map behind the compare tool's public/private flag.
+  // Every college dropdown offers the full list, covered and
+  // not yet covered alike (Kris, Nov 19, 2026): the three
+  // colleges without public course data stay listed, and
+  // picking one shows the uncovered notice below instead of
+  // failing silently.
+  if (typeof CTC_COLLEGES_PROMISE !== 'undefined') {
+    CTC_COLLEGES_PROMISE.then(function (colleges) {
+      COVERED = (colleges || []).filter(function (c) { return c.covered; })
+        .map(function (c) { return c.name; });
+      ALLNAMES = (colleges || []).map(function (c) { return c.name; });
+      UNCOVERED = (colleges || []).filter(function (c) { return !c.covered; })
+        .map(function (c) { return c.name; });
+      (colleges || []).forEach(function (c) { if (c.type) TYPES[c.name] = c.type; });
+      renderStrip();
+      renderCoverage();
+      fillSelect($('planSource'), ALLNAMES, 'Pick your college');
+      fillSelect($('planTarget'), ALLNAMES, 'Pick the university');
+      fillSelect($('cmpSource'), ALLNAMES, 'Pick your college');
+      fillSelect($('gapSource'), ALLNAMES, 'Pick your college');
+      if (cmpPicker) cmpPicker.refresh();
+      if (gapPicker) gapPicker.refresh();
+      refreshUncoveredNotes();
+    });
+  }
+
+  // ---- Language state, dictionary, patterns ----
+  var spanish = false;
+  function L(en, es) { return spanish ? es : en; }
+  function T(s) {
+    if (!spanish || typeof s !== 'string') return s;
+    if (Object.prototype.hasOwnProperty.call(DICT, s)) return DICT[s];
+    var m;
+    if ((m = s.match(/^(\d+) credit hours in the order listed, semester by semester\. Each one is matched to (.+) in the statewide course data\.$/))) {
+      return m[1] + ' horas de crédito en el orden indicado, semestre por semestre. Cada una está vinculada con ' + m[2] + ' en los datos estatales de cursos.';
+    }
+    if ((m = s.match(/^Send your official (.+) transcript to (.+)$/))) {
+      return 'Envíe su expediente académico oficial de ' + m[1] + ' a ' + m[2];
+    }
+    if ((m = s.match(/^Take these (\d+) courses at (.+)$/))) {
+      return 'Tome estos ' + m[1] + ' cursos en ' + m[2];
+    }
+    if ((m = s.match(/^Apply for admission at (.+)$/))) return 'Solicite la admisión en ' + m[1];
+    if ((m = s.match(/^Apply for dual enrollment at (.+)$/))) return 'Solicite la inscripción dual en ' + m[1];
+    if ((m = s.match(/^A ([\d.]+) cumulative GPA for a (senior|junior) \(yours: ([\d.]+)\)$/))) {
+      return 'Un GPA acumulado de ' + m[1] + ' para ' + (m[2] === 'senior' ? '12.º grado' : '11.º grado') + ' (el suyo: ' + m[3] + ')';
+    }
+    if ((m = s.match(/^A GPA of at least ([\d.]+) \(yours: ([\d.]+)\)$/))) {
+      return 'Un GPA de al menos ' + m[1] + ' (el suyo: ' + m[2] + ')';
+    }
+    if ((m = s.match(/^GPA ([\d.]+) meets the ([\d.]+) minimum( for a (senior|junior))?$/))) {
+      return 'El GPA ' + m[1] + ' cumple el mínimo de ' + m[2] +
+        (m[4] ? ' para ' + (m[4] === 'senior' ? '12.º grado' : '11.º grado') : '');
+    }
+    if ((m = s.match(/^ACT (English|Math) (\d+) \(for (.+?) courses\) \(yours: (\d+)\)$/))) {
+      return 'ACT de ' + (m[1] === 'English' ? 'inglés' : 'matemáticas') + ' ' + m[2] +
+        ' (para cursos de ' + (m[3] === 'humanities and social sciences' ? 'humanidades y ciencias sociales' : 'matemáticas y ciencias') +
+        ') (el suyo: ' + m[4] + ')';
+    }
+    if ((m = s.match(/^ACT (English|Math) (\d+) \(yours: (\d+)\)$/))) {
+      return 'ACT de ' + (m[1] === 'English' ? 'inglés' : 'matemáticas') + ' ' + m[2] + ' (el suyo: ' + m[3] + ')';
+    }
+    if ((m = s.match(/^ACT composite (\d+) \(yours: (\d+)\)$/))) {
+      return 'ACT compuesto ' + m[1] + ' (el suyo: ' + m[2] + ')';
+    }
+    if ((m = s.match(/^Not covered yet: (.+)$/))) return 'Aún no cubierto: ' + m[1];
+    if ((m = s.match(/^These colleges are being built\. Enter your email and we will let you know when their course data is verified\. Every request moves a college up the list\.$/))) {
+      return 'Estas universidades se están construyendo. Ingrese su correo electrónico y le avisaremos cuando los datos de sus cursos estén verificados. Cada solicitud hace subir una universidad en la lista.';
+    }
+    if ((m = s.match(/^All (\d+) credit hours of the transfer degree move, with junior standing\.$/))) {
+      return 'Las ' + m[1] + ' horas de crédito del título de transferencia se mueven todas, con nivel junior.';
+    }
+    if ((m = s.match(/^Transfer degree still in progress: the guarantee is not in hand yet\. (.+)\.$/))) {
+      return 'Título de transferencia aún en curso: la garantía aún no está en mano. ' + m[1] + '.';
+    }
+    if ((m = s.match(/^Flagged: (.+) falls outside the transfer guarantee\. The receiving university decides that course on its own\.$/))) {
+      return 'Marcado: ' + m[1] + ' queda fuera de la garantía de transferencia. La universidad receptora decide sobre ese curso por su cuenta.';
+    }
+    if ((m = s.match(/^Credit awarded: counts toward (.+)\.$/))) {
+      return 'Crédito otorgado: cuenta para ' + T(m[1]) + '.';
+    }
+    if ((m = s.match(/^Credit awarded: (.+)\.$/))) return 'Crédito otorgado: ' + m[1] + '.';
+    if ((m = s.match(/^Credit awarded as an elective in the subject\. ?(.*)$/))) {
+      return 'Crédito otorgado como electiva en la materia. ' + m[1];
+    }
+    if ((m = s.match(/^No credit\. (.+)$/))) return 'Sin crédito. ' + m[1];
+    if ((m = s.match(/^College (\d+)$/))) return 'Universidad ' + m[1];
+    if ((m = s.match(/^Same requirement as (.+)$/))) return 'El mismo requisito que ' + m[1];
+    if ((m = s.match(/^Course data built from current catalogs: (.+), joined on the Louisiana common course numbers in the AY 2025-26 statewide catalog\. For these colleges, pick the subject, then the course, and the tool finds the match itself\. More colleges are being added the same way\.$/))) {
+      var mid = m[1]
+        .replace(/(\d+) courses with state numbers/g, '$1 cursos con números estatales')
+        .replace(/2026-2027 catalog and Board of Regents Articulation Matrix, 2025-26/g, 'catálogo 2026-2027 y Matriz de Articulación del Board of Regents, 2025-26')
+        .replace(/2026-2027 catalog/g, 'catálogo 2026-2027')
+        .replace(/Board of Regents Articulation Matrix, 2025-26/g, 'Matriz de Articulación del Board of Regents, 2025-26')
+        .replace(/\) and /g, ') y ');
+      return 'Datos de cursos construidos a partir de los catálogos actuales: ' + mid +
+        ', unidos por los números comunes de curso de Luisiana en el catálogo estatal AY 2025-26. Para estas universidades, elija la materia, luego el curso, y la herramienta encuentra la coincidencia por sí misma. Se están agregando más universidades de la misma manera.';
+    }
+    return s;
+  }
+
+  // ---- Text walker: translate static and page-rendered text ----
+  var origText = new Map();
+  var origPlaceholder = new Map();
+  var origAria = new Map();
+  var origTitle = document.title;
+  function walkTranslate(root) {
+    if (!root || !document.createTreeWalker) return;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        var p = node.parentNode;
+        if (!p || p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE') return NodeFilter.FILTER_REJECT;
+        if (p.id === 'spanishToggle') return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    var n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    nodes.forEach(function (node) {
+      if (!origText.has(node)) origText.set(node, node.nodeValue);
+      var parts = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      if (parts && DICT[parts[2]]) {
+        node.nodeValue = parts[1] + DICT[parts[2]] + parts[3];
+      } else if (parts) {
+        var t = T(parts[2]);
+        if (t !== parts[2]) node.nodeValue = parts[1] + t + parts[3];
+      }
+    });
+    if (root.querySelectorAll) {
+      root.querySelectorAll('[placeholder]').forEach(function (el) {
+        if (!origPlaceholder.has(el)) origPlaceholder.set(el, el.getAttribute('placeholder'));
+        var ph = el.getAttribute('placeholder');
+        if (ph && DICT[ph]) el.setAttribute('placeholder', DICT[ph]);
+      });
+      root.querySelectorAll('[aria-label]').forEach(function (el) {
+        if (!origAria.has(el)) origAria.set(el, el.getAttribute('aria-label'));
+        var al = el.getAttribute('aria-label');
+        if (al && DICT[al]) el.setAttribute('aria-label', DICT[al]);
+      });
+    }
+  }
+  function walkRestore(root) {
+    origText.forEach(function (orig, node) {
+      if (node.isConnected) node.nodeValue = orig;
+    });
+    origPlaceholder.forEach(function (orig, el) {
+      if (el.isConnected && orig != null) el.setAttribute('placeholder', orig);
+    });
+    origAria.forEach(function (orig, el) {
+      if (el.isConnected && orig != null) el.setAttribute('aria-label', orig);
+    });
+  }
+
+  // ---- Coverage strip ----
+  function renderStrip() {
+    var strip = $('coverageStrip');
+    if (!strip || !COVERED.length) return;
+    var short = {
+      'Delgado Community College': 'Delgado',
+      'University of Louisiana at Lafayette': 'UL Lafayette',
+      'University of New Orleans': 'UNO',
+      'Baton Rouge Community College': 'BRCC',
+      'Southeastern Louisiana University': 'Southeastern',
+      'Louisiana State University and A&M College': 'LSU',
+      'Northwestern State University of Louisiana': 'Northwestern State',
+      'Louisiana Tech University': 'Louisiana Tech'
+    };
+    var names = COVERED.map(function (n2) { return esc(short[n2] || n2); }).join(', ');
+    strip.innerHTML = spanish
+      ? 'Ahora verificamos <strong>' + COVERED.length + ' universidades de Luisiana</strong>, incluidas las cinco mayores proveedoras de inscripción dual: ' + names + '.'
+      : 'Now checking <strong>' + COVERED.length + ' Louisiana colleges</strong>, including the five biggest dual enrollment providers: ' + names + '.';
+  }
+  renderStrip();
+
+  // ---- Uncovered colleges notice (Nov 19, 2026) ----
+  // Dillard, Tulane, and Xavier stay in every college
+  // dropdown, but they do not publish transfer equivalencies
+  // in the state's public sources, so there is no public
+  // data to check against. Picking one, as the student's
+  // college or as the target, in any tool, puts this plain
+  // notice right under the dropdown, instead of a raw error
+  // or silently empty dropdowns. When a main check names
+  // one, the results also carry the coverage request panel
+  // (filled by the results renderer), which is how a
+  // college gets queued for coverage.
+  var UNCOVERED_SELECT_IDS = {
+    target: true, pwSource: true, pwTarget: true,
+    planSource: true, planTarget: true,
+    cmpSource: true, cmpTargetA: true, cmpTargetB: true,
+    gapSource: true, gapTarget: true, admTarget: true
+  };
+  function isUncovered(name) { return !!name && UNCOVERED.indexOf(name) >= 0; }
+  function uncoveredNoteText(name) {
+    return L('We do not have course information for ', 'Aún no tenemos información de cursos de ') +
+      name +
+      L(' yet. This college does not publish its transfer equivalencies in the state\'s public sources, so there is no public data for us to check against. We only report what is publicly available, and we will add this college if its data becomes public.',
+        '. Esta universidad no publica sus equivalencias de transferencia en las fuentes públicas del estado, así que no hay datos públicos con los que podamos verificar. Solo informamos lo que está disponible públicamente, y agregaremos esta universidad si sus datos se hacen públicos.');
+  }
+  function refreshUncoveredNote(sel) {
+    if (!sel || !sel.parentNode) return;
+    var old = null;
+    var sib = sel.nextSibling;
+    while (sib) {
+      var next = sib.nextSibling;
+      if (sib.nodeType === 1 && sib.classList && sib.classList.contains('ctc-uncovered-note')) {
+        old = sib;
+        break;
+      }
+      sib = next;
+    }
+    if (old) old.parentNode.removeChild(old);
+    if (!isUncovered(sel.value)) return;
+    var note = document.createElement('p');
+    note.className = 'verdict warn ctc-uncovered-note';
+    note.textContent = uncoveredNoteText(sel.value);
+    sel.parentNode.insertBefore(note, sel.nextSibling);
+  }
+  function refreshUncoveredNotes() {
+    Object.keys(UNCOVERED_SELECT_IDS).forEach(function (id) {
+      refreshUncoveredNote($(id));
+    });
+    document.querySelectorAll('.s-name').forEach(function (sel) {
+      refreshUncoveredNote(sel);
+    });
+  }
+  document.addEventListener('change', function (ev) {
+    var t = ev.target;
+    if (!t || t.tagName !== 'SELECT') return;
+    if (UNCOVERED_SELECT_IDS[t.id] ||
+        (t.classList && t.classList.contains('s-name'))) {
+      refreshUncoveredNote(t);
+    }
+  });
+
+  // ---- Results additions: savings line, source line, Spanish guidance ----
+  function savingsSentence(sv, target, hours) {
+    if (spanish) {
+      return 'Estas ' + (hours ? hours + ' ' : '') + 'horas para el título valen aproximadamente ' +
+        moneyInt(sv.amount) + ' en ' + esc(target) +
+        ', calculado según su matrícula y tarifas publicadas de ' + moneyRate(sv.perCreditHour) +
+        ' por hora de crédito (' + esc(T(sv.schedule)) + ').';
+    }
+    return 'These ' + (hours ? hours + ' ' : '') + 'degree hours are worth about ' +
+      moneyInt(sv.amount) + ' at ' + esc(target) +
+      ', priced from its published tuition and fees of ' + moneyRate(sv.perCreditHour) +
+      ' per credit hour (' + esc(sv.schedule) + ').';
+  }
+  function renderAdditions() {
+    if (!window._lastStudent || !window._lastReport) return;
+    if (typeof buildGuidance !== 'function') return;
+    var g = buildGuidance(window._lastStudent, window._lastReport);
+    var target = (window._lastStudent.target && window._lastStudent.target.name) || '';
+    var verdicts = $('verdicts');
+    if (verdicts && typeof withSavings === 'function') {
+      var ratesData = { rates: {} };
+      if (window._lastReport.tuitionRate && target) {
+        ratesData.rates[target] = window._lastReport.tuitionRate;
+      }
+      var withS = withSavings(g, target, ratesData);
+      var sEl = $('savingsLine');
+      if (!sEl) {
+        sEl = document.createElement('div');
+        sEl.id = 'savingsLine';
+        verdicts.appendChild(sEl);
+      }
+      sEl.innerHTML = withS.savings
+        ? '<p class="verdict good">' + savingsSentence(withS.savings, target, null) + '</p>'
+        : '';
+    }
+    var tableBox = $('courseTable');
+    if (tableBox) {
+      var srcEl = $('sourceLine');
+      if (!srcEl) {
+        srcEl = document.createElement('div');
+        srcEl.id = 'sourceLine';
+        tableBox.appendChild(srcEl);
+      }
+      var seen = {};
+      var lines = [];
+      (window._lastReport.courseResults || []).forEach(function (r) {
+        if (r.sourceCatalog && !seen[r.sourceInstitution]) {
+          seen[r.sourceInstitution] = true;
+          if (spanish) {
+            lines.push('Fuentes: ' + T(r.sourceCatalog) + ' y ' + T(r.targetCatalog || 'the target catalog') + '.');
+          } else {
+            lines.push('Traced from ' + r.sourceCatalog + ' and ' + (r.targetCatalog || 'the target catalog') + '.');
+          }
+        }
+      });
+      srcEl.innerHTML = lines.length
+        ? '<p class="fine">' + esc(lines.join(' ')) + ' ' +
+          L('Statewide course numbers are shown with each match.',
+            'Los números estatales de curso se muestran con cada coincidencia.') + '</p>'
+        : '';
+    }
+    if (spanish && typeof translateGuidance === 'function') {
+      var t = translateGuidance(g);
+      var ns = $('nextSteps');
+      if (ns && t.nextSteps && t.nextSteps.length) {
+        ns.innerHTML = '<p><strong>Próximos pasos</strong></p><ul>' +
+          t.nextSteps.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>';
+      }
+      var adv = $('advisorBox');
+      if (adv && t.advisorQuestions && t.advisorQuestions.length) {
+        adv.innerHTML = '<div class="keycard" style="border:2px solid #1d3fae;background:#f2f4fd;border-radius:10px;padding:14px;margin-top:12px;">' +
+          '<p style="margin-top:0;"><strong>Preguntas para su asesor</strong></p><ul>' +
+          t.advisorQuestions.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ul></div>';
+      }
+    }
+  }
+  var runBtn = $('run');
+  if (runBtn) {
+    runBtn.addEventListener('click', function () {
+      // The check itself is an API call now, so the additions
+      // wait until the fresh report lands (or give up after
+      // about ten seconds, when the error line is showing).
+      var before = window._lastReport;
+      var tries = 0;
+      var timer = setInterval(function () {
+        tries += 1;
+        if ((window._lastReport && window._lastReport !== before) || tries > 100) {
+          clearInterval(timer);
+          renderAdditions();
+          if (spanish) walkTranslate(document.body);
+        }
+      }, 100);
+    });
+  }
+
+  // ---- Eligibility ----
+  var lastElig = null;
+  function renderEligibility() {
+    if (!lastElig) return;
+    var out = $('eligResult');
+    var r = lastElig.result;
+    var college = lastElig.college;
+    var h = '';
+    if (r.status === 'eligible') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Elegible según los mínimos publicados en ' + esc(college) + '.'
+        : 'Eligible on the published minimums at ' + esc(college) + '.') + '</p>';
+    } else if (r.status === 'not-yet') {
+      h += '<p class="verdict bad">' + (spanish ? 'Todavía no. Aún falta: ' : 'Not yet. Still missing: ') + '</p><ul>' +
+        (r.missing || []).map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    } else {
+      h += '<p class="verdict warn">' + (spanish ? 'Todavía no se puede saber. Esta verificación aún necesita: ' : 'Cannot tell yet. This check still needs: ') + '</p><ul>' +
+        (r.unknown || []).map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    }
+    if (r.met && r.met.length) {
+      h += '<p><strong>' + L('Met:', 'Cumplido:') + '</strong></p><ul>' +
+        r.met.map(function (x) { return '<li>' + esc(T(x)) + '</li>'; }).join('') + '</ul>';
+    }
+    out.innerHTML = h;
+  }
+  if ($('eligCollege')) {
+    apiGet('/api/eligibility').then(function (d) {
+      fillSelect($('eligCollege'), (d && d.colleges) || [], 'Pick the college');
+    }).catch(function () {});
+    $('eligRun').addEventListener('click', function () {
+      var out = $('eligResult');
+      var college = $('eligCollege').value;
+      if (!college) {
+        out.innerHTML = '<p class="verdict warn">' + L('Pick a college first.', 'Primero elija una universidad.') + '</p>';
+        lastElig = null;
+        return;
+      }
+      var student = {
+        gradeLevel: $('eligGrade').value,
+        track: $('eligTrack').value,
+        gpa: num('eligGpa'),
+        actComposite: intOrNull('eligComp'),
+        actEnglish: intOrNull('eligEng'),
+        actMath: intOrNull('eligMath'),
+        counselorRecommendation: $('eligRec').checked,
+        subject: $('eligSubject').value || undefined
+      };
+      apiPost('/api/eligibility', { college: college, student: student }).then(function (result) {
+        lastElig = { college: college, result: result };
+        renderEligibility();
+      }).catch(function () { apiError(out); });
+    });
+  }
+
+  // ---- Career pathways ----
+  var lastPathway = null;
+  function renderPathway() {
+    if (!lastPathway) return;
+    var out = $('pwResult');
+    var plan = lastPathway.plan;
+    var source = lastPathway.source;
+    var target = lastPathway.target;
+    if (plan.status === 'unknown-pathway') {
+      out.innerHTML = '<p class="verdict warn">' + L('That pathway is not verified yet.', 'Esa ruta aún no está verificada.') + '</p>';
+      return;
+    }
+    var h = '';
+    h += '<h3>' + esc(T(plan.pathwayName)) + ': ' + esc(source) + ' <span aria-hidden="true">→</span> ' + esc(target) + '</h3>';
+    if (plan.careers && plan.careers.length) {
+      h += '<p class="fine">' + L('Careers this pathway feeds: ', 'Carreras a las que lleva esta ruta: ') +
+        plan.careers.map(function (c) { return esc(T(c)); }).join(', ') + '.</p>';
+    }
+    if (plan.status === 'on-pathway') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Cada una de las ' + plan.totalHours + ' horas puede tomarse en ' + esc(source) + ' según sus datos de cursos publicados.'
+        : 'Every one of the ' + plan.totalHours + ' hours can be taken at ' + esc(source) + ' from its published course data.') + '</p>';
+    } else {
+      h += '<p class="verdict warn">' + (spanish
+        ? plan.gapHours + ' de las ' + plan.totalHours + ' horas son vacíos en ' + esc(source) + ': no están en sus datos de cursos publicados. Un vacío se nombra, nunca se rellena con una suposición.'
+        : plan.gapHours + ' of the ' + plan.totalHours + ' hours are gaps at ' + esc(source) + ': not in its published course data. A gap is named, never filled with a guess.') + '</p>';
+    }
+    if (plan.targetCovered === false) {
+      h += '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' aún no está en los datos de cursos, así que todavía no se puede verificar aquí si cada curso cuenta allí.'
+        : esc(target) + ' is not in the course data yet, so whether each course counts there cannot be verified here yet.') + '</p>';
+    }
+    if (plan.nextSemester && plan.nextSemester.length) {
+      h += '<p><strong>' + (spanish
+        ? 'Próximo semestre (' + plan.nextSemesterHours + ' horas):'
+        : 'Next semester (' + plan.nextSemesterHours + ' hours):') + '</strong></p><ul>' +
+        plan.nextSemester.map(function (p) {
+          return '<li>' + esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + ' (' + p.hours + 'h)</li>';
+        }).join('') + '</ul>';
+    }
+    var statusLabel = spanish
+      ? { taken: 'Ya obtenido', available: 'Disponible en su universidad', partial: 'Parcialmente disponible', gap: 'Vacío' }
+      : { taken: 'Already earned', available: 'Available at your college', partial: 'Partly available', gap: 'Gap' };
+    h += '<table class="results"><colgroup><col style="width:30%"><col style="width:12%"><col style="width:38%"><col style="width:20%"></colgroup>' +
+      '<tr><th>' + L('Requirement', 'Requisito') + '</th><th class="num">' + L('Hours', 'Horas') + '</th><th>' +
+      (spanish ? 'Cursos en ' : 'Courses at ') + esc(source) + '</th><th>' + L('Status', 'Estado') + '</th></tr>';
+    h += plan.requirements.map(function (r, i) {
+      var picks = (r.picks || []).map(function (p) {
+        var note = p.countsAtTarget === false
+          ? L(' (not verified at the target)', ' (no verificado en la universidad de destino)') : '';
+        return esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + esc(note);
+      }).join('<br>');
+      return '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + esc(T(r.label)) + '</td>' +
+        '<td class="num">' + r.hours + '</td><td>' + (picks || ' ') + '</td>' +
+        '<td>' + esc(statusLabel[r.status] || r.status) + '</td></tr>';
+    }).join('');
+    h += '</table>';
+    out.innerHTML = h;
+  }
+  if ($('pwPathway')) {
+    apiPathways().then(function (pathways) {
+      $('pwPathway').innerHTML = '<option value="">Pick a career goal</option>' +
+        pathways.map(function (p) {
+          return '<option value="' + esc(p.id) + '">' + esc(p.name) + '</option>';
+        }).join('');
+    });
+    fillSelect($('pwSource'), COLLEGES36, 'Pick your college');
+    fillSelect($('pwTarget'), COLLEGES36, 'Pick the university');
+    $('pwRun').addEventListener('click', function () {
+      var out = $('pwResult');
+      var pathwayId = $('pwPathway').value;
+      var source = $('pwSource').value;
+      var target = $('pwTarget').value;
+      if (!pathwayId || !source || !target) {
+        out.innerHTML = '<p class="verdict warn">' + L('Pick a career goal, your college, and the university.', 'Elija una meta profesional, su universidad y la universidad de destino.') + '</p>';
+        lastPathway = null;
+        return;
+      }
+      apiPost('/api/pathways', {
+        pathwayId: pathwayId, sourceCollege: source, targetCollege: target, takenLccns: []
+      }).then(function (plan) {
+        lastPathway = { source: source, target: target, plan: plan };
+        renderPathway();
+      }).catch(function () { apiError(out); });
+    });
+  }
+
+  // ---- Transfer degree planner + apply ready packet ----
+  var lastPlan = null;
+  var AREA_ES = {
+    'english-composition': 'composición en inglés',
+    'mathematics': 'matemáticas',
+    'natural-sciences': 'ciencias naturales',
+    'humanities': 'humanidades',
+    'fine-arts': 'bellas artes',
+    'behavioral-sciences': 'ciencias sociales y del comportamiento',
+    'discipline-electives': 'electivas de la disciplina'
+  };
+  function renderPlan() {
+    if (!lastPlan) return;
+    var out = $('planResult');
+    var pkt = $('packetResult');
+    var plan = lastPlan.plan;
+    var target = lastPlan.target;
+    if (plan.status === 'cannot-plan') {
+      out.innerHTML = '<p class="verdict warn">' + L('A plan cannot be built between these two colleges from the verified data yet.', 'Aún no se puede construir un plan entre estas dos universidades con los datos verificados.') + '</p>';
+      pkt.innerHTML = '';
+      return;
+    }
+    var h = '';
+    if (plan.status === 'complete') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Plan completo: ' + plan.totalHours + ' horas, cada curso verificado en ambas universidades.'
+        : 'Complete plan: ' + plan.totalHours + ' hours, every course verified at both colleges.') + '</p>';
+    } else {
+      var gapText = (plan.gaps || []).map(function (gp) {
+        return spanish
+          ? (AREA_ES[gp.area] || gp.area) + ' necesita ' + gp.needed + ' horas, ' + gp.have + ' en los datos vinculados'
+          : gp.area + ' needs ' + gp.needed + ' hours, ' + gp.have + ' in the matched data';
+      }).join('; ');
+      h += '<p class="verdict warn">' + (spanish
+        ? 'Plan parcial: ' + plan.totalHours + ' horas verificadas. Vacíos: '
+        : 'Partial plan: ' + plan.totalHours + ' hours verified. Gaps: ') + gapText + '.</p>';
+    }
+    var sv = plan.savings || null;
+    if (sv) {
+      h += '<p class="verdict good">' + savingsSentence(sv, target, sv.hours) + '</p>';
+    }
+    (plan.semesters || []).forEach(function (sem) {
+      h += '<p><strong>' + (spanish
+        ? 'Semestre ' + sem.number + ' (' + sem.hours + ' horas)'
+        : 'Semester ' + sem.number + ' (' + sem.hours + ' hours)') + '</strong></p><ul>' +
+        sem.courses.map(function (c) {
+          return '<li>' + esc(c.sourceCode) + ' ' + esc(c.sourceTitle) +
+            ' <span aria-hidden="true">→</span> ' + esc(c.targetCode) + ' (' + c.hours + 'h)</li>';
+        }).join('') + '</ul>';
+    });
+    out.innerHTML = h;
+    if (lastPlan.packet) {
+      var packet = lastPlan.packet;
+      pkt.innerHTML = '<h3>' + T('Your apply ready packet') + '</h3><ol>' +
+        (packet.steps || []).map(function (s) {
+          var link = s.url ? ' <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + T('Open') + '</a>' : '';
+          return '<li><strong>' + esc(T(s.title)) + '</strong>' +
+            (s.detail ? '<br>' + esc(T(s.detail)) : '') + link + '</li>';
+        }).join('') + '</ol>';
+    } else {
+      pkt.innerHTML = '';
+    }
+  }
+  if ($('planSource')) {
+    // planSource and planTarget are filled from the colleges
+    // answer in the API bootstrap above (the full list).
+    $('planRun').addEventListener('click', function () {
+      var source = $('planSource').value;
+      var target = $('planTarget').value;
+      if (!source || !target) {
+        $('planResult').innerHTML = '<p class="verdict warn">' + L('Pick your college and the university.', 'Elija su universidad y la universidad de destino.') + '</p>';
+        $('packetResult').innerHTML = '';
+        lastPlan = null;
+        return;
+      }
+      apiPost('/api/planner', { sourceCollege: source, targetCollege: target }).then(function (resp) {
+        lastPlan = {
+          source: source, target: target,
+          plan: resp.plan, packet: resp.packet || null
+        };
+        renderPlan();
+      }).catch(function () {
+        apiError($('planResult'));
+        $('packetResult').innerHTML = '';
+      });
+    });
+  }
+
+  // ---- Admission check ----
+  var lastAdmission = null;
+  var PATH_ES = {
+    'earned-credits': 'créditos obtenidos',
+    'bridge': 'programa puente',
+    'associate-degree': 'título asociado',
+    'adult': 'adulto'
+  };
+  function renderAdmission() {
+    if (!lastAdmission) return;
+    var out = $('admResult');
+    var r = lastAdmission.result;
+    var target = lastAdmission.target;
+    var h = '';
+    if (r.verdict === 'meets-state-minimum') {
+      h += '<p class="verdict good">' + (spanish
+        ? 'Cumple el mínimo estatal para la admisión por transferencia en ' + esc(target) + '. La universidad toma la decisión final de admisión.'
+        : 'Meets the state minimum for transfer admission at ' + esc(target) + '. The university makes the final admission call.') + '</p>';
+    } else if (r.verdict === 'open-admission') {
+      h += '<p class="verdict good">' + (spanish
+        ? esc(target) + ' es una universidad de admisión abierta: los mínimos de transferencia anteriores no limitan el ingreso.'
+        : esc(target) + ' is an open admission college: the transfer minimums above do not gate entry.') + '</p>';
+    } else if (r.verdict === 'not-applicable-private') {
+      h += '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' es una universidad privada y establece sus propios estándares de admisión; los mínimos estatales no aplican. Verifíquelo directamente con la universidad.'
+        : esc(target) + ' is a private university and sets its own admission standards; the state minimums do not apply. Verify with the university directly.') + '</p>';
+    } else if (r.verdict === 'cannot-tell') {
+      h += '<p class="verdict warn">' + L('Cannot tell from the state minimums alone. One of the paths below depends on standards the university sets itself.', 'No se puede saber solo con los mínimos estatales. Una de las rutas siguientes depende de estándares que la propia universidad establece.') + '</p>';
+    } else if (r.verdict === 'unknown-college') {
+      h += '<p class="verdict warn">' + L('That university is not in the admission standards data yet.', 'Esa universidad aún no está en los datos de estándares de admisión.') + '</p>';
+    } else {
+      h += '<p class="verdict bad">' + (spanish
+        ? 'Aún no cumple el mínimo estatal para ' + esc(target) + '.'
+        : 'Does not meet the state minimum yet for ' + esc(target) + '.') + '</p>';
+    }
+    var missingLines = [];
+    (r.paths || []).forEach(function (p) {
+      if (p.status !== 'meets' && p.missing && p.missing.length) {
+        var label = spanish ? (PATH_ES[p.id] || p.id) : p.id;
+        missingLines.push('<li>' + esc(label) + (spanish ? ': falta ' : ' path: missing ') +
+          p.missing.map(function (x) { return esc(T(x)); }).join('; ') + '</li>');
+      }
+    });
+    if (missingLines.length && r.verdict !== 'meets-state-minimum') {
+      h += '<p><strong>' + L('What each path still needs:', 'Lo que aún necesita cada ruta:') + '</strong></p><ul>' + missingLines.join('') + '</ul>';
+    }
+    out.innerHTML = h;
+  }
+  if ($('admTarget')) {
+    fillSelect($('admTarget'), COLLEGES36, 'Pick the university');
+    $('admRun').addEventListener('click', function () {
+      var out = $('admResult');
+      var target = $('admTarget').value;
+      if (!target) {
+        out.innerHTML = '<p class="verdict warn">' + L('Pick the university first.', 'Primero elija la universidad.') + '</p>';
+        lastAdmission = null;
+        return;
+      }
+      var input = {
+        targetCollege: target,
+        earnedHours: intOrNull('admHours'),
+        gpa: num('admGpa'),
+        englishCompleted: $('admEng').checked,
+        mathCompleted: $('admMath').checked,
+        hasAssociateDegree: $('admDegree').checked,
+        inBridgeProgram: $('admBridge').checked,
+        age25OrOver: $('admAge').checked,
+        placementMathOrEnglish: $('admPlacement').checked
+      };
+      apiPost('/api/admission', input).then(function (result) {
+        lastAdmission = { target: target, result: result };
+        renderAdmission();
+      }).catch(function () { apiError(out); });
+    });
+  }
+
+  // ---- Shared course picker (subject first, then course; dropdowns only) ----
+  function makeCoursePicker(prefix) {
+    var state = { courses: [] };
+    var srcEl = $(prefix + 'Source');
+    var subjEl = $(prefix + 'Subject');
+    var courseEl = $(prefix + 'Course');
+    var addBtn = $(prefix + 'Add');
+    var listEl = $(prefix + 'List');
+    if (!srcEl || !subjEl || !courseEl || !addBtn || !listEl) return null;
+    function fillSubjects() {
+      var college = srcEl.value;
+      if (!college) {
+        subjEl.innerHTML = '<option value="">' + esc(L('Pick the subject', 'Elija la materia')) + '</option>';
+        fillCourses();
+        return;
+      }
+      apiSubjects(college).then(function (subjects) {
+        if (srcEl.value !== college) return;
+        subjEl.innerHTML = '<option value="">' + esc(L('Pick the subject', 'Elija la materia')) + '</option>' +
+          subjects.map(function (s2) {
+            return '<option value="' + esc(s2.key) + '">' + esc(T(s2.label)) + '</option>';
+          }).join('');
+        fillCourses();
+      });
+    }
+    function fillCourses() {
+      var college = srcEl.value;
+      var subj = subjEl.value;
+      if (!college || !subj) {
+        courseEl.innerHTML = '<option value="">' + esc(L('Pick the course', 'Elija el curso')) + '</option>';
+        return;
+      }
+      apiCourses(college, subj).then(function (courses) {
+        if (srcEl.value !== college || subjEl.value !== subj) return;
+        courseEl.innerHTML = '<option value="">' + esc(L('Pick the course', 'Elija el curso')) + '</option>' +
+          courses.map(function (c) {
+            return '<option value="' + esc(c.code) + '">' + esc(c.code) + ' ' + esc(c.title) + '</option>';
+          }).join('');
+      });
+    }
+    function renderList() {
+      listEl.innerHTML = state.courses.map(function (code) {
+        return '<p style="margin:4px 0;">' + esc(code) +
+          ' <button type="button" data-remove="' + esc(code) + '">' + esc(L('Remove', 'Quitar')) + '</button></p>';
+      }).join('');
+    }
+    srcEl.addEventListener('change', function () {
+      state.courses = [];
+      renderList();
+      fillSubjects();
+    });
+    subjEl.addEventListener('change', fillCourses);
+    addBtn.addEventListener('click', function () {
+      var code = courseEl.value;
+      if (code && !state.courses.includes(code)) {
+        state.courses.push(code);
+        renderList();
+      }
+    });
+    listEl.addEventListener('click', function (ev) {
+      var code = ev.target && ev.target.getAttribute ? ev.target.getAttribute('data-remove') : null;
+      if (code) {
+        state.courses = state.courses.filter(function (c) { return c !== code; });
+        renderList();
+      }
+    });
+    return {
+      getSource: function () { return srcEl.value; },
+      getCourses: function () { return state.courses.slice(); },
+      refresh: function () { fillSubjects(); renderList(); }
+    };
+  }
+
+  // ---- Side by side compare (Stage 65) ----
+  var cmpPicker = null;
+  var lastCompare = null;
+  function isPublicTarget(name) {
+    if (Object.prototype.hasOwnProperty.call(TYPES, name)) return TYPES[name] !== 'private';
+    var privates = (typeof LA_PRIVATE !== 'undefined') ? LA_PRIVATE : [];
+    return !privates.includes(name);
+  }
+  function verdictCell(r) {
+    if (!r) return '';
+    var words = {
+      'matched': L('counts toward the degree', 'cuenta para el título'),
+      'subject-elective': L('credit only, as an elective', 'solo crédito, como electiva'),
+      'verify-individually': L('verify with the university', 'verificar con la universidad'),
+      'no-match-in-data': L('not in the course data yet', 'aún no está en los datos de cursos'),
+      'not-in-data': L('not in the course data yet', 'aún no está en los datos de cursos')
+    };
+    var word = words[r.dataStatus] || '';
+    return esc(r.shownAs) + (word ? '<br><span class="fine">' + esc(word) +
+      (r.degreeCredit ? ', ' + r.degreeCredit + 'h' : '') + '</span>' : '');
+  }
+  function renderCompare() {
+    if (!lastCompare) return;
+    var out = $('cmpResult');
+    var a = lastCompare[0];
+    var b = lastCompare[1];
+    var codes = lastCompare.codes;
+    function cellFor(entry, code) {
+      var r = (entry.report.courseResults || []).find(function (x) { return x.code === code; });
+      return verdictCell(r);
+    }
+    function totalFor(entry) {
+      return (entry.report.courseResults || []).reduce(function (s, x) { return s + (x.degreeCredit || 0); }, 0);
+    }
+    var h = '';
+    [a, b].forEach(function (entry) {
+      if (entry.report.allCoursesVerifyIndividually) {
+        h += '<p class="verdict warn">' + esc(entry.target.name) + ': ' +
+          L('private university, the Louisiana state guarantee does not apply. Every course is verified with the university individually.',
+            'universidad privada, la garantía estatal de Luisiana no aplica. Cada curso se verifica con la universidad de forma individual.') + '</p>';
+      }
+    });
+    h += '<table class="results"><colgroup><col style="width:20%"><col style="width:40%"><col style="width:40%"></colgroup>' +
+      '<tr><th>' + L('Course', 'Curso') + '</th><th>' + esc(a.target.name) + '</th><th>' + esc(b.target.name) + '</th></tr>';
+    h += codes.map(function (code, i) {
+      return '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + esc(code) + '</td><td>' +
+        cellFor(a, code) + '</td><td>' + cellFor(b, code) + '</td></tr>';
+    }).join('');
+    h += '<tr><td><strong>' + L('Total degree hours', 'Total de horas para el título') + '</strong></td>' +
+      '<td><strong>' + totalFor(a) + '</strong></td><td><strong>' + totalFor(b) + '</strong></td></tr>';
+    h += '</table>';
+    out.innerHTML = h;
+  }
+  if ($('cmpSource')) {
+    // cmpSource is filled from the colleges answer in the API
+    // bootstrap above (the full list).
+    fillSelect($('cmpTargetA'), COLLEGES36, 'Pick the university');
+    fillSelect($('cmpTargetB'), COLLEGES36, 'Pick the university');
+    cmpPicker = makeCoursePicker('cmp');
+    if (cmpPicker) cmpPicker.refresh();
+    $('cmpRun').addEventListener('click', function () {
+      var out = $('cmpResult');
+      var source = cmpPicker ? cmpPicker.getSource() : '';
+      var codes = cmpPicker ? cmpPicker.getCourses() : [];
+      var nameA = $('cmpTargetA').value;
+      var nameB = $('cmpTargetB').value;
+      if (!source || !codes.length || !nameA || !nameB) {
+        out.innerHTML = '<p class="verdict warn">' + L('Pick your college, at least one course, and both universities.', 'Elija su universidad, al menos un curso y ambas universidades.') + '</p>';
+        lastCompare = null;
+        return;
+      }
+      var student = {
+        sources: [{ institution: source, courses: codes.map(function (code) { return { code: code }; }) }],
+        programType: 'general'
+      };
+      var targets = [nameA, nameB].map(function (name) {
+        return { name: name, isPublic: isPublicTarget(name) };
+      });
+      var body = Object.assign({}, student, { targets: targets });
+      apiPost('/api/compare', body).then(function (resp) {
+        lastCompare = resp.comparisons || [];
+        lastCompare.codes = codes;
+        renderCompare();
+      }).catch(function () { apiError(out); });
+    });
+  }
+
+  // ---- What to take next: gap analysis (Stage 66) ----
+  var gapPicker = null;
+  var lastGap = null;
+  // Coverage list (Stage 68): filled from the colleges answer
+  // since the migration. Before that it waited on a data
+  // bridge that was never wired, so the list stayed empty.
+  function renderCoverage() {
+    var el = document.getElementById('coverageList');
+    if (!el) return;
+    var covered = (typeof CTC_COLLEGES !== 'undefined' ? CTC_COLLEGES : [])
+      .filter(function (c) { return c.covered; })
+      .slice()
+      .sort(function (a, b) { return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0); });
+    if (!covered.length) return;
+    var items = covered.map(function (c) {
+      return '<li>' + esc(c.name) + ': course data last verified ' + esc(c.lastVerified || '') + '</li>';
+    }).join('');
+    el.innerHTML = '<p><strong>' + covered.length + ' Louisiana colleges covered</strong></p><ul>' + items + '</ul>' +
+      '<p>Three Louisiana colleges are not covered yet: Dillard University, Tulane University, and Xavier University of Louisiana. They do not appear in the Board of Regents matrix for 2025-26. Name one as your college or your target in the check above and the coverage request panel will offer to queue it; every request moves a college up the list.</p>';
+  }
+  document.addEventListener('DOMContentLoaded', renderCoverage);
+
+function renderGap() {
+    if (!lastGap) return;
+    var out = $('gapResult');
+    var g = lastGap.plan;
+    var source = lastGap.source;
+    var target = lastGap.target;
+    if (g.status === 'unknown-source-college') {
+      out.innerHTML = '<p class="verdict warn">' + L('That college is not in the verified course data yet, so what is left cannot be computed here yet.', 'Esa universidad aún no está en los datos verificados de cursos, así que todavía no se puede calcular aquí lo que falta.') + '</p>';
+      return;
+    }
+    if (g.status === 'target-not-covered') {
+      out.innerHTML = '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' aún no está en los datos de cursos, así que todavía no se puede verificar aquí qué cursos cuentan allí.'
+        : esc(target) + ' is not in the course data yet, so which courses count there cannot be verified here yet.') + '</p>';
+      return;
+    }
+    if (g.status !== 'ok') {
+      out.innerHTML = '<p class="verdict warn">' + L('That check cannot be built from the verified data yet.', 'Esa verificación aún no se puede construir con los datos verificados.') + '</p>';
+      return;
+    }
+    var h = '';
+    h += '<h3>' + (g.basis === 'pathway'
+      ? esc(T(g.pathwayName)) + ': ' + L('what is left', 'lo que falta')
+      : L('General education block: what is left', 'Bloque de educación general: lo que falta')) +
+      ' <span aria-hidden="true">·</span> ' + esc(source) + ' <span aria-hidden="true">→</span> ' + esc(target) + '</h3>';
+    h += '<p class="verdict ' + (g.remainingHours === 0 ? 'good' : 'warn') + '">' +
+      (spanish
+        ? g.takenHours + ' de ' + g.totalHours + ' horas ya están obtenidas. Quedan ' + g.remainingHours + ' horas.'
+        : g.takenHours + ' of ' + g.totalHours + ' hours are already earned. ' + g.remainingHours + ' hours remain.') + '</p>';
+    if (g.guaranteeApplies === false) {
+      h += '<p class="verdict warn">' + (spanish
+        ? esc(target) + ' es una universidad privada: la garantía estatal no aplica y la universidad decide cada curso. Nada de lo siguiente está marcado como que cuenta allí.'
+        : esc(target) + ' is a private university: the state guarantee does not apply and the university decides each course. Nothing below is marked as counting there.') + '</p>';
+    }
+    if (g.unresolvedTaken && g.unresolvedTaken.length) {
+      h += '<p class="fine">' + L('Not in the course data for your college, so not counted as taken: ', 'No está en los datos de cursos de su universidad, así que no se contó como obtenido: ') +
+        g.unresolvedTaken.map(function (c) { return esc(c); }).join(', ') + '.</p>';
+    }
+    if (g.nextSemester && g.nextSemester.length) {
+      h += '<p><strong>' + (spanish
+        ? 'Próximo semestre (' + g.nextSemesterHours + ' horas):'
+        : 'Next semester (' + g.nextSemesterHours + ' hours):') + '</strong></p><ul>' +
+        g.nextSemester.map(function (p) {
+          return '<li>' + esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + ' (' + p.hours + 'h)</li>';
+        }).join('') + '</ul>';
+    }
+    var gapStatusLabel = spanish
+      ? { taken: 'Ya obtenido', met: 'Cumplido', available: 'Disponible en su universidad', partial: 'Parcialmente disponible', gap: 'Vacío' }
+      : { taken: 'Already earned', met: 'Met', available: 'Available at your college', partial: 'Partly available', gap: 'Gap' };
+    h += '<table class="results"><colgroup><col style="width:26%"><col style="width:10%"><col style="width:10%"><col style="width:36%"><col style="width:18%"></colgroup>' +
+      '<tr><th>' + L('Requirement', 'Requisito') + '</th><th class="num">' + L('Hours', 'Horas') + '</th><th class="num">' +
+      L('Taken', 'Obtenido') + '</th><th>' + (spanish ? 'Cursos en ' : 'Courses at ') + esc(source) + '</th><th>' + L('Status', 'Estado') + '</th></tr>';
+    h += g.requirements.map(function (r, i) {
+      var picks = (r.coursesToTake || []).map(function (p) {
+        var note = p.countsAtTarget === false
+          ? L(' (not verified at the target)', ' (no verificado en la universidad de destino)') : '';
+        var arrow = p.targetCode ? ' <span aria-hidden="true">→</span> ' + esc(p.targetCode) : '';
+        return esc(p.sourceCode) + ' ' + esc(p.sourceTitle) + arrow + esc(note);
+      }).join('<br>');
+      return '<tr class="crow' + (i % 2 ? ' alt' : '') + '"><td>' + esc(T(r.label)) + '</td>' +
+        '<td class="num">' + r.hours + '</td><td class="num">' + r.takenHours + '</td><td>' + (picks || ' ') + '</td>' +
+        '<td>' + esc(gapStatusLabel[r.status] || r.status) + '</td></tr>';
+    }).join('');
+    h += '</table>';
+    out.innerHTML = h;
+  }
+  if ($('gapSource')) {
+    // gapSource is filled from the colleges answer in the API
+    // bootstrap above (the full list).
+    fillSelect($('gapTarget'), COLLEGES36, 'Pick the university');
+    apiPathways().then(function (pathways) {
+      $('gapPathway').innerHTML = '<option value="">' + esc(L('No specific major: general education block', 'Sin especialidad específica: bloque de educación general')) + '</option>' +
+        pathways.map(function (p) {
+          return '<option value="' + esc(p.id) + '">' + esc(p.name) + '</option>';
+        }).join('');
+    });
+    gapPicker = makeCoursePicker('gap');
+    if (gapPicker) gapPicker.refresh();
+    $('gapRun').addEventListener('click', function () {
+      var out = $('gapResult');
+      var source = gapPicker ? gapPicker.getSource() : '';
+      var target = $('gapTarget').value;
+      if (!source || !target) {
+        out.innerHTML = '<p class="verdict warn">' + L('Pick your college and the university.', 'Elija su universidad y la universidad de destino.') + '</p>';
+        lastGap = null;
+        return;
+      }
+      apiPost('/api/gap', {
+        sourceCollege: source,
+        targetCollege: target,
+        takenCourses: gapPicker ? gapPicker.getCourses() : [],
+        pathwayId: $('gapPathway').value || null
+      }).then(function (plan) {
+        lastGap = { source: source, target: target, plan: plan };
+        renderGap();
+      }).catch(function () { apiError(out); });
+    });
+  }
+
+  // ---- Spanish toggle: the whole page changes language ----
+  var tog = $('spanishToggle');
+  function setSpanish(on) {
+    spanish = on;
+    document.title = on
+      ? '¿Contará este crédito? Verificador de transferencia de créditos de Luisiana'
+      : origTitle;
+    if (tog) tog.textContent = on ? 'View in English' : 'Ver en español';
+    renderStrip();
+    if (window._lastReport && typeof render === 'function') {
+      render(window._lastReport);
+      renderAdditions();
+    }
+    renderEligibility();
+    renderPathway();
+    renderPlan();
+    renderAdmission();
+    renderCompare();
+    refreshUncoveredNotes();
+    if (cmpPicker) cmpPicker.refresh();
+    renderGap();
+    if (gapPicker) gapPicker.refresh();
+    renderCoverage();
+    if (on) {
+      walkTranslate(document.body);
+    } else {
+      walkRestore(document.body);
+      // Dynamic areas were rebuilt in English above; static text
+      // is restored from the walker map. Re-run additions so the
+      // savings and source lines are English even without a check.
+      renderAdditions();
+    }
+  }
+  if (tog) {
+    tog.addEventListener('click', function () { setSpanish(!spanish); });
+  }
+  // Dynamically added rows (Add a college, Add an AP exam,
+  // typeahead picks) arrive after the toggle: re-walk after clicks
+  // and changes while Spanish is on.
+  var rewalkTimer = null;
+  function scheduleRewalk() {
+    if (!spanish) return;
+    clearTimeout(rewalkTimer);
+    rewalkTimer = setTimeout(function () { walkTranslate(document.body); }, 60);
+  }
+  document.addEventListener('click', scheduleRewalk);
+  document.addEventListener('change', scheduleRewalk);
+})();
+/*CTC-WIRING-END*/
+</script>
+</body>
+</html>
