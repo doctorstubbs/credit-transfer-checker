@@ -116,3 +116,7 @@ Then('no gap course is marked as counting at the target', function () {
 Then('the gap analysis reports the source college as unknown', function () {
   assert.equal(this.gap.status, 'unknown-source-college');
 });
+
+Then('the gap plan links the source document {string}', function (url) {
+  assert.strictEqual(this.gap.documentUrl, url);
+});
