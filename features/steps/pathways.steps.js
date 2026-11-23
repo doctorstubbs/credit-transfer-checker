@@ -116,7 +116,7 @@ Given('a pathway plan for Social Work at BRCC toward Southeastern', function () 
 
 Given('a pathway plan for Political Science at BRCC toward UNO', function () {
   this.plan = buildPathwayPlan(
-    { pathwayId: 'political-science', sourceCollege: 'Baton Rouge Community College', targetCollege: 'University of New Orleans', takenLccns: [] },
+    { pathwayId: 'political-science', sourceCollege: 'Baton Rouge Community College', targetCollege: 'Louisiana State University of New Orleans', takenLccns: [] },
     DATA
   );
 });
@@ -179,28 +179,28 @@ Given('a pathway plan for Nursing at BRCC toward Southeastern', function () {
 
 Given('a pathway plan for Chemical Engineering at Delgado toward UNO', function () {
   this.plan = buildPathwayPlan(
-    { pathwayId: 'chemical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'University of New Orleans', takenLccns: [] },
+    { pathwayId: 'chemical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'Louisiana State University of New Orleans', takenLccns: [] },
     DATA
   );
 });
 
 Given('a pathway plan for Civil Engineering at Delgado toward UNO', function () {
   this.plan = buildPathwayPlan(
-    { pathwayId: 'civil-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'University of New Orleans', takenLccns: [] },
+    { pathwayId: 'civil-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'Louisiana State University of New Orleans', takenLccns: [] },
     DATA
   );
 });
 
 Given('a pathway plan for Electrical Engineering at Delgado toward UNO', function () {
   this.plan = buildPathwayPlan(
-    { pathwayId: 'electrical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'University of New Orleans', takenLccns: [] },
+    { pathwayId: 'electrical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'Louisiana State University of New Orleans', takenLccns: [] },
     DATA
   );
 });
 
 Given('a pathway plan for Mechanical Engineering at Delgado toward UNO', function () {
   this.plan = buildPathwayPlan(
-    { pathwayId: 'mechanical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'University of New Orleans', takenLccns: [] },
+    { pathwayId: 'mechanical-engineering', sourceCollege: 'Delgado Community College', targetCollege: 'Louisiana State University of New Orleans', takenLccns: [] },
     DATA
   );
 });
@@ -218,6 +218,10 @@ Then('the plan has {int} gap hours', function (hours) {
 Then('the plan totals {int} hours across {int} requirements', function (hours, count) {
   assert.strictEqual(this.plan.totalHours, hours);
   assert.strictEqual(this.plan.requirements.length, count);
+});
+
+Then('the plan links the source document {string}', function (url) {
+  assert.strictEqual(this.plan.documentUrl, url);
 });
 
 Then('the plan lists careers from the published document', function () {
