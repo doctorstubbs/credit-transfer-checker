@@ -90,7 +90,7 @@ function evaluateEligibility(college, student, eligibilityData) {
     return finish(base, met, missing, unknown);
   }
 
-  // Track based rules (Delgado, UNO state floor).
+  // Track based rules (Delgado, LSUNO state floor).
   const trackName = student.track === 'technical' ? 'technical' : 'academic';
   const track = (rules.tracks || {})[trackName];
   if (!track) {
