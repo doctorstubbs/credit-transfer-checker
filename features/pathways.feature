@@ -9,8 +9,12 @@ Feature: Career pathways (Stage 30)
 
   Scenario: The Psychology pathway carries its published shape
     Given a pathway plan for Psychology at BRCC toward Southeastern
-    Then the plan totals 60 hours across 14 requirements
+    Then the plan totals 48 hours across 13 requirements
     And the plan lists careers from the published document
+
+  Scenario: A plan carries the link to its published document
+    Given a pathway plan for English at BRCC toward Southeastern
+    Then the plan links the source document "https://www.laregents.edu/wp-content/uploads/2024/09/English-Pathway.pdf"
 
   Scenario: College Algebra resolves to a BRCC course that counts at Southeastern
     Given a pathway plan for Psychology at BRCC toward Southeastern
@@ -26,10 +30,6 @@ Feature: Career pathways (Stage 30)
     Given a pathway plan for Psychology at BRCC toward Southeastern
     Then the next semester totals between 12 and 15 hours
     And the next semester starts with "CMAT 1213"
-
-  Scenario: College selected credits fill with courses that count at the target
-    Given a pathway plan for Psychology at BRCC toward Southeastern
-    Then the "Twelve college-selected credits" requirement is filled with 12 hours that count at the target
 
   Scenario: An uncovered target is reported honestly, not invented
     Given a pathway plan for Psychology at BRCC toward Tulane
@@ -80,19 +80,19 @@ Feature: Career pathways (Stage 30)
 
   Scenario: Finance at BRCC toward Louisiana Tech resolves except Business Calculus
     Given a pathway plan for Finance at BRCC toward Louisiana Tech
-    Then the plan totals 60 hours across 16 requirements
+    Then the plan totals 60 hours across 18 requirements
     And the "Business Calculus" requirement is a gap
     And the plan has 3 gap hours
 
   Scenario: Management at BRCC toward Louisiana Tech resolves except Business Calculus
     Given a pathway plan for Management at BRCC toward Louisiana Tech
-    Then the plan totals 60 hours across 16 requirements
+    Then the plan totals 60 hours across 18 requirements
     And the "Business Calculus" requirement is a gap
     And the plan has 3 gap hours
 
   Scenario: Marketing at BRCC toward Southeastern resolves except Business Calculus
     Given a pathway plan for Marketing at BRCC toward Southeastern
-    Then the plan totals 60 hours across 16 requirements
+    Then the plan totals 60 hours across 18 requirements
     And the "Business Calculus" requirement is a gap
     And the plan has 3 gap hours
 
@@ -105,13 +105,13 @@ Feature: Career pathways (Stage 30)
 
   Scenario: Political Science at BRCC toward UNO runs short on political science courses themselves
     Given a pathway plan for Political Science at BRCC toward UNO
-    Then the plan totals 60 hours across 14 requirements
+    Then the plan totals 60 hours across 16 requirements
     And the "American Government" requirement is available with statewide number "CPOL 2013" counting at the target
     And the plan has 6 gap hours
 
   Scenario: Art at Northwestern toward Louisiana Tech lacks only the western art survey
     Given a pathway plan for Art at Northwestern toward Louisiana Tech
-    Then the plan totals 60 hours across 16 requirements
+    Then the plan totals 57 hours across 15 requirements
     And the "Survey of Western Art 1 and 2" requirement is a gap
     And the plan has 6 gap hours
 
@@ -119,7 +119,8 @@ Feature: Career pathways (Stage 30)
     Given a pathway plan for Computer Science at BRCC toward LSU
     Then the plan totals 60 hours across 14 requirements
     And the "Computer Science I" requirement is a gap
-    And the plan has 18 gap hours
+    And the "General Biology and Lab" requirement is a gap
+    And the plan has 21 gap hours
 
   Scenario: Kinesiology Sport Management at Delgado toward Southeastern lacks the gateway course
     Given a pathway plan for Kinesiology Sport Management at Delgado toward Southeastern

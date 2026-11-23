@@ -43,7 +43,7 @@ Feature: Dual enrollment eligibility check
     And the missing list names the English minimum
 
   Scenario: UNO is read against the state floor, labeled as such
-    Given an eligibility check at "University of New Orleans" for a junior with GPA 2.7 and a counselor recommendation
+    Given an eligibility check at "Louisiana State University of New Orleans" for a junior with GPA 2.7 and a counselor recommendation
     Then the eligibility status is "eligible"
     And the basis names Policy 2.22
 
@@ -70,14 +70,14 @@ Feature: Dual enrollment eligibility check
     And the missing list names the grade level
 
   Scenario: UNO scores the state ACT minimum for the student's subject
-    Given an eligibility check at "University of New Orleans" for a junior with GPA 2.7 in subject "math" with ACT Math 19
+    Given an eligibility check at "Louisiana State University of New Orleans" for a junior with GPA 2.7 in subject "math" with ACT Math 19
     Then the eligibility status is "eligible"
 
   Scenario: A UNO student below the state ACT minimum for the subject is not yet eligible
-    Given an eligibility check at "University of New Orleans" for a senior with GPA 2.7 in subject "english" with ACT English 16
+    Given an eligibility check at "Louisiana State University of New Orleans" for a senior with GPA 2.7 in subject "english" with ACT English 16
     Then the eligibility status is "not-yet"
     And the missing list names the English minimum
 
   Scenario: The state floor sets no grade levels, so a UNO freshman is scored on the floor
-    Given an eligibility check at "University of New Orleans" for a freshman with GPA 2.7 and a counselor recommendation
+    Given an eligibility check at "Louisiana State University of New Orleans" for a freshman with GPA 2.7 and a counselor recommendation
     Then the eligibility status is "eligible"
