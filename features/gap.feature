@@ -9,6 +9,10 @@ Feature: What to take next, the gap analysis
   requirement; without one it falls back to the 39 hour general
   education block of the Louisiana Transfer Degree.
 
+  Scenario: A pathway gap analysis carries the link to its published document
+    Given a gap analysis for Psychology at Delgado toward the Louisiana State University of New Orleans with "ENGL 101" taken
+    Then the gap plan links the source document "https://www.laregents.edu/wp-content/uploads/2024/09/Psychology-Pathway.pdf"
+
   Scenario: A pathway gap analysis credits what was taken and lists what is left
     Given a gap analysis for Psychology at Delgado toward the Louisiana State University of New Orleans with "ENGL 101" taken
     Then the gap analysis basis is the pathway
