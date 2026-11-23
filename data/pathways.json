@@ -8,7 +8,8 @@
     "Behavioral Health Specialist",
     "Social Psychologist"
    ],
-   "document": "LA-Transfer-Pathways-Psychology.pdf",
+   "document": "Psychology-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Psychology-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -23,7 +24,7 @@
     "Southern University at New Orleans",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "psychology",
    "name": "Psychology",
@@ -171,12 +172,6 @@
      },
      "hours": 3,
      "label": "Three credits of fine arts"
-    },
-    {
-     "area": "Other",
-     "collegeSelected": true,
-     "hours": 12,
-     "label": "Twelve college-selected credits"
     }
    ]
   },
@@ -189,6 +184,7 @@
     "Probation Officer"
    ],
    "document": "Criminal-Justice-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Criminal-Justice-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "LSU at Alexandria",
@@ -405,7 +401,8 @@
     "Pharmacy Tech",
     "Research Scientist"
    ],
-   "document": "LA-Transfer-Pathways-Biology.pdf",
+   "document": "Biology-Pathway-.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Biology-Pathway-.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -413,7 +410,7 @@
     "Louisiana Tech University",
     "Northwestern State University",
     "Southern University + A&M College",
-    "Southern University of New Orleans",
+    "Southern Louisiana State University of New Orleans",
     "University of Louisiana at Lafayette",
     "McNeese State University",
     "Nicholls State University",
@@ -427,12 +424,19 @@
      "choice": {
       "lccns": [
        "CMAT 1213",
-       "CMAT 2115",
-       "CMAT 1223",
        "CMAT 1303",
        "CMAT 1313",
+       "CMAT 1223",
+       "CMAT 1233",
+       "CMAT 1234",
        "CMAT 1235",
        "CMAT 1236",
+       "CMAT 2113",
+       "CMAT 2114",
+       "CMAT 2115",
+       "CMAT 2116",
+       "CMAT 2123",
+       "CMAT 2124",
        "CMAT 2125"
       ]
      },
@@ -511,9 +515,7 @@
      "choice": {
       "lccns": [
        "CCEM 1123",
-       "CCEM 1133",
-       "CCEM 1213",
-       "CCEM 1223"
+       "CCEM 1133"
       ]
      },
      "hours": 6,
@@ -525,9 +527,7 @@
       "lccns": [
        "CCEM 1121",
        "CCEM 1131",
-       "CCEM 1132",
-       "CCEM 2201",
-       "CCEM 2211"
+       "CCEM 1132"
       ]
      },
      "hours": 2,
@@ -572,13 +572,12 @@
        "CPHY 2121",
        "CPHY 2133",
        "CPHY 2143",
-       "CPHY 2153",
        "CPHY 2131",
        "CPHY 2141",
        "CCEM 2213",
        "CCEM 2223",
+       "CCEM 2211",
        "CCEM 2221",
-       "CCEM 2231",
        "CCEM 2222"
       ]
      },
@@ -596,6 +595,7 @@
     "Budget Manager"
    ],
    "document": "Accounting-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Accounting-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -607,7 +607,7 @@
     "Northwestern State University",
     "Southeastern Louisiana University",
     "Southern University A&M",
-    "University of New Orleans",
+    "Louisiana State University of New Orleans",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe"
    ],
@@ -809,7 +809,8 @@
     "Risk Manager",
     "Financial Planner"
    ],
-   "document": "LA-Transfer-Pathways-Finance.pdf",
+   "document": "Finance-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Finance-Pathway.pdf",
    "finishAtPublished": [
     "Louisiana State University",
     "LSU at Alexandria",
@@ -819,7 +820,7 @@
     "Nicholls State University",
     "Southeastern Louisiana University",
     "Southern University + A&M College",
-    "University of New Orleans",
+    "Louisiana State University of New Orleans",
     "University of Louisiana at Lafayette",
     "University of Lousiana at Monroe"
    ],
@@ -952,6 +953,31 @@
      "area": "Natural Sciences",
      "choice": {
       "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
        "CAST",
        "CBIO",
        "CCEM",
@@ -961,8 +987,8 @@
        "CPHY"
       ]
      },
-     "hours": 9,
-     "label": "Nine credits of natural sciences"
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
     },
     {
      "area": "Social/Behavioral Science",
@@ -996,7 +1022,8 @@
     "Supply Chain Manager",
     "Budget Analyst"
    ],
-   "document": "LA-Transfer-Pathways-Management.pdf",
+   "document": "Management-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Management-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -1009,7 +1036,7 @@
     "Southern University + A&M College",
     "University of Louisiana at Lafayette",
     "University of Lousiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "management",
    "name": "Management",
@@ -1140,6 +1167,31 @@
      "area": "Natural Sciences",
      "choice": {
       "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
        "CAST",
        "CBIO",
        "CCEM",
@@ -1149,8 +1201,8 @@
        "CPHY"
       ]
      },
-     "hours": 9,
-     "label": "Nine credits of natural sciences"
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
     },
     {
      "area": "Social/Behavioral Science",
@@ -1184,7 +1236,8 @@
     "Advertising Manager",
     "Market Research Analyst"
    ],
-   "document": "LA-Transfer-Pathways-Marketing.pdf",
+   "document": "Marketing-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Marketing-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -1196,7 +1249,7 @@
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "marketing",
    "name": "Marketing",
@@ -1327,6 +1380,31 @@
      "area": "Natural Sciences",
      "choice": {
       "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
        "CAST",
        "CBIO",
        "CCEM",
@@ -1336,8 +1414,8 @@
        "CPHY"
       ]
      },
-     "hours": 9,
-     "label": "Nine credits of natural sciences"
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
     },
     {
      "area": "Social/Behavioral Science",
@@ -1372,6 +1450,7 @@
     "Human Resource Manager"
    ],
    "document": "LA-Transfer-Pathways-Social-Work.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/06/LA-Transfer-Pathways-Social-Work.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Southern University and A+M College",
@@ -1597,7 +1676,8 @@
     "Public Affairs Manager",
     "Teacher"
    ],
-   "document": "LA-Transfer-Pathways-Political-Science.pdf",
+   "document": "Political-Science-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Political-Science-Pathway.pdf",
    "finishAtPublished": [
     "Louisiana State University",
     "Louisiana Tech University",
@@ -1607,7 +1687,7 @@
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "political-science",
    "name": "Political Science",
@@ -1634,6 +1714,31 @@
      "area": "Natural Sciences",
      "choice": {
       "rubrics": [
+       "CBIO"
+      ]
+     },
+     "hours": 3,
+     "label": "One Life Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
+       "CAST",
+       "CCEM",
+       "CECO",
+       "CEVS",
+       "CGEO",
+       "CPHY"
+      ]
+     },
+     "hours": 3,
+     "label": "One Physical Science course"
+    },
+    {
+     "area": "Natural Sciences",
+     "choice": {
+      "rubrics": [
        "CAST",
        "CBIO",
        "CCEM",
@@ -1643,8 +1748,8 @@
        "CPHY"
       ]
      },
-     "hours": 9,
-     "label": "Nine credits of natural sciences"
+     "hours": 3,
+     "label": "One more course in the same discipline from either"
     },
     {
      "area": "English",
@@ -1786,7 +1891,8 @@
     "Art Teacher",
     "Illustrator"
    ],
-   "document": "LA-Transfer-Pathways-Art.pdf",
+   "document": "Art-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Art-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -1799,7 +1905,7 @@
     "Southeastern Louisiana University",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "art",
    "name": "Art",
@@ -1977,16 +2083,6 @@
       ]
      },
      "hours": 3,
-     "label": "Art (100-200 level)"
-    },
-    {
-     "area": "Art History and Content",
-     "choice": {
-      "rubrics": [
-       "CART"
-      ]
-     },
-     "hours": 3,
      "label": "One art elective"
     }
    ]
@@ -1999,7 +2095,8 @@
     "Network Administrator",
     "Web Developer"
    ],
-   "document": "LA-Transfer-Pathways-Computer-Science.pdf",
+   "document": "Computer-Science-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Computer-Science-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -2013,7 +2110,7 @@
     "Southern University + A&M College",
     "University of Louisiana at Lafayette",
     "University of Lousiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "computer-science",
    "name": "Computer Science",
@@ -2031,6 +2128,7 @@
      "choice": {
       "lccns": [
        "CMAT 2113",
+       "CMAT 2114",
        "CMAT 2115",
        "CMAT 2116"
       ]
@@ -2043,6 +2141,7 @@
      "choice": {
       "lccns": [
        "CMAT 2123",
+       "CMAT 2124",
        "CMAT 2125"
       ]
      },
@@ -2053,9 +2152,7 @@
      "area": "Natural Sciences",
      "choice": {
       "lccns": [
-       "CBIO 1013",
        "CBIO 1033",
-       "CBIO 1011",
        "CBIO 1031"
       ]
      },
@@ -2076,17 +2173,12 @@
      "area": "Natural Sciences",
      "choice": {
       "rubrics": [
-       "CAST",
        "CBIO",
-       "CCEM",
-       "CECO",
-       "CEVS",
-       "CGEO",
        "CPHY"
       ]
      },
      "hours": 3,
-     "label": "Three credits of other natural sciences"
+     "label": "One more course in biology or physics"
     },
     {
      "area": "English",
@@ -2193,6 +2285,7 @@
     "Exercise Physiologist"
    ],
    "document": "Kinesiology-Sports-Management-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Kinesiology-Sports-Management-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -2349,6 +2442,7 @@
     "Respiratory Therapist"
    ],
    "document": "Kinesiology-Pre-Allied-Health-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Kinesiology-Pre-Allied-Health-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -2519,6 +2613,7 @@
     "Operations Manager"
    ],
    "document": "Business-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/10/Business-Pathway.pdf",
    "finishAtPublished": [
     "Louisiana State University",
     "LSU at Alexandria",
@@ -2531,7 +2626,7 @@
     "Southern University in New Orleans",
     "Southern University A&M",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "general-business",
    "name": "General Business",
@@ -2733,6 +2828,7 @@
     "Content Editor"
    ],
    "document": "Communications-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Communications-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -2912,6 +3008,7 @@
     "Historian"
    ],
    "document": "History-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/History-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "LSU",
@@ -2925,7 +3022,7 @@
     "Southern University A&M College",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "history",
    "name": "History",
@@ -3110,6 +3207,7 @@
     "Content strategist"
    ],
    "document": "English-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/English-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -3124,7 +3222,7 @@
     "Southern University at New Orleans",
     "University of Louisiana at Lafayette",
     "University of Louisiana at Monroe",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "english",
    "name": "English",
@@ -3314,6 +3412,7 @@
     "Program Manager"
    ],
    "document": "Sociology-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Sociology-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -3325,7 +3424,7 @@
     "Southeastern Louisiana University",
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "sociology",
    "name": "Sociology",
@@ -3512,6 +3611,7 @@
     "Nurse Administrator"
    ],
    "document": "Nursing-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/09/Nursing-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "LSU at Alexandria",
@@ -3658,6 +3758,7 @@
     "Pharmaceutical Manufacturer"
    ],
    "document": "Chemical-Engineering-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/12/Chemical-Engineering-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -3667,7 +3768,7 @@
     "Northwestern State University",
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "chemical-engineering",
    "name": "Chemical Engineering",
@@ -3828,6 +3929,7 @@
     "Construction Engineer"
    ],
    "document": "Civil-Engineering-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/12/Civil-Engineering-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -3837,7 +3939,7 @@
     "Northwestern State University",
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "civil-engineering",
    "name": "Civil Engineering",
@@ -4014,6 +4116,7 @@
     "Test Engineer"
    ],
    "document": "Elec.-Engineering-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/12/Elec.-Engineering-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -4023,7 +4126,7 @@
     "Northwestern State University",
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "electrical-engineering",
    "name": "Electrical Engineering",
@@ -4202,6 +4305,7 @@
     "Quality Engineer"
    ],
    "document": "Mech-Engineering-Pathway.pdf",
+   "documentUrl": "https://www.laregents.edu/wp-content/uploads/2024/12/Mech-Engineering-Pathway.pdf",
    "finishAtPublished": [
     "Grambling State University",
     "Louisiana State University",
@@ -4211,7 +4315,7 @@
     "Northwestern State University",
     "Southern University and A+M College",
     "University of Louisiana at Lafayette",
-    "University of New Orleans"
+    "Louisiana State University of New Orleans"
    ],
    "id": "mechanical-engineering",
    "name": "Mechanical Engineering",
@@ -4379,5 +4483,5 @@
    ]
   }
  ],
- "source": "Louisiana Board of Regents, Universal Transfer Pathways student documents (laregents.edu, 2024), transcribed from each pathway's published First 60 Credits list. Named required courses carry the statewide course number assigned to that exact title in the Louisiana Statewide Common Course Catalog, AY 2025-26 edition. Choice slots follow the published wording (for example, three credits of other math) and use the rubric families of the Board of Regents general education core as published in the transfer degree framework. The Criminal Justice document prints a Common Course Numbers column for its named courses (CCRJ 1013, CCRJ 2013, CCRJ 2313, CCRJ 2213, CENL 1013 and CENL 1023, CHIS 2013, CCOM 2013, CPOL 2013, CSOC 2013, CPSY 2013); its Courts line carries no printed number and is joined to CCRJ 2613, Judicial Process, the courts course in the statewide catalog. The Nursing document is HELD out of the data: as published it lists only 46 credits, duplicates American Literature I under two subjects, and contains an Accounting block and an Engineering sentence copied from other pathways, so it cannot be transcribed faithfully until it is reconciled against a second official source. Biology notes: the document's math block is a choose-two list, carried as an explicit candidate list; its general chemistry sequence appears under two statewide numberings at different campuses (CCEM 1123 and 1133 with labs 1121 and 1131, and CCEM 1213 and 1223 with labs 2201 and 2211), so both numberings are candidates and the engine matches whichever the student's college uses; the closing block offers physics (either track) with labs or organic chemistry with labs, carried as one eight hour choice. The Business (General Business) document is HELD out: as published its course list sums to 42 hours and omits the business core entirely (no accounting, business law, or statistics beyond Statistics 1), where its sibling Finance document carries that block. Accounting and Finance share one published template (business core, composition, fine arts, public speaking plus two humanities electives, an IT elective covering at least 50 percent Excel, college algebra, introductory statistics, a three part natural sciences block, micro and macro economics, and three elective credits). The Accounting document prints its statewide numbers; its column order places CBUS 2323 before CBUS 2313, and the two are assigned by their verified catalog titles (CBUS 2313 Business Statistical Methods II, CBUS 2323 Business Calculus). The IT elective's Excel coverage share cannot be verified from course data and is carried as a business rubric choice under the document's own label. Management and Marketing publish the same business template as Finance. One sibling difference is preserved: the Accounting document prints its natural sciences block in structured form (one life science, one physical science, and one more from either), while the Finance, Management, and Marketing documents print theirs as nine free choice credits of natural sciences; each pathway is transcribed as its own document prints it (the Finance entry was corrected to its own document's free choice form when Management and Marketing were added). Social Work notes: its Intro to Social Work line joins to CSWK 1101, Social Work as a Profession, the only social work course in the statewide catalog, and that course carries one credit hour against the document's three credit pattern, so the engine reports the block short wherever it appears rather than inflating it; its three credits of BSW program-specific coursework are defined by the receiving university's BSW program and cannot be specified statewide, so that requirement carries no candidates and always reports as a named gap. The Sociology document is HELD out: as published, its course list sums to 54 of the 60 credits (statistics plus three math, nine natural science, six English, nine humanities, twelve social and behavioral science, three fine arts, six sociology, three history) with no elective or college selected block to absorb the missing six hours. The English, History, and Communication documents are HELD out on the same arithmetic ground as Sociology: as published, each list sums to 54 of the 60 credits (English: six math, nine natural science, twelve English, twelve humanities, six foreign language, six social and behavioral science, three fine arts; History: six math, nine natural science, nine English, six humanities sequence, nine social science, three fine arts, twelve chosen credits; Communication: six math, nine natural science, six English, nine humanities, fifteen communications, six social and behavioral science, three fine arts), with no elective or college selected block printed to absorb the missing six hours. Six of the nineteen sourced documents are now held (Nursing, General Business, Sociology, English, History, Communication), each awaiting reconciliation against a second official source. Computer Science note: the document's blocks are carried at the pathway's published 60 credit total; its General Biology and Lab line is carried at three hours because campuses split that course differently (a three hour combined course, or a three hour lecture with a one hour lab under its own number), and its calculus sequence likewise carries different statewide numbers and hour values by campus, so both published numberings are candidates. The two Kinesiology documents print their fixed blocks with statewide numbers and then a choose-from pool (18 credits for Sport Management, 12 for Pre-Allied Health) whose printed number column interleaves numbers from several pool items and contains at least one error (an anatomy lab paired with a lecture number) and one truncated number (CM1303 for CMAT 1303); the pools are carried as the union of their identifiable printed numbers and the kinesiology and health rubric families their item names describe. With these two, every sourced pathway document has been processed: thirteen pathways are transcribed and six are held. Stage 70 (Nov 17, 2026) rechecked every held and unsourced pathway against the documents the Board of Regents links today from its Universal Transfer Pathways page (laregents.edu/divisions/academicaffairs/utp/), and saved the ten current documents alongside the earlier set in data/pathways. Three held pathways are now transcribed from the revised documents the Regents published in fall 2024, which replaced the defective June 2024 copies this dataset first read. General Business (Business-Pathway.pdf, October 2024): the revised document carries the full business core the June copy omitted and sums to 60; its numbers column prints CECN 2113 against Macroeconomics, but CECN 2113 in the statewide catalog is Economic Principles, so Macroeconomics carries CECN 2213, the number the statewide catalog assigns to that title and the number its sibling business pathways carry. Communication (Communications-Pathway.pdf, September 2024): the revised document adds the six foreign language credits the June copy lacked and sums to 60. History (History-Pathway.pdf, September 2024): the revised document carries the second history sequence (World History I and II OR Western Civilization I and II) the June copy lacked and sums to 60; a stray fragment, CBIO 103, prints inside its Natural Sciences row where its sibling documents print no number, and is carried as a print artifact, not a course. Still held after the recheck: Nursing (Nursing-Pathway.pdf, September 2024) is titled First 49 Credits and lists 49, with American Literature I, CENL 2153, printed under two subjects; Sociology (Sociology-Pathway.pdf, September 2024) still sums to 54 of 60 with no elective block to absorb the missing six; English (English-Pathway.pdf, September 2024) adds a one course Communication elective to the June copy and still sums to 57 of 60. Cybersecurity has no student document on the Regents pathways page at all (a UCYB concentration code exists in the Regents Statewide Student Profile definitions, April 2025, but no First 60 Credits document is published), so there is nothing to transcribe. Engineering is published as four documents (December 2024), not one: Chemical Engineering is titled First 61 Credits and prints its calculus numbers as ranges (CMAT 2113-6, CMAT 2123-5) that vary by campus; Civil Engineering is titled First 62 Credits with the same ranges and a copy error that offers a bachelor's degree in mechanical engineering inside the Civil document; Electrical Engineering is titled First 62 Credits with the same ranges; Mechanical Engineering is titled First 60 Credits with fixed calculus numbers, but its numbers column assigns only CPHY 2133 against Physics I and II for Engineering and Science, so the physics sequence cannot be assigned without guessing. All four engineering documents are saved and held until the Regents publish fixed, complete numbers. Sixteen pathways are now transcribed; three remain held (Nursing, Sociology, English), Cybersecurity remains unsourced, and Engineering is held as four documents. Stage 71 (Nov 22, 2026): at the site owner's direction, the seven remaining pathway documents linked from the Regents Universal Transfer Pathways page were transcribed as published, quirks included, so every pathway with a published student document is now carried. Nursing (Nursing-Pathway.pdf, September 2024) is published as First 49 Credits and is carried at 49: its American Literature I is carried once, under Humanities where its course line sits, though its number also prints inside the English block's numbers column; its Chemistry Elective with Lab prints no numbers and is carried as a chemistry choice at four hours. Sociology (Sociology-Pathway.pdf, September 2024) sums to 54 of 60 as published, with no elective block to absorb the missing six; its Western Civilization line (CHIS 1013) appears in both the Humanities block and the History choice, as printed. English (English-Pathway.pdf, September 2024) sums to 57 of 60 as published. The four engineering documents (December 2024) print calculus numbers as ranges (CMAT 2113-6, CMAT 2123-5) in three of them; the ranges are carried as candidate lists on the Computer Science pattern; Mechanical prints fixed numbers (CMAT 2113, CMAT 2123) for the same sequence and is carried with the same candidate lists, because the statewide catalog assigns the calculus sequence several numbers by campus (Delgado's own Calculus I carries CMAT 2115, its Calculus II CMAT 2125). Each engineering document prints a single number, CPHY 2133, against its Physics I and II for Engineering & Science line; that requirement carries the statewide numbers assigned to that exact title (CENG 2113 and CENG 2123) together with the calculus based physics numbering the printed number belongs to (CPHY 2133, CPHY 2143, and the split labs CPHY 2131 and CPHY 2141). The engineering totals at catalog hours are 59 (Chemical), 62 (Civil), 62 (Electrical), and 62 (Mechanical), against printed titles of 61, 62, 62, and 60; Civil and Mechanical print identical course lists under different totals, so the lists are carried as printed and the totals fall where the catalog hours put them. Cybersecurity still has no published student document on the Regents pathways page, so there is still nothing to transcribe for it. Twenty three pathways are now transcribed."
+ "source": "Louisiana Board of Regents, Universal Transfer Pathways student documents (laregents.edu, 2024), transcribed from each pathway's published First 60 Credits list. Named required courses carry the statewide course number assigned to that exact title in the Louisiana Statewide Common Course Catalog, AY 2025-26 edition. Choice slots follow the published wording (for example, three credits of other math) and use the rubric families of the Board of Regents general education core as published in the transfer degree framework. The Criminal Justice document prints a Common Course Numbers column for its named courses (CCRJ 1013, CCRJ 2013, CCRJ 2313, CCRJ 2213, CENL 1013 and CENL 1023, CHIS 2013, CCOM 2013, CPOL 2013, CSOC 2013, CPSY 2013); its Courts line carries no printed number and is joined to CCRJ 2613, Judicial Process, the courts course in the statewide catalog. The Nursing document is HELD out of the data: as published it lists only 46 credits, duplicates American Literature I under two subjects, and contains an Accounting block and an Engineering sentence copied from other pathways, so it cannot be transcribed faithfully until it is reconciled against a second official source. Biology notes: the document's math block is a choose-two list, carried as an explicit candidate list; its general chemistry sequence appears under two statewide numberings at different campuses (CCEM 1123 and 1133 with labs 1121 and 1131, and CCEM 1213 and 1223 with labs 2201 and 2211), so both numberings are candidates and the engine matches whichever the student's college uses; the closing block offers physics (either track) with labs or organic chemistry with labs, carried as one eight hour choice. The Business (General Business) document is HELD out: as published its course list sums to 42 hours and omits the business core entirely (no accounting, business law, or statistics beyond Statistics 1), where its sibling Finance document carries that block. Accounting and Finance share one published template (business core, composition, fine arts, public speaking plus two humanities electives, an IT elective covering at least 50 percent Excel, college algebra, introductory statistics, a three part natural sciences block, micro and macro economics, and three elective credits). The Accounting document prints its statewide numbers; its column order places CBUS 2323 before CBUS 2313, and the two are assigned by their verified catalog titles (CBUS 2313 Business Statistical Methods II, CBUS 2323 Business Calculus). The IT elective's Excel coverage share cannot be verified from course data and is carried as a business rubric choice under the document's own label. Management and Marketing publish the same business template as Finance. One sibling difference is preserved: the Accounting document prints its natural sciences block in structured form (one life science, one physical science, and one more from either), while the Finance, Management, and Marketing documents print theirs as nine free choice credits of natural sciences; each pathway is transcribed as its own document prints it (the Finance entry was corrected to its own document's free choice form when Management and Marketing were added). Social Work notes: its Intro to Social Work line joins to CSWK 1101, Social Work as a Profession, the only social work course in the statewide catalog, and that course carries one credit hour against the document's three credit pattern, so the engine reports the block short wherever it appears rather than inflating it; its three credits of BSW program-specific coursework are defined by the receiving university's BSW program and cannot be specified statewide, so that requirement carries no candidates and always reports as a named gap. The Sociology document is HELD out: as published, its course list sums to 54 of the 60 credits (statistics plus three math, nine natural science, six English, nine humanities, twelve social and behavioral science, three fine arts, six sociology, three history) with no elective or college selected block to absorb the missing six hours. The English, History, and Communication documents are HELD out on the same arithmetic ground as Sociology: as published, each list sums to 54 of the 60 credits (English: six math, nine natural science, twelve English, twelve humanities, six foreign language, six social and behavioral science, three fine arts; History: six math, nine natural science, nine English, six humanities sequence, nine social science, three fine arts, twelve chosen credits; Communication: six math, nine natural science, six English, nine humanities, fifteen communications, six social and behavioral science, three fine arts), with no elective or college selected block printed to absorb the missing six hours. Six of the nineteen sourced documents are now held (Nursing, General Business, Sociology, English, History, Communication), each awaiting reconciliation against a second official source. Computer Science note: the document's blocks are carried at the pathway's published 60 credit total; its General Biology and Lab line is carried at three hours because campuses split that course differently (a three hour combined course, or a three hour lecture with a one hour lab under its own number), and its calculus sequence likewise carries different statewide numbers and hour values by campus, so both published numberings are candidates. The two Kinesiology documents print their fixed blocks with statewide numbers and then a choose-from pool (18 credits for Sport Management, 12 for Pre-Allied Health) whose printed number column interleaves numbers from several pool items and contains at least one error (an anatomy lab paired with a lecture number) and one truncated number (CM1303 for CMAT 1303); the pools are carried as the union of their identifiable printed numbers and the kinesiology and health rubric families their item names describe. With these two, every sourced pathway document has been processed: thirteen pathways are transcribed and six are held. Stage 70 (Nov 17, 2026) rechecked every held and unsourced pathway against the documents the Board of Regents links today from its Universal Transfer Pathways page (laregents.edu/divisions/academicaffairs/utp/), and saved the ten current documents alongside the earlier set in data/pathways. Three held pathways are now transcribed from the revised documents the Regents published in fall 2024, which replaced the defective June 2024 copies this dataset first read. General Business (Business-Pathway.pdf, October 2024): the revised document carries the full business core the June copy omitted and sums to 60; its numbers column prints CECN 2113 against Macroeconomics, but CECN 2113 in the statewide catalog is Economic Principles, so Macroeconomics carries CECN 2213, the number the statewide catalog assigns to that title and the number its sibling business pathways carry. Communication (Communications-Pathway.pdf, September 2024): the revised document adds the six foreign language credits the June copy lacked and sums to 60. History (History-Pathway.pdf, September 2024): the revised document carries the second history sequence (World History I and II OR Western Civilization I and II) the June copy lacked and sums to 60; a stray fragment, CBIO 103, prints inside its Natural Sciences row where its sibling documents print no number, and is carried as a print artifact, not a course. Still held after the recheck: Nursing (Nursing-Pathway.pdf, September 2024) is titled First 49 Credits and lists 49, with American Literature I, CENL 2153, printed under two subjects; Sociology (Sociology-Pathway.pdf, September 2024) still sums to 54 of 60 with no elective block to absorb the missing six; English (English-Pathway.pdf, September 2024) adds a one course Communication elective to the June copy and still sums to 57 of 60. Cybersecurity has no student document on the Regents pathways page at all (a UCYB concentration code exists in the Regents Statewide Student Profile definitions, April 2025, but no First 60 Credits document is published), so there is nothing to transcribe. Engineering is published as four documents (December 2024), not one: Chemical Engineering is titled First 61 Credits and prints its calculus numbers as ranges (CMAT 2113-6, CMAT 2123-5) that vary by campus; Civil Engineering is titled First 62 Credits with the same ranges and a copy error that offers a bachelor's degree in mechanical engineering inside the Civil document; Electrical Engineering is titled First 62 Credits with the same ranges; Mechanical Engineering is titled First 60 Credits with fixed calculus numbers, but its numbers column assigns only CPHY 2133 against Physics I and II for Engineering and Science, so the physics sequence cannot be assigned without guessing. All four engineering documents are saved and held until the Regents publish fixed, complete numbers. Sixteen pathways are now transcribed; three remain held (Nursing, Sociology, English), Cybersecurity remains unsourced, and Engineering is held as four documents. Stage 71 (Nov 22, 2026): at the site owner's direction, the seven remaining pathway documents linked from the Regents Universal Transfer Pathways page were transcribed as published, quirks included, so every pathway with a published student document is now carried. Nursing (Nursing-Pathway.pdf, September 2024) is published as First 49 Credits and is carried at 49: its American Literature I is carried once, under Humanities where its course line sits, though its number also prints inside the English block's numbers column; its Chemistry Elective with Lab prints no numbers and is carried as a chemistry choice at four hours. Sociology (Sociology-Pathway.pdf, September 2024) sums to 54 of 60 as published, with no elective block to absorb the missing six; its Western Civilization line (CHIS 1013) appears in both the Humanities block and the History choice, as printed. English (English-Pathway.pdf, September 2024) sums to 57 of 60 as published. The four engineering documents (December 2024) print calculus numbers as ranges (CMAT 2113-6, CMAT 2123-5) in three of them; the ranges are carried as candidate lists on the Computer Science pattern; Mechanical prints fixed numbers (CMAT 2113, CMAT 2123) for the same sequence and is carried with the same candidate lists, because the statewide catalog assigns the calculus sequence several numbers by campus (Delgado's own Calculus I carries CMAT 2115, its Calculus II CMAT 2125). Each engineering document prints a single number, CPHY 2133, against its Physics I and II for Engineering & Science line; that requirement carries the statewide numbers assigned to that exact title (CENG 2113 and CENG 2123) together with the calculus based physics numbering the printed number belongs to (CPHY 2133, CPHY 2143, and the split labs CPHY 2131 and CPHY 2141). The engineering totals at catalog hours are 59 (Chemical), 62 (Civil), 62 (Electrical), and 62 (Mechanical), against printed titles of 61, 62, 62, and 60; Civil and Mechanical print identical course lists under different totals, so the lists are carried as printed and the totals fall where the catalog hours put them. Cybersecurity still has no published student document on the Regents pathways page, so there is still nothing to transcribe for it. Twenty three pathways are now transcribed. Stage 72 (November 22, 2026): every pathway was reconciled against the document the Regents currently link from the Universal Transfer Pathways page, and each pathway now carries the link to its published document, which the checker shows with the plan so students can verify the plan themselves. Eight pathways had been transcribed from the June 2024 documents; the currently linked documents (September and October 2024) differ. Psychology now totals 48 as published: the current document omits the twelve college-selected credits its June document carried, so the pathway is titled First 60 Credits and lists 48. Art now totals 57 as published: the current document lists four art practice courses where the June document listed five. Political Science, Finance, Management, and Marketing now carry the structured natural sciences block (one life science, one physical science, and one more from either) that their current documents print, replacing the nine free choice science credits their June documents printed. Computer Science carries the full printed calculus ranges, the biology pair the current document prints (CBIO 1033 and CBIO 1031), and a third science course from biology or physics, as its current document specifies. Biology carries the full printed math list, the general chemistry lectures and labs the current document prints (CCEM 1123, 1133, 1121, 1131, 1132), and the thirteen printed numbers for its physics or organic chemistry block. The university in New Orleans is carried under its new name, Louisiana State Louisiana State University of New Orleans, throughout the checker data."
 }
